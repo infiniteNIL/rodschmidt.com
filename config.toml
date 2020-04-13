@@ -1,0 +1,4 @@
+baseURL = "https://www.rodschmidt.com/"
+languageCode = "en-us"
+title = "Rod Schmidt"
+theme = "noteworthy"
