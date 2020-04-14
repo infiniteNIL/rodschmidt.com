@@ -5,18 +5,20 @@ draft: false
 tags: ['Apple Platforms', 'Software Development']
 ---
 
-In my previous [post](https://rodschmidt.com/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/), I gave some reasons why putting the Core Data MOC in your app delegate was a bad idea. Those reasons were:
+In my previous [post]({{<ref "what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate.md">}}), I gave some reasons why putting the Core Data MOC in your app delegate was a bad idea. Those reasons were:
 
-1.  The app delegate is managing the Core Data stack. Classes should only have one responsibility. The app delegate is already responsible for managing application lifecycle. It shouldn’t be managing the Core Data stack as well.
-2.  You are completely dependent on Core Data and using it as your persistence method for your app. What if you decide to switch to Realm or something?
-3.  Any code you write that uses `myManagedObjectContext` will be dependent on the App Delegate.
-4.  Any tests you write will be dependent on the App Delegate and Core Data and will be hard to test and slow as a result.
+1. The app delegate is managing the Core Data stack. Classes should only have one responsibility. The app delegate is already responsible for managing application lifecycle. It shouldn’t be managing the Core Data stack as well.
+2. You are completely dependent on Core Data and using it as your persistence method for your app. What if you decide to switch to Realm or something?
+3. Any code you write that uses `myManagedObjectContext` will be dependent on the App Delegate.
+4. Any tests you write will be dependent on the App Delegate and Core Data and will be hard to test and slow as a result.
 
-In the previous [post](https://rodschmidt.com/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/), we talked about how putting the Core Data MOC in your app delegate makes your app dependent on Core Data as your persistence mechanism and makes it hard to use something else. In this post, I’d like to talk about reason #1: That your app delegate is already responsible for managing the application life cycle and it shouldn’t be responsible for the Core Data stack as well. This comes from the [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) principles of good object-oriented design, specifically the [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle), which states:
+In the previous [post]({{<ref "what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate.md">}}), we talked about how putting the Core Data MOC in your app delegate makes your app dependent on Core Data as your persistence mechanism and makes it hard to use something else. In this post, I’d like to talk about **reason #1: That your app delegate is already responsible for managing the application life cycle and it shouldn’t be responsible for the Core Data stack as well**. This comes from the [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) principles of good object-oriented design, specifically the [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle), which states:
 
 > Every module or class should have responsibility over a single part of the functionality provided by the software, and that responsibility should be entirely encapsulated by the class. All of its services should be narrowly aligned with that responsibility.
 
-Or as Robert C. Martin (Uncle Bob) puts it, “_A class should have only one reason to change._” The documentation for `UIApplicationDelegate` states:
+Or as Robert C. Martin (Uncle Bob) puts it, “_A class should have only one reason to change._” 
+
+The documentation for `UIApplicationDelegate` states:
 
 > The UIApplicationDelegate protocol defines methods that are called by the singleton UIApplication object in response to important events in the lifetime of your app.
 
