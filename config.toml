@@ -12,3 +12,9 @@ github = "https://github.com/infinitenil"
 twitter = "https://twitter.com/rodschmidt"
 linkedin = "https://linkedin.com/in/rodschmidt"
 stackoverflow = "http://careers.stackoverflow.com/rodschmidt"
+
+[menu]
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
