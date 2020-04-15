@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SwiftUI on Rod Schmidt</title>
+    <link>https://www.rodschmidt.com/tags/swiftui/</link>
+    <description>Recent content in SwiftUI on Rod Schmidt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Aug 2019 17:47:09 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.rodschmidt.com/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Swift UI &amp; App Architecture: A New Approach Required</title>
+      <link>https://www.rodschmidt.com/posts/swift-ui-app-architecture-a-new-approach-required/</link>
+      <pubDate>Sun, 04 Aug 2019 17:47:09 +0000</pubDate>
+      
+      <guid>https://www.rodschmidt.com/posts/swift-ui-app-architecture-a-new-approach-required/</guid>
+      <description>With SwiftUI, everything has changed. As Brent Simmons said, it’s the end of the NeXT era and the beginning of the Swift era.
+With the coming of SwiftUI, most of our app architectures are no longer valid (or at least parts of them). They need to be adjusted. MVC is certainly out. In fact, even controllers seem to be out. From Apple’s content, it seems all we have is models and views, and that’s true.</description>
+    </item>
+    
+  </channel>
+</rss>

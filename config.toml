@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Rod Schmidt"
 theme = "noteworthy"
 disqusShortname = "infinitenil"
+publishDir = "docs"
 
 [params]
 description = "Thoughts on Software Development"

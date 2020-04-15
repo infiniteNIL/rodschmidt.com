@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cocoa Touch on Rod Schmidt</title>
+    <link>https://www.rodschmidt.com/tags/cocoa-touch/</link>
+    <description>Recent content in Cocoa Touch on Rod Schmidt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Oct 2016 16:55:28 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.rodschmidt.com/tags/cocoa-touch/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>3 Ways To Fix Your iOS Testing Woes</title>
+      <link>https://www.rodschmidt.com/posts/3-ways-to-fix-your-ios-testing-woes/</link>
+      <pubDate>Mon, 03 Oct 2016 16:55:28 +0000</pubDate>
+      
+      <guid>https://www.rodschmidt.com/posts/3-ways-to-fix-your-ios-testing-woes/</guid>
+      <description>Lots of companies have constant problems testing their iOS apps. Here are some ways to fix or ease them.
+1. Don’t Make Developers Run or Write UI Tests UI tests are black box tests and test the app from the perspective of the user. Your developers are the worst choice to test the app from this viewpoint and you need a fresh set of eyes for those tests. The QA engineer’s job is to test the app from the user’s viewpoint.</description>
+    </item>
+    
+    <item>
+      <title>Sticky Footers with UITableView</title>
+      <link>https://www.rodschmidt.com/posts/sticky-footers-with-uitableview/</link>
+      <pubDate>Mon, 16 Feb 2015 23:49:00 +0000</pubDate>
+      
+      <guid>https://www.rodschmidt.com/posts/sticky-footers-with-uitableview/</guid>
+      <description>The Problem Last week, I had to implement sticky footers in a table view. Sticky footers are where the footer comes at the end of all the table contents, but if the contents are such that the scrollable content height of the table view is less than the height of the view, the footer will still appear at the bottom of the view.
+  A non-sticky footer
+    A sticky footer</description>
+    </item>
+    
+  </channel>
+</rss>

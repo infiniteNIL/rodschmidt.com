@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no"/>
+
+    <title>The Clean Architecture: An Introduction | Rod Schmidt</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#FF3DB4">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    
+    
+    <link rel="stylesheet" href="https://www.rodschmidt.com/css/main.min.03322cbe6bddfc28e7b17b84bc5446282a510b14b57be3371ba1f68ef1ab9ce8.css"/>
+
+    
+    
+    
+
+    
+    
+ 
+    
+    
+</head>
+
+    <body>
+        
+<nav>
+  <header>
+    <div class="site-title">
+        <a href="/">Rod Schmidt</a>
+    </div>  
+</header>
+  <div class="nav-menu">
+  
+    <a class="color-link nav-link" href="/about/">About</a>
+  
+    <a class="color-link nav-link" href="/archives/">Archives</a>
+  
+    <a class="color-link nav-link" href="/tags/">Tags</a>
+  
+  <a class="color-link nav-link" href="https://www.rodschmidt.com/index.xml" target="_blank" rel="noopener" type="application/rss+xml">RSS</a>
+</div>
+<footer class="footer">
+	<div class="social-icons">
+        
+
+    
+
+    
+    <a class="social-icon" href="https://twitter.com/rodschmidt" target="_blank" rel="noopener" title="Twitter">
+        <svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" fill="#ABABAB" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+            <path d="M8.991284,24.971612 C19.180436,24.971612 24.752372,16.530224 24.752372,9.210524 C24.752372,8.970656 24.747512,8.731868 24.736496,8.494376 C25.818008,7.712564 26.758256,6.737 27.5,5.62622 C26.507372,6.067076 25.439252,6.364292 24.318752,6.498212 C25.462472,5.812628 26.340512,4.727444 26.754584,3.434036 C25.684088,4.068536 24.499004,4.53002 23.23724,4.778528 C22.226468,3.701876 20.786828,3.028388 19.193828,3.028388 C16.134404,3.028388 13.653536,5.509256 13.653536,8.567492 C13.653536,9.0023 13.702244,9.424904 13.797176,9.830552 C9.19346,9.599108 5.11106,7.39472 2.3792,4.04294 C1.903028,4.861364 1.629032,5.812628 1.629032,6.827072 C1.629032,8.74904 2.606972,10.445612 4.094024,11.438132 C3.185528,11.41016 2.331788,11.160464 1.585184,10.745096 C1.583888,10.768208 1.583888,10.791428 1.583888,10.815728 C1.583888,13.49888 3.493652,15.738584 6.028088,16.246508 C5.562932,16.373084 5.07326,16.44134 4.56782,16.44134 C4.210988,16.44134 3.863876,16.406024 3.526484,16.34144 C4.231724,18.542264 6.276596,20.143796 8.701412,20.18894 C6.805148,21.674696 4.416836,22.56008 1.821488,22.56008 C1.374476,22.56008 0.93362,22.534592 0.5,22.4834 C2.951708,24.054476 5.862524,24.971612 8.991284,24.971612"></path>
+        </svg>
+    </a>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <a class="social-icon" href="https://linkedin.com/in/rodschmidt" target="_blank" rel="noopener" title="LinkedIn">
+        <svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" fill="#ABABAB" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+            <path d="M2,3.654102 C2,2.69908141 2.79442509,1.92397846 3.77383592,1.92397846 L24.2261641,1.92397846 C25.2058917,1.92397846 26,2.69908141 26,3.654102 L26,24.3462148 C26,25.3015521 25.2058917,26.0760215 24.2261641,26.0760215 L3.77383592,26.0760215 C2.79442509,26.0760215 2,25.3015521 2,24.3465315 L2,3.65378524 L2,3.654102 Z M9.27526132,22.1415901 L9.27526132,11.2356668 L5.65030092,11.2356668 L5.65030092,22.1415901 L9.27557808,22.1415901 L9.27526132,22.1415901 Z M7.46341463,9.74691162 C8.72727273,9.74691162 9.51409566,8.90940767 9.51409566,7.86284447 C9.49033893,6.79252455 8.72727273,5.97846056 7.48748812,5.97846056 C6.24675325,5.97846056 5.43649034,6.79252455 5.43649034,7.86284447 C5.43649034,8.90940767 6.22299652,9.74691162 7.4396579,9.74691162 L7.46309788,9.74691162 L7.46341463,9.74691162 Z M11.2815965,22.1415901 L14.9062401,22.1415901 L14.9062401,16.0519481 C14.9062401,15.7263225 14.9299968,15.4000634 15.0256573,15.1675641 C15.2876148,14.5159962 15.8840672,13.8416218 16.8856509,13.8416218 C18.1970225,13.8416218 18.7218879,14.8416218 18.7218879,16.3078872 L18.7218879,22.1415901 L22.3465315,22.1415901 L22.3465315,15.8885017 C22.3465315,12.5388027 20.5584416,10.9800443 18.1735825,10.9800443 C16.2182452,10.9800443 15.3595185,12.072854 14.8824834,12.8172315 L14.9065569,12.8172315 L14.9065569,11.2359835 L11.2819132,11.2359835 C11.3291099,12.2591067 11.2815965,22.1419069 11.2815965,22.1419069 L11.2815965,22.1415901 Z"></path>
+        </svg>
+    </a>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <a class="social-icon" href="https://github.com/infinitenil" target="_blank" rel="noopener" title="GitHub">
+        <svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" fill="#ABABAB" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+            <path d="M13.9988029,1.32087331 C6.82105037,1.32087331 1,7.14112562 1,14.3212723 C1,20.0649109 4.72454649,24.9370678 9.89038951,26.6560892 C10.5408085,26.7757983 10.7778323,26.374374 10.7778323,26.0296121 C10.7778323,25.7215609 10.7666595,24.9035493 10.760275,23.8189856 C7.14426471,24.6042767 6.38131925,22.0760223 6.38131925,22.0760223 C5.78995672,20.5740732 4.93762853,20.1742451 4.93762853,20.1742451 C3.75729765,19.3682044 5.02701126,19.3841656 5.02701126,19.3841656 C6.33183953,19.4759425 7.01817121,20.7241085 7.01817121,20.7241085 C8.17775254,22.7104801 10.0611744,22.1366749 10.8017741,21.8038838 C10.919887,20.9643246 11.2558703,20.3913175 11.6269683,20.066507 C8.74038491,19.7385043 5.70536235,18.6228163 5.70536235,13.6413251 C5.70536235,12.2223743 6.21213051,11.0611968 7.04370914,10.1530044 C6.90963504,9.82420367 6.46351945,8.50181809 7.17139875,6.71256734 C7.17139875,6.71256734 8.26234691,6.36301702 10.7459099,8.04532771 C11.78259,7.75642995 12.8950858,7.61277914 14.000399,7.60719272 C15.1049142,7.61277914 16.2166119,7.75642995 17.2548881,8.04532771 C19.736855,6.36301702 20.8262071,6.71256734 20.8262071,6.71256734 C21.5356825,8.50181809 21.0895669,9.82420367 20.9562909,10.1530044 C21.7894656,11.0611968 22.2922435,12.2223743 22.2922435,13.6413251 C22.2922435,18.6355852 19.2524325,19.734514 16.3570705,20.0561322 C16.8231376,20.4575564 17.2389269,21.2508282 17.2389269,22.4638795 C17.2389269,24.2012564 17.2229657,25.603448 17.2229657,26.0296121 C17.2229657,26.3775663 17.4575954,26.7821827 18.116793,26.6552912 C23.2786458,24.9322794 27,20.0633148 27,14.3212723 C27,7.14112562 21.1789496,1.32087331 13.9988029,1.32087331"></path>
+        </svg>
+    </a>
+    
+
+    
+    <a class="social-icon" href="http://careers.stackoverflow.com/rodschmidt" target="_blank" rel="noopener" title="Stack Overflow">
+        <svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" fill="#ABABAB" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+            <path d="M20.8863636,23.7090909 L20.8863636,17.3818182 L22.9863636,17.3818182 L22.9863636,25.8090909 L4.03181818,25.8090909 L4.03181818,17.3818182 L6.13181818,17.3818182 L6.13181818,23.7090909 L20.8863636,23.7090909 Z M8.45,16.7818182 L8.88636364,14.7090909 L19.1954545,16.8636364 L18.7590909,18.9363636 L8.45,16.7818182 Z M9.81363636,11.8727273 L10.6863636,9.93636364 L20.2318182,14.4090909 L19.3590909,16.3181818 L9.81363636,11.8727273 Z M12.4590909,7.18181818 L13.7954545,5.57272727 L21.8954545,12.3090909 L20.5590909,13.9181818 L12.4590909,7.18181818 Z M17.6954545,2.19090909 L23.9681818,10.6454545 L22.2772727,11.9 L16.0045455,3.44545455 L17.6954545,2.19090909 Z M8.23181818,21.5818182 L8.23181818,19.4818182 L18.7590909,19.4818182 L18.7590909,21.5818182 L8.23181818,21.5818182 Z"></path>
+        </svg>
+    </a>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+
+
+
+	<p><a href="https://github.com/kimcc/hugo-theme-noteworthy" target="_blank" rel="noopener">Noteworthy theme</a></p>
+	<p><a href="https://gohugo.io" target="_blank" rel="noopener">Built with Hugo</a></p>
+
+	<script src="https://www.rodschmidt.com/js/main.min.fa5c2b23e07b5d9bfad267a52b4b24fdb053e6fb7524993383594926a3ac270c.js" integrity="sha256-+lwrI+B7XZv60melK0sk/bBT5vt1JJkzg1lJJqOsJww="></script>
+</footer>
+</nav>
+        <div id="content" class="content-container">
+        
+<h1 class="post-title">The Clean Architecture: An Introduction</h1>
+    
+    <time>December 9, 2016</time>
+    
+    <div>
+        <p>
+        <p>In the last <a href="https://www.rodschmidt.com/posts/moving-towards-the-clean-architecture-for-apple-development/">post</a>, I talked about various architectures used as alternatives to MVC, in a attempt to solve MVCs problems, such as Massive View Controller.</p>
+<p>In this post, I would like to introduce you to another architecture, which seems to me to be the best starting point for your app’s architecture: the Clean Architecture.</p>
+<p>I think I first ran into the Clean Architecture in one of <a href="https://www.youtube.com/watch?v=WpkDN78P884">Uncle Bob’s presentations on YouTube</a>. At first, I kind of wrote it off as a typical Java over-engineered design pattern. It wasn’t until earlier this year, probably years later after my initial discovery, that I ran into it again. I was looking for a better app architecture after an experience working for a large company with a large iOS team (with about 11 developers) and all the issues they had getting the app to work and test it. I kind of became obsessed with figuring out how to make an app easier to test. I searched the internet for app architectures and studied them. It took me awhile to get my head around the Clean Architecture, but once I did, I decided it would be my starting point for an app architecture.</p>
+<p>Uncle Bob also has a <a href="https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html">blog post</a> on the Clean Architecture.</p>
+<h2 id="origins-and-resurgence">Origins and Resurgence</h2>
+<p>The roots of the Clean Architecture go back to the 1993, when the book <a href="http://amzn.to/2g74J3X">Object-Oriented Software Engineering: An Use-Case Driven Approach</a> by Ivar Jacobson was published. In it, Mr. Jacobson proposed a design approach where the use case was the central concept an application design was built around. A use case is very similar to what we now call a user story. It’s basically a function the user can do with the app, such as create a new user in a payroll app, for example.</p>
+<p>According to Uncle Bob, the industry was just starting to learn that this was a good way to design applications, when in the mid to late 90s, the web arrived and threw everything into disarray. We had to figure out how to write web applications and we stopped thinking about how we did it for desktop applications.</p>
+<p>Eventually we started thinking about architecture again, and MVC was adapted to web applications. That is probably how most developers were introduced to MVC. Maybe more recently when they started doing iOS and mobile development. Uncle Bob says MVC is not a architecture, but a design pattern. Originally, it was designed to control one single thing on the screen like a button. Every button, text field, etc., would have its own controller, view, and model. It was then adopted as an application architecture and this is the cause of its problems.</p>
+<p>Because of these problems, everybody is thinking about architecture again and we’re seeing an explosion of app architectures. People are looking for solutions to their problems such as testing and writing code that is easy to maintain.</p>
+<p>The Clean Architecture is very similar to these other architectures that you may have heard of:</p>
+<ul>
+<li>
+<p><strong><a href="http://www.artima.com/articles/dci_vision.html">DCI</a></strong> (Data, Context, and Interaction) created by Trygve Reekskaug and James O. Coplien. Mr Reenskaug is the original creator of MVC.</p>
+</li>
+<li>
+<p><strong><a href="http://alistair.cockburn.us/Hexagonal+architecture">The Hexagonal Architecture</a></strong> created by Alistair Cockburn. Also known as <strong>Ports and Adapters</strong></p>
+</li>
+<li>
+<p><strong><a href="http://jeffreypalermo.com/blog/the-onion-architecture-part-1/">The Onion Architecture</a></strong> by Jeffrey Palermo.</p>
+</li>
+</ul>
+<h2 id="how-it-works">How it Works</h2>
+<p>I like to think about the Clean Architecture as a way of creating an engine for your application, much like you would create a game engine. You have some code tucked away in some libraries that is independent of the platform it will run on, or its environment. That’s really what it’s about.</p>
+<p>Here’s a diagram of the Clean Architecture:</p>
+<figure>
+    <img src="/images/CleanArchitecture-8b00a9d7e2543fa9ca76b81b05066629.jpg"
+         alt="from 8th Light"/> <figcaption>
+            <p>from 8th Light</p>
+        </figcaption>
+</figure>
+
+<p>The engine, or core of your app, are the 3 circles (yellow, red, and green) in the middle. They contain the entities, use cases, interactors, and other objects of your engine. They know nothing of UIKit, Core Data, Realm, HTTP, the web, or any other delivery mechanism, as Uncle Bob calls them.</p>
+<p>The outer blue circle contain the external things your app needs to talk to, such as a delivery mechanism (i.e. the UI, UIKit, A web browser, etc). It also contains other things that your app needs to talk to to relate to the outside world, such as databases, networks, or even a sensor somewhere. Examples would be Core Data, a REST API, or a bluetooth sensor. These are not part of your engine or app core, and your app core will not know anything about them. It will know about some protocols it can use to talk to them.</p>
+<p>The Clean Architecture has the following components:</p>
+<ul>
+<li>
+<p><strong>Interactors</strong> - Represent the use cases and are the central objects in the Clean Architecture. You will have an interactor for every use case and they will be named after the use case. It is responsible for executing the use case by talking to entities and gateways. All the interactors together contain your application specific business logic or rules.</p>
+</li>
+<li>
+<p><strong>Entities</strong> - Represent the business objects and contain business logic that could be used in multiple applications. Unlike in frameworks, they do not inherit from NSManagedObject or ActiveRecord. They are just plain simple objects, probably just structs in Swift. They do not know about the database or your network layer.</p>
+</li>
+<li>
+<p><strong>Presenters</strong> - Contain your presentation logic. It is called by an interactor (through a boundary or protocol) to present something to the delivery mechanism. It does this by creating a ViewModel and passing that to the view (or view controller). Again, the presenter knows nothing of UIKit, it simply talks to an interface.</p>
+</li>
+<li>
+<p><strong>ViewModels</strong> - In the Clean Architecture, the view model simply contains simple data (strings, ints, boolean, etc.) the view needs to display. It just a simple struct that contains all the data the view needs (which was prepared or formatted by the presenter). The view is very dumb. All it does is take the data and place it where it needs to go.</p>
+</li>
+<li>
+<p><strong>Boundaries</strong> - You will hear Uncle Bob talk about Boundaries. They are simply just interfaces or protocols in Swift that all communication must go through to talk to another layer (or ring) in the architecture.</p>
+</li>
+<li>
+<p><strong>Gateways</strong> - A gateway is simply another kind of boundary to talk to the outside world like a database, network, service, or other device that your core might need to talk to. Uncle Bob uses the term Gateway, but you and I are probably more likely to give then specific names like DatabaseStore or NetworkAPIClient for example. Again, these would be protocol names or abstract classes.</p>
+</li>
+</ul>
+<h3 id="relationships-and-data-flow">Relationships and Data Flow</h3>
+<p>Here’s another diagram I created from some other diagrams Uncle Bob had in his talk:</p>
+<figure>
+    <img src="/images/Clean-Arch.-Data-Flow.png"
+         alt="from 8th Light" width="768"/> 
+</figure>
+
+<p>Let’s say we have a create user use case. Here’s how everything works:</p>
+<ol>
+<li>
+<p>The user kicks things off by tapping on a new user button. Let’s say that brings up a form that the user fills out and then they tap the done button.</p>
+</li>
+<li>
+<p>The view controller action connected to the button gets called. It creates a <em>RequestModel</em>, fills it with the data from the form, and passes it to a method on the boundary (or protocol) that our CreateUser interactor implements. The <em>RequestModel</em> is simply a struct that contains all the data needed by the use case. Do not include any UIKIt types in the request model. Ideally, just Swift types. Maybe some Foundation types depending on how independent you want to be from Apple’s APIs.</p>
+</li>
+<li>
+<p>The interactor takes the data in the RequestModel and calls a method on the Entity Gateway Interface (or protocol) implemented by an Entity Gateway Implementation. Probably a method called something like createUser() with parameter(s) for all the data needed to create a user.</p>
+</li>
+<li>
+<p>The Entity Gateway Implementation talks to the Database API (maybe Core Data) and creates a user in the database or whatever our storage mechanism is. It then takes the result of creating that user and creates a User Entity and passes that back to the interactor. The User entity is simply a struct that contains information about the user. It does not contain any storage mechanism specific information.</p>
+</li>
+<li>
+<p>The interactor takes the user entity and creates a <em>ResponseModel</em>, filling it with the data from the entity. The <em>ResponseModel</em> is very similar to a RequestModel, except it is for returning a response through the boundary. The Interactor then calls a method on the boundary (or protocol) implemented by the presenter, passing it the response model.</p>
+</li>
+<li>
+<p>The presenter takes the response model and creates a ViewModel filling it with data from the response model. It then calls a method on the view controller, passing it the view model.</p>
+</li>
+<li>
+<p>The view controller then uses the view model to populate the view. In this case the view controller might simply present an alert that says the user was created. It might also add the the user’s name to a list that is displaying and refresh the list.</p>
+</li>
+</ol>
+<h2 id="testing">Testing</h2>
+<p>One of the benefits and main goals of the Clean Architecture is testability. Uncle Bob advocates doing Test-Driven Development (TDD), saying that writing tests after the fact are a waste of time. The tests guide your design. If the tests are hard to write then something might be wrong with your design. The tests let your refactor very quickly and tell you when you are done.</p>
+<p>The Clean Architecture makes things easy to test with its use of boundaries. Anywhere there is a boundary (or protocol), you can substitute another object that implements the protocol. Your delivery mechanism can just be your tests. Your Entity Gateway Implementation can just return some stubbed data. This makes it very easy to test things in isolation by replacing all of an object’s dependencies with stubs or mocks. This also makes the tests very fast.</p>
+<p>The views are really dumb and don’t really need to be tested. You can write some tests just to make sure that they call the right boundaries methods when they should. You just replace your interactor with a spy that records when a method gets called. Your tests just verify the methods are called.</p>
+<p>Uncle Bob says you don’t need to test the views or UI. I would tend to agree with him, but I’m not sure you can completely get away with that with management. It’s easy enough to add the tests I described above. I would leave testing of the rest of the UI to the acceptance tests. Remember, you want your unit tests to run very fast. You will be using them constantly. UI testing (by that I mean user-based end-to-end black box tests) will always be be slow.</p>
+<h3 id="acceptance-testing">Acceptance Testing</h3>
+<p>J.B. Rainsberger is a consultant that helps companies solve their architectural and testing issues. I highly recommend his <a href="http://blog.thecodewhisperer.com/series#integrated-tests-are-a-scam">blog</a>. In a presentation called “<a href="https://vimeo.com/80533536">Integrated Tests are Scam</a>”, he talks about how it is impossible to write integrated tests that cover everything. Your tests just get slower and slower as your app grows. There are just too many code paths. All you really need to test is the boundaries. Hence the need for a good architecture like the Clean Architecture.</p>
+<p>Have your developers write unit tests for everything (maybe even a little view testing with everything else stubbed out). They can even write some unit tests that test the integration between the different layers (i.e. test the boundaries). Leave the end-to-end testing, or acceptance tests to your QA engineers. Their job is to determine if the software is acceptable by the customer. They just need to write acceptance tests that test each use case from a user’s viewpoint. Uncle Bob was involved in the creating of an acceptance test framework called <a href="http://fitnesse.org">Fitnesse</a>.</p>
+<h2 id="summary">Summary</h2>
+<p>Uncle Bob says a good architecture maximizes the number of decisions not made. The Clean Architecture does that by providing clear boundaries between different parts of your app in such a way that your app doesn’t care how things behind the boundaries are implemented. This gives you tremendous flexibility and independence. You can plugin different drivers of your app (i.e. UIs or tests) whenever you want. Same thing with the other external dependencies of your app (i.e. database, network, etc.)</p>
+<p>This article presented a lot of information, and it will probably talk multiple readings and studying of the articles and videos I linked to to fully wrap your head around it. I believe you will find it worthwhile.</p>
+<h2 id="next-time">Next Time</h2>
+<p>Next time, we’ll get practical. I plan to take a classic or common Cocoa example that uses MVC and convert that to the Clean Architecture.</p>
+
+        </p>
+    </div>
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "infinitenil" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    <div class="page-footer">
+        
+        <hr class="footer-divider">
+        
+            <a class="tag" href="/tags/clean-architecture">#Clean Architecture</a>
+        
+            <a class="tag" href="/tags/software-development">#Software Development</a>
+        
+            <a class="tag" href="/tags/testing">#Testing</a>
+        
+      
+    </div>
+
+
+        
+        </div>
+        <footer class="footer-mobile">
+	<div class="social-icons">
+        
+
+    
+
+    
+    <a class="social-icon" href="https://twitter.com/rodschmidt" target="_blank" rel="noopener" title="Twitter">
+        <svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" fill="#ABABAB" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+            <path d="M8.991284,24.971612 C19.180436,24.971612 24.752372,16.530224 24.752372,9.210524 C24.752372,8.970656 24.747512,8.731868 24.736496,8.494376 C25.818008,7.712564 26.758256,6.737 27.5,5.62622 C26.507372,6.067076 25.439252,6.364292 24.318752,6.498212 C25.462472,5.812628 26.340512,4.727444 26.754584,3.434036 C25.684088,4.068536 24.499004,4.53002 23.23724,4.778528 C22.226468,3.701876 20.786828,3.028388 19.193828,3.028388 C16.134404,3.028388 13.653536,5.509256 13.653536,8.567492 C13.653536,9.0023 13.702244,9.424904 13.797176,9.830552 C9.19346,9.599108 5.11106,7.39472 2.3792,4.04294 C1.903028,4.861364 1.629032,5.812628 1.629032,6.827072 C1.629032,8.74904 2.606972,10.445612 4.094024,11.438132 C3.185528,11.41016 2.331788,11.160464 1.585184,10.745096 C1.583888,10.768208 1.583888,10.791428 1.583888,10.815728 C1.583888,13.49888 3.493652,15.738584 6.028088,16.246508 C5.562932,16.373084 5.07326,16.44134 4.56782,16.44134 C4.210988,16.44134 3.863876,16.406024 3.526484,16.34144 C4.231724,18.542264 6.276596,20.143796 8.701412,20.18894 C6.805148,21.674696 4.416836,22.56008 1.821488,22.56008 C1.374476,22.56008 0.93362,22.534592 0.5,22.4834 C2.951708,24.054476 5.862524,24.971612 8.991284,24.971612"></path>
+        </svg>
+    </a>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <a class="social-icon" href="https://linkedin.com/in/rodschmidt" target="_blank" rel="noopener" title="LinkedIn">
+        <svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" fill="#ABABAB" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+            <path d="M2,3.654102 C2,2.69908141 2.79442509,1.92397846 3.77383592,1.92397846 L24.2261641,1.92397846 C25.2058917,1.92397846 26,2.69908141 26,3.654102 L26,24.3462148 C26,25.3015521 25.2058917,26.0760215 24.2261641,26.0760215 L3.77383592,26.0760215 C2.79442509,26.0760215 2,25.3015521 2,24.3465315 L2,3.65378524 L2,3.654102 Z M9.27526132,22.1415901 L9.27526132,11.2356668 L5.65030092,11.2356668 L5.65030092,22.1415901 L9.27557808,22.1415901 L9.27526132,22.1415901 Z M7.46341463,9.74691162 C8.72727273,9.74691162 9.51409566,8.90940767 9.51409566,7.86284447 C9.49033893,6.79252455 8.72727273,5.97846056 7.48748812,5.97846056 C6.24675325,5.97846056 5.43649034,6.79252455 5.43649034,7.86284447 C5.43649034,8.90940767 6.22299652,9.74691162 7.4396579,9.74691162 L7.46309788,9.74691162 L7.46341463,9.74691162 Z M11.2815965,22.1415901 L14.9062401,22.1415901 L14.9062401,16.0519481 C14.9062401,15.7263225 14.9299968,15.4000634 15.0256573,15.1675641 C15.2876148,14.5159962 15.8840672,13.8416218 16.8856509,13.8416218 C18.1970225,13.8416218 18.7218879,14.8416218 18.7218879,16.3078872 L18.7218879,22.1415901 L22.3465315,22.1415901 L22.3465315,15.8885017 C22.3465315,12.5388027 20.5584416,10.9800443 18.1735825,10.9800443 C16.2182452,10.9800443 15.3595185,12.072854 14.8824834,12.8172315 L14.9065569,12.8172315 L14.9065569,11.2359835 L11.2819132,11.2359835 C11.3291099,12.2591067 11.2815965,22.1419069 11.2815965,22.1419069 L11.2815965,22.1415901 Z"></path>
+        </svg>
+    </a>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <a class="social-icon" href="https://github.com/infinitenil" target="_blank" rel="noopener" title="GitHub">
+        <svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" fill="#ABABAB" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+            <path d="M13.9988029,1.32087331 C6.82105037,1.32087331 1,7.14112562 1,14.3212723 C1,20.0649109 4.72454649,24.9370678 9.89038951,26.6560892 C10.5408085,26.7757983 10.7778323,26.374374 10.7778323,26.0296121 C10.7778323,25.7215609 10.7666595,24.9035493 10.760275,23.8189856 C7.14426471,24.6042767 6.38131925,22.0760223 6.38131925,22.0760223 C5.78995672,20.5740732 4.93762853,20.1742451 4.93762853,20.1742451 C3.75729765,19.3682044 5.02701126,19.3841656 5.02701126,19.3841656 C6.33183953,19.4759425 7.01817121,20.7241085 7.01817121,20.7241085 C8.17775254,22.7104801 10.0611744,22.1366749 10.8017741,21.8038838 C10.919887,20.9643246 11.2558703,20.3913175 11.6269683,20.066507 C8.74038491,19.7385043 5.70536235,18.6228163 5.70536235,13.6413251 C5.70536235,12.2223743 6.21213051,11.0611968 7.04370914,10.1530044 C6.90963504,9.82420367 6.46351945,8.50181809 7.17139875,6.71256734 C7.17139875,6.71256734 8.26234691,6.36301702 10.7459099,8.04532771 C11.78259,7.75642995 12.8950858,7.61277914 14.000399,7.60719272 C15.1049142,7.61277914 16.2166119,7.75642995 17.2548881,8.04532771 C19.736855,6.36301702 20.8262071,6.71256734 20.8262071,6.71256734 C21.5356825,8.50181809 21.0895669,9.82420367 20.9562909,10.1530044 C21.7894656,11.0611968 22.2922435,12.2223743 22.2922435,13.6413251 C22.2922435,18.6355852 19.2524325,19.734514 16.3570705,20.0561322 C16.8231376,20.4575564 17.2389269,21.2508282 17.2389269,22.4638795 C17.2389269,24.2012564 17.2229657,25.603448 17.2229657,26.0296121 C17.2229657,26.3775663 17.4575954,26.7821827 18.116793,26.6552912 C23.2786458,24.9322794 27,20.0633148 27,14.3212723 C27,7.14112562 21.1789496,1.32087331 13.9988029,1.32087331"></path>
+        </svg>
+    </a>
+    
+
+    
+    <a class="social-icon" href="http://careers.stackoverflow.com/rodschmidt" target="_blank" rel="noopener" title="Stack Overflow">
+        <svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" fill="#ABABAB" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+            <path d="M20.8863636,23.7090909 L20.8863636,17.3818182 L22.9863636,17.3818182 L22.9863636,25.8090909 L4.03181818,25.8090909 L4.03181818,17.3818182 L6.13181818,17.3818182 L6.13181818,23.7090909 L20.8863636,23.7090909 Z M8.45,16.7818182 L8.88636364,14.7090909 L19.1954545,16.8636364 L18.7590909,18.9363636 L8.45,16.7818182 Z M9.81363636,11.8727273 L10.6863636,9.93636364 L20.2318182,14.4090909 L19.3590909,16.3181818 L9.81363636,11.8727273 Z M12.4590909,7.18181818 L13.7954545,5.57272727 L21.8954545,12.3090909 L20.5590909,13.9181818 L12.4590909,7.18181818 Z M17.6954545,2.19090909 L23.9681818,10.6454545 L22.2772727,11.9 L16.0045455,3.44545455 L17.6954545,2.19090909 Z M8.23181818,21.5818182 L8.23181818,19.4818182 L18.7590909,19.4818182 L18.7590909,21.5818182 L8.23181818,21.5818182 Z"></path>
+        </svg>
+    </a>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+
+
+
+	<div class="footer-mobile-links">
+		<p><a href="https://github.com/kimcc/hugo-theme-noteworthy" target="_blank" rel="noopener">Noteworthy theme</a></p>
+		<span class="divider-bar">|</span>
+		<p><a href="https://gohugo.io" target="_blank" rel="noopener">Built with Hugo</a></p>
+	</div>
+
+	<script src="https://www.rodschmidt.com/js/main.min.fa5c2b23e07b5d9bfad267a52b4b24fdb053e6fb7524993383594926a3ac270c.js" integrity="sha256-+lwrI+B7XZv60melK0sk/bBT5vt1JJkzg1lJJqOsJww="></script>
+</footer>
+    </body>
+</html>
