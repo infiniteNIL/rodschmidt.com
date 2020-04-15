@@ -18,3 +18,9 @@ stackoverflow = "http://careers.stackoverflow.com/rodschmidt"
     identifier = "tags"
     name = "Tags"
     url = "/tags/"
+
+  [[menu.main]]
+    name = "Archives"
+    identifier = "archives"
+    url = "/archives/"
+    #weight = 3
