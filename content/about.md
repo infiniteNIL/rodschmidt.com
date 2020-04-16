@@ -18,9 +18,3 @@ I've presented on RubyCocoa at the [2003 O'Reilly Mac OS X Conference](http://co
 I am interested in programming languages, and right now I'm especially interested in functional languages such as Haskell and Clojure. My other main interest is the field of Artificial Intelligence and applying it to software so that we don't have to adapt to use computers, but computers adapt to work for us. 
 
 When I'm not working, I enjoy movies, TV, books, playing tennis, rooting for the Los Angeles Dodgers, cheering on the United States' soccer teams, and spending time with my girlfriend, Yoshiko. 
-
-Other links: 
-- [@rodschmidt](https://twitter.com/rodschmidt)
-- [GitHub](https://github.com/infinitenil)
-- [StackOverflow](http://careers.stackoverflow.com/rodschmidt) 
-- [LinkedIn](http://www.linkedin.com/in/rodschmidt/)
