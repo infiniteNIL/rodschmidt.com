@@ -2,138 +2,138 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Rod Schmidt</title>
-    <link>/tags/</link>
+    <link>rodschmidt.com/tags/</link>
     <description>Recent content in Tags on Rod Schmidt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Aug 2019 23:36:43 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="rodschmidt.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Apple</title>
-      <link>/tags/apple/</link>
+      <link>rodschmidt.com/tags/apple/</link>
       <pubDate>Fri, 23 Aug 2019 23:36:43 +0000</pubDate>
       
-      <guid>/tags/apple/</guid>
+      <guid>rodschmidt.com/tags/apple/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Movies</title>
-      <link>/tags/movies/</link>
+      <link>rodschmidt.com/tags/movies/</link>
       <pubDate>Fri, 23 Aug 2019 23:36:43 +0000</pubDate>
       
-      <guid>/tags/movies/</guid>
+      <guid>rodschmidt.com/tags/movies/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Apple Platforms</title>
-      <link>/tags/apple-platforms/</link>
+      <link>rodschmidt.com/tags/apple-platforms/</link>
       <pubDate>Sun, 04 Aug 2019 17:47:09 +0000</pubDate>
       
-      <guid>/tags/apple-platforms/</guid>
+      <guid>rodschmidt.com/tags/apple-platforms/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Clean Architecture</title>
-      <link>/tags/clean-architecture/</link>
+      <link>rodschmidt.com/tags/clean-architecture/</link>
       <pubDate>Sun, 04 Aug 2019 17:47:09 +0000</pubDate>
       
-      <guid>/tags/clean-architecture/</guid>
+      <guid>rodschmidt.com/tags/clean-architecture/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Software Development</title>
-      <link>/tags/software-development/</link>
+      <link>rodschmidt.com/tags/software-development/</link>
       <pubDate>Sun, 04 Aug 2019 17:47:09 +0000</pubDate>
       
-      <guid>/tags/software-development/</guid>
+      <guid>rodschmidt.com/tags/software-development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Swift</title>
-      <link>/tags/swift/</link>
+      <link>rodschmidt.com/tags/swift/</link>
       <pubDate>Sun, 04 Aug 2019 17:47:09 +0000</pubDate>
       
-      <guid>/tags/swift/</guid>
+      <guid>rodschmidt.com/tags/swift/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SwiftUI</title>
-      <link>/tags/swiftui/</link>
+      <link>rodschmidt.com/tags/swiftui/</link>
       <pubDate>Sun, 04 Aug 2019 17:47:09 +0000</pubDate>
       
-      <guid>/tags/swiftui/</guid>
+      <guid>rodschmidt.com/tags/swiftui/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Testing</title>
-      <link>/tags/testing/</link>
+      <link>rodschmidt.com/tags/testing/</link>
       <pubDate>Fri, 09 Dec 2016 00:33:44 +0000</pubDate>
       
-      <guid>/tags/testing/</guid>
+      <guid>rodschmidt.com/tags/testing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Robots</title>
-      <link>/tags/robots/</link>
+      <link>rodschmidt.com/tags/robots/</link>
       <pubDate>Tue, 11 Oct 2016 22:36:54 +0000</pubDate>
       
-      <guid>/tags/robots/</guid>
+      <guid>rodschmidt.com/tags/robots/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cocoa Touch</title>
-      <link>/tags/cocoa-touch/</link>
+      <link>rodschmidt.com/tags/cocoa-touch/</link>
       <pubDate>Mon, 03 Oct 2016 16:55:28 +0000</pubDate>
       
-      <guid>/tags/cocoa-touch/</guid>
+      <guid>rodschmidt.com/tags/cocoa-touch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Elixir</title>
-      <link>/tags/elixir/</link>
+      <link>rodschmidt.com/tags/elixir/</link>
       <pubDate>Fri, 22 May 2015 22:11:23 +0000</pubDate>
       
-      <guid>/tags/elixir/</guid>
+      <guid>rodschmidt.com/tags/elixir/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blogging</title>
-      <link>/tags/blogging/</link>
+      <link>rodschmidt.com/tags/blogging/</link>
       <pubDate>Sat, 14 Feb 2015 00:31:21 +0000</pubDate>
       
-      <guid>/tags/blogging/</guid>
+      <guid>rodschmidt.com/tags/blogging/</guid>
       <description></description>
     </item>
     
     <item>
       <title>General</title>
-      <link>/tags/general/</link>
+      <link>rodschmidt.com/tags/general/</link>
       <pubDate>Sun, 18 Jan 2015 00:09:53 +0000</pubDate>
       
-      <guid>/tags/general/</guid>
+      <guid>rodschmidt.com/tags/general/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sabbatical</title>
-      <link>/tags/sabbatical/</link>
+      <link>rodschmidt.com/tags/sabbatical/</link>
       <pubDate>Sun, 08 Sep 2002 22:37:10 +0000</pubDate>
       
-      <guid>/tags/sabbatical/</guid>
+      <guid>rodschmidt.com/tags/sabbatical/</guid>
       <description></description>
     </item>
     
