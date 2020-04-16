@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Testing on Rod Schmidt</title>
-    <link>rodschmidt.com/tags/testing/</link>
+    <link>https://infinitenil.github.io/rodschmidt.com/tags/testing/</link>
     <description>Recent content in Testing on Rod Schmidt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 09 Dec 2016 00:33:44 +0000</lastBuildDate>
     
-	<atom:link href="rodschmidt.com/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://infinitenil.github.io/rodschmidt.com/tags/testing/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The Clean Architecture: An Introduction</title>
-      <link>rodschmidt.com/posts/the-clean-architecture-an-introduction/</link>
+      <link>https://infinitenil.github.io/rodschmidt.com/posts/the-clean-architecture-an-introduction/</link>
       <pubDate>Fri, 09 Dec 2016 00:33:44 +0000</pubDate>
       
-      <guid>rodschmidt.com/posts/the-clean-architecture-an-introduction/</guid>
+      <guid>https://infinitenil.github.io/rodschmidt.com/posts/the-clean-architecture-an-introduction/</guid>
       <description>In the last post, I talked about various architectures used as alternatives to MVC, in a attempt to solve MVCs problems, such as Massive View Controller.
 In this post, I would like to introduce you to another architecture, which seems to me to be the best starting point for your app’s architecture: the Clean Architecture.
 I think I first ran into the Clean Architecture in one of Uncle Bob’s presentations on YouTube.</description>
@@ -24,10 +24,10 @@ I think I first ran into the Clean Architecture in one of Uncle Bob’s presenta
     
     <item>
       <title>Part 4: What Are the Downsides to Putting the Core Data MOC in the App Delegate</title>
-      <link>rodschmidt.com/posts/part-4-what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</link>
+      <link>https://infinitenil.github.io/rodschmidt.com/posts/part-4-what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</link>
       <pubDate>Tue, 01 Nov 2016 21:49:48 +0000</pubDate>
       
-      <guid>rodschmidt.com/posts/part-4-what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</guid>
+      <guid>https://infinitenil.github.io/rodschmidt.com/posts/part-4-what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</guid>
       <description>In part 3, I talked about why putting the MOC in the app delegate makes any code that uses the MOC will be dependent on the app delegate and why that’s not a good thing.
 In part 2, I talked about why putting the MOC in the app delegate is a violation of the Single Responsibility Principle.
 In part 1, I talked about why putting the MOC in your app delegate makes you dependent on Core Data for your application’s persistence.</description>
@@ -35,10 +35,10 @@ In part 1, I talked about why putting the MOC in your app delegate makes you dep
     
     <item>
       <title>3 Ways To Fix Your iOS Testing Woes</title>
-      <link>rodschmidt.com/posts/3-ways-to-fix-your-ios-testing-woes/</link>
+      <link>https://infinitenil.github.io/rodschmidt.com/posts/3-ways-to-fix-your-ios-testing-woes/</link>
       <pubDate>Mon, 03 Oct 2016 16:55:28 +0000</pubDate>
       
-      <guid>rodschmidt.com/posts/3-ways-to-fix-your-ios-testing-woes/</guid>
+      <guid>https://infinitenil.github.io/rodschmidt.com/posts/3-ways-to-fix-your-ios-testing-woes/</guid>
       <description>Lots of companies have constant problems testing their iOS apps. Here are some ways to fix or ease them.
 1. Don’t Make Developers Run or Write UI Tests UI tests are black box tests and test the app from the perspective of the user. Your developers are the worst choice to test the app from this viewpoint and you need a fresh set of eyes for those tests. The QA engineer’s job is to test the app from the user’s viewpoint.</description>
     </item>
