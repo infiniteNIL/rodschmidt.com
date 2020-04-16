@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Robots on Rod Schmidt</title>
-    <link>https://infinitenil.github.io/rodschmidt.com/tags/robots/</link>
+    <link>/tags/robots/</link>
     <description>Recent content in Robots on Rod Schmidt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 11 Oct 2016 22:36:54 +0000</lastBuildDate>
     
-	<atom:link href="https://infinitenil.github.io/rodschmidt.com/tags/robots/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/robots/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Swift Robot Arm</title>
-      <link>https://infinitenil.github.io/rodschmidt.com/posts/swift-robot-arm/</link>
+      <link>/posts/swift-robot-arm/</link>
       <pubDate>Tue, 11 Oct 2016 22:36:54 +0000</pubDate>
       
-      <guid>https://infinitenil.github.io/rodschmidt.com/posts/swift-robot-arm/</guid>
+      <guid>/posts/swift-robot-arm/</guid>
       <description>In a previous post, I wrote about controlling my OWI robot arm with Elixir. Well, I decided to port that to Swift!
 In that post, there’s a link to some code that does it in Objective-C with IOKit. I first tried to just do a straight port and use IOKit in Swift. That didn’t work to well. The IOKit API is an old Core Foundation library and even has some old COM style APIs.</description>
     </item>
     
     <item>
       <title>Elixir Robots</title>
-      <link>https://infinitenil.github.io/rodschmidt.com/posts/elixir-robots/</link>
+      <link>/posts/elixir-robots/</link>
       <pubDate>Fri, 22 May 2015 22:11:23 +0000</pubDate>
       
-      <guid>https://infinitenil.github.io/rodschmidt.com/posts/elixir-robots/</guid>
+      <guid>/posts/elixir-robots/</guid>
       <description>My robot hobby is picking up steam. After going through the Python examples that came with the GoPiGo, I got inspired by some embedded Erlang videos on YouTube and decided to see if I could control the GoPiGo with Elixir. After watching Elixir Sips, I learned of a project called Elixir/Ale, an Elixir library for embedded programming. With Elixir/Ale, you can talk to the GPIO ports on the Raspberry Pi and some common hardware bus protocols: I2C and SPI.</description>
     </item>
     
     <item>
       <title>Robots! Robots! Robots!</title>
-      <link>https://infinitenil.github.io/rodschmidt.com/posts/robots-robots-robots/</link>
+      <link>/posts/robots-robots-robots/</link>
       <pubDate>Thu, 14 May 2015 00:21:25 +0000</pubDate>
       
-      <guid>https://infinitenil.github.io/rodschmidt.com/posts/robots-robots-robots/</guid>
+      <guid>/posts/robots-robots-robots/</guid>
       <description>I’ve been getting into robots lately. For a long time I was searching for the perfect robot kit to use with my Arduino. Then I decided I’d rather use my Raspberry Pi to control my robots so I could use better programming languages like Clojure, Elixir, Scala, Ruby, etc. So I was looking around for the perfect Raspberry Pi robot kit.
 For Christmas, my parents gave me the OWI Robotic Arm Edge.</description>
     </item>

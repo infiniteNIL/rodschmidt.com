@@ -1,4 +1,4 @@
-baseURL = "https://infinitenil.github.io/rodschmidt.com/"
+baseURL = "/"
 languageCode = "en-us"
 title = "Rod Schmidt"
 theme = "noteworthy"
