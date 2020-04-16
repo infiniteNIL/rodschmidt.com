@@ -10,6 +10,8 @@ $gray-light: #ABABAB;
 $gray-medium: #898989;
 $gray-dark: #5F5F5F;
 $highlight: #FFEC5C;
+$blue: #0000CC;
+$blue-lighter: #0000FF;
 
 // FONTS
 $serif: "Noto Serif","Segoe UI","Helvetica Neue",Helvetica,Roboto,FreeSans,serif;
@@ -134,20 +136,20 @@ a:visited {
 
 .color-link {
   text-decoration: none;
-  color: $teal;
+  color: $blue;
   font-family: $sans-serif;
   margin-right: 1.5em;
 }
 
 .color-link:visited {
-  color: $teal;
+  color: $blue;
 }
 
 .color-link:hover {
-  color: $teal-darker;
+  color: $blue-lighter;
 
   .color-arrow {
-    fill: $teal-darker;
+    fill: $blue-lighter;
   }
 }
 
@@ -313,7 +315,7 @@ nav {
 
   a {
     text-decoration: none;
-    color: $teal;
+    color: $blue;
     font-size: 0.95rem;
   }
 }
