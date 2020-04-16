@@ -4,6 +4,7 @@ title = "Rod Schmidt"
 theme = "noteworthy"
 disqusShortname = "infinitenil"
 publishDir = "docs"
+staticDir = "static"
 
 [params]
 description = "Thoughts on Software Development"
