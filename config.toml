@@ -5,6 +5,7 @@ theme = "hyde-hyde"
 disqusShortname = "infinitenil"
 publishDir = "docs"
 canonifyURLs = true
+enableRobotsTXT = true
 
 [params]
 description = "Thoughts on Software Development"
