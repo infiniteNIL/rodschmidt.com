@@ -369,27 +369,3 @@ Conclusion
 Whew! That was a lot! You can now see why Clean Swift is overkill for our simple example and why some teams are reluctant to use it or others have strived to simplify it. At my new job, we are using a simpler version of the Clean architecture that is more of a cross between MVP and Clean, and it’s working pretty well. The app we are working on is very large and quite complicated. It’s a challenge to implement this architecture in some cases, but it definitely helps in knowing where functionality should be placed and what classes are responsible for certain behavior. It definitely helps in testing. We have no UI automation tests and all our units tests run in under 10 seconds. Our unit tests also test the UI. 
 
 Using an architecture like Clean Swift takes practice and discipline, but take the time to understand it. It will pay off in your understanding of applying an architecture to your next project. That architecture may or may not be Clean Swift. Do what works for you and your team. I’d say start with the Clean architecture and adapt it to your needs. This article has been a long time coming and I apologize for the delay. It was quite a challenge to write with all the moving parts and with my inexperience with Clean Swift as well. Please comment below or contact me directly if you have any questions or have some topics you would like me to cover in future posts.
-
----
-### Comments:
-
-[Vikko]( "vikko.taruc@yahoo.com") - May 1, 2017
-
-_Hi Rod, thanks for this post. Could you explain a bit further about the usage of models?_
-
-[infinitenil]( "rod@infinitenil.com") - May 1, 2017
-
-Hi Vikko. Could you give me a little more context for your question? What about the usage of the models would you like explained more? In the Clean architecture models are also referred to as Entities and are really just simple objects that hold data that is transferred between the different boundaries of the architecture.
-
-[Vikko]( "vikko.taruc@yahoo.com") - May 1, 2017
-
-_Sorry about that. Anyway, here's what I'm currently trying to figure out. How do I go about saving a data to Core Data if I have something like this: Order – (an object) Product – (an object as well) The Order object contains an orderId and a Product object. I’m not really sure how to pass this data from the view controller to the core data worker(interactor) ._
-
-[infinitenil]( "rod@infinitenil.com") - May 6, 2017
-
-Order and Product should be just plain Swift structs or objects. They should not be managed objects. You would create a a `SaveRequest` struct that has the `Order` you would pass to a `saveOrder` method on your interactor. The interactor would take the order from the request and pass it to the worker who would pass the order to your store (probably an `OrderStore` or something), which would convert the order to a managed object and insert it, or update it in the Core Data managed object context.
-
-[Vitaly Vaschenko]( "tovvv.studio@gmail.com") - Jan 5, 2018
-
-_In Clean Architecture (by Robert C Martin) Entities are the external Interactors, some external business logic (like fetch request to a server etc.). It is VIPER who changed Entity abstraction meaning to Model. Clean Swift just inherited it._
-
