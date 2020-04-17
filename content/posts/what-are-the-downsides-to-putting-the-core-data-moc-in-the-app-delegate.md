@@ -11,7 +11,7 @@ I saw this question on the [iOSProgramming](https://www.reddit.com/r/iOSProgramm
 
 The writer then shows the following code which is the computed variable:
 
-```objective-c
+```swift
 static var myManagedObjectContext: NSManagedObjectContext {
    return (UIApplication.sharedApplication().delegate as!
            AppDelegate).managedObjectContext
