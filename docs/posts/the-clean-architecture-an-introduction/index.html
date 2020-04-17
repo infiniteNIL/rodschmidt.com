@@ -171,12 +171,16 @@
 <h2 id="how-it-works">How it Works</h2>
 <p>I like to think about the Clean Architecture as a way of creating an engine for your application, much like you would create a game engine. You have some code tucked away in some libraries that is independent of the platform it will run on, or its environment. That’s really what it’s about.</p>
 <p>Here’s a diagram of the Clean Architecture:</p>
-<figure>
-    <img src="https://infinitenil.github.io/rodschmidt.com/images/CleanArchitecture-8b00a9d7e2543fa9ca76b81b05066629.jpg"
-         alt="from 8th Light"/> <figcaption>
-            <p>from 8th Light</p>
-        </figcaption>
-</figure>
+<div>
+  <img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
+       src="https://infinitenil.github.io/rodschmidt.com/images/CleanArchitecture-8b00a9d7e2543fa9ca76b81b05066629.jpg" 
+       title="from 8th Light" 
+       alt="from 8th Light"
+       
+  >
+  <p style="text-align: center; font-size: smaller;">from 8th Light</p>
+</div>
+
 
 <p>The engine, or core of your app, are the 3 circles (yellow, red, and green) in the middle. They contain the entities, use cases, interactors, and other objects of your engine. They know nothing of UIKit, Core Data, Realm, HTTP, the web, or any other delivery mechanism, as Uncle Bob calls them.</p>
 <p>The outer blue circle contain the external things your app needs to talk to, such as a delivery mechanism (i.e. the UI, UIKit, A web browser, etc). It also contains other things that your app needs to talk to to relate to the outside world, such as databases, networks, or even a sensor somewhere. Examples would be Core Data, a REST API, or a bluetooth sensor. These are not part of your engine or app core, and your app core will not know anything about them. It will know about some protocols it can use to talk to them.</p>
@@ -203,10 +207,18 @@
 </ul>
 <h3 id="relationships-and-data-flow">Relationships and Data Flow</h3>
 <p>Here’s another diagram I created from some other diagrams Uncle Bob had in his talk:</p>
-<figure>
-    <img src="https://infinitenil.github.io/rodschmidt.com/images/Clean-Arch.-Data-Flow.png"
-         alt="from 8th Light" width="768"/> 
-</figure>
+<div>
+  <img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
+       src="https://infinitenil.github.io/rodschmidt.com/images/Clean-Arch.-Data-Flow.png" 
+       title="Clean Architecture data flow" 
+       alt="Clean Architecture data flow"
+       
+       width="768"
+       
+  >
+  <p style="text-align: center; font-size: smaller;">Clean Architecture data flow</p>
+</div>
+
 
 <p>Let’s say we have a create user use case. Here’s how everything works:</p>
 <ol>

@@ -149,8 +149,19 @@
         <p>
         <p>Today, I’d like to take an example iOS app written with an MVC architecture and show you what the example would be with a Clean Swift architecture. The example I’ve chosen to use is the Quiz app from chapter 1 of the 3rd edition of <a href="https://www.amazon.com/iOS-Programming-Ranch-Guide-Guides/dp/0321821521/ref=sr_1_7?crid=393OBE770KCSR&amp;dchild=1&amp;keywords=big+nerd+ranch+ios+programming&amp;qid=1586836438&amp;sprefix=Big+nerd+ranch%2Caps%2C182&amp;sr=8-7">iOS Programming: The Big Nerd Ranch Guide</a>.</p>
 <p>The Quiz is a simple app that is like flash cards. It looks like this:</p>
-<p><img src="https://infinitenil.github.io/rodschmidt.com/images/quiz.png" alt=""></p>
-<p>The Show Answer button will reveal the answer to the question and tapping on the Next Question button will display the next question.</p>
+<div>
+  <img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
+       src="https://infinitenil.github.io/rodschmidt.com/images/quiz.png" 
+       title="" 
+       alt=""
+       
+  >
+  <p style="text-align: center; font-size: smaller;"></p>
+</div>
+
+
+<p><br>
+The Show Answer button will reveal the answer to the question and tapping on the Next Question button will display the next question.</p>
 <h2 id="the-mvc-example">The MVC Example</h2>
 <p>Click <a href="https://www.bignerdranch.com/solutions/iOSProgramming6ed.zip">here</a> to download the source code for the MVC version from Big Nerd Ranch’s site. The code is actually from the 6th edition. Let’s look at the relevant code. Here’s the code for the view controller, ViewController.swift:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">UIKit</span>
@@ -209,8 +220,19 @@
 <p>Before we start on the Clean Swift example, let me first say that for such a simple example, using an architecture such as Clean Swift, VIPER, etc. is overkill. However, if you are on a large team working on a large project (say a professional level flash card app targeted at professionals like lawyers studying for the Bar exam), you absolutely need some kind of architecture. Click <a href="https://github.com/infiniteNIL/CleanQuiz">here</a> to download the Clean Swift example.</p>
 <h3 id="clean-swift-project-structure">Clean Swift: Project Structure</h3>
 <p>Here’s a screenshot of the project structure:</p>
-<p><img src="https://infinitenil.github.io/rodschmidt.com/images/CleanQuiz-Project.png" alt=""></p>
-<p>Notice that the project structure is built around the scenes (or screens) in your app. In the Clean architecture, your app is built around the use cases of your app and the project structure reveals the nature of the app. In a traditional MVC project your code is organized around and grouped by models, views, and controllers. You can’t tell at all what kind of app it is. Looking at the structure, you can see that we have one scene in the app, that displays a flash card. There’s also some common code such as our FlashCard entity, and a service to manage the storage of our flash cards.</p>
+<div>
+  <img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
+       src="https://infinitenil.github.io/rodschmidt.com/images/CleanQuiz-Project.png" 
+       title="" 
+       alt=""
+       
+  >
+  <p style="text-align: center; font-size: smaller;"></p>
+</div>
+
+
+<p><br>
+Notice that the project structure is built around the scenes (or screens) in your app. In the Clean architecture, your app is built around the use cases of your app and the project structure reveals the nature of the app. In a traditional MVC project your code is organized around and grouped by models, views, and controllers. You can’t tell at all what kind of app it is. Looking at the structure, you can see that we have one scene in the app, that displays a flash card. There’s also some common code such as our FlashCard entity, and a service to manage the storage of our flash cards.</p>
 <h3 id="clean-swift-common-code">Clean Swift: Common Code</h3>
 <p>Let’s start with the common code. We just have one file that looks like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">FlashCard</span> {

@@ -11,10 +11,10 @@ I left early, about 8am. I wanted to get an early start so I could check out Mis
 
 I drove around the town and found my old grade school (Cordillera elementary) and junior high (La Paz). I also checked out the high school and the baseball complex I used to play baseball at. It really brought back the memories. It hasn't changed much, but I was blown away at how nice a facility it was. Brick dugouts, snack bars, announcer booths, electronic scoreboards, and fences in the outfield. The athletic programs in Utah are pathetic in comparison. Even back 20 years ago. Maybe even more so today. 
 
-![Little League Field](/images/Little_League_Field.jpg) 
+{{<img-center src="/images/Little_League_Field.jpg">}}
 
 I also found two of our old houses. It was fun to have your memory come back so that you recognize where you going. Even though I couldn't drive then, I did right my bike a lot. So I was able to remember the local streets. 
 
-![23772 Coronel](/images/23772_Coronel.jpg) 
+{{<img-center src="/images/23772_Coronel.jpg">}}
 
 I had lunch at California Pizza Kitchen (that wasn't there 20 years ago) at about 1pm. Then I got back on the freeway and started home. Unfortunately, there was a major fire blocking I-15, so I had to go around it and go into Arizona and then up to Vegas. I found a hotel outside of Vegas about 10pm and spent the night.

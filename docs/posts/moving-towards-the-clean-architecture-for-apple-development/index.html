@@ -152,23 +152,31 @@
 <p>Up front, I don’t have a lot of experience with these, but I have studied them and I believe they are a step in the right direction. They all introduce another object to take over some of the responsibilities from the controller, but I don’t think they go far enough because the new object typically has too many responsibilities as well and tends to grow just as the controller in MVC does. They do spread the load though, reducing the issues with MVC and increasing testability.</p>
 <h3 id="model-view-presenter-mvp">Model View Presenter (MVP)</h3>
 <p>MVP treats UIViewController as part of the view (as it should), and introduces a new object, called the Presenter.</p>
-<figure>
-    <img src="https://infinitenil.github.io/rodschmidt.com/images/Model_View_Presenter_GUI_Design_Pattern.png"
-         alt="from Wikipedia"/> <figcaption>
-            <p>from Wikipedia</p>
-        </figcaption>
-</figure>
+<div>
+  <img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
+       src="https://infinitenil.github.io/rodschmidt.com/images/Model_View_Presenter_GUI_Design_Pattern.png" 
+       title="from Wikipedia" 
+       alt="from Wikipedia"
+       
+  >
+  <p style="text-align: center; font-size: smaller;">from Wikipedia</p>
+</div>
+
 
 <p>Unlike the view controller, the presenter knows nothing of UIKit. It talks to the view through a protocol the view implements. The presenter handles presentation logic and is responsible for updating the view and responding to view events and translating them into model changes. The view talks to the presenter through a protocol as well. The protocols make it easy to mock the view or the presenter making it easy to test the presenter or the view in isolation.</p>
 <p>I think MVP was popular in the Microsoft world and their tools supported it. I’m not sure that is still the case. I think it has been supplanted by MVVM.</p>
 <h3 id="model-view-viewmodel-mvvm">Model View ViewModel (MVVM)</h3>
 <p>MVVM treats the view controller as part of the view as well, and introduces a new object, called the ViewModel.</p>
-<figure>
-    <img src="https://infinitenil.github.io/rodschmidt.com/images/MVVMPattern.png"
-         alt="from Wikipedia"/> <figcaption>
-            <p>from Wikipedia</p>
-        </figcaption>
-</figure>
+<div>
+  <img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
+       src="https://infinitenil.github.io/rodschmidt.com/images/MVVMPattern.png" 
+       title="from Wikipedia" 
+       alt="from Wikipedia"
+       
+  >
+  <p style="text-align: center; font-size: smaller;">from Wikipedia</p>
+</div>
+
 
 <p>MVVM is pretty similar to MVP. Think of the ViewModel as a UIKit independent representation of the view and its state. MVVM typically introduces some kind of binding between the View and the ViewModel with some kind of functional reactive programming library such as RxSwift or ReactiveCocoa. The bindings cause UI events in the View to invoke changes on the ViewModel, in turn invoking changes in the Model. The ViewModel updates itself with the updated Model and the bindings cause the view to be updated. Communication between the View and the ViewModel is again done through protocols making it easy to mock and isolate things for easy testing.</p>
 <p>MVVM is becoming quite popular in the iOS world and is closely linked to Reactive programming. It is also sometimes called “Massive View Model” because it can suffer from the same problem as MVC.</p>
@@ -178,12 +186,16 @@
 <p>Marcus Zarra, of Core Data fame, made a presentation called <a href="https://realm.io/news/slug-marcus-zarra-exploring-mvcn-swift/">MVC-N: Isolating networks calls from View Controllers</a>, which also moves network calls out of the controller or model into a separate object called the Network Controller.</p>
 <h3 id="viper">VIPER</h3>
 <p>VIPER is not like the other MVC based architectures, because it actually has a cool name ;). Actually, it’s because it is an implementation of the Clean Architecture that I will be delving into. VIPER stands for View-Interactor-Presenter-Entities-Router. The router is also known as the Wireframe. It was introduced in an article in <a href="www.objc.io">objc.io</a> called <a href="https://www.objc.io/issues/13-architecture/viper/">Architecting iOS Apps with VIPER</a>.</p>
-<figure>
-    <img src="https://infinitenil.github.io/rodschmidt.com/images/viper.png"
-         alt="from objc.io"/> <figcaption>
-            <p>from objc.io</p>
-        </figcaption>
-</figure>
+<div>
+  <img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
+       src="https://infinitenil.github.io/rodschmidt.com/images/viper.png" 
+       title="from objc.io" 
+       alt="from objc.io"
+       
+  >
+  <p style="text-align: center; font-size: smaller;">from objc.io</p>
+</div>
+
 
 <p>VIPER treats the view controller as part of the view, but instead of introducing just one new object, it introduces 5: The Interactor, Presenter, Entities, a Router, and a Data Store. As a result there is a much better separation of concerns.</p>
 <p>I’m not going to say much more about VIPER since I will be delving into greater detail into another implementation of the Clean architecture in another post. The implementation I will talk about is <a href="http://clean-swift.com">Clean Swift</a>. I like it better because it has a unidirectional data flow, whereas VIPER has bidirectional data flow between the view and the presenter. It just made more sense to me and seemed more faithful to the goals and purpose behind Uncle Bob’s Clean Architecture.</p>

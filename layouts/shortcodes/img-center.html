@@ -3,6 +3,9 @@
        src="{{ .Get "src" }}" 
        title="{{ .Get "title" }}" 
        alt="{{ .Get "title" }}"
+       {{ with .Get "width" }}
+       width="{{ . }}"
+       {{ end }}
   >
   <p style="text-align: center; font-size: smaller;">{{ .Get "title" }}</p>
 </div>

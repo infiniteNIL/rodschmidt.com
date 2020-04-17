@@ -28,8 +28,8 @@
       
       <guid>https://infinitenil.github.io/rodschmidt.com/posts/sticky-footers-with-uitableview/</guid>
       <description>The Problem Last week, I had to implement sticky footers in a table view. Sticky footers are where the footer comes at the end of all the table contents, but if the contents are such that the scrollable content height of the table view is less than the height of the view, the footer will still appear at the bottom of the view.
-  A non-sticky footer
-    A sticky footer</description>
+A non-sticky footer
+ A sticky footer</description>
     </item>
     
   </channel>

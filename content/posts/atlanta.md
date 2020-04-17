@@ -22,7 +22,7 @@ Field at about maybe 5:30 or 5:45 PM. Other people are there also. I spend the
 time before the game touring the stadium, taking in the Braves museum and trying 
 to decide what I want to eat.
 
-{{<figure src="/images/Front_Gate-300x225.jpg" alt="Turner Field" caption="Turner Field">}}
+{{<img-center src="/images/Front_Gate-300x225.jpg" title="Turner Field">}}
 
 I found my seat, then got 3 tacos, making sure I got soda with the souvenir 
 cup that I use to record my stadium visits. Soon after I finish eating the 
@@ -31,7 +31,7 @@ of you who don't know, he's probably, currently, the best pitcher in
 baseball. The Braves are playing the Mets, so I will also get to see Mike 
 Piazza. Another star player, who should still be playing for the Dodgers :) 
 
-{{<figure src="/images/Mike_Piazza.jpg" alt="Mike Piazza" caption="Mike Piazza">}}
+{{<img-center src="/images/Mike_Piazza.jpg" title="Mike Piazza">}}
 
 It was a good game with leads being exchanged but both teams staying close. 
 You could tell that the Atlanta fans really love their Braves. Always 

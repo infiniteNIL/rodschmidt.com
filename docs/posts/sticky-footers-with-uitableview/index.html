@@ -149,21 +149,30 @@
         <p>
         <h1 id="the-problem">The Problem</h1>
 <p>Last week, I had to implement sticky footers in a table view. Sticky footers are where the footer comes at the end of all the table contents, but if the contents are such that the scrollable content height of the table view is less than the height of the view, the footer will still appear at the bottom of the view.</p>
-<figure>
-    <img src="https://infinitenil.github.io/rodschmidt.com/images/nonstickyfooter-169x300.png"
-         alt="A non-sticky footer"/> <figcaption>
-            <p>A non-sticky footer</p>
-        </figcaption>
-</figure>
-
-<figure>
-    <img src="https://infinitenil.github.io/rodschmidt.com/images/stickyfooter-169x300.png"
-         alt="A sticky footer"/> <figcaption>
-            <p>A sticky footer</p>
-        </figcaption>
-</figure>
-
-<p>I searched for a solution to this, but all I found were solutions where the footer was always at the bottom of the view. That&rsquo;s pretty easy to solve. You just use a UIViewController and put a UITableView and your footer view into the view controller&rsquo;s view, lay it out properly and you&rsquo;re good to go. In this scenario, the footer never scrolls and is always visible. That&rsquo;s not the kind of sticky footer I needed.</p>
+<span style="float: left; padding-right: 10px;">
+  <img style="border: 1px solid black;" src="https://infinitenil.github.io/rodschmidt.com/images/nonstickyfooter-169x300.png" title="A non-sticky footer" alt="A non-sticky footer">
+  <p style="text-align: center; font-size: smaller">A non-sticky footer</p>
+</span>
+  
+<span style="float: left; padding-right: 10px;">
+  <img style="border: 1px solid black;" src="https://infinitenil.github.io/rodschmidt.com/images/stickyfooter-169x300.png" title="A sticky footer" alt="A sticky footer">
+  <p style="text-align: center; font-size: smaller">A sticky footer</p>
+</span>
+  
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+I searched for a solution to this, but all I found were solutions where the footer was always at the bottom of the view. That&rsquo;s pretty easy to solve. You just use a UIViewController and put a UITableView and your footer view into the view controller&rsquo;s view, lay it out properly and you&rsquo;re good to go. In this scenario, the footer never scrolls and is always visible. That&rsquo;s not the kind of sticky footer I needed.</p>
 <h1 id="the-solution">The Solution</h1>
 <p>The solution I came up with was to stick my footer view into another view that I used as the UITableView&rsquo;s footer. Let&rsquo;s call it the main footer view. You then resize this main footer view depending on the scrollable content of the table. If the scrollable content height is greater than the tables view&rsquo;s visible height then no need to do anything. The main footer view and my footer view are the same size. However, if the content height is less than the visible height then you just resize the main footer view to occupy the remaining space.</p>
 <h1 id="the-code">The Code</h1>

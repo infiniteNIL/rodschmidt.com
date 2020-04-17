@@ -15,15 +15,15 @@ So I ordered an ultrasonic sensor, and a Raspberry Pi camera and waited. It took
 
 In the meantime, I decided to put the robot arm together. 48 steps! Took me 2 days, but it wasn’t that hard. I ended up with this.
 
-{{<figure src="/images/completed-robot-arm.png" alt="Completed robot arm" caption="Completed robot arm" width="370">}}
+{{<img-center src="/images/completed-robot-arm.png" title="Completed robot arm" width="370">}}
 
 Then I went to our local Microcontroller meetup hosted by [Make Salt Lake](http://makesaltlake.org). There were lots of cool projects everybody was working on, and I talked a little about my GoPiGo. I expressed my desire to make it autonomous and also to have a battery that I could recharge. Somebody mentioned the [iRobot Create](http://www.irobot.com/About-iRobot/STEM/Create-2.aspx) and that got me thinking. A couple of weeks later, I ordered one, and a week later it showed up.
 
-{{<figure src="/images/irobot-create2.png" alt="iRobot Create 2" caption="iRobot Create 2" width="370">}}
+{{<img-center src="/images/irobot-create2.png" title="iRobot Create 2" width="370">}}
 
 Finally, my GoPiGo parts came and I added those to my robot. That was a little bit of a challenge as well. Here’s the GoPiGo:
 
-{{<figure src="/images/gopigo.png" alt="Completed GoPiGo" caption="Completed GoPiGo" width="370">}}
+{{<img-center src="/images/gopigo.png" title="Completed GoPiGo" width="370">}}
 
 I ran the examples for that demonstrating how to use the sensor and camera. They worked. I decided to order a compass and a GPS module to add to the GoPiGo because there are examples that use that. I want to make this thing as smart as possible. So, lots of things to do. I want to:    
 

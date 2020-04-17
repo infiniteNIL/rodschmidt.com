@@ -39,7 +39,7 @@ I like to think about the Clean Architecture as a way of creating an engine for 
 
 Here’s a diagram of the Clean Architecture: 
 
-{{<figure src="/images/CleanArchitecture-8b00a9d7e2543fa9ca76b81b05066629.jpg" alt="from 8th Light" caption="from 8th Light">}}
+{{<img-center src="/images/CleanArchitecture-8b00a9d7e2543fa9ca76b81b05066629.jpg" title="from 8th Light">}}
 
 The engine, or core of your app, are the 3 circles (yellow, red, and green) in the middle. They contain the entities, use cases, interactors, and other objects of your engine. They know nothing of UIKit, Core Data, Realm, HTTP, the web, or any other delivery mechanism, as Uncle Bob calls them. 
 
@@ -63,7 +63,7 @@ The Clean Architecture has the following components:
 
 Here’s another diagram I created from some other diagrams Uncle Bob had in his talk: 
 
-{{<figure src="/images/Clean-Arch.-Data-Flow.png" alt="from 8th Light" width="768">}}
+{{<img-center src="/images/Clean-Arch.-Data-Flow.png" title="Clean Architecture data flow" width="768">}}
 
 Let’s say we have a create user use case. Here’s how everything works:
 

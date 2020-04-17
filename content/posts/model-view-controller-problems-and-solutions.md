@@ -15,9 +15,9 @@ _Model View Controller_ or _MVC_ is the application architecture used by default
 
 Here’s a nice picture from Apple’s documentation that nicely depicts the above description: 
 
-{{<figure src="/images/model_view_controller_2x.png" alt="Model View Controller Diagram" caption="Model View Controller Diagram" width="768">}}
+{{<figure src="/images/model_view_controller_2x.png" alt="Model View Controller Diagram" width="768">}}
 
-
+\
 For a more detailed description of MVC, I highly recommend you read [Apple’s documentation on MVC](https://developer.apple.com/library/etc/redirect/xcode/content/1189/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html "Apple documentation on MVC").
 
 Problems with MVC

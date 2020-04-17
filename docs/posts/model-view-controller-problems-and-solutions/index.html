@@ -162,12 +162,11 @@
 <p>Here’s a nice picture from Apple’s documentation that nicely depicts the above description:</p>
 <figure>
     <img src="https://infinitenil.github.io/rodschmidt.com/images/model_view_controller_2x.png"
-         alt="Model View Controller Diagram" width="768"/> <figcaption>
-            <p>Model View Controller Diagram</p>
-        </figcaption>
+         alt="Model View Controller Diagram" width="768"/> 
 </figure>
 
-<p>For a more detailed description of MVC, I highly recommend you read <a href="https://developer.apple.com/library/etc/redirect/xcode/content/1189/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html" title="Apple documentation on MVC">Apple’s documentation on MVC</a>.</p>
+<p><br>
+For a more detailed description of MVC, I highly recommend you read <a href="https://developer.apple.com/library/etc/redirect/xcode/content/1189/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html" title="Apple documentation on MVC">Apple’s documentation on MVC</a>.</p>
 <h2 id="problems-with-mvc">Problems with MVC</h2>
 <p>In the iOS development world, MVC is sometimes jokingly called “Massive View Controller” for the tendency for iOS view controllers to end up with lots of code and do all kinds of things not related to just mediating between the view and the model, such as load data from databases, and access the network, among others.</p>
 <p>iOS apps have a lot of responsibilities. Models (represents data, persistence) and views (display data, UI events) are fairy well defined, so when something doesn’t belong in the model or the view, it ends up in the only other place there is, the controller. Thus they tend to become very big.</p>

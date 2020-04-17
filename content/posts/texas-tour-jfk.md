@@ -11,11 +11,11 @@ Sunday morning, I decided to go downtown and check out the JFK museum. John F. K
 
 I parked downtown and one of the first things I came across was the JFK Memorial. You wouldn't know it if it didn't say John F. Kennedy on it. A rather bland and strange memorial for such a popular figure and major event in American history. 
 
-{{<figure src="/images/JFK_Memorial.jpg" alt="The JFK Memorial" caption="The JFK Memorial">}}
+{{<img-center src="/images/JFK_Memorial.jpg" title="The JFK Memorial">}}
 
 Next was Dealy Plaza, the place of the actual event. I walked the Grassy Knoll and the area behind the fence, where rumors persist there was another shooter. On the road where the fatal shot occurred is an X to mark the spot. There is also a round plague next to the sidewalk, across the street from the spot that marks it as an American historical spot. However, it says nothing about the historical event it marks. Very strange. Crowds gather around speakers still arguing and selling books that say there was a conspiracy. The whole area has a little ominous feeling that something is not quite right. 
 
-{{<figure src="/images/Grassy_Knoll.jpg" alt="The Grassy Knoll" caption="The Grassy Knoll">}}
+{{<img-center src="/images/Grassy_Knoll.jpg" title="The Grassy Knoll">}}
 
 Next, was the JFK museum, which is in the old Texas book repository where Oswald supposedly fired the shots. It tells the history of the president, of his administration, of the fateful day, and of the world's reaction after the event. For not being alive at the time, it still had an emotional effect on me. Personally, I believe JFK was assasinated to stop him from doing something that the establishment didn't want him to do. I feel that when he was killed America suffered a near fatal blow to her founding ideals. It was the beginning of where we are now. 
 

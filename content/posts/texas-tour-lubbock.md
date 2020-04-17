@@ -9,11 +9,11 @@ tags: ['Sabbatical']
 
 From Albuquerque, I decided to go half way to Austin, and stay the night with a recent friend of the family and her family. I had just met her when I had been up to Montana this summer and she had offered to let me stay with her and her family when I went to Texas. In the directions she gave me to get to her house she mentioned that there was a steel house that I couldn't miss. She was right. However, she didn't mention that it was their house that her husband had been building for 27 years! 
 
-{{<figure src="/images/Steel_House.jpg" alt="The Steel House" caption="The Steel House">}}
+{{<img-center src="/images/Steel_House.jpg" title="The Steel House">}}
 
-It is probably the most interesting house I have ever seen. From some angles it looks like a spaceship. From the outside it looks like the villian's submersible fortess in the _Spy Who Loved Me_. Inside, its flowing stairs, curved walls and big windows. A very cool house. 
+It is probably the most interesting house I have ever seen. From some angles it looks like a spaceship. From the outside it looks like the villian's submersible fortess in the _Spy Who Loved Me_. Inside, it has flowing stairs, curved walls and big windows. A very cool house. 
 
-{{<figure src="/images/Steel_House_2.jpg" alt="Inside" caption="Inside">}}
+{{<img-center src="/images/Steel_House_2.jpg" title="Inside">}}
 
 For dinner we went to an Italian restaurant, very similar to Macaroni Grill. After dinner, we saw a video. It was _The Sheltering Sky_ with John Malkovich and Debra Winger. By the time that was over, it was 2 in the morning. And then we went for a walk! 
 

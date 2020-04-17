@@ -9,8 +9,9 @@ Today, I’d like to take an example iOS app written with an MVC architecture an
 
 The Quiz is a simple app that is like flash cards. It looks like this: 
 
-![](/images/quiz.png) 
+{{<img-center src="/images/quiz.png">}}
 
+\
 The Show Answer button will reveal the answer to the question and tapping on the Next Question button will display the next question.
 
 The MVC Example
@@ -93,8 +94,9 @@ Before we start on the Clean Swift example, let me first say that for such a sim
 
 Here’s a screenshot of the project structure: 
 
-![](/images/CleanQuiz-Project.png) 
+{{<img-center src="/images/CleanQuiz-Project.png">}}
 
+\
 Notice that the project structure is built around the scenes (or screens) in your app. In the Clean architecture, your app is built around the use cases of your app and the project structure reveals the nature of the app. In a traditional MVC project your code is organized around and grouped by models, views, and controllers. You can’t tell at all what kind of app it is. Looking at the structure, you can see that we have one scene in the app, that displays a flash card. There’s also some common code such as our FlashCard entity, and a service to manage the storage of our flash cards.
 
 ### Clean Swift: Common Code

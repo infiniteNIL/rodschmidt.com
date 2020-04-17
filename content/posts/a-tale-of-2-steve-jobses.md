@@ -5,9 +5,7 @@ draft: false
 tags: ['Apple', 'Movies']
 ---
 
-![](/images/jobs.jpg)
-
-Believe or not, I just got around to watching the 2 Steve Jobs movies that came out a few years ago: _Steve Jobs_, starring Michael Fassbender, and _Jobs_, staring Ashton Kutcher
+{{<img-left src="/images/jobs.jpg">}}Believe or not, I just got around to watching the 2 Steve Jobs movies that came out a few years ago: _Steve Jobs_, starring Michael Fassbender, and _Jobs_, staring Ashton Kutcher
 
 I’ve held off watching them because I knew there would be a lot of inaccuracies. I grew up with Steve Jobs. I followed him. I didn’t want to see him distorted the way Hollywood does. 
 
