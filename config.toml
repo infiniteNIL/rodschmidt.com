@@ -1,7 +1,7 @@
 baseURL = "https://infinitenil.github.io/rodschmidt.com/"
 languageCode = "en-us"
 title = "Rod Schmidt"
-theme = "noteworthy"
+theme = "hyde-hyde"
 disqusShortname = "infinitenil"
 publishDir = "docs"
 canonifyURLs = true
