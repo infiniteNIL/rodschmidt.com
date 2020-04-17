@@ -28,7 +28,7 @@ The Clean Architecture is very similar to these other architectures that you may
 
 * **[DCI](http://www.artima.com/articles/dci_vision.html)** (Data, Context, and Interaction) created by Trygve Reekskaug and James O. Coplien. Mr Reenskaug is the original creator of MVC.
 
-* **[The Hexagonal Architecture](http://alistair.cockburn.us/Hexagonal+architecture)** created by Alistair Cockburn. Also known as **Ports and Adapters**
+* **[The Hexagonal Architecture](https://en.wikipedia.org/wiki/Hexagonal_architecture_(software))** created by Alistair Cockburn. Also known as **Ports and Adapters**
 
 * **[The Onion Architecture](http://jeffreypalermo.com/blog/the-onion-architecture-part-1/)** by Jeffrey Palermo.
 

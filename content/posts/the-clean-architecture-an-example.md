@@ -17,7 +17,7 @@ The Show Answer button will reveal the answer to the question and tapping on the
 The MVC Example
 ---------------
 
-Click [here](https://www.bignerdranch.com/solutions/iOSProgramming6ed.zip) to download the source code for the MVC version from Big Nerd Ranch’s site. The code is actually from the 6th edition. Let’s look at the relevant code. Here’s the code for the view controller, ViewController.swift:
+Click [here](http://www.bignerdranch.com/assets/solutions/iOSProgramming6ed.zip) to download the source code for the MVC version from Big Nerd Ranch’s site. The code is actually from the 6th edition. Let’s look at the relevant code. Here’s the code for the view controller, ViewController.swift:
 
 ```swift
 import UIKit

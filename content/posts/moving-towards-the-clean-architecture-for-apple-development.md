@@ -38,11 +38,11 @@ Developers are coming up with alternatives to MVC all the time. Two mentioned by
 
 MVC-S, or Model View Controller Store, was put forth in [iOS Programming: The Big Nerd Ranch Guide](http://rads.stackoverflow.com/amzn/click/B007OWBAB0 "iOS Programming: The Big Nerd Ranch Guide"). It basically adds a Store object into the mix that handles storing and fetching data either from a database and/or the network. All you’re doing here is moving that logic from the controller or model into another object. Again, its a step in the right direction, but not enough. 
 
-Marcus Zarra, of Core Data fame, made a presentation called [MVC-N: Isolating networks calls from View Controllers](https://realm.io/news/slug-marcus-zarra-exploring-mvcn-swift/), which also moves network calls out of the controller or model into a separate object called the Network Controller.
+Marcus Zarra, of Core Data fame, made a presentation called [MVC-N: Isolating networks calls from View Controllers](https://academy.realm.io/posts/slug-marcus-zarra-exploring-mvcn-swift), which also moves network calls out of the controller or model into a separate object called the Network Controller.
 
 ### VIPER
 
-VIPER is not like the other MVC based architectures, because it actually has a cool name ;). Actually, it’s because it is an implementation of the Clean Architecture that I will be delving into. VIPER stands for View-Interactor-Presenter-Entities-Router. The router is also known as the Wireframe. It was introduced in an article in [objc.io](www.objc.io) called [Architecting iOS Apps with VIPER](https://www.objc.io/issues/13-architecture/viper/). 
+VIPER is not like the other MVC based architectures, because it actually has a cool name ;). Actually, it’s because it is an implementation of the Clean Architecture that I will be delving into. VIPER stands for View-Interactor-Presenter-Entities-Router. The router is also known as the Wireframe. It was introduced in an article in [objc.io](https://www.objc.io) called [Architecting iOS Apps with VIPER](https://www.objc.io/issues/13-architecture/viper/). 
 
 {{<img-center src="/images/viper.png" title="from objc.io">}}
 
