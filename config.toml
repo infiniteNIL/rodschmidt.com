@@ -8,12 +8,15 @@ canonifyURLs = true
 
 [params]
 description = "Thoughts on Software Development"
+copyright = "Rod Schmidt"
 
 # Social media links
-github = "https://github.com/infinitenil"
-twitter = "https://twitter.com/rodschmidt"
-linkedin = "https://linkedin.com/in/rodschmidt"
-stackoverflow = "http://careers.stackoverflow.com/rodschmidt"
+[params.social]
+github = "infinitenil"
+twitter = "rodschmidt"
+linkedin = "rodschmidt"
+stackoverflow = "117435"
+gravatar = "rod@infinitenil.com"
 
 [menu]
   [[menu.main]]
@@ -22,7 +25,7 @@ stackoverflow = "http://careers.stackoverflow.com/rodschmidt"
     url = "/tags/"
 
   [[menu.main]]
-    name = "Archives"
-    identifier = "archives"
-    url = "/archives/"
+    name = "Posts"
+    identifier = "posts"
+    url = "/posts/"
     #weight = 3
