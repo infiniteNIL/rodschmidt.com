@@ -19,7 +19,7 @@ meta: false
 \
 My name is Rod Schmidt. I'm a software developer from Sandy, Utah and the founder of [infiniteNIL Software](http://www.infinitenil.com). I am also the founder and organizer of [CocoaHeads SLC](https://www.facebook.com/groups/127783123953808/), the Salt Lake City chapter of the international [CocoaHeads](http://www.cocoaheads.org) organization. 
 
-My journey into programming started when my Dad brought home an Apple \]\[+. I spent the next two days going through the BASIC programming book and I was hooked. 
+My journey into programming started when my Dad brought home an Apple computer, an Apple ][+. I spent the next two days going through the BASIC programming book and I was hooked. 
 
 I have a bachelor's degree in Computer Science from the University of Utah. During my career, I've programed with C, C++, Java, Objective-C, Ruby, and Swift. Before I became a professional I used BASIC, 6502 Assembly, Pascal, Lisp, and C. 
 
