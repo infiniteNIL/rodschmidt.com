@@ -3,6 +3,7 @@ title: 'About'
 date: Thu, 12 Feb 2015 21:54:03 +
 menu: "main"
 meta: false
+showcomments: false
 ---
 
 {{<img-left src="/images/yoshiko-me-300x225.jpg" title="Yoshiko & I">}}
