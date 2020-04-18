@@ -6,7 +6,7 @@
     <description>Recent content on Rod Schmidt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Aug 2019 23:36:43 +0000</lastBuildDate>
     
 	<atom:link href="https://infinitenil.github.io/rodschmidt.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,15 +30,6 @@ I actually liked Jobs.</description>
       <guid>https://infinitenil.github.io/rodschmidt.com/posts/swift-ui-app-architecture-a-new-approach-required/</guid>
       <description>With SwiftUI, everything has changed. As Brent Simmons said, it’s the end of the NeXT era and the beginning of the Swift era.
 With the coming of SwiftUI, most of our app architectures are no longer valid (or at least parts of them). They need to be adjusted. MVC is certainly out. In fact, even controllers seem to be out. From Apple’s content, it seems all we have is models and views, and that’s true.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://infinitenil.github.io/rodschmidt.com/archives/</link>
-      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://infinitenil.github.io/rodschmidt.com/archives/</guid>
-      <description></description>
     </item>
     
     <item>
