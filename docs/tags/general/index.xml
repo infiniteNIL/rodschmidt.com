@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>General on Rod Schmidt</title>
-    <link>https://infinitenil.github.io/rodschmidt.com/tags/general/</link>
+    <link>https://rodschmidt.com/tags/general/</link>
     <description>Recent content in General on Rod Schmidt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 18 Jan 2015 00:09:53 +0000</lastBuildDate>
     
-	<atom:link href="https://infinitenil.github.io/rodschmidt.com/tags/general/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rodschmidt.com/tags/general/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>App: The Human Story - My Prize</title>
-      <link>https://infinitenil.github.io/rodschmidt.com/posts/app-the-human-story-my-prize/</link>
+      <link>https://rodschmidt.com/posts/app-the-human-story-my-prize/</link>
       <pubDate>Sun, 18 Jan 2015 00:09:53 +0000</pubDate>
       
-      <guid>https://infinitenil.github.io/rodschmidt.com/posts/app-the-human-story-my-prize/</guid>
+      <guid>https://rodschmidt.com/posts/app-the-human-story-my-prize/</guid>
       <description>A while back I wrote a blog post and entered it in a contest for App: The Human Story. I came in second, and for that I was awarded a custom app token from Matic. It finally came last week and here it is:
  My app token
  Now, I finally have a sign for my office.</description>
@@ -24,19 +24,19 @@
     
     <item>
       <title>App: The Human Story - My Story</title>
-      <link>https://infinitenil.github.io/rodschmidt.com/posts/app-the-human-story-my-story/</link>
+      <link>https://rodschmidt.com/posts/app-the-human-story-my-story/</link>
       <pubDate>Wed, 09 Jul 2014 22:47:34 +0000</pubDate>
       
-      <guid>https://infinitenil.github.io/rodschmidt.com/posts/app-the-human-story-my-story/</guid>
+      <guid>https://rodschmidt.com/posts/app-the-human-story-my-story/</guid>
       <description>There is a Kickstarter project that was started recently for a film titled App: The Human Story. It &amp;ldquo;is the story of the cultural phenomenon that touches all our lives.&amp;rdquo; It is about the people who make apps. Many of them are people I follow on blogs, and listen to on podcasts, and look up to. I simply had to back the project, and I did. The producers of the film, on their blog, have asked that others involved in apps write about their own stories.</description>
     </item>
     
     <item>
       <title>A New Start</title>
-      <link>https://infinitenil.github.io/rodschmidt.com/posts/a-new-start/</link>
+      <link>https://rodschmidt.com/posts/a-new-start/</link>
       <pubDate>Fri, 27 Jun 2014 22:44:25 +0000</pubDate>
       
-      <guid>https://infinitenil.github.io/rodschmidt.com/posts/a-new-start/</guid>
+      <guid>https://rodschmidt.com/posts/a-new-start/</guid>
       <description>If you haven&amp;rsquo;t noticed, my weblog has a new design and new content. I have switched from WordPress to Octopress and have used a new theme. So far, I like it. It&amp;rsquo;s nice to be able to use Markdown instead of some slow web tool to write my posts.
 My old blog was mostly political commentary and I&amp;rsquo;ve decided to remove that. Some of my most popular posts were the posts about my sabbatical that I took in the summer of 2002.</description>
     </item>

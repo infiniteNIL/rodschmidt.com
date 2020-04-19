@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Elixir on Rod Schmidt</title>
-    <link>https://infinitenil.github.io/rodschmidt.com/tags/elixir/</link>
+    <link>https://rodschmidt.com/tags/elixir/</link>
     <description>Recent content in Elixir on Rod Schmidt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 22 May 2015 22:11:23 +0000</lastBuildDate>
     
-	<atom:link href="https://infinitenil.github.io/rodschmidt.com/tags/elixir/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rodschmidt.com/tags/elixir/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Elixir Robots</title>
-      <link>https://infinitenil.github.io/rodschmidt.com/posts/elixir-robots/</link>
+      <link>https://rodschmidt.com/posts/elixir-robots/</link>
       <pubDate>Fri, 22 May 2015 22:11:23 +0000</pubDate>
       
-      <guid>https://infinitenil.github.io/rodschmidt.com/posts/elixir-robots/</guid>
+      <guid>https://rodschmidt.com/posts/elixir-robots/</guid>
       <description>My robot hobby is picking up steam. After going through the Python examples that came with the GoPiGo, I got inspired by some embedded Erlang videos on YouTube and decided to see if I could control the GoPiGo with Elixir. After watching Elixir Sips, I learned of a project called Elixir/Ale, an Elixir library for embedded programming. With Elixir/Ale, you can talk to the GPIO ports on the Raspberry Pi and some common hardware bus protocols: I2C and SPI.</description>
     </item>
     
