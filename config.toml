@@ -24,9 +24,16 @@ gravatar = "rod@infinitenil.com"
     identifier = "tags"
     name = "Tags"
     url = "/tags/"
+    weight = 3
 
   [[menu.main]]
     name = "Posts"
     identifier = "posts"
     url = "/posts/"
-    #weight = 3
+    weight = 2
+
+  [[menu.main]]
+    name = "RSS"
+    identefier = "rss"
+    url = "index.xml"
+    weight = 4

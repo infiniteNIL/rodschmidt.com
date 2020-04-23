@@ -3,6 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rodschmidt.com/about/</loc>
+  </url>
+  
+  <url>
     <loc>https://rodschmidt.com/posts/a-tale-of-2-steve-jobses/</loc>
     <lastmod>2019-08-23T23:36:43+00:00</lastmod>
   </url>
@@ -300,10 +304,6 @@
   <url>
     <loc>https://rodschmidt.com/posts/atlanta/</loc>
     <lastmod>2002-06-07T20:00:16+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rodschmidt.com/about/</loc>
   </url>
   
   <url>

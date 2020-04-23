@@ -12,6 +12,18 @@
     
     
     <item>
+      <title>About</title>
+      <link>https://rodschmidt.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/about/</guid>
+      <description>Yoshiko &amp;amp; I
+ 
+My name is Rod Schmidt. I&amp;rsquo;m a software developer from Sandy, Utah and the founder of infiniteNIL Software. I am also the founder and organizer of CocoaHeads SLC, the Salt Lake City chapter of the international CocoaHeads organization.
+My journey into programming started when my Dad brought home an Apple computer, an Apple ][+. I spent the next two days going through the BASIC programming book and I was hooked.</description>
+    </item>
+    
+    <item>
       <title>A Tale of 2 Steve Jobses</title>
       <link>https://rodschmidt.com/posts/a-tale-of-2-steve-jobses/</link>
       <pubDate>Fri, 23 Aug 2019 23:36:43 +0000</pubDate>
@@ -457,18 +469,6 @@ The whole purpose of the west coast tour is too see the west coast baseball team
       <guid>https://rodschmidt.com/posts/atlanta/</guid>
       <description>Wednesday, June 7th, 2002
 On Wednesday I caught a flight to Atlanta (thanks to my sister&amp;rsquo;s buddy pass) and arrived at about 2:30 PM EST. Caught the MARTA (Atlanta equivalent of TRAX) right from the airport to downtown. My hotel was only a couple of blocks from my stop. One thing I notice is the humidity. To me, it actually felt good. Keeps your skin moist and when it&amp;rsquo;s hot you actually sweat.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://rodschmidt.com/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rodschmidt.com/about/</guid>
-      <description>Yoshiko &amp;amp; I
- 
-My name is Rod Schmidt. I&amp;rsquo;m a software developer from Sandy, Utah and the founder of infiniteNIL Software. I am also the founder and organizer of CocoaHeads SLC, the Salt Lake City chapter of the international CocoaHeads organization.
-My journey into programming started when my Dad brought home an Apple computer, an Apple ][+. I spent the next two days going through the BASIC programming book and I was hooked.</description>
     </item>
     
   </channel>
