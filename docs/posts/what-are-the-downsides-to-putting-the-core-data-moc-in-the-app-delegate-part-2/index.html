@@ -222,6 +222,7 @@
 <p>So the app delegate is already handling the application’s life cycle, so by the <strong>Single Responsibility Principle</strong>, it shouldn’t be doing anything else. Doing so would lead to a app delegate that has too much code. If Apple adds more application life cycle events then its alright for the app delegate to change. <em>(I think that even with that single responsibility the app delegate is doing too much. One would be wise to delegate its handling of life cycle events to other classes, such as a class just to manage push notifications, as one example.)</em> But if the app delegate is also managing the Core Data stack and has to change if you decide to use something else, or rename your database file, or something else related to data storage, then you’re violating the <strong>Single Responsibility Principle</strong>. <strong>The Single Responsibility Principle</strong> really boils down to a keeping a class cohesive, easy to change, easy to use, easy to understand, and easy to test.</p>
 
   </div>
+  <script async data-uid="d20275c87b" src="https://relentless-teacher-3937.ck.page/d20275c87b/index.js"></script>
   
 
 <div class="navigation navigation-single">
