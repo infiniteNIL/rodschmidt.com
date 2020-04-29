@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Rod Schmidt</title>
+    <link>https://rodschmidt.com/tags/hugo/</link>
+    <description>Recent content in Hugo on Rod Schmidt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Apr 2020 16:55:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://rodschmidt.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>From WordPress to Hugo</title>
+      <link>https://rodschmidt.com/posts/from-wordpress-to-hugo/</link>
+      <pubDate>Wed, 29 Apr 2020 16:55:00 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/from-wordpress-to-hugo/</guid>
+      <description>If you’ve visited this site in the past, you’ve probably noticed a change. I recently changed my blogging platform from WordPress to Hugo. Hugo is static site generator. I also changed my theme.
+Why? I was never really satisfied with the performance of my WordPress site. Combine that with the fact that my site kept going down every month, I decided that it was time to do something and be more in control.</description>
+    </item>
+    
+  </channel>
+</rss>

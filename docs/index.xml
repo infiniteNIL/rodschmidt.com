@@ -6,7 +6,7 @@
     <description>Recent content on Rod Schmidt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Aug 2019 23:36:43 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2020 16:55:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rodschmidt.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,6 +21,16 @@
  
 My name is Rod Schmidt. I&amp;rsquo;m a software developer from Sandy, Utah and the founder of infiniteNIL Software. I am also the founder and organizer of CocoaHeads SLC, the Salt Lake City chapter of the international CocoaHeads organization.
 My journey into programming started when my Dad brought home an Apple computer, an Apple ][+. I spent the next two days going through the BASIC programming book and I was hooked.</description>
+    </item>
+    
+    <item>
+      <title>From WordPress to Hugo</title>
+      <link>https://rodschmidt.com/posts/from-wordpress-to-hugo/</link>
+      <pubDate>Wed, 29 Apr 2020 16:55:00 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/from-wordpress-to-hugo/</guid>
+      <description>If you’ve visited this site in the past, you’ve probably noticed a change. I recently changed my blogging platform from WordPress to Hugo. Hugo is static site generator. I also changed my theme.
+Why? I was never really satisfied with the performance of my WordPress site. Combine that with the fact that my site kept going down every month, I decided that it was time to do something and be more in control.</description>
     </item>
     
     <item>
