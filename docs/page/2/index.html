@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="public" />
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.119.0">
 
     
 
@@ -23,7 +23,6 @@
 <meta property="og:description" content="Thoughts on Software Development" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rodschmidt.com/" />
-<meta property="og:updated_time" content="2020-04-29T16:55:00+00:00" />
 
 
     
@@ -148,7 +147,7 @@
     </div>
     
 <div class="copyright">
-  &copy; 2020 Rod Schmidt
+  &copy; 2023 Rod Schmidt
   
 </div>
 
@@ -162,6 +161,28 @@
   <div class="post-list">
     
     
+      
+        
+      
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="https://rodschmidt.com/posts/do-you-find-the-whole-planning-process-painful/" >Do You Find The Whole Planning Process Painful?</a>
+        </span>
+        <span class="item__date">
+          Nov 09, 2016
+        </span>
+        <span >
+        
+        A thread in the AskPrograming forum on reddit started with this question and I thought I would share my thoughts on planning and up-front design.
+Basically, the originator of the thread is expressing his dislike of planning before coding, but thinks it’s a good idea because they’ve either been told that or seen others do it. They also expresses dislike for planning tools and wonders if there’s a better way. Basically, they want to know how do you plan and how do you break up a project into tasks that you need to do.
+        
+        </span>
+        
+          ... <a class="read-more-symbol" href="https://rodschmidt.com/posts/do-you-find-the-whole-planning-process-painful/">➦</a>
+        
+        </div>
+        
+     
       
         
       
@@ -200,7 +221,7 @@ In part 1, I talked about why putting the MOC in your app delegate makes you dep
         In part 2, I talked about why putting the MOC in the app delegate is a violation of the Single Responsibility Principle.
 In part 1, I talked about why putting the MOC in your app delegate makes you dependent on Core Data for your application’s persistence.
 Today I like to talk about the 3rd reason I gave in part 1, which is:
- Any code you write that uses myManagedObjectContext will be dependent on the App Delegate.
+Any code you write that uses myManagedObjectContext will be dependent on the App Delegate.
         
         </span>
         
@@ -222,7 +243,7 @@ Today I like to talk about the 3rd reason I gave in part 1, which is:
         <span >
         
         In my previous post, I gave some reasons why putting the Core Data MOC in your app delegate was a bad idea. Those reasons were:
- The app delegate is managing the Core Data stack. Classes should only have one responsibility. The app delegate is already responsible for managing application lifecycle. It shouldn’t be managing the Core Data stack as well. You are completely dependent on Core Data and using it as your persistence method for your app.
+The app delegate is managing the Core Data stack. Classes should only have one responsibility. The app delegate is already responsible for managing application lifecycle. It shouldn’t be managing the Core Data stack as well. You are completely dependent on Core Data and using it as your persistence method for your app.
         
         </span>
         
@@ -288,7 +309,7 @@ In that post, there’s a link to some code that does it in Objective-C with IOK
         <span >
         
         I saw this question on the iOSProgramming topic in reddit:
- I&rsquo;ve seen a number of different ways to access the NSManagedObjectContext when working with Core Data, but I was wondering if there are any downsides to the way I&rsquo;ve been doing it. Basically, I stick a computed variable in the AppDelegate, and grab it when I need it&hellip; Please let me know if you see any flaws&hellip; If not, feel free to use it!
+I&rsquo;ve seen a number of different ways to access the NSManagedObjectContext when working with Core Data, but I was wondering if there are any downsides to the way I&rsquo;ve been doing it. Basically, I stick a computed variable in the AppDelegate, and grab it when I need it&hellip; Please let me know if you see any flaws&hellip; If not, feel free to use it!
         
         </span>
         
@@ -354,33 +375,12 @@ For Christmas, my parents gave me the OWI Robotic Arm Edge.
         
         The Problem Last week, I had to implement sticky footers in a table view. Sticky footers are where the footer comes at the end of all the table contents, but if the contents are such that the scrollable content height of the table view is less than the height of the view, the footer will still appear at the bottom of the view.
 A non-sticky footer
- A sticky footer
+A sticky footer
+I searched for a solution to this, but all I found were solutions where the footer was always at the bottom of the view.
         
         </span>
         
           ... <a class="read-more-symbol" href="https://rodschmidt.com/posts/sticky-footers-with-uitableview/">➦</a>
-        
-        </div>
-        
-     
-      
-        
-      
-      <div class="post-list__item">
-        <span class="item__title--big">
-          <a href="https://rodschmidt.com/posts/back-to-wordpress/" >Back to Wordpress</a>
-        </span>
-        <span class="item__date">
-          Feb 14, 2015
-        </span>
-        <span >
-        
-        You&rsquo;ve probably noticed that my blog has changed again. I&rsquo;ve moved back to Wordpress from Octopress. I could never find a plugin for Octopress that did image captions right. I spent way too much time on it and just decided to use something that just worked. I looked at a lot of static blogging engines and they all had their issues.
-With Wordpress, I have to use the web based editor, but it works and their is a lot of plugins and support behind it.
-        
-        </span>
-        
-          ... <a class="read-more-symbol" href="https://rodschmidt.com/posts/back-to-wordpress/">➦</a>
         
         </div>
         

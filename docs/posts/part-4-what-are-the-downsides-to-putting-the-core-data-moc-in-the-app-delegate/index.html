@@ -11,7 +11,7 @@
 <meta http-equiv="Cache-Control" content="public" />
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.119.0">
 
     
     
@@ -31,7 +31,7 @@ In part 1, I talked about why putting the MOC in your app delegate makes you dep
 In part 2, I talked about why putting the MOC in the app delegate is a violation of the Single Responsibility Principle.
 In part 1, I talked about why putting the MOC in your app delegate makes you dependent on Core Data for your application’s persistence." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rodschmidt.com/posts/part-4-what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/" />
+<meta property="og:url" content="https://rodschmidt.com/posts/part-4-what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2016-11-01T21:49:48+00:00" />
 <meta property="article:modified_time" content="2016-11-01T21:49:48+00:00" />
 
@@ -157,7 +157,7 @@ In part 1, I talked about why putting the MOC in your app delegate makes you dep
     </div>
     
 <div class="copyright">
-  &copy; 2020 Rod Schmidt
+  &copy; 2023 Rod Schmidt
   
 </div>
 
@@ -221,64 +221,64 @@ In part 1, I talked about why putting the MOC in your app delegate makes you dep
 <p>We’ve already shown in part 3, how any code you write will be dependent on the App Delegate and Core Data, so any tests you write will also be dependent on them. Any test you write, in order to use the MOC in the app delegate will have to instantiate the app delegate just to run. With the way XCTest runs tests that means before every test runs the app delegate will have to be instantiated and the Core Data stack created and initialized.</p>
 <p>Any test you write using Core Data will typically be reading and writing data to or from disk. You typically want to write some data to disk and then read it, possibly write it again, and then delete it to cleanup after a test. That’s a lot of reading and writing to to disk and we all know that is slower than accessing RAM. Unit tests need to be fast so we can run them constantly after making a change, especially if you’re doing TDD and you’re doing the TDD waltz of writing a failing test, making the test pass, and then refactoring. After each step you want to run your tests so they need to be fast. With a lot of tests, going to disk all the time is going to add up and slow things down significantly.</p>
 <p>So how do we fix this? First we do what I suggested in <a href="https://rodschmidt.com/posts/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/">part 1</a>, which is create a DataStore class that contains all the Core Data code for you app. Here’s that class again:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DataStore</span> {
-   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">let</span> sharedInstance: DataStore = DataStore()
- 
-   <span style="color:#66d9ef">init</span>() {
-       <span style="color:#75715e">// Code to create Core Data stack</span>
-   }
- 
-   <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">addUser</span>(username: String, password: String) -&gt; <span style="color:#66d9ef">throws</span> {
-       <span style="color:#75715e">// Code to use Core Data to add a new user to the database.</span>
-   }
-} 
-</code></pre></div><p>What’s next? Well, Core Data does support memory only contexts, so, that’s a possibility. Also, with some tests, we don’t really care that data gets written or read from the database. We just want to know that the right method was called to do the reading or writing, so we could change DataStore to just record that a method was called. What we need is a way to put in different <code>DataStore</code> implementations for different tests. The way to do that with Swift is with protocols. First let’s rename our <code>DataStore</code> class to <code>CoreDataStore</code>. Next, let’s create a protocol called <code>DataStore</code>. It will look like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">protocol</span> <span style="color:#a6e22e">DataStore</span> {
-    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">addUser</span>(username: String, password: String) -&gt; <span style="color:#66d9ef">throws</span>   
-} 
-</code></pre></div><p>Let’s also change <code>CoreDataStore</code> to implement <code>DataStore</code> and remove the <code>sharedInstance</code> property:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CoreDataStore</span>: NSObject, DataStore {
-   <span style="color:#66d9ef">init</span>() {
-       <span style="color:#75715e">// Code to create Core Data stack</span>
-   }
- 
-   <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">addUser</span>(username: String, password: String) -&gt; <span style="color:#66d9ef">throws</span> {
-       <span style="color:#75715e">// Code to use Core Data to add a new user to the database.</span>
-   }
-} 
-</code></pre></div><p>We removed the <code>sharedInstance</code> property because we need to be able to control what class is used to instantiate a <code>DataStore</code> implementation. We can’t do that very easily or in a flexible manner with a singleton. Now we can create an <code>InMemoryDataStore</code> class and a <code>SpyDataStore</code> class:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">InMemoryDataStore</span>: NSObject, DataStore {
-   <span style="color:#66d9ef">init</span>() {
-       <span style="color:#75715e">// Core to create in memory core data stack</span>
-   }
-   
-   <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">addUser</span>(username: String, password: String) -&gt; <span style="color:#66d9ef">throws</span> {
-        <span style="color:#75715e">// Code to use in memory context to add new user to database</span>
-   }
-}
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpyDataStore</span>: NSObject, DataStore {
-    <span style="color:#66d9ef">var</span> addUserCalled = <span style="color:#66d9ef">false</span>
-
-    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">addUser</span>(username: String, password: String) -&gt; <span style="color:#66d9ef">throws</span> {
-        addUserCalled = <span style="color:#66d9ef">true</span>
-    }
-} 
-</code></pre></div><p>We need to change the app delegate to instantiate an instance of <code>CoreDataStore</code>, but you will notice the type is <code>DataStore</code>. <code>DataStore</code> will be used all over the rest of the app. The only place you will see <code>CoreDataStore</code> is when it is created. So somewhere in the app delegate you would have code like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> dataStore: DataStore = CoreDataStore() 
-</code></pre></div><p>and then you would need to pass <code>dataStore</code> to anybody that needed it such as your root view controller who would forward it other view controllers, etc. Finally, to speed up those tests, we either create an instance of <code>InMemoryDataStore</code>, or <code>SpyDataStore</code>, depending on our needs, like so:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">testAddUserWasCalled</span>() {
-    <span style="color:#66d9ef">let</span> dataStore = SpyDataStore()
-   
-    <span style="color:#75715e">// pass dataStore to all the objects that need it that our involved </span>
-    <span style="color:#75715e">// in the test.</span>
-
-    <span style="color:#75715e">// Some operation on a view controller or other object that should </span>
-    <span style="color:#75715e">// cause addUser to be called</span>
-
-    XCTAssert(dataStore.addUserCalled, <span style="color:#960050;background-color:#1e0010">“</span>addUser not called on data store<span style="color:#960050;background-color:#1e0010">”</span>)
-} 
-</code></pre></div><p>Now our tests will run fast and we can change the implementation of how we store data with ease. This finishes the series on why you shouldn’t put the Core Data managed object context in the app delegate. I hope I was able to help you see why this is not a good idea and present to you a better way. If you have any questions or opinions, please feel free to comment below or email me.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DataStore</span> {
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">let</span> sharedInstance: DataStore = DataStore()
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">init</span>() {
+</span></span><span style="display:flex;"><span>       <span style="color:#75715e">// Code to create Core Data stack</span>
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">addUser</span>(username: String, password: String) -&gt; <span style="color:#66d9ef">throws</span> {
+</span></span><span style="display:flex;"><span>       <span style="color:#75715e">// Code to use Core Data to add a new user to the database.</span>
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>} 
+</span></span></code></pre></div><p>What’s next? Well, Core Data does support memory only contexts, so, that’s a possibility. Also, with some tests, we don’t really care that data gets written or read from the database. We just want to know that the right method was called to do the reading or writing, so we could change DataStore to just record that a method was called. What we need is a way to put in different <code>DataStore</code> implementations for different tests. The way to do that with Swift is with protocols. First let’s rename our <code>DataStore</code> class to <code>CoreDataStore</code>. Next, let’s create a protocol called <code>DataStore</code>. It will look like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">protocol</span> <span style="color:#a6e22e">DataStore</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">addUser</span>(username: String, password: String) -&gt; <span style="color:#66d9ef">throws</span>   
+</span></span><span style="display:flex;"><span>} 
+</span></span></code></pre></div><p>Let’s also change <code>CoreDataStore</code> to implement <code>DataStore</code> and remove the <code>sharedInstance</code> property:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CoreDataStore</span>: NSObject, DataStore {
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">init</span>() {
+</span></span><span style="display:flex;"><span>       <span style="color:#75715e">// Code to create Core Data stack</span>
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">addUser</span>(username: String, password: String) -&gt; <span style="color:#66d9ef">throws</span> {
+</span></span><span style="display:flex;"><span>       <span style="color:#75715e">// Code to use Core Data to add a new user to the database.</span>
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>} 
+</span></span></code></pre></div><p>We removed the <code>sharedInstance</code> property because we need to be able to control what class is used to instantiate a <code>DataStore</code> implementation. We can’t do that very easily or in a flexible manner with a singleton. Now we can create an <code>InMemoryDataStore</code> class and a <code>SpyDataStore</code> class:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">InMemoryDataStore</span>: NSObject, DataStore {
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">init</span>() {
+</span></span><span style="display:flex;"><span>       <span style="color:#75715e">// Core to create in memory core data stack</span>
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">addUser</span>(username: String, password: String) -&gt; <span style="color:#66d9ef">throws</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Code to use in memory context to add new user to database</span>
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpyDataStore</span>: NSObject, DataStore {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> addUserCalled = <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">addUser</span>(username: String, password: String) -&gt; <span style="color:#66d9ef">throws</span> {
+</span></span><span style="display:flex;"><span>        addUserCalled = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>} 
+</span></span></code></pre></div><p>We need to change the app delegate to instantiate an instance of <code>CoreDataStore</code>, but you will notice the type is <code>DataStore</code>. <code>DataStore</code> will be used all over the rest of the app. The only place you will see <code>CoreDataStore</code> is when it is created. So somewhere in the app delegate you would have code like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> dataStore: DataStore = CoreDataStore() 
+</span></span></code></pre></div><p>and then you would need to pass <code>dataStore</code> to anybody that needed it such as your root view controller who would forward it other view controllers, etc. Finally, to speed up those tests, we either create an instance of <code>InMemoryDataStore</code>, or <code>SpyDataStore</code>, depending on our needs, like so:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">testAddUserWasCalled</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> dataStore = SpyDataStore()
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// pass dataStore to all the objects that need it that our involved </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// in the test.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Some operation on a view controller or other object that should </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// cause addUser to be called</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    XCTAssert(dataStore.addUserCalled, <span style="color:#960050;background-color:#1e0010">“</span>addUser not called on data store<span style="color:#960050;background-color:#1e0010">”</span>)
+</span></span><span style="display:flex;"><span>} 
+</span></span></code></pre></div><p>Now our tests will run fast and we can change the implementation of how we store data with ease. This finishes the series on why you shouldn’t put the Core Data managed object context in the app delegate. I hope I was able to help you see why this is not a good idea and present to you a better way. If you have any questions or opinions, please feel free to comment below or email me.</p>
 
   </div>
   <script async data-uid="d20275c87b" src="https://relentless-teacher-3937.ck.page/d20275c87b/index.js"></script>
@@ -344,14 +344,6 @@ In part 1, I talked about why putting the MOC in your app delegate makes you dep
 
 <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" integrity="sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1" crossorigin="anonymous"></script>
 
-
-    
-    
-    <script type="text/javascript">
-        
-        hljs.initHighlightingOnLoad();
-    </script>
-    
 
 
 

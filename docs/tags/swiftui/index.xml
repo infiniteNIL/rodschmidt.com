@@ -6,11 +6,7 @@
     <description>Recent content in SwiftUI on Rod Schmidt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Aug 2019 17:47:09 +0000</lastBuildDate>
-    
-	<atom:link href="https://rodschmidt.com/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 04 Aug 2019 17:47:09 +0000</lastBuildDate><atom:link href="https://rodschmidt.com/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Swift UI &amp; App Architecture: A New Approach Required</title>
       <link>https://rodschmidt.com/posts/swift-ui-app-architecture-a-new-approach-required/</link>

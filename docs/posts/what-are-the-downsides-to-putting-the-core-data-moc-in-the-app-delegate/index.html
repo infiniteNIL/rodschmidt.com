@@ -11,7 +11,7 @@
 <meta http-equiv="Cache-Control" content="public" />
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.119.0">
 
     
     
@@ -23,13 +23,13 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="What are the Downsides to Putting the Core Data MOC in the App Delegate?"/>
 <meta name="twitter:description" content="I saw this question on the iOSProgramming topic in reddit:
- I&rsquo;ve seen a number of different ways to access the NSManagedObjectContext when working with Core Data, but I was wondering if there are any downsides to the way I&rsquo;ve been doing it. Basically, I stick a computed variable in the AppDelegate, and grab it when I need it&hellip; Please let me know if you see any flaws&hellip; If not, feel free to use it!"/>
+I&rsquo;ve seen a number of different ways to access the NSManagedObjectContext when working with Core Data, but I was wondering if there are any downsides to the way I&rsquo;ve been doing it. Basically, I stick a computed variable in the AppDelegate, and grab it when I need it&hellip; Please let me know if you see any flaws&hellip; If not, feel free to use it!"/>
 
 <meta property="og:title" content="What are the Downsides to Putting the Core Data MOC in the App Delegate?" />
 <meta property="og:description" content="I saw this question on the iOSProgramming topic in reddit:
- I&rsquo;ve seen a number of different ways to access the NSManagedObjectContext when working with Core Data, but I was wondering if there are any downsides to the way I&rsquo;ve been doing it. Basically, I stick a computed variable in the AppDelegate, and grab it when I need it&hellip; Please let me know if you see any flaws&hellip; If not, feel free to use it!" />
+I&rsquo;ve seen a number of different ways to access the NSManagedObjectContext when working with Core Data, but I was wondering if there are any downsides to the way I&rsquo;ve been doing it. Basically, I stick a computed variable in the AppDelegate, and grab it when I need it&hellip; Please let me know if you see any flaws&hellip; If not, feel free to use it!" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rodschmidt.com/posts/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/" />
+<meta property="og:url" content="https://rodschmidt.com/posts/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2016-08-25T20:59:37+00:00" />
 <meta property="article:modified_time" content="2016-08-25T20:59:37+00:00" />
 
@@ -155,7 +155,7 @@
     </div>
     
 <div class="copyright">
-  &copy; 2020 Rod Schmidt
+  &copy; 2023 Rod Schmidt
   
 </div>
 
@@ -208,11 +208,11 @@
 <p>I&rsquo;ve seen a number of different ways to access the NSManagedObjectContext when working with Core Data, but I was wondering if there are any downsides to the way I&rsquo;ve been doing it. Basically, I stick a computed variable in the AppDelegate, and grab it when I need it&hellip; Please let me know if you see any flaws&hellip; If not, feel free to use it!</p>
 </blockquote>
 <p>The writer then shows the following code which is the computed variable:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">var</span> myManagedObjectContext: NSManagedObjectContext {
-   <span style="color:#66d9ef">return</span> (UIApplication.sharedApplication().delegate <span style="color:#66d9ef">as</span>!
-           AppDelegate).managedObjectContext
-} 
-</code></pre></div><p>There are a number of downsides to this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">var</span> myManagedObjectContext: NSManagedObjectContext {
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">return</span> (UIApplication.sharedApplication().delegate <span style="color:#66d9ef">as</span>!
+</span></span><span style="display:flex;"><span>           AppDelegate).managedObjectContext
+</span></span><span style="display:flex;"><span>} 
+</span></span></code></pre></div><p>There are a number of downsides to this:</p>
 <ol>
 <li>The app delegate is managing the Core Data stack. Classes should only have one responsibility. The app delegate is already responsible for managing application lifecycle. It shouldn’t be managing the Core Data stack as well.</li>
 <li>You are completely dependent on Core Data and using it as your persistence method for your app. What if you decide to switch to Realm or something?</li>
@@ -224,22 +224,22 @@
 <p>Here’s an example: What if the Core Data API changes? iOS 10 introduces <code>NSPersistentContainer</code>, which now encapsulates the Core Data stack for you. So instead of using an MOC, you might want to use a persistent container instead. So now, everywhere you need to use a persistent container instead of an MOC, you have to change your code.</p>
 <p>So, now you’re thinking, “Ok, smarty pants, how am I supposed to do anything about that? I can’t control what Apple does.” You can’t control what Apple does, but you can protect yourself from any third party code changes you are dependent on. You can accomplish this by putting the dependency behind your own layer of code that you control. Anytime you want to use this third party code, you do so through your own layer. If the third party code changes, you only have to change your layer and how it uses the third party code.</p>
 <p>Let’s look at a concrete example for the situation above. First, I would remove all the code in the app delegate that creates the Core Data stack into a new class. Let’s call it <code>DataStore</code>. For now, you can even add a shared property on it to make it easy to access (<em>this creates its own problems, but we’re just talking about the 2nd issue above for now</em>):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DataStore</span> {
-   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">let</span> sharedInstance: DataStore = DataStore()
-} 
-</code></pre></div><p>You’ll notice that there’s no mention of Core Data or an MOC. Any code that uses <code>DataStore</code> has no direct dependence on Core Data and has no knowledge of it. <code>DataStore</code> doesn’t let you do anything yet, so let’s add some functionality. Let’s say your app has users and it needs to save them. Here’s a new version of <code>DataStore</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DataStore</span> {
-   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">let</span> sharedInstance: DataStore = DataStore()
- 
-   <span style="color:#66d9ef">init</span>() {
-       <span style="color:#75715e">// Code to create Core Data stack</span>
-   }
- 
-   <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">addUser</span>(username: String, password: String) -&gt; <span style="color:#66d9ef">throws</span> {
-       <span style="color:#75715e">// Code to use Core Data to add a new user to the database.</span>
-   }
-} 
-</code></pre></div><p>Now, when somewhere in your app you need to create a new user: <code>try DataStore.sharedInstance.addUser(&quot;fred@anywhere.com&quot;, &quot;12345&quot;)</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DataStore</span> {
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">let</span> sharedInstance: DataStore = DataStore()
+</span></span><span style="display:flex;"><span>} 
+</span></span></code></pre></div><p>You’ll notice that there’s no mention of Core Data or an MOC. Any code that uses <code>DataStore</code> has no direct dependence on Core Data and has no knowledge of it. <code>DataStore</code> doesn’t let you do anything yet, so let’s add some functionality. Let’s say your app has users and it needs to save them. Here’s a new version of <code>DataStore</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DataStore</span> {
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">let</span> sharedInstance: DataStore = DataStore()
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">init</span>() {
+</span></span><span style="display:flex;"><span>       <span style="color:#75715e">// Code to create Core Data stack</span>
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">addUser</span>(username: String, password: String) -&gt; <span style="color:#66d9ef">throws</span> {
+</span></span><span style="display:flex;"><span>       <span style="color:#75715e">// Code to use Core Data to add a new user to the database.</span>
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>} 
+</span></span></code></pre></div><p>Now, when somewhere in your app you need to create a new user: <code>try DataStore.sharedInstance.addUser(&quot;fred@anywhere.com&quot;, &quot;12345&quot;)</code></p>
 <p>That somewhere in your app doesn’t need to know anything about Core Data. If Core Data changes, it doesn’t care. If you decide to switch to Realm, it doesn’t care. If you decide all you really need is a text file, it doesn’t care. Other than the <code>DataStore</code> class, you have eliminated your dependence on Core Data.</p>
 
   </div>
@@ -306,14 +306,6 @@
 
 <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" integrity="sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1" crossorigin="anonymous"></script>
 
-
-    
-    
-    <script type="text/javascript">
-        
-        hljs.initHighlightingOnLoad();
-    </script>
-    
 
 
 

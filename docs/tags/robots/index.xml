@@ -6,11 +6,7 @@
     <description>Recent content in Robots on Rod Schmidt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Oct 2016 22:36:54 +0000</lastBuildDate>
-    
-	<atom:link href="https://rodschmidt.com/tags/robots/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 11 Oct 2016 22:36:54 +0000</lastBuildDate><atom:link href="https://rodschmidt.com/tags/robots/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Swift Robot Arm</title>
       <link>https://rodschmidt.com/posts/swift-robot-arm/</link>

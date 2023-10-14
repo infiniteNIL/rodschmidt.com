@@ -6,11 +6,7 @@
     <description>Recent content on Rod Schmidt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Apr 2020 16:55:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://rodschmidt.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 20 Sep 2023 17:48:29 -0600</lastBuildDate><atom:link href="https://rodschmidt.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://rodschmidt.com/about/</link>
@@ -18,9 +14,21 @@
       
       <guid>https://rodschmidt.com/about/</guid>
       <description>Yoshiko &amp;amp; I
- 
 My name is Rod Schmidt. I&amp;rsquo;m a software developer from Sandy, Utah and the founder of infiniteNIL Software. I am also the founder and organizer of CocoaHeads SLC, the Salt Lake City chapter of the international CocoaHeads organization.
 My journey into programming started when my Dad brought home an Apple computer, an Apple ][+. I spent the next two days going through the BASIC programming book and I was hooked.</description>
+    </item>
+    
+    <item>
+      <title>St. Louis Cardinals, My Penultimate Baseball Stadium?</title>
+      <link>https://rodschmidt.com/posts/baseball-stl/</link>
+      <pubDate>Wed, 20 Sep 2023 17:48:29 -0600</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/baseball-stl/</guid>
+      <description>Busch Stadium
+I finally went to another baseball game in my goal to see every MLB team at their home stadium. This time I went to St. Louis to see the Cardinals. I call this my penultimate stadium because just Pittsburgh is left after this one. More on that later.
+Here&amp;rsquo;s the box score: Box Score
+Click here to see a rundown of the game.
+The Cardinals lost to the Milwaukee Brewers, 8-2.</description>
     </item>
     
     <item>
@@ -72,7 +80,8 @@ The other example is CleanNote that applies Clean Architecture to an iOS and Mac
       
       <guid>https://rodschmidt.com/posts/the-clean-architecture-an-example/</guid>
       <description>Today, I’d like to take an example iOS app written with an MVC architecture and show you what the example would be with a Clean Swift architecture. The example I’ve chosen to use is the Quiz app from chapter 1 of the 3rd edition of iOS Programming: The Big Nerd Ranch Guide.
-The Quiz is a simple app that is like flash cards. It looks like this:</description>
+The Quiz is a simple app that is like flash cards. It looks like this:
+The Show Answer button will reveal the answer to the question and tapping on the Next Question button will display the next question.</description>
     </item>
     
     <item>
@@ -103,7 +112,7 @@ Alternative Architectures to MVC Up front, I don’t have a lot of experience wi
       
       <guid>https://rodschmidt.com/posts/model-view-controller-problems-and-solutions/</guid>
       <description>Model View Controller or MVC is the application architecture used by default for applications on all Apple platforms. Most of the tools, frameworks, and docs from Apple all talk about it and support it. In MVC, objects are assigned 1 of 3 roles:
-  Model - objects that encapsulate and manage the data the application works with (this includes persistence). The data typically represents things in the real world like an employee, hardware part, or a picture that is being drawn.</description>
+Model - objects that encapsulate and manage the data the application works with (this includes persistence). The data typically represents things in the real world like an employee, hardware part, or a picture that is being drawn.</description>
     </item>
     
     <item>
@@ -113,7 +122,7 @@ Alternative Architectures to MVC Up front, I don’t have a lot of experience wi
       
       <guid>https://rodschmidt.com/posts/5-ways-to-avoid-force-unwrapping/</guid>
       <description>Someone on the reddit iOS Programming group asked “What are the mistakes generally done by iOS developers while coding in Swift?”A lot of comments were about using force unwrapping on optionals. Comments such as:
- Force unwrapping everything Using pyramids of if-let as opposed to guard statements var firstName: String! ugh Overuse of force unwrapped optionals. I cringe when I see that especially when a simple one-liner guard statement would make the code a ton safer.</description>
+Force unwrapping everything Using pyramids of if-let as opposed to guard statements var firstName: String! ugh Overuse of force unwrapped optionals. I cringe when I see that especially when a simple one-liner guard statement would make the code a ton safer.</description>
     </item>
     
     <item>
@@ -146,7 +155,7 @@ In part 1, I talked about why putting the MOC in your app delegate makes you dep
       <description>In part 2, I talked about why putting the MOC in the app delegate is a violation of the Single Responsibility Principle.
 In part 1, I talked about why putting the MOC in your app delegate makes you dependent on Core Data for your application’s persistence.
 Today I like to talk about the 3rd reason I gave in part 1, which is:
- Any code you write that uses myManagedObjectContext will be dependent on the App Delegate.</description>
+Any code you write that uses myManagedObjectContext will be dependent on the App Delegate.</description>
     </item>
     
     <item>
@@ -156,7 +165,7 @@ Today I like to talk about the 3rd reason I gave in part 1, which is:
       
       <guid>https://rodschmidt.com/posts/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate-part-2/</guid>
       <description>In my previous post, I gave some reasons why putting the Core Data MOC in your app delegate was a bad idea. Those reasons were:
- The app delegate is managing the Core Data stack. Classes should only have one responsibility. The app delegate is already responsible for managing application lifecycle. It shouldn’t be managing the Core Data stack as well. You are completely dependent on Core Data and using it as your persistence method for your app.</description>
+The app delegate is managing the Core Data stack. Classes should only have one responsibility. The app delegate is already responsible for managing application lifecycle. It shouldn’t be managing the Core Data stack as well. You are completely dependent on Core Data and using it as your persistence method for your app.</description>
     </item>
     
     <item>
@@ -186,7 +195,7 @@ In that post, there’s a link to some code that does it in Objective-C with IOK
       
       <guid>https://rodschmidt.com/posts/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</guid>
       <description>I saw this question on the iOSProgramming topic in reddit:
- I&amp;rsquo;ve seen a number of different ways to access the NSManagedObjectContext when working with Core Data, but I was wondering if there are any downsides to the way I&amp;rsquo;ve been doing it. Basically, I stick a computed variable in the AppDelegate, and grab it when I need it&amp;hellip; Please let me know if you see any flaws&amp;hellip; If not, feel free to use it!</description>
+I&amp;rsquo;ve seen a number of different ways to access the NSManagedObjectContext when working with Core Data, but I was wondering if there are any downsides to the way I&amp;rsquo;ve been doing it. Basically, I stick a computed variable in the AppDelegate, and grab it when I need it&amp;hellip; Please let me know if you see any flaws&amp;hellip; If not, feel free to use it!</description>
     </item>
     
     <item>
@@ -216,7 +225,8 @@ For Christmas, my parents gave me the OWI Robotic Arm Edge.</description>
       <guid>https://rodschmidt.com/posts/sticky-footers-with-uitableview/</guid>
       <description>The Problem Last week, I had to implement sticky footers in a table view. Sticky footers are where the footer comes at the end of all the table contents, but if the contents are such that the scrollable content height of the table view is less than the height of the view, the footer will still appear at the bottom of the view.
 A non-sticky footer
- A sticky footer</description>
+A sticky footer
+I searched for a solution to this, but all I found were solutions where the footer was always at the bottom of the view.</description>
     </item>
     
     <item>
@@ -236,8 +246,8 @@ With Wordpress, I have to use the web based editor, but it works and their is a 
       
       <guid>https://rodschmidt.com/posts/app-the-human-story-my-prize/</guid>
       <description>A while back I wrote a blog post and entered it in a contest for App: The Human Story. I came in second, and for that I was awarded a custom app token from Matic. It finally came last week and here it is:
- My app token
- Now, I finally have a sign for my office.</description>
+My app token
+Now, I finally have a sign for my office.</description>
     </item>
     
     <item>
@@ -297,7 +307,7 @@ Sunday morning, I decided to go downtown and check out the JFK museum. John F. K
       <description>Wednesday, August 13th, 2002
 I met my friend Marc at his house and we headed off to the game. This game is kind of a milestone in my quest to visit every major league ball park. It will be my 20th team. Just ten more to go (barring expansion or contraction).
 The Ballpark at Arlington
- The Ranger&amp;rsquo;s stadium has the rather ordinary name of The Ballpark At Arlington. Arlington is a town just outside of Dallas/Ft.</description>
+The Ranger&amp;rsquo;s stadium has the rather ordinary name of The Ballpark At Arlington. Arlington is a town just outside of Dallas/Ft.</description>
     </item>
     
     <item>
@@ -330,7 +340,7 @@ I spent Sunday through Thursday morning in Austin. Austin was the main reason I 
       <description>Monday, August 5th, 2002
 Today was my first full day in Austin. I decided to take a drive down to San Antonio, which was just about an hour and half south. I wanted to see the Alamo, and my friend Laury had told me about the cool river walk there. So off I went.
 The Alamo
- For those of you who are not familiar with the Alamo (miss a little school, did we?</description>
+For those of you who are not familiar with the Alamo (miss a little school, did we?</description>
     </item>
     
     <item>
@@ -433,8 +443,7 @@ I was thinking about this today when suddenly I had a Zen moment.</description>
       
       <guid>https://rodschmidt.com/posts/west-coast-tour-san-francisco/</guid>
       <description>Friday, June 14th, 2002
- Today started off with a great drive through more evergreen lined roads. That lasted till about midday. Then the road turned into a more freeway like drive with the golden hills of central California as the view, Eventually, I passed through the Golden Gate Bridge (horrible traffic) and settled in Palo Alto.
-  </description>
+Today started off with a great drive through more evergreen lined roads. That lasted till about midday. Then the road turned into a more freeway like drive with the golden hills of central California as the view, Eventually, I passed through the Golden Gate Bridge (horrible traffic) and settled in Palo Alto.</description>
     </item>
     
     <item>
@@ -444,7 +453,7 @@ I was thinking about this today when suddenly I had a Zen moment.</description>
       
       <guid>https://rodschmidt.com/posts/west-coast-tour-oregon-coast/</guid>
       <description>Thursday, June 13th, 2002
- Today started off well. Found my way to the PCH, flipped the top down, and right away I was on a single lane road with no one in front of or behind me. That didn&amp;rsquo;t last long however. Kept going through towns where you have to slow down for the traffic. But every so often you hit a stretch of road and its just you and the road.</description>
+Today started off well. Found my way to the PCH, flipped the top down, and right away I was on a single lane road with no one in front of or behind me. That didn&amp;rsquo;t last long however. Kept going through towns where you have to slow down for the traffic. But every so often you hit a stretch of road and its just you and the road.</description>
     </item>
     
     <item>
@@ -455,8 +464,8 @@ I was thinking about this today when suddenly I had a Zen moment.</description>
       <guid>https://rodschmidt.com/posts/west-coast-tour-seattle/</guid>
       <description>Wednesday, June 12th, 2002
 Took my time getting started and probably left Portland around 10am. Dez lent me some audio books (Thanks Dez) and I leisurely drove to Seattle arriving at about 3pm. Had the top down most of the way, but had to put it up about an hour outside of Seattle because I was starting to get sunburned. Its 90 degrees in Seattle today!
- Safeco Field
- Caught a shuttle from the hotel to the ballpark and arrived about 5:30 pm.</description>
+Safeco Field
+Caught a shuttle from the hotel to the ballpark and arrived about 5:30 pm.</description>
     </item>
     
     <item>
@@ -467,8 +476,9 @@ Took my time getting started and probably left Portland around 10am. Dez lent me
       <guid>https://rodschmidt.com/posts/west-coast-tour-portland/</guid>
       <description>Tuesday, June 11th, 2002
 The whole purpose of the west coast tour is too see the west coast baseball teams I haven&amp;rsquo;t seen yet (Seattle and San Diego) and to drive my Miata down the coast. So to that end I got up early and left at 5am and drove 12 hours with a few stops for lunch and rest.
- On the way to Portland
-  bug plastered Miata</description>
+On the way to Portland
+bug plastered Miata
+Arrived at my friend Dez&amp;rsquo;s place at about 4pm PST.</description>
     </item>
     
     <item>

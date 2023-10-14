@@ -6,11 +6,7 @@
     <description>Recent content in Blogging on Rod Schmidt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Apr 2020 16:55:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://rodschmidt.com/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 29 Apr 2020 16:55:00 +0000</lastBuildDate><atom:link href="https://rodschmidt.com/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>From WordPress to Hugo</title>
       <link>https://rodschmidt.com/posts/from-wordpress-to-hugo/</link>
