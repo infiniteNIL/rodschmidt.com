@@ -33,6 +33,6 @@ photo of the stadium.
 {{<img-center src="/images/thearch.jpeg" title="The Arch">}}
 
 It turns out the St. Louis and Pittsburgh might not be my last 2 stadiums. With the Oakland A's
-moving to Las Vegas, MLB want to expand the league by 2 more teams. Among the potential cities are
+moving to Las Vegas, MLB wants to expand the league by 2 more teams. Among the potential cities are
 my own Salt Lake City, Nashville, Oakland, San Antonio, and even Mexico City, Mexico. I think it's
 very unlikely that SLC will be selected.
