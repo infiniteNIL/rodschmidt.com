@@ -1,5 +1,5 @@
 ---
-title: "The Composable Architecture Experience: My 3 Year Experience"
+title: "The Composable Architecture: My 3 Year Experience"
 date: 2024-04-26T11:35:37-06:00
 draft: false
 tags: ['Architecture', 'Apple Platforms', 'TCA', 'The Composable Architecture', 'Swift', 'SwiftUI']
