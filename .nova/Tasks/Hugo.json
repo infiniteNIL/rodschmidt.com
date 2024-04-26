@@ -1,0 +1,23 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "postActions" : [
+        {
+          "script" : "hugo --minify",
+          "type" : "runScript"
+        }
+      ],
+      "script" : "hugo --minify"
+    },
+    "clean" : {
+      "enabled" : true,
+      "script" : "hugo --cleanDestinationDir"
+    },
+    "run" : {
+      "enabled" : true,
+      "script" : "hugo server"
+    }
+  },
+  "openLogOnRun" : "start"
+}
