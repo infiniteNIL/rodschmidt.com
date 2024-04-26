@@ -6,7 +6,7 @@
     <description>Recent content on Rod Schmidt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Sep 2023 17:48:29 -0600</lastBuildDate><atom:link href="https://rodschmidt.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Apr 2024 11:35:37 -0600</lastBuildDate><atom:link href="https://rodschmidt.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://rodschmidt.com/about/</link>
@@ -16,6 +16,16 @@
       <description>Yoshiko &amp;amp; I
 My name is Rod Schmidt. I&amp;rsquo;m a software developer from Sandy, Utah and the founder of infiniteNIL Software. I am also the founder and organizer of CocoaHeads SLC, the Salt Lake City chapter of the international CocoaHeads organization.
 My journey into programming started when my Dad brought home an Apple computer, an Apple ][+. I spent the next two days going through the BASIC programming book and I was hooked.</description>
+    </item>
+    
+    <item>
+      <title>The Composable Architecture Experience: My 3 Year Experience</title>
+      <link>https://rodschmidt.com/posts/composable-architecture-experience/</link>
+      <pubDate>Fri, 26 Apr 2024 11:35:37 -0600</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/composable-architecture-experience/</guid>
+      <description>Introduction I recently finished a 3 year stint with a company that uses the Composable Architecture (TCA) from PointFree. I wanted to write about my experiences with TCA and some of the problems I see with it.
+I think Brandon Williams and Stephen Cellis, the creators of TCA, are absolutely brilliant, and what they have managed to pull off with the creation of TCA is amazing. However, It’s just the two of them, and nobody, or no thing, is perfect.</description>
     </item>
     
     <item>

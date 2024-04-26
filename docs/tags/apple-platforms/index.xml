@@ -6,7 +6,17 @@
     <description>Recent content in Apple Platforms on Rod Schmidt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Aug 2019 17:47:09 +0000</lastBuildDate><atom:link href="https://rodschmidt.com/tags/apple-platforms/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Apr 2024 11:35:37 -0600</lastBuildDate><atom:link href="https://rodschmidt.com/tags/apple-platforms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Composable Architecture Experience: My 3 Year Experience</title>
+      <link>https://rodschmidt.com/posts/composable-architecture-experience/</link>
+      <pubDate>Fri, 26 Apr 2024 11:35:37 -0600</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/composable-architecture-experience/</guid>
+      <description>Introduction I recently finished a 3 year stint with a company that uses the Composable Architecture (TCA) from PointFree. I wanted to write about my experiences with TCA and some of the problems I see with it.
+I think Brandon Williams and Stephen Cellis, the creators of TCA, are absolutely brilliant, and what they have managed to pull off with the creation of TCA is amazing. However, It’s just the two of them, and nobody, or no thing, is perfect.</description>
+    </item>
+    
     <item>
       <title>Swift UI &amp; App Architecture: A New Approach Required</title>
       <link>https://rodschmidt.com/posts/swift-ui-app-architecture-a-new-approach-required/</link>

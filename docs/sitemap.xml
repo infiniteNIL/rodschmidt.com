@@ -4,19 +4,40 @@
   <url>
     <loc>https://rodschmidt.com/about/</loc>
   </url><url>
+    <loc>https://rodschmidt.com/tags/apple-platforms/</loc>
+    <lastmod>2024-04-26T11:35:37-06:00</lastmod>
+  </url><url>
+    <loc>https://rodschmidt.com/tags/architecture/</loc>
+    <lastmod>2024-04-26T11:35:37-06:00</lastmod>
+  </url><url>
+    <loc>https://rodschmidt.com/posts/</loc>
+    <lastmod>2024-04-26T11:35:37-06:00</lastmod>
+  </url><url>
+    <loc>https://rodschmidt.com/</loc>
+    <lastmod>2024-04-26T11:35:37-06:00</lastmod>
+  </url><url>
+    <loc>https://rodschmidt.com/tags/swift/</loc>
+    <lastmod>2024-04-26T11:35:37-06:00</lastmod>
+  </url><url>
+    <loc>https://rodschmidt.com/tags/swiftui/</loc>
+    <lastmod>2024-04-26T11:35:37-06:00</lastmod>
+  </url><url>
+    <loc>https://rodschmidt.com/tags/</loc>
+    <lastmod>2024-04-26T11:35:37-06:00</lastmod>
+  </url><url>
+    <loc>https://rodschmidt.com/tags/tca/</loc>
+    <lastmod>2024-04-26T11:35:37-06:00</lastmod>
+  </url><url>
+    <loc>https://rodschmidt.com/tags/the-composable-architecture/</loc>
+    <lastmod>2024-04-26T11:35:37-06:00</lastmod>
+  </url><url>
+    <loc>https://rodschmidt.com/posts/composable-architecture-experience/</loc>
+    <lastmod>2024-04-26T11:35:37-06:00</lastmod>
+  </url><url>
     <loc>https://rodschmidt.com/tags/baseball/</loc>
     <lastmod>2023-09-20T17:48:29-06:00</lastmod>
   </url><url>
-    <loc>https://rodschmidt.com/posts/</loc>
-    <lastmod>2023-09-20T17:48:29-06:00</lastmod>
-  </url><url>
-    <loc>https://rodschmidt.com/</loc>
-    <lastmod>2023-09-20T17:48:29-06:00</lastmod>
-  </url><url>
     <loc>https://rodschmidt.com/posts/baseball-stl/</loc>
-    <lastmod>2023-09-20T17:48:29-06:00</lastmod>
-  </url><url>
-    <loc>https://rodschmidt.com/tags/</loc>
     <lastmod>2023-09-20T17:48:29-06:00</lastmod>
   </url><url>
     <loc>https://rodschmidt.com/tags/blogging/</loc>
@@ -37,22 +58,13 @@
     <loc>https://rodschmidt.com/tags/movies/</loc>
     <lastmod>2019-08-23T23:36:43+00:00</lastmod>
   </url><url>
-    <loc>https://rodschmidt.com/tags/apple-platforms/</loc>
-    <lastmod>2019-08-04T17:47:09+00:00</lastmod>
-  </url><url>
     <loc>https://rodschmidt.com/tags/clean-architecture/</loc>
     <lastmod>2019-08-04T17:47:09+00:00</lastmod>
   </url><url>
     <loc>https://rodschmidt.com/tags/software-development/</loc>
     <lastmod>2019-08-04T17:47:09+00:00</lastmod>
   </url><url>
-    <loc>https://rodschmidt.com/tags/swift/</loc>
-    <lastmod>2019-08-04T17:47:09+00:00</lastmod>
-  </url><url>
     <loc>https://rodschmidt.com/posts/swift-ui-app-architecture-a-new-approach-required/</loc>
-    <lastmod>2019-08-04T17:47:09+00:00</lastmod>
-  </url><url>
-    <loc>https://rodschmidt.com/tags/swiftui/</loc>
     <lastmod>2019-08-04T17:47:09+00:00</lastmod>
   </url><url>
     <loc>https://rodschmidt.com/posts/two-more-examples-of-clean-architecture/</loc>
