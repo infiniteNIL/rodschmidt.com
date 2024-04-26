@@ -1,7 +1,7 @@
 ---
 title: "The Composable Architecture Experience: My 3 Year Experience"
 date: 2024-04-26T11:35:37-06:00
-draft: true
+draft: false
 ---
 ## Introduction
 I recently finished a 3 year stint with a company that uses the Composable Architecture ([TCA](https://github.com/pointfreeco/swift-composable-architecture))
