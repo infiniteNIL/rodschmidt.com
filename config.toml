@@ -1,4 +1,4 @@
-baseURL = "https://rodschmidt.com/"
+baseURL = "https://rodschmidt.netlify.app/"
 languageCode = "en-us"
 title = "Rod Schmidt"
 theme = "hyde-hyde"
