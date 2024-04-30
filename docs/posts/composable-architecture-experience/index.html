@@ -24,10 +24,11 @@ and other frameworks that you may have heard of like this are <a href=https://re
 I reached out to someone I knew that worked at the company and soon had an interview. I interviewed
 with 3 of their lead developers. I must have done well because I started working for the company at
 the beginning of March 2021. I was on a team that had responsibility for one iOS app out of 3 the
-company had on the App Store. It wasn’t long before I ran into my first issue with TCA.</p><h2 id=its-complicated>It’s Complicated</h2><p>TCA has a steep learning curve. You need to learn about reducers, stores, view stores, environments,
-and scoping of state and actions. You can’t just use SwiftUI like you learned from Apple. Every view
-needs a store, and if you care about performance, a view store. You need to learn how to use TCA’s top
-notch testing abilities, and use a test store. You can’t just use XCTest by itself.</p><p>In March of 2021, TCA was at version <a href=https://github.com/pointfreeco/swift-composable-architecture/releases/tag/0.16.0>0.16.0</a>.
+company had on the App Store. It wasn’t long before I ran into my first issue with TCA.</p><h2 id=its-complicated>It’s Complicated</h2><p>TCA has a steep learning curve. You need to learn about reducers, stores, and scoping of state and actions.
+In the beginning, you had to know about view stores and environments as well (These are no longer needed,
+see below). You can’t just use SwiftUI like you learned from Apple. Every view needs a store, and if
+you care about performance, a view store. You need to learn how to use TCA’s top notch testing abilities,
+and use a test store. You can’t just use XCTest by itself.</p><p>In March of 2021, TCA was at version <a href=https://github.com/pointfreeco/swift-composable-architecture/releases/tag/0.16.0>0.16.0</a>.
 Things have improved a lot since then with the latest release (<a href=https://github.com/pointfreeco/swift-composable-architecture/releases/tag/1.9.0>1.9.x</a>),
 but really the main things that have improved are the ergonomics of using the framework, and its performance.
 View stores are no longer required with Apple&rsquo;s new <a href=https://developer.apple.com/documentation/Observation>Observation</a>
