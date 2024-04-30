@@ -28,10 +28,11 @@ the beginning of March 2021. I was on a team that had responsibility for one iOS
 company had on the App Store. It wasn’t long before I ran into my first issue with TCA.
 
 ## It’s Complicated
-TCA has a steep learning curve. You need to learn about reducers, stores, view stores, environments,
-and scoping of state and actions. You can’t just use SwiftUI like you learned from Apple. Every view
-needs a store, and if you care about performance, a view store. You need to learn how to use TCA’s top
-notch testing abilities, and use a test store. You can’t just use XCTest by itself.
+TCA has a steep learning curve. You need to learn about reducers, stores, and scoping of state and actions.
+In the beginning, you had to know about view stores and environments as well (These are no longer needed,
+see below). You can’t just use SwiftUI like you learned from Apple. Every view needs a store, and if
+you care about performance, a view store. You need to learn how to use TCA’s top notch testing abilities,
+and use a test store. You can’t just use XCTest by itself.
 
 In March of 2021, TCA was at version [0.16.0](https://github.com/pointfreeco/swift-composable-architecture/releases/tag/0.16.0).
 Things have improved a lot since then with the latest release ([1.9.x](https://github.com/pointfreeco/swift-composable-architecture/releases/tag/1.9.0)),
