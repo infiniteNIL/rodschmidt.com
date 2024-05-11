@@ -16,7 +16,7 @@
     },
     "run" : {
       "enabled" : true,
-      "script" : "hugo server"
+      "script" : "hugo -D server"
     }
   },
   "openLogOnRun" : "start"
