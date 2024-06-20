@@ -1,7 +1,7 @@
 ---
 title: "Pittsburgh - The Last One?"
 date: 2024-06-20T16:29:12-06:00
-draft: true
+draft: false
 tags: ['Baseball']
 ---
 
