@@ -1,559 +1,211 @@
-<!DOCTYPE html>
-<html lang="en-us">
-    
-    
-
-
-    <head>
-    <link href="https://gmpg.org/xfn/11" rel="profile">
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Cache-Control" content="public" />
-<!-- Enable responsiveness on mobile devices -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.119.0">
-
-    
-    
-    
-
-<title>The Clean Architecture: An Example • Rod Schmidt</title>
-
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="The Clean Architecture: An Example"/>
-<meta name="twitter:description" content="Today, I’d like to take an example iOS app written with an MVC architecture and show you what the example would be with a Clean Swift architecture. The example I’ve chosen to use is the Quiz app from chapter 1 of the 3rd edition of iOS Programming: The Big Nerd Ranch Guide.
+<!doctype html><html lang=en-us><head><link href=https://gmpg.org/xfn/11 rel=profile><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta http-equiv=cache-control content="public"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta name=generator content="Hugo 0.119.0"><title>The Clean Architecture: An Example • Rod Schmidt</title><meta name=twitter:card content="summary"><meta name=twitter:title content="The Clean Architecture: An Example"><meta name=twitter:description content="Today, I’d like to take an example iOS app written with an MVC architecture and show you what the example would be with a Clean Swift architecture. The example I’ve chosen to use is the Quiz app from chapter 1 of the 3rd edition of iOS Programming: The Big Nerd Ranch Guide.
 The Quiz is a simple app that is like flash cards. It looks like this:
-The Show Answer button will reveal the answer to the question and tapping on the Next Question button will display the next question."/>
-
-<meta property="og:title" content="The Clean Architecture: An Example" />
-<meta property="og:description" content="Today, I’d like to take an example iOS app written with an MVC architecture and show you what the example would be with a Clean Swift architecture. The example I’ve chosen to use is the Quiz app from chapter 1 of the 3rd edition of iOS Programming: The Big Nerd Ranch Guide.
+The Show Answer button will reveal the answer to the question and tapping on the Next Question button will display the next question."><meta property="og:title" content="The Clean Architecture: An Example"><meta property="og:description" content="Today, I’d like to take an example iOS app written with an MVC architecture and show you what the example would be with a Clean Swift architecture. The example I’ve chosen to use is the Quiz app from chapter 1 of the 3rd edition of iOS Programming: The Big Nerd Ranch Guide.
 The Quiz is a simple app that is like flash cards. It looks like this:
-The Show Answer button will reveal the answer to the question and tapping on the Next Question button will display the next question." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://rodschmidt.com/posts/the-clean-architecture-an-example/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2017-01-29T21:33:02+00:00" />
-<meta property="article:modified_time" content="2017-01-29T21:33:02+00:00" />
-
-
-    
-
-
-
-
-
-
-<link rel="stylesheet" href="https://rodschmidt.com/scss/hyde-hyde.0d89d10ddd2f2e23f97e661848b7ad8092fbfcbe8d60e4d1564914cf25d188d8.css" integrity="sha256-DYnRDd0vLiP5fmYYSLetgJL7/L6NYOTRVkkUzyXRiNg=">
-
-
-<link rel="stylesheet" href="https://rodschmidt.com/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
-
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!-- Icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://rodschmidt.com/apple-touch-icon-144-precomposed.png">
-    <link rel="shortcut icon" href="https://rodschmidt.com/favicon.png">
-    
-    
-
-</head>
-
-
-    <body class=" ">
-    
-<div class="sidebar">
-  <div class="container ">
-    <div class="sidebar-about">
-      <span class="site__title">
-        <a href="https://rodschmidt.com/">Rod Schmidt</a>
-      </span>
-      
-      
-        <div class="author-image">
-          <img src="https://www.gravatar.com/avatar/e72ca1d6149c220065acbb01cd9f5d01?s=240&d=mp" class="img--circle img--headshot element--center" alt="gravatar">
-        </div>
-      
-      <p class="site__description">
-         Thoughts on Software Development 
-      </p>
-    </div>
-    <div class="collapsible-menu">
-      <input type="checkbox" id="menuToggle">
-      <label for="menuToggle">Rod Schmidt</label>
-      <div class="menu-content">
-        <div>
-	<ul class="sidebar-nav">
-		 
-		 
-			 
-				<li>
-					<a href="https://rodschmidt.com/about/">
-						<span>About</span>
-					</a>
-				</li>
-			 
-		 
-			 
-				<li>
-					<a href="https://rodschmidt.com/posts/">
-						<span>Posts</span>
-					</a>
-				</li>
-			 
-		 
-			 
-				<li>
-					<a href="https://rodschmidt.com/tags/">
-						<span>Tags</span>
-					</a>
-				</li>
-			 
-		 
-			 
-				<li>
-					<a href="https://rodschmidt.com/index.xml">
-						<span>RSS</span>
-					</a>
-				</li>
-			 
-		
-	</ul>
-</div>
-
-        <section class="social">
-	
-	<a href="https://twitter.com/rodschmidt" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	<a href="https://github.com/infinitenil" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	
-	
-	
-	
-	<a href="https://linkedin.com/in/rodschmidt" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
-	
-	
-	<a href="https://stackoverflow.com/users/117435" rel="me"><i class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	
-	
-	
-	
-	
-</section>
-
-      </div>
-    </div>
-    
-<div class="copyright">
-  &copy; 2024 Rod Schmidt
-  
-</div>
-
-
-
-  </div>
-</div>
-
-        <div class="content container">
-            
-    
-<article>
-  <header>
-    <h1>The Clean Architecture: An Example</h1>
-    
-    
-<div class="post__meta">
-    
-    
-      <i class="fas fa-calendar-alt"></i> Jan 29, 2017
-    
-    
-    
-    
-    
-      
-      
-          <br/>
-           <i class="fas fa-tags"></i>
-          
-          <a class="badge badge-tag" href="https://rodschmidt.com/tags/apple-platforms">apple platforms</a>
-           
-      
-          <a class="badge badge-tag" href="https://rodschmidt.com/tags/clean-architecture">clean architecture</a>
-           
-      
-          <a class="badge badge-tag" href="https://rodschmidt.com/tags/software-development">software development</a>
-           
-      
-          <a class="badge badge-tag" href="https://rodschmidt.com/tags/swift">swift</a>
-          
-      
-    
-    
-    <br/>
-    
-</div>
-
-
-  </header>
-  
-  
-  <div class="post">
-    <p>Today, I’d like to take an example iOS app written with an MVC architecture and show you what the example would be with a Clean Swift architecture. The example I’ve chosen to use is the Quiz app from chapter 1 of the 3rd edition of <a href="https://www.amazon.com/iOS-Programming-Ranch-Guide-Guides/dp/0321821521/ref=sr_1_7?crid=393OBE770KCSR&amp;dchild=1&amp;keywords=big+nerd+ranch+ios+programming&amp;qid=1586836438&amp;sprefix=Big+nerd+ranch%2Caps%2C182&amp;sr=8-7">iOS Programming: The Big Nerd Ranch Guide</a>.</p>
-<p>The Quiz is a simple app that is like flash cards. It looks like this:</p>
-<div>
-  <img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
-       src="https://rodschmidt.com/images/quiz.png" 
-       title="" 
-       alt=""
-       
-  >
-  <p style="text-align: center; font-size: smaller;"></p>
-</div>
-
-
-<p><br>
-The Show Answer button will reveal the answer to the question and tapping on the Next Question button will display the next question.</p>
-<h2 id="the-mvc-example">The MVC Example</h2>
-<p>Click <a href="http://www.bignerdranch.com/assets/solutions/iOSProgramming6ed.zip">here</a> to download the source code for the MVC version from Big Nerd Ranch’s site. The code is actually from the 6th edition. Let’s look at the relevant code. Here’s the code for the view controller, ViewController.swift:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">UIKit</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ViewController</span>: UIViewController {
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">@IBOutlet</span> <span style="color:#66d9ef">var</span> questionLabel: UILabel!
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">@IBOutlet</span> <span style="color:#66d9ef">var</span> answerLabel: UILabel!
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">let</span> questions: [String] = [
-</span></span><span style="display:flex;"><span>       <span style="color:#e6db74">&#34;From what is cognac made?&#34;</span>,
-</span></span><span style="display:flex;"><span>       <span style="color:#e6db74">&#34;What is 7+7?&#34;</span>,
-</span></span><span style="display:flex;"><span>       <span style="color:#e6db74">&#34;What is the capital of Vermont?&#34;</span>
-</span></span><span style="display:flex;"><span>   ]
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">let</span> answers: [String] = [
-</span></span><span style="display:flex;"><span>       <span style="color:#e6db74">&#34;Grapes&#34;</span>,
-</span></span><span style="display:flex;"><span>       <span style="color:#e6db74">&#34;14&#34;</span>,
-</span></span><span style="display:flex;"><span>       <span style="color:#e6db74">&#34;Montpelier&#34;</span>
-</span></span><span style="display:flex;"><span>   ]
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">var</span> currentQuestionIndex: Int = <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">viewDidLoad</span>() {
-</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">super</span>.viewDidLoad()
-</span></span><span style="display:flex;"><span>       questionLabel.text = questions[currentQuestionIndex]
-</span></span><span style="display:flex;"><span>   }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">@IBAction</span> <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">showNextQuestion</span>(<span style="color:#66d9ef">_</span> sender: UIButton) {
-</span></span><span style="display:flex;"><span>       currentQuestionIndex <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">if</span> currentQuestionIndex == questions.count {
-</span></span><span style="display:flex;"><span>           currentQuestionIndex = <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>       }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">let</span> question: String = questions[currentQuestionIndex]
-</span></span><span style="display:flex;"><span>       questionLabel.text = question
-</span></span><span style="display:flex;"><span>       answerLabel.text = <span style="color:#e6db74">&#34;???&#34;</span>
-</span></span><span style="display:flex;"><span>   }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">@IBAction</span> <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">showAnswer</span>(<span style="color:#66d9ef">_</span> sender: UIButton) {
-</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">let</span> answer: String = answers[currentQuestionIndex]
-</span></span><span style="display:flex;"><span>       answerLabel.text = answer
-</span></span><span style="display:flex;"><span>   }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>} 
-</span></span></code></pre></div><p>That’s really the only source file we need to look at. The view part of MVC is in a storyboard that is just a simple view controller with 2 labels and 2 buttons. The 2 labels are connected to the 2 outlets you see above and the 2 buttons are connected to the 2 actions you see above (with the @IBAction attribute). The class of the view controller in the storyboard is set to <code>ViewController</code>.</p>
-<p>So basically, all the functionality of the app is crammed into the view controller. Granted, this is an example from a book designed to teach some basic principles, so it was not meant to demonstrate a good architecture. That being said, it is not uncommon to see code similar to this, even in professionally developed apps in large companies. The reason for this, I believe is that so many of our examples don’t touch on topics like architecture, even from Apple. It’s up to the developer to discover the error of their ways and start thinking about architecture.</p>
-<h3 id="mvc-model">MVC: Model</h3>
-<p>The model is put directly into the view controller and consists of an array of strings for the questions and an array of strings for the answers. There is also <code>currentQuestionIndex</code> to keep track of the current question. There is no model object to speak of as there typically would be in a true MVC implementation. Those three items would probably be separated into a <code>FlashCardDeck</code> class that the view controller talked to.</p>
-<h3 id="mvc-view">MVC: View</h3>
-<p>The view is entirely in the storyboard and all it really does it forward events to the controller. It’s actually pretty good for this case.</p>
-<h3 id="mvc-controller">MVC: Controller</h3>
-<p>The controller is implemented in the <code>ViewController</code> class. It’s directly manipulating the model and in fact the model is part of the class. It’s also directly manipulating the view in response to view events. In a more truer implementation of MVC, the controller would be more separated from the view and call methods on the view to make these changes.</p>
-<h3 id="mvc-summary">MVC: Summary</h3>
-<p>In MVC, the view takes events and and feeds them to the controller. The controller updates the model and the view listens for events from the model to update itself or just displays what the controller tells it to. The controller would typically do this after updating the model.</p>
-<p>Testing this would be rather difficult. It is simplified by that fact that everything is in one file, but you would have to instantiate the view and test everything together. If there was a database or network to talk to this would further complicates things and make your tests slow. There’s really no way to test anything in isolation. The example is not really a true representation of MVC, but as I’ve previously discussed, the implementation is a common representation of what many iOS apps do.</p>
-<h2 id="the-clean-swift-example">The Clean Swift Example</h2>
-<p>Before we start on the Clean Swift example, let me first say that for such a simple example, using an architecture such as Clean Swift, VIPER, etc. is overkill. However, if you are on a large team working on a large project (say a professional level flash card app targeted at professionals like lawyers studying for the Bar exam), you absolutely need some kind of architecture. Click <a href="https://github.com/infiniteNIL/CleanQuiz">here</a> to download the Clean Swift example.</p>
-<h3 id="clean-swift-project-structure">Clean Swift: Project Structure</h3>
-<p>Here’s a screenshot of the project structure:</p>
-<div>
-  <img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
-       src="https://rodschmidt.com/images/CleanQuiz-Project.png" 
-       title="" 
-       alt=""
-       
-  >
-  <p style="text-align: center; font-size: smaller;"></p>
-</div>
-
-
-<p><br>
-Notice that the project structure is built around the scenes (or screens) in your app. In the Clean architecture, your app is built around the use cases of your app and the project structure reveals the nature of the app. In a traditional MVC project your code is organized around and grouped by models, views, and controllers. You can’t tell at all what kind of app it is. Looking at the structure, you can see that we have one scene in the app, that displays a flash card. There’s also some common code such as our FlashCard entity, and a service to manage the storage of our flash cards.</p>
-<h3 id="clean-swift-common-code">Clean Swift: Common Code</h3>
-<p>Let’s start with the common code. We just have one file that looks like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">FlashCard</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> question: String
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> answer: String
-</span></span><span style="display:flex;"><span>} 
-</span></span></code></pre></div><p>That’s it. It just contains the data for a flash card which consists of the question and the answer.</p>
-<h3 id="clean-swift-services">Clean Swift: Services</h3>
-<p>To manage the storage of our flash cards, we have one common service. All of the rest of the code in the app accesses it through the <code>FlashCardsStore</code> protocol:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">protocol</span> <span style="color:#a6e22e">FlashCardsStore</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">fetchFlashCards</span>(completionHandler: @escaping (FlashCardsStoreResult) -&gt; Void)
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">FlashCardsStoreResult</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> cards([FlashCard])
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> error(FlashCardsStoreError)
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">FlashCardsStoreError</span>: Error {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> unknownError
-</span></span><span style="display:flex;"><span>} 
-</span></span></code></pre></div><p>It consists of one function to fetch all the cards that calls a completion handler with the result which is either the fetched cards or an error. For this simple example, we don’t really have any errors, but we show one just to show the possibilities. Our <code>FlashCardsStore</code> has one implementation, <code>FlashCardsMemStore</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FlashCardsMemStore</span>: FlashCardsStore {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> flashCards = [
-</span></span><span style="display:flex;"><span>        FlashCard(question: <span style="color:#e6db74">&#34;From what is cognac made?&#34;</span>, answer: <span style="color:#e6db74">&#34;Grapes&#34;</span>),
-</span></span><span style="display:flex;"><span>        FlashCard(question: <span style="color:#e6db74">&#34;What is 7+7?&#34;</span>, answer: <span style="color:#e6db74">&#34;14&#34;</span>),
-</span></span><span style="display:flex;"><span>        FlashCard(question: <span style="color:#e6db74">&#34;What is the capital of Vermont?&#34;</span>, answer: <span style="color:#e6db74">&#34;Montpelier&#34;</span>),
-</span></span><span style="display:flex;"><span>    ]
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">fetchFlashCards</span>(completionHandler: @escaping (FlashCardsStoreResult) -&gt; Void) {
-</span></span><span style="display:flex;"><span>        DispatchQueue.global().async {
-</span></span><span style="display:flex;"><span>            completionHandler(.cards(<span style="color:#66d9ef">self</span>.flashCards))
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>} 
-</span></span></code></pre></div><p>There’s only one place in the app that cares about this class and that’s where it’s instantiated. The rest of the app doesn’t know how the cards are stored, nor does it care. This makes is really easy to replace our store with something else and to test the rest of the apps interaction with the store by replacing it with a mock.</p>
-<h3 id="clean-swift-configuration">Clean Swift: Configuration</h3>
-<p>Now, let’s turn our attention to how a scene is brought to life and everything is connected together. When the app is loaded it instantiates the initial view controller in the Main storyboard. In this case it is the <code>DisplayFlashCardViewController</code>. Here’s what the start of the class looks like:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DisplayFlashCardViewController</span>: UIViewController, DisplayFlashCardViewControllerInput {
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">var</span> output: DisplayFlashCardViewControllerOutput!
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">var</span> router: DisplayFlashCardRouter!
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">@IBOutlet</span> <span style="color:#66d9ef">weak</span> <span style="color:#66d9ef">var</span> questionLabel: UILabel!
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">@IBOutlet</span> <span style="color:#66d9ef">weak</span> <span style="color:#66d9ef">var</span> nextQuestionButton: UIButton!
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">@IBOutlet</span> <span style="color:#66d9ef">weak</span> <span style="color:#66d9ef">var</span> answerLabel: UILabel!
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">@IBOutlet</span> <span style="color:#66d9ef">weak</span> <span style="color:#66d9ef">var</span> revealAnswerButton: UIButton!
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">awakeFromNib</span>()
-</span></span><span style="display:flex;"><span>   {
-</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">super</span>.awakeFromNib()
-</span></span><span style="display:flex;"><span>       DisplayFlashCardConfigurator.sharedInstance.configure(viewController: <span style="color:#66d9ef">self</span>)
-</span></span><span style="display:flex;"><span>   } 
-</span></span></code></pre></div><p>You see it has outlets for the question label, next question button, answer label, and the reveal answer label. I’ll get to the output and router properties later. For now look at the <code>awakeFromNib</code> method. This method is called after the view controller is instantiated from the storyboard. In this case, the first thing we do is instantiate the <em>configurator</em>, passing it the view controller. The <em>configurator</em> is responsible for connecting up all the different objects in the scene. Let’s look at it:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DisplayFlashCardConfigurator</span> {
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">let</span> sharedInstance = DisplayFlashCardConfigurator()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">init</span>() {}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">configure</span>(viewController: DisplayFlashCardViewController) {
-</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">let</span> router = DisplayFlashCardRouter()
-</span></span><span style="display:flex;"><span>       router.viewController = viewController
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">let</span> presenter = DisplayFlashCardPresenter()
-</span></span><span style="display:flex;"><span>       presenter.output = viewController
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">let</span> interactor = DisplayFlashCardInteractor()
-</span></span><span style="display:flex;"><span>       interactor.output = presenter
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>       viewController.output = interactor
-</span></span><span style="display:flex;"><span>       viewController.router = router
-</span></span><span style="display:flex;"><span>   }
-</span></span><span style="display:flex;"><span>} 
-</span></span></code></pre></div><p>The <code>configure</code> method just connects up our View -&gt; Interactor -&gt; Presenter data flow for the scene. The view talks to the interactor via its output property. The interactor talks to the presenter via its output property and the presenter talks to the view via its output property. The router and view are also connected together. The view talks to the router to navigate to other scenes in the app. Since our Quiz app only has one scene, the router doesn’t do anything and I won’t cover it.</p>
-<h3 id="clean-view---interactor-loading-flash-cards">Clean: View -&gt; Interactor: Loading Flash Cards</h3>
-<p>Everything is hooked up now and our view controller will be loaded. Let’s see what happens next back in our <code>DisplayFlashCardViewController</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">override</span> <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">viewDidLoad</span>() {
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">super</span>.viewDidLoad()
-</span></span><span style="display:flex;"><span>   fetchFlashCardOnLoad()
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">fetchFlashCardOnLoad</span>() {
-</span></span><span style="display:flex;"><span>   <span style="color:#75715e">// NOTE: Ask the Interactor to do some work</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">let</span> request = DisplayFlashCard.Request.FetchFlashCards()
-</span></span><span style="display:flex;"><span>   output.fetchFlashCards(request: request)
-</span></span><span style="display:flex;"><span>} 
-</span></span></code></pre></div><p>Once the view has been loaded from the storyboard, <code>viewDidLoad</code> is called. It calls <code>fetchFlashCardOnLoad()</code> to fetch the flash card to display. <code>fetchFlashCardOnLoad()</code> creates a <code>FetchFlashCards</code> request object and through its output property tells the <em>interactor</em> to fetch the flash cards with the options specified in the request. In this case there aren’t any options but you could imagine such things as a limit to the number of cards to fetch, etc. Up above you saw the output property, which looks like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> output: DisplayFlashCardViewControllerOutput! 
-</span></span></code></pre></div><p>Here’s <code>DisplayFlashCardViewControllerOutput</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">protocol</span> <span style="color:#a6e22e">DisplayFlashCardViewControllerOutput</span> {
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">fetchFlashCards</span>(request: DisplayFlashCard.Request.FetchFlashCards)
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">fetchNextFlashCard</span>(request: DisplayFlashCard.Request.FetchNextFlashCard)
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">revealAnswer</span>(request: DisplayFlashCard.Request.RevealAnswer)
-</span></span><span style="display:flex;"><span>} 
-</span></span></code></pre></div><p>This is the protocol through which the view controller will talk to the <em>interactor</em>. The interactor will implement this protocol (or some mock interactor during testing will implement it). Let’s look at the relevant parts of <code>DisplayFlashCardsInteractor</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DisplayFlashCardInteractor</span>: DisplayFlashCardInteractorInput {
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">var</span> output: DisplayFlashCardInteractorOutput!
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">var</span> worker = DisplayFlashCardWorker(cardsStore: FlashCardsMemStore())
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">var</span> flashCards: [FlashCard] = [] {
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">didSet</span> {
-</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">if</span> flashCards.count <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> {
-</span></span><span style="display:flex;"><span>           cardIndex = <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>       }
-</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>           cardIndex = <span style="color:#66d9ef">nil</span>
-</span></span><span style="display:flex;"><span>       }
-</span></span><span style="display:flex;"><span>   }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">var</span> cardIndex: Int?
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">fetchFlashCards</span>(request: DisplayFlashCard.Request.FetchFlashCards) {
-</span></span><span style="display:flex;"><span>       worker.fetchFlashCards { (result: FlashCardsStoreResult) <span style="color:#66d9ef">in</span>
-</span></span><span style="display:flex;"><span>           DispatchQueue.main.async {
-</span></span><span style="display:flex;"><span>               <span style="color:#66d9ef">switch</span> result {
-</span></span><span style="display:flex;"><span>                   <span style="color:#66d9ef">case</span> .cards(<span style="color:#66d9ef">let</span> cards):
-</span></span><span style="display:flex;"><span>                       <span style="color:#66d9ef">self</span>.flashCards = cards
-</span></span><span style="display:flex;"><span>                       <span style="color:#66d9ef">guard</span> <span style="color:#66d9ef">let</span> card = <span style="color:#66d9ef">self</span>.currentCard <span style="color:#66d9ef">else</span> { <span style="color:#66d9ef">return</span> }
-</span></span><span style="display:flex;"><span>                       <span style="color:#66d9ef">let</span> response = DisplayFlashCard.Response.FetchFlashCard(
-</span></span><span style="display:flex;"><span>                           card: <span style="color:#66d9ef">self</span>.hideAnswer(card: card),
-</span></span><span style="display:flex;"><span>                           isLastCard: <span style="color:#66d9ef">self</span>.onLastCard(),
-</span></span><span style="display:flex;"><span>                           isAnswerHidden: <span style="color:#66d9ef">true</span>)
-</span></span><span style="display:flex;"><span>                       <span style="color:#66d9ef">self</span>.output.presentFlashCard(response: response)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>                   <span style="color:#66d9ef">case</span> .error(<span style="color:#66d9ef">let</span> error):
-</span></span><span style="display:flex;"><span>                       <span style="color:#66d9ef">self</span>.output.presentError(error)
-</span></span><span style="display:flex;"><span>               }
-</span></span><span style="display:flex;"><span>           }
-</span></span><span style="display:flex;"><span>       }
-</span></span><span style="display:flex;"><span>   } 
-</span></span></code></pre></div><p>The first thing to notice is that <code>DisplayFlashCardInteractor</code> implements the <code>DisplayFlashCardInteractorInput</code> protocol. This looks exactly like the <code>DisplayFlashCardViewControllerOutput</code> protocol. You set the output of the view controller to the object that implements an input protocol that looks the same. <code>DisplayFlashCardInteractor</code> then has some code to manage the flash cards in the scene and the <code>fetchFlashCards()</code> method. <code>fetchFlashCards</code> just tells a worker to fetch the flash cards. The worker will call the closure with a result once its finished. The worker was instantiated with this line:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> worker = DisplayFlashCardWorker(cardsStore: FlashCardsMemStore()) 
-</span></span></code></pre></div><p>This is the only place where we know what class the cards store actually is. You could supply the interactor with another worker that uses another completely different cards store. The Interactor won’t care. I won’t go into the worker here, but it just talks to the store and when it gets cards back from the store, it calls the closure with a <code>FlashCardsStoreResult</code>, which looks like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">FlashCardsStoreResult</span> {
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">case</span> cards([FlashCard])
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">case</span> error(FlashCardsStoreError)
-</span></span><span style="display:flex;"><span>} 
-</span></span></code></pre></div><p>So you either get back the cards or you get an error. If the interactor gets an error back from the worker, it just tells the presenter through its output property to present the error. The presenter will in turn tell the view controller to display the error. Again, I won’t cover that here because it is similar to what we will be doing for the displaying the cards.</p>
-<h3 id="clean-interactor---presenter---display-a-flash-card">Clean: Interactor -&gt; Presenter - Display a Flash Card</h3>
-<p>If we get back some cards, the interactor saves the cards, sets up the initial state for the cards and then creates a response object that will be sent though its output property to the presenter. Our response object in this case, contains the first card with its answer hidden, whether or not this is the last card, and whether or not the answer is hidden. The interactor then tells the presenter, through the output property, to present the flash card in a manner specified by the response object. Here’s the interactor’s output protocol:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">protocol</span> <span style="color:#a6e22e">DisplayFlashCardInteractorOutput</span> {
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">presentFlashCard</span>(response: DisplayFlashCard.Response.FetchFlashCard)
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">presentError</span>(<span style="color:#66d9ef">_</span> error: FlashCardsStoreError)
-</span></span><span style="display:flex;"><span>} 
-</span></span></code></pre></div><p>And here’s <code>DisplayFlashCardPresenter</code>’s input protocol:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">protocol</span> <span style="color:#a6e22e">DisplayFlashCardPresenterInput</span> {
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">presentFlashCard</span>(response: DisplayFlashCard.Response.FetchFlashCard)
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">presentError</span>(<span style="color:#66d9ef">_</span> error: FlashCardsStoreError)
-</span></span><span style="display:flex;"><span>} 
-</span></span></code></pre></div><p>Again, they match. Now let’s look at the relevant presenter code:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">presentFlashCard</span>(response: DisplayFlashCard.Response.FetchFlashCard) {
-</span></span><span style="display:flex;"><span>   <span style="color:#75715e">// NOTE: Format the response from the Interactor and pass the result back to the View</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">let</span> viewModel = DisplayFlashCard.ViewModel(questionText: response.card.question,
-</span></span><span style="display:flex;"><span>                                              answerText: response.card.answer,
-</span></span><span style="display:flex;"><span>                                              nextQuestionEnabled: <span style="color:#f92672">!</span>response.isLastCard,
-</span></span><span style="display:flex;"><span>                                              revealAnswerEnabled: response.isAnswerHidden)
-</span></span><span style="display:flex;"><span>   output.displayFlashCard(viewModel: viewModel)
-</span></span><span style="display:flex;"><span>} 
-</span></span></code></pre></div><p>The <em>presenter</em> takes the response from the <em>interactor</em> and creates a view model. The view model simply contains all the data the view controller needs as strings or other simple data types (bools in this case). The presenter should handle all the necessary formatting. Is this case, no formatting is required. Our view model looks like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">ViewModel</span> {
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">let</span> questionText: String
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">let</span> answerText: String
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">let</span> nextQuestionEnabled: Bool
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">let</span> revealAnswerEnabled: Bool
-</span></span><span style="display:flex;"><span>} 
-</span></span></code></pre></div><p>Its just the text to use for the question label, the text to use for the answer label, whether or not the next question button should be enabled, and whether or not the reveal answer button should be enabled.</p>
-<h3 id="clean-presenter---view-displaying-a-card">Clean: Presenter -&gt; View: Displaying a Card</h3>
-<p>The <em>presenter</em> then passes this view model to the <em>view</em> through its output property by calling <code>displayFlashCard</code>. Here’s the <em>presenter</em> output protocol:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">protocol</span> <span style="color:#a6e22e">DisplayFlashCardPresenterOutput</span>: <span style="color:#66d9ef">class</span> {
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">displayFlashCard</span>(viewModel: DisplayFlashCard.ViewModel)
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">displayError</span>(title: String, message: String)
-</span></span><span style="display:flex;"><span>} 
-</span></span></code></pre></div><p>This again will match exactly with the <code>DisplayFlashCardViewControllerInput</code> protocol, which is the input protocol for the <em>view</em>. Now let’s look at how the <em>view</em> implemented by <code>DisplayFlashCardViewController</code>, handles <code>displayFlashCard</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">displayFlashCard</span>(viewModel: DisplayFlashCard.ViewModel) {
-</span></span><span style="display:flex;"><span>   questionLabel.text = viewModel.questionText
-</span></span><span style="display:flex;"><span>   nextQuestionButton.isEnabled = viewModel.nextQuestionEnabled
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   answerLabel.text = viewModel.answerText
-</span></span><span style="display:flex;"><span>   revealAnswerButton.isEnabled = viewModel.revealAnswerEnabled
-</span></span><span style="display:flex;"><span>} 
-</span></span></code></pre></div><p>The view is dumb. All it does is take the values from the view model and put them where they should go in the view.</p>
-<h3 id="clean-summary">Clean: Summary</h3>
-<p>That’s one complete cycle through the <em>view</em>, <em>interactor</em>, <em>presenter</em> data flow. The other ones are when the user taps the next questions button and the reveal answer button. I won’t cover those because the flow is similar. Just look at the code to see how they are handled.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>Whew! That was a lot! You can now see why Clean Swift is overkill for our simple example and why some teams are reluctant to use it or others have strived to simplify it. At my new job, we are using a simpler version of the Clean architecture that is more of a cross between MVP and Clean, and it’s working pretty well. The app we are working on is very large and quite complicated. It’s a challenge to implement this architecture in some cases, but it definitely helps in knowing where functionality should be placed and what classes are responsible for certain behavior. It definitely helps in testing. We have no UI automation tests and all our units tests run in under 10 seconds. Our unit tests also test the UI.</p>
-<p>Using an architecture like Clean Swift takes practice and discipline, but take the time to understand it. It will pay off in your understanding of applying an architecture to your next project. That architecture may or may not be Clean Swift. Do what works for you and your team. I’d say start with the Clean architecture and adapt it to your needs. This article has been a long time coming and I apologize for the delay. It was quite a challenge to write with all the moving parts and with my inexperience with Clean Swift as well. Please comment below or contact me directly if you have any questions or have some topics you would like me to cover in future posts.</p>
-
-  </div>
-  <script async data-uid="d20275c87b" src="https://relentless-teacher-3937.ck.page/d20275c87b/index.js"></script>
-  
-
-<div class="navigation navigation-single">
-    
-    <a href="https://rodschmidt.com/posts/the-clean-architecture-an-introduction/" class="navigation-prev">
-      <i aria-hidden="true" class="fa fa-chevron-left"></i>
-      <span class="navigation-tittle">The Clean Architecture: An Introduction</span>
-    </a>
-    
-    
-    <a href="https://rodschmidt.com/posts/two-more-examples-of-clean-architecture/" class="navigation-next">
-      <span class="navigation-tittle">Two More Examples of Clean Architecture</span>
-      <i aria-hidden="true" class="fa fa-chevron-right"></i>
-    </a>
-    
-</div>
-
-
-  
-
-  
-    
-        <div id="disqus_thread"></div>
-<script type="text/javascript">
-    
-
-    (function () {
-    if (location.hostname === "localhost" ||
-      location.hostname === "127.0.0.1" ||
-      location.hostname === "") {
-      return;
-    }
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    var disqus_shortname = 'rodschmidt';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || 
-      document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-
-<noscript>
-  Please enable JavaScript to view the
-  <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by
-  <span class="logo-disqus">Disqus</span>
-</a>
-
-    
-
-
-</article>
-
-
-        </div>
-        
-    
-
-<script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" integrity="sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1" crossorigin="anonymous"></script>
-
-
-
-
-
-    
-
-
-
-    </body>
-</html>
+The Show Answer button will reveal the answer to the question and tapping on the Next Question button will display the next question."><meta property="og:type" content="article"><meta property="og:url" content="https://rodschmidt.com/posts/the-clean-architecture-an-example/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2017-01-29T21:33:02+00:00"><meta property="article:modified_time" content="2017-01-29T21:33:02+00:00"><link rel=stylesheet href=https://rodschmidt.com/scss/hyde-hyde.0d89d10ddd2f2e23f97e661848b7ad8092fbfcbe8d60e4d1564914cf25d188d8.css integrity="sha256-DYnRDd0vLiP5fmYYSLetgJL7/L6NYOTRVkkUzyXRiNg="><link rel=stylesheet href=https://rodschmidt.com/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58+TzH3icCkSHGoJ+ed7w=" media=print><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js></script>
+<script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=apple-touch-icon-precomposed sizes=144x144 href=https://rodschmidt.com/apple-touch-icon-144-precomposed.png><link rel="shortcut icon" href=https://rodschmidt.com/favicon.png></head><body><div class=sidebar><div class=container><div class=sidebar-about><span class=site__title><a href=https://rodschmidt.com/>Rod Schmidt</a></span><div class=author-image><img src="https://www.gravatar.com/avatar/e72ca1d6149c220065acbb01cd9f5d01?s=240&d=mp" class="img--circle img--headshot element--center" alt=gravatar></div><p class=site__description>Thoughts on Software Development</p></div><div class=collapsible-menu><input type=checkbox id=menuToggle>
+<label for=menuToggle>Rod Schmidt</label><div class=menu-content><div><ul class=sidebar-nav><li><a href=https://rodschmidt.com/about/><span>About</span></a></li><li><a href=https://rodschmidt.com/posts/><span>Posts</span></a></li><li><a href=https://rodschmidt.com/tags/><span>Tags</span></a></li><li><a href=https://rodschmidt.com/index.xml><span>RSS</span></a></li></ul></div><section class=social><a href=https://twitter.com/rodschmidt rel=me><i class="fab fa-twitter fa-lg" aria-hidden=true></i></a>
+<a href=https://github.com/infinitenil rel=me><i class="fab fa-github fa-lg" aria-hidden=true></i></a>
+<a href=https://linkedin.com/in/rodschmidt rel=me><i class="fab fa-linkedin fa-lg" aria-hidden=true></i></a>
+<a href=https://stackoverflow.com/users/117435 rel=me><i class="fab fa-stack-overflow fa-lg" aria-hidden=true></i></a></section></div></div><div class=copyright>&copy; 2024 Rod Schmidt</div></div></div><div class="content container"><article><header><h1>The Clean Architecture: An Example</h1><div class=post__meta><i class="fas fa-calendar-alt"></i> Jan 29, 2017<br><i class="fas fa-tags"></i>
+<a class="badge badge-tag" href=https://rodschmidt.com/tags/apple-platforms>apple platforms</a>
+<a class="badge badge-tag" href=https://rodschmidt.com/tags/clean-architecture>clean architecture</a>
+<a class="badge badge-tag" href=https://rodschmidt.com/tags/software-development>software development</a>
+<a class="badge badge-tag" href=https://rodschmidt.com/tags/swift>swift</a><br></div></header><div class=post><p>Today, I’d like to take an example iOS app written with an MVC architecture and show you what the example would be with a Clean Swift architecture. The example I’ve chosen to use is the Quiz app from chapter 1 of the 3rd edition of <a href="https://www.amazon.com/iOS-Programming-Ranch-Guide-Guides/dp/0321821521/ref=sr_1_7?crid=393OBE770KCSR&amp;dchild=1&amp;keywords=big+nerd+ranch+ios+programming&amp;qid=1586836438&amp;sprefix=Big+nerd+ranch%2Caps%2C182&amp;sr=8-7">iOS Programming: The Big Nerd Ranch Guide</a>.</p><p>The Quiz is a simple app that is like flash cards. It looks like this:</p><div><img style="display:block;margin:.7rem auto;border:1px solid #000;margin-bottom:0" src=https://rodschmidt.com/images/quiz.png title alt><p style=text-align:center;font-size:smaller></p></div><p><br>The Show Answer button will reveal the answer to the question and tapping on the Next Question button will display the next question.</p><h2 id=the-mvc-example>The MVC Example</h2><p>Click <a href=http://www.bignerdranch.com/assets/solutions/iOSProgramming6ed.zip>here</a> to download the source code for the MVC version from Big Nerd Ranch’s site. The code is actually from the 6th edition. Let’s look at the relevant code. Here’s the code for the view controller, ViewController.swift:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>import</span> <span style=color:#a6e22e>UIKit</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ViewController</span>: UIViewController {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>@IBOutlet</span> <span style=color:#66d9ef>var</span> questionLabel: UILabel!
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>@IBOutlet</span> <span style=color:#66d9ef>var</span> answerLabel: UILabel!
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>let</span> questions: [String] = [
+</span></span><span style=display:flex><span>       <span style=color:#e6db74>&#34;From what is cognac made?&#34;</span>,
+</span></span><span style=display:flex><span>       <span style=color:#e6db74>&#34;What is 7+7?&#34;</span>,
+</span></span><span style=display:flex><span>       <span style=color:#e6db74>&#34;What is the capital of Vermont?&#34;</span>
+</span></span><span style=display:flex><span>   ]
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>let</span> answers: [String] = [
+</span></span><span style=display:flex><span>       <span style=color:#e6db74>&#34;Grapes&#34;</span>,
+</span></span><span style=display:flex><span>       <span style=color:#e6db74>&#34;14&#34;</span>,
+</span></span><span style=display:flex><span>       <span style=color:#e6db74>&#34;Montpelier&#34;</span>
+</span></span><span style=display:flex><span>   ]
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>var</span> currentQuestionIndex: Int = <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>override</span> <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>viewDidLoad</span>() {
+</span></span><span style=display:flex><span>       <span style=color:#66d9ef>super</span>.viewDidLoad()
+</span></span><span style=display:flex><span>       questionLabel.text = questions[currentQuestionIndex]
+</span></span><span style=display:flex><span>   }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>@IBAction</span> <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>showNextQuestion</span>(<span style=color:#66d9ef>_</span> sender: UIButton) {
+</span></span><span style=display:flex><span>       currentQuestionIndex <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>       <span style=color:#66d9ef>if</span> currentQuestionIndex == questions.count {
+</span></span><span style=display:flex><span>           currentQuestionIndex = <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>       }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>       <span style=color:#66d9ef>let</span> question: String = questions[currentQuestionIndex]
+</span></span><span style=display:flex><span>       questionLabel.text = question
+</span></span><span style=display:flex><span>       answerLabel.text = <span style=color:#e6db74>&#34;???&#34;</span>
+</span></span><span style=display:flex><span>   }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>@IBAction</span> <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>showAnswer</span>(<span style=color:#66d9ef>_</span> sender: UIButton) {
+</span></span><span style=display:flex><span>       <span style=color:#66d9ef>let</span> answer: String = answers[currentQuestionIndex]
+</span></span><span style=display:flex><span>       answerLabel.text = answer
+</span></span><span style=display:flex><span>   }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>} 
+</span></span></code></pre></div><p>That’s really the only source file we need to look at. The view part of MVC is in a storyboard that is just a simple view controller with 2 labels and 2 buttons. The 2 labels are connected to the 2 outlets you see above and the 2 buttons are connected to the 2 actions you see above (with the @IBAction attribute). The class of the view controller in the storyboard is set to <code>ViewController</code>.</p><p>So basically, all the functionality of the app is crammed into the view controller. Granted, this is an example from a book designed to teach some basic principles, so it was not meant to demonstrate a good architecture. That being said, it is not uncommon to see code similar to this, even in professionally developed apps in large companies. The reason for this, I believe is that so many of our examples don’t touch on topics like architecture, even from Apple. It’s up to the developer to discover the error of their ways and start thinking about architecture.</p><h3 id=mvc-model>MVC: Model</h3><p>The model is put directly into the view controller and consists of an array of strings for the questions and an array of strings for the answers. There is also <code>currentQuestionIndex</code> to keep track of the current question. There is no model object to speak of as there typically would be in a true MVC implementation. Those three items would probably be separated into a <code>FlashCardDeck</code> class that the view controller talked to.</p><h3 id=mvc-view>MVC: View</h3><p>The view is entirely in the storyboard and all it really does it forward events to the controller. It’s actually pretty good for this case.</p><h3 id=mvc-controller>MVC: Controller</h3><p>The controller is implemented in the <code>ViewController</code> class. It’s directly manipulating the model and in fact the model is part of the class. It’s also directly manipulating the view in response to view events. In a more truer implementation of MVC, the controller would be more separated from the view and call methods on the view to make these changes.</p><h3 id=mvc-summary>MVC: Summary</h3><p>In MVC, the view takes events and and feeds them to the controller. The controller updates the model and the view listens for events from the model to update itself or just displays what the controller tells it to. The controller would typically do this after updating the model.</p><p>Testing this would be rather difficult. It is simplified by that fact that everything is in one file, but you would have to instantiate the view and test everything together. If there was a database or network to talk to this would further complicates things and make your tests slow. There’s really no way to test anything in isolation. The example is not really a true representation of MVC, but as I’ve previously discussed, the implementation is a common representation of what many iOS apps do.</p><h2 id=the-clean-swift-example>The Clean Swift Example</h2><p>Before we start on the Clean Swift example, let me first say that for such a simple example, using an architecture such as Clean Swift, VIPER, etc. is overkill. However, if you are on a large team working on a large project (say a professional level flash card app targeted at professionals like lawyers studying for the Bar exam), you absolutely need some kind of architecture. Click <a href=https://github.com/infiniteNIL/CleanQuiz>here</a> to download the Clean Swift example.</p><h3 id=clean-swift-project-structure>Clean Swift: Project Structure</h3><p>Here’s a screenshot of the project structure:</p><div><img style="display:block;margin:.7rem auto;border:1px solid #000;margin-bottom:0" src=https://rodschmidt.com/images/CleanQuiz-Project.png title alt><p style=text-align:center;font-size:smaller></p></div><p><br>Notice that the project structure is built around the scenes (or screens) in your app. In the Clean architecture, your app is built around the use cases of your app and the project structure reveals the nature of the app. In a traditional MVC project your code is organized around and grouped by models, views, and controllers. You can’t tell at all what kind of app it is. Looking at the structure, you can see that we have one scene in the app, that displays a flash card. There’s also some common code such as our FlashCard entity, and a service to manage the storage of our flash cards.</p><h3 id=clean-swift-common-code>Clean Swift: Common Code</h3><p>Let’s start with the common code. We just have one file that looks like this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>FlashCard</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> question: String
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> answer: String
+</span></span><span style=display:flex><span>} 
+</span></span></code></pre></div><p>That’s it. It just contains the data for a flash card which consists of the question and the answer.</p><h3 id=clean-swift-services>Clean Swift: Services</h3><p>To manage the storage of our flash cards, we have one common service. All of the rest of the code in the app accesses it through the <code>FlashCardsStore</code> protocol:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>FlashCardsStore</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>fetchFlashCards</span>(completionHandler: @escaping (FlashCardsStoreResult) -&gt; Void)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>enum</span> <span style=color:#a6e22e>FlashCardsStoreResult</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> cards([FlashCard])
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> error(FlashCardsStoreError)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>enum</span> <span style=color:#a6e22e>FlashCardsStoreError</span>: Error {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> unknownError
+</span></span><span style=display:flex><span>} 
+</span></span></code></pre></div><p>It consists of one function to fetch all the cards that calls a completion handler with the result which is either the fetched cards or an error. For this simple example, we don’t really have any errors, but we show one just to show the possibilities. Our <code>FlashCardsStore</code> has one implementation, <code>FlashCardsMemStore</code>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>FlashCardsMemStore</span>: FlashCardsStore {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> flashCards = [
+</span></span><span style=display:flex><span>        FlashCard(question: <span style=color:#e6db74>&#34;From what is cognac made?&#34;</span>, answer: <span style=color:#e6db74>&#34;Grapes&#34;</span>),
+</span></span><span style=display:flex><span>        FlashCard(question: <span style=color:#e6db74>&#34;What is 7+7?&#34;</span>, answer: <span style=color:#e6db74>&#34;14&#34;</span>),
+</span></span><span style=display:flex><span>        FlashCard(question: <span style=color:#e6db74>&#34;What is the capital of Vermont?&#34;</span>, answer: <span style=color:#e6db74>&#34;Montpelier&#34;</span>),
+</span></span><span style=display:flex><span>    ]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>fetchFlashCards</span>(completionHandler: @escaping (FlashCardsStoreResult) -&gt; Void) {
+</span></span><span style=display:flex><span>        DispatchQueue.global().async {
+</span></span><span style=display:flex><span>            completionHandler(.cards(<span style=color:#66d9ef>self</span>.flashCards))
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>} 
+</span></span></code></pre></div><p>There’s only one place in the app that cares about this class and that’s where it’s instantiated. The rest of the app doesn’t know how the cards are stored, nor does it care. This makes is really easy to replace our store with something else and to test the rest of the apps interaction with the store by replacing it with a mock.</p><h3 id=clean-swift-configuration>Clean Swift: Configuration</h3><p>Now, let’s turn our attention to how a scene is brought to life and everything is connected together. When the app is loaded it instantiates the initial view controller in the Main storyboard. In this case it is the <code>DisplayFlashCardViewController</code>. Here’s what the start of the class looks like:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>DisplayFlashCardViewController</span>: UIViewController, DisplayFlashCardViewControllerInput {
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>var</span> output: DisplayFlashCardViewControllerOutput!
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>var</span> router: DisplayFlashCardRouter!
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>@IBOutlet</span> <span style=color:#66d9ef>weak</span> <span style=color:#66d9ef>var</span> questionLabel: UILabel!
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>@IBOutlet</span> <span style=color:#66d9ef>weak</span> <span style=color:#66d9ef>var</span> nextQuestionButton: UIButton!
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>@IBOutlet</span> <span style=color:#66d9ef>weak</span> <span style=color:#66d9ef>var</span> answerLabel: UILabel!
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>@IBOutlet</span> <span style=color:#66d9ef>weak</span> <span style=color:#66d9ef>var</span> revealAnswerButton: UIButton!
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>override</span> <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>awakeFromNib</span>()
+</span></span><span style=display:flex><span>   {
+</span></span><span style=display:flex><span>       <span style=color:#66d9ef>super</span>.awakeFromNib()
+</span></span><span style=display:flex><span>       DisplayFlashCardConfigurator.sharedInstance.configure(viewController: <span style=color:#66d9ef>self</span>)
+</span></span><span style=display:flex><span>   } 
+</span></span></code></pre></div><p>You see it has outlets for the question label, next question button, answer label, and the reveal answer label. I’ll get to the output and router properties later. For now look at the <code>awakeFromNib</code> method. This method is called after the view controller is instantiated from the storyboard. In this case, the first thing we do is instantiate the <em>configurator</em>, passing it the view controller. The <em>configurator</em> is responsible for connecting up all the different objects in the scene. Let’s look at it:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>DisplayFlashCardConfigurator</span> {
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>let</span> sharedInstance = DisplayFlashCardConfigurator()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>init</span>() {}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>configure</span>(viewController: DisplayFlashCardViewController) {
+</span></span><span style=display:flex><span>       <span style=color:#66d9ef>let</span> router = DisplayFlashCardRouter()
+</span></span><span style=display:flex><span>       router.viewController = viewController
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>       <span style=color:#66d9ef>let</span> presenter = DisplayFlashCardPresenter()
+</span></span><span style=display:flex><span>       presenter.output = viewController
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>       <span style=color:#66d9ef>let</span> interactor = DisplayFlashCardInteractor()
+</span></span><span style=display:flex><span>       interactor.output = presenter
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>       viewController.output = interactor
+</span></span><span style=display:flex><span>       viewController.router = router
+</span></span><span style=display:flex><span>   }
+</span></span><span style=display:flex><span>} 
+</span></span></code></pre></div><p>The <code>configure</code> method just connects up our View -> Interactor -> Presenter data flow for the scene. The view talks to the interactor via its output property. The interactor talks to the presenter via its output property and the presenter talks to the view via its output property. The router and view are also connected together. The view talks to the router to navigate to other scenes in the app. Since our Quiz app only has one scene, the router doesn’t do anything and I won’t cover it.</p><h3 id=clean-view---interactor-loading-flash-cards>Clean: View -> Interactor: Loading Flash Cards</h3><p>Everything is hooked up now and our view controller will be loaded. Let’s see what happens next back in our <code>DisplayFlashCardViewController</code>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>override</span> <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>viewDidLoad</span>() {
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>super</span>.viewDidLoad()
+</span></span><span style=display:flex><span>   fetchFlashCardOnLoad()
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>private</span> <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>fetchFlashCardOnLoad</span>() {
+</span></span><span style=display:flex><span>   <span style=color:#75715e>// NOTE: Ask the Interactor to do some work</span>
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>let</span> request = DisplayFlashCard.Request.FetchFlashCards()
+</span></span><span style=display:flex><span>   output.fetchFlashCards(request: request)
+</span></span><span style=display:flex><span>} 
+</span></span></code></pre></div><p>Once the view has been loaded from the storyboard, <code>viewDidLoad</code> is called. It calls <code>fetchFlashCardOnLoad()</code> to fetch the flash card to display. <code>fetchFlashCardOnLoad()</code> creates a <code>FetchFlashCards</code> request object and through its output property tells the <em>interactor</em> to fetch the flash cards with the options specified in the request. In this case there aren’t any options but you could imagine such things as a limit to the number of cards to fetch, etc. Up above you saw the output property, which looks like this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>var</span> output: DisplayFlashCardViewControllerOutput! 
+</span></span></code></pre></div><p>Here’s <code>DisplayFlashCardViewControllerOutput</code>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>DisplayFlashCardViewControllerOutput</span> {
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>fetchFlashCards</span>(request: DisplayFlashCard.Request.FetchFlashCards)
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>fetchNextFlashCard</span>(request: DisplayFlashCard.Request.FetchNextFlashCard)
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>revealAnswer</span>(request: DisplayFlashCard.Request.RevealAnswer)
+</span></span><span style=display:flex><span>} 
+</span></span></code></pre></div><p>This is the protocol through which the view controller will talk to the <em>interactor</em>. The interactor will implement this protocol (or some mock interactor during testing will implement it). Let’s look at the relevant parts of <code>DisplayFlashCardsInteractor</code>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>DisplayFlashCardInteractor</span>: DisplayFlashCardInteractorInput {
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>var</span> output: DisplayFlashCardInteractorOutput!
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>var</span> worker = DisplayFlashCardWorker(cardsStore: FlashCardsMemStore())
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>var</span> flashCards: [FlashCard] = [] {
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>didSet</span> {
+</span></span><span style=display:flex><span>       <span style=color:#66d9ef>if</span> flashCards.count <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0</span> {
+</span></span><span style=display:flex><span>           cardIndex = <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>       }
+</span></span><span style=display:flex><span>       <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>           cardIndex = <span style=color:#66d9ef>nil</span>
+</span></span><span style=display:flex><span>       }
+</span></span><span style=display:flex><span>   }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>var</span> cardIndex: Int?
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>fetchFlashCards</span>(request: DisplayFlashCard.Request.FetchFlashCards) {
+</span></span><span style=display:flex><span>       worker.fetchFlashCards { (result: FlashCardsStoreResult) <span style=color:#66d9ef>in</span>
+</span></span><span style=display:flex><span>           DispatchQueue.main.async {
+</span></span><span style=display:flex><span>               <span style=color:#66d9ef>switch</span> result {
+</span></span><span style=display:flex><span>                   <span style=color:#66d9ef>case</span> .cards(<span style=color:#66d9ef>let</span> cards):
+</span></span><span style=display:flex><span>                       <span style=color:#66d9ef>self</span>.flashCards = cards
+</span></span><span style=display:flex><span>                       <span style=color:#66d9ef>guard</span> <span style=color:#66d9ef>let</span> card = <span style=color:#66d9ef>self</span>.currentCard <span style=color:#66d9ef>else</span> { <span style=color:#66d9ef>return</span> }
+</span></span><span style=display:flex><span>                       <span style=color:#66d9ef>let</span> response = DisplayFlashCard.Response.FetchFlashCard(
+</span></span><span style=display:flex><span>                           card: <span style=color:#66d9ef>self</span>.hideAnswer(card: card),
+</span></span><span style=display:flex><span>                           isLastCard: <span style=color:#66d9ef>self</span>.onLastCard(),
+</span></span><span style=display:flex><span>                           isAnswerHidden: <span style=color:#66d9ef>true</span>)
+</span></span><span style=display:flex><span>                       <span style=color:#66d9ef>self</span>.output.presentFlashCard(response: response)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>                   <span style=color:#66d9ef>case</span> .error(<span style=color:#66d9ef>let</span> error):
+</span></span><span style=display:flex><span>                       <span style=color:#66d9ef>self</span>.output.presentError(error)
+</span></span><span style=display:flex><span>               }
+</span></span><span style=display:flex><span>           }
+</span></span><span style=display:flex><span>       }
+</span></span><span style=display:flex><span>   } 
+</span></span></code></pre></div><p>The first thing to notice is that <code>DisplayFlashCardInteractor</code> implements the <code>DisplayFlashCardInteractorInput</code> protocol. This looks exactly like the <code>DisplayFlashCardViewControllerOutput</code> protocol. You set the output of the view controller to the object that implements an input protocol that looks the same. <code>DisplayFlashCardInteractor</code> then has some code to manage the flash cards in the scene and the <code>fetchFlashCards()</code> method. <code>fetchFlashCards</code> just tells a worker to fetch the flash cards. The worker will call the closure with a result once its finished. The worker was instantiated with this line:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>var</span> worker = DisplayFlashCardWorker(cardsStore: FlashCardsMemStore()) 
+</span></span></code></pre></div><p>This is the only place where we know what class the cards store actually is. You could supply the interactor with another worker that uses another completely different cards store. The Interactor won’t care. I won’t go into the worker here, but it just talks to the store and when it gets cards back from the store, it calls the closure with a <code>FlashCardsStoreResult</code>, which looks like this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>enum</span> <span style=color:#a6e22e>FlashCardsStoreResult</span> {
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>case</span> cards([FlashCard])
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>case</span> error(FlashCardsStoreError)
+</span></span><span style=display:flex><span>} 
+</span></span></code></pre></div><p>So you either get back the cards or you get an error. If the interactor gets an error back from the worker, it just tells the presenter through its output property to present the error. The presenter will in turn tell the view controller to display the error. Again, I won’t cover that here because it is similar to what we will be doing for the displaying the cards.</p><h3 id=clean-interactor---presenter---display-a-flash-card>Clean: Interactor -> Presenter - Display a Flash Card</h3><p>If we get back some cards, the interactor saves the cards, sets up the initial state for the cards and then creates a response object that will be sent though its output property to the presenter. Our response object in this case, contains the first card with its answer hidden, whether or not this is the last card, and whether or not the answer is hidden. The interactor then tells the presenter, through the output property, to present the flash card in a manner specified by the response object. Here’s the interactor’s output protocol:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>DisplayFlashCardInteractorOutput</span> {
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>presentFlashCard</span>(response: DisplayFlashCard.Response.FetchFlashCard)
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>presentError</span>(<span style=color:#66d9ef>_</span> error: FlashCardsStoreError)
+</span></span><span style=display:flex><span>} 
+</span></span></code></pre></div><p>And here’s <code>DisplayFlashCardPresenter</code>’s input protocol:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>DisplayFlashCardPresenterInput</span> {
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>presentFlashCard</span>(response: DisplayFlashCard.Response.FetchFlashCard)
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>presentError</span>(<span style=color:#66d9ef>_</span> error: FlashCardsStoreError)
+</span></span><span style=display:flex><span>} 
+</span></span></code></pre></div><p>Again, they match. Now let’s look at the relevant presenter code:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>presentFlashCard</span>(response: DisplayFlashCard.Response.FetchFlashCard) {
+</span></span><span style=display:flex><span>   <span style=color:#75715e>// NOTE: Format the response from the Interactor and pass the result back to the View</span>
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>let</span> viewModel = DisplayFlashCard.ViewModel(questionText: response.card.question,
+</span></span><span style=display:flex><span>                                              answerText: response.card.answer,
+</span></span><span style=display:flex><span>                                              nextQuestionEnabled: <span style=color:#f92672>!</span>response.isLastCard,
+</span></span><span style=display:flex><span>                                              revealAnswerEnabled: response.isAnswerHidden)
+</span></span><span style=display:flex><span>   output.displayFlashCard(viewModel: viewModel)
+</span></span><span style=display:flex><span>} 
+</span></span></code></pre></div><p>The <em>presenter</em> takes the response from the <em>interactor</em> and creates a view model. The view model simply contains all the data the view controller needs as strings or other simple data types (bools in this case). The presenter should handle all the necessary formatting. Is this case, no formatting is required. Our view model looks like this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>ViewModel</span> {
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>let</span> questionText: String
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>let</span> answerText: String
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>let</span> nextQuestionEnabled: Bool
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>let</span> revealAnswerEnabled: Bool
+</span></span><span style=display:flex><span>} 
+</span></span></code></pre></div><p>Its just the text to use for the question label, the text to use for the answer label, whether or not the next question button should be enabled, and whether or not the reveal answer button should be enabled.</p><h3 id=clean-presenter---view-displaying-a-card>Clean: Presenter -> View: Displaying a Card</h3><p>The <em>presenter</em> then passes this view model to the <em>view</em> through its output property by calling <code>displayFlashCard</code>. Here’s the <em>presenter</em> output protocol:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>DisplayFlashCardPresenterOutput</span>: <span style=color:#66d9ef>class</span> {
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>displayFlashCard</span>(viewModel: DisplayFlashCard.ViewModel)
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>displayError</span>(title: String, message: String)
+</span></span><span style=display:flex><span>} 
+</span></span></code></pre></div><p>This again will match exactly with the <code>DisplayFlashCardViewControllerInput</code> protocol, which is the input protocol for the <em>view</em>. Now let’s look at how the <em>view</em> implemented by <code>DisplayFlashCardViewController</code>, handles <code>displayFlashCard</code>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>displayFlashCard</span>(viewModel: DisplayFlashCard.ViewModel) {
+</span></span><span style=display:flex><span>   questionLabel.text = viewModel.questionText
+</span></span><span style=display:flex><span>   nextQuestionButton.isEnabled = viewModel.nextQuestionEnabled
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>   answerLabel.text = viewModel.answerText
+</span></span><span style=display:flex><span>   revealAnswerButton.isEnabled = viewModel.revealAnswerEnabled
+</span></span><span style=display:flex><span>} 
+</span></span></code></pre></div><p>The view is dumb. All it does is take the values from the view model and put them where they should go in the view.</p><h3 id=clean-summary>Clean: Summary</h3><p>That’s one complete cycle through the <em>view</em>, <em>interactor</em>, <em>presenter</em> data flow. The other ones are when the user taps the next questions button and the reveal answer button. I won’t cover those because the flow is similar. Just look at the code to see how they are handled.</p><h2 id=conclusion>Conclusion</h2><p>Whew! That was a lot! You can now see why Clean Swift is overkill for our simple example and why some teams are reluctant to use it or others have strived to simplify it. At my new job, we are using a simpler version of the Clean architecture that is more of a cross between MVP and Clean, and it’s working pretty well. The app we are working on is very large and quite complicated. It’s a challenge to implement this architecture in some cases, but it definitely helps in knowing where functionality should be placed and what classes are responsible for certain behavior. It definitely helps in testing. We have no UI automation tests and all our units tests run in under 10 seconds. Our unit tests also test the UI.</p><p>Using an architecture like Clean Swift takes practice and discipline, but take the time to understand it. It will pay off in your understanding of applying an architecture to your next project. That architecture may or may not be Clean Swift. Do what works for you and your team. I’d say start with the Clean architecture and adapt it to your needs. This article has been a long time coming and I apologize for the delay. It was quite a challenge to write with all the moving parts and with my inexperience with Clean Swift as well. Please comment below or contact me directly if you have any questions or have some topics you would like me to cover in future posts.</p></div><script async data-uid=d20275c87b src=https://relentless-teacher-3937.ck.page/d20275c87b/index.js></script><div class="navigation navigation-single"><a href=https://rodschmidt.com/posts/the-clean-architecture-an-introduction/ class=navigation-prev><i aria-hidden=true class="fa fa-chevron-left"></i>
+<span class=navigation-tittle>The Clean Architecture: An Introduction</span></a>
+<a href=https://rodschmidt.com/posts/two-more-examples-of-clean-architecture/ class=navigation-next><span class=navigation-tittle>Two More Examples of Clean Architecture</span>
+<i aria-hidden=true class="fa fa-chevron-right"></i></a></div><div id=disqus_thread></div><script type=text/javascript>(function(){if(location.hostname==="localhost"||location.hostname==="127.0.0.1"||location.hostname==="")return;var t,e=document.createElement("script");e.type="text/javascript",e.async=!0,t="rodschmidt",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script><noscript>Please enable JavaScript to view the
+<a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=http://disqus.com/ class=dsq-brlink>comments powered by
+<span class=logo-disqus>Disqus</span></a></article></div><script defer src=https://use.fontawesome.com/releases/v5.11.2/js/all.js integrity=sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1 crossorigin=anonymous></script></body></html>
