@@ -16,7 +16,7 @@ In the previous [post]({{<ref "what-are-the-downsides-to-putting-the-core-data-m
 
 > Every module or class should have responsibility over a single part of the functionality provided by the software, and that responsibility should be entirely encapsulated by the class. All of its services should be narrowly aligned with that responsibility.
 
-Or as Robert C. Martin (Uncle Bob) puts it, “_A class should have only one reason to change._” 
+Or as Robert C. Martin (Uncle Bob) puts it, “_A class should have only one reason to change._”
 
 The documentation for `UIApplicationDelegate` states:
 
