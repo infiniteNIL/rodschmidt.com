@@ -1,7 +1,7 @@
 ---
 title: "Thoughts on Testing"
 date: 2024-07-05T15:18:45-06:00
-draft: true
+draft: false
 tags: ['Testing']
 ---
 Testing has grown to be a very important part of software development. When I first started my career, I didn’t hear about writing tests until a few years in. Then we started writing tests for all our libraries. When I first got into Cocoa development, testing was not a part of the culture. That slowly changed, and now it is an important part of development on Apple platforms.
