@@ -1,7 +1,8 @@
 ---
 title: "Feature Flags Case Study"
 date: 2025-01-16T10:34:43-07:00
-draft: true
+draft: false
+tags: ['Architecture', 'Software Development']
 ---
 
 # Case Study: Improving the Efficiency of Software Development Teams Dependent on Another Team
