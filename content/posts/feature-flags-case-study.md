@@ -1,12 +1,9 @@
 ---
-title: "Feature Flags Case Study"
+title: "Case Study: Improving the Effeciency of Software Development Teams Dependent on Another Team"
 date: 2025-01-16T10:34:43-07:00
 draft: false
 tags: ['Architecture', 'Software Development']
 ---
-
-# Case Study: Improving the Efficiency of Software Development Teams Dependent on Another Team
-
 In my last job, I was on a platform team. One of the responsibilities of a platform team is to support all the other software development teams in an organization by writing libraries and tools that can be used by the other teams.
 
 One of the libraries the platform team provided was a library that managed feature flags for the iOS app that our company produced. The primary function of the library was to get the current value of a given feature flag. If you’re not familiar with feature flags see [Feature Flags 101: Use Cases, Benefits, and Best Practices](https://launchdarkly.com/blog/what-are-feature-flags/). Basically, they are used to turn off and on features of an application at runtime.
