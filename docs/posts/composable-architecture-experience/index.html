@@ -1,134 +1,450 @@
-<!doctype html><html lang=en-us><head><link href=https://gmpg.org/xfn/11 rel=profile><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta http-equiv=cache-control content="public"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta name=generator content="Hugo 0.119.0"><title>The Composable Architecture: My 3 Year Experience • Rod Schmidt</title><meta name=twitter:card content="summary"><meta name=twitter:title content="The Composable Architecture: My 3 Year Experience"><meta name=twitter:description content="Introduction I recently finished a 3 year stint with a company that uses the Composable Architecture (TCA) from PointFree. I wanted to write about my experiences with TCA and some of the problems I see with it.
-I think Brandon Williams and Stephen Cellis, the creators of TCA, are absolutely brilliant, and what they have managed to pull off with the creation of TCA is amazing. However, It’s just the two of them, and nobody, or no thing, is perfect."><meta property="og:title" content="The Composable Architecture: My 3 Year Experience"><meta property="og:description" content="Introduction I recently finished a 3 year stint with a company that uses the Composable Architecture (TCA) from PointFree. I wanted to write about my experiences with TCA and some of the problems I see with it.
-I think Brandon Williams and Stephen Cellis, the creators of TCA, are absolutely brilliant, and what they have managed to pull off with the creation of TCA is amazing. However, It’s just the two of them, and nobody, or no thing, is perfect."><meta property="og:type" content="article"><meta property="og:url" content="https://rodschmidt.com/posts/composable-architecture-experience/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2024-04-26T11:35:37-06:00"><meta property="article:modified_time" content="2024-04-26T11:35:37-06:00"><link rel=stylesheet href=https://rodschmidt.com/scss/hyde-hyde.0d89d10ddd2f2e23f97e661848b7ad8092fbfcbe8d60e4d1564914cf25d188d8.css integrity="sha256-DYnRDd0vLiP5fmYYSLetgJL7/L6NYOTRVkkUzyXRiNg="><link rel=stylesheet href=https://rodschmidt.com/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58+TzH3icCkSHGoJ+ed7w=" media=print><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js></script>
-<script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=apple-touch-icon-precomposed sizes=144x144 href=https://rodschmidt.com/apple-touch-icon-144-precomposed.png><link rel="shortcut icon" href=https://rodschmidt.com/favicon.png></head><body><div class=sidebar><div class=container><div class=sidebar-about><span class=site__title><a href=https://rodschmidt.com/>Rod Schmidt</a></span><div class=author-image><img src="https://www.gravatar.com/avatar/e72ca1d6149c220065acbb01cd9f5d01?s=240&d=mp" class="img--circle img--headshot element--center" alt=gravatar></div><p class=site__description>Thoughts on Software Development</p></div><div class=collapsible-menu><input type=checkbox id=menuToggle>
-<label for=menuToggle>Rod Schmidt</label><div class=menu-content><div><ul class=sidebar-nav><li><a href=https://rodschmidt.com/about/><span>About</span></a></li><li><a href=https://rodschmidt.com/posts/><span>Posts</span></a></li><li><a href=https://rodschmidt.com/tags/><span>Tags</span></a></li><li><a href=https://rodschmidt.com/index.xml><span>RSS</span></a></li></ul></div><section class=social><a href=https://twitter.com/rodschmidt rel=me><i class="fab fa-twitter fa-lg" aria-hidden=true></i></a>
-<a href=https://github.com/infinitenil rel=me><i class="fab fa-github fa-lg" aria-hidden=true></i></a>
-<a href=https://linkedin.com/in/rodschmidt rel=me><i class="fab fa-linkedin fa-lg" aria-hidden=true></i></a>
-<a href=https://stackoverflow.com/users/117435 rel=me><i class="fab fa-stack-overflow fa-lg" aria-hidden=true></i></a></section></div></div><div class=copyright>&copy; 2024 Rod Schmidt</div></div></div><div class="content container"><article><header><h1>The Composable Architecture: My 3 Year Experience</h1><div class=post__meta><i class="fas fa-calendar-alt"></i> Apr 26, 2024<br><i class="fas fa-tags"></i>
-<a class="badge badge-tag" href=https://rodschmidt.com/tags/architecture>architecture</a>
-<a class="badge badge-tag" href=https://rodschmidt.com/tags/apple-platforms>apple platforms</a>
-<a class="badge badge-tag" href=https://rodschmidt.com/tags/tca>tca</a>
-<a class="badge badge-tag" href=https://rodschmidt.com/tags/the-composable-architecture>the composable architecture</a>
-<a class="badge badge-tag" href=https://rodschmidt.com/tags/swift>swift</a>
-<a class="badge badge-tag" href=https://rodschmidt.com/tags/swiftui>swiftui</a><br></div></header><div class=post><h2 id=introduction>Introduction</h2><p>I recently finished a 3 year stint with a company that uses the Composable Architecture (<a href=https://github.com/pointfreeco/swift-composable-architecture>TCA</a>)
-from <a href=https://pointfree.co>PointFree</a>. I wanted to write about my experiences with TCA and some of
-the problems I see with it.</p><p>I think Brandon Williams and Stephen Cellis, the creators of TCA, are absolutely brilliant, and what
+<!DOCTYPE html>
+<html lang="en-us">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.119.0">
+
+    
+    
+    
+
+<title>The Composable Architecture: My 3 Year Experience • Rod Schmidt</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The Composable Architecture: My 3 Year Experience"/>
+<meta name="twitter:description" content="Introduction I recently finished a 3 year stint with a company that uses the Composable Architecture (TCA) from PointFree. I wanted to write about my experiences with TCA and some of the problems I see with it.
+I think Brandon Williams and Stephen Cellis, the creators of TCA, are absolutely brilliant, and what they have managed to pull off with the creation of TCA is amazing. However, It’s just the two of them, and nobody, or no thing, is perfect."/>
+
+<meta property="og:title" content="The Composable Architecture: My 3 Year Experience" />
+<meta property="og:description" content="Introduction I recently finished a 3 year stint with a company that uses the Composable Architecture (TCA) from PointFree. I wanted to write about my experiences with TCA and some of the problems I see with it.
+I think Brandon Williams and Stephen Cellis, the creators of TCA, are absolutely brilliant, and what they have managed to pull off with the creation of TCA is amazing. However, It’s just the two of them, and nobody, or no thing, is perfect." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rodschmidt.com/posts/composable-architecture-experience/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-04-26T11:35:37-06:00" />
+<meta property="article:modified_time" content="2024-04-26T11:35:37-06:00" />
+
+
+    
+
+
+
+
+
+
+<link rel="stylesheet" href="https://rodschmidt.com/scss/hyde-hyde.0d89d10ddd2f2e23f97e661848b7ad8092fbfcbe8d60e4d1564914cf25d188d8.css" integrity="sha256-DYnRDd0vLiP5fmYYSLetgJL7/L6NYOTRVkkUzyXRiNg=">
+
+
+<link rel="stylesheet" href="https://rodschmidt.com/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://rodschmidt.com/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="https://rodschmidt.com/favicon.png">
+    
+    
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://rodschmidt.com/">Rod Schmidt</a>
+      </span>
+      
+      
+        <div class="author-image">
+          <img src="https://www.gravatar.com/avatar/e72ca1d6149c220065acbb01cd9f5d01?s=240&d=mp" class="img--circle img--headshot element--center" alt="gravatar">
+        </div>
+      
+      <p class="site__description">
+         Thoughts on Software Development 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Rod Schmidt</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="https://rodschmidt.com/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://rodschmidt.com/posts/">
+						<span>Posts</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://rodschmidt.com/tags/">
+						<span>Tags</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://rodschmidt.com/index.xml">
+						<span>RSS</span>
+					</a>
+				</li>
+			 
+		
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/rodschmidt" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/infinitenil" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/rodschmidt" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://stackoverflow.com/users/117435" rel="me"><i class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    
+<div class="copyright">
+  &copy; 2025 Rod Schmidt
+  
+</div>
+
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    
+<article>
+  <header>
+    <h1>The Composable Architecture: My 3 Year Experience</h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Apr 26, 2024
+    
+    
+    
+    
+    
+      
+      
+          <br/>
+           <i class="fas fa-tags"></i>
+          
+          <a class="badge badge-tag" href="https://rodschmidt.com/tags/architecture">architecture</a>
+           
+      
+          <a class="badge badge-tag" href="https://rodschmidt.com/tags/apple-platforms">apple platforms</a>
+           
+      
+          <a class="badge badge-tag" href="https://rodschmidt.com/tags/tca">tca</a>
+           
+      
+          <a class="badge badge-tag" href="https://rodschmidt.com/tags/the-composable-architecture">the composable architecture</a>
+           
+      
+          <a class="badge badge-tag" href="https://rodschmidt.com/tags/swift">swift</a>
+           
+      
+          <a class="badge badge-tag" href="https://rodschmidt.com/tags/swiftui">swiftui</a>
+          
+      
+    
+    
+    <br/>
+    
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    <h2 id="introduction">Introduction</h2>
+<p>I recently finished a 3 year stint with a company that uses the Composable Architecture (<a href="https://github.com/pointfreeco/swift-composable-architecture">TCA</a>)
+from <a href="https://pointfree.co">PointFree</a>. I wanted to write about my experiences with TCA and some of
+the problems I see with it.</p>
+<p>I think Brandon Williams and Stephen Cellis, the creators of TCA, are absolutely brilliant, and what
 they have managed to pull off with the creation of TCA is amazing. However, It’s just the two of them,
-and nobody, or no thing, is perfect.</p><h2 id=the-start>The Start</h2><p>In February of 2021, I found out that a local company was using TCA to write their software for iOS.
+and nobody, or no thing, is perfect.</p>
+<h2 id="the-start">The Start</h2>
+<p>In February of 2021, I found out that a local company was using TCA to write their software for iOS.
 I’m a big fan of functional programming, and had been watching the PointFree videos, so I was very
-much interested in TCA and getting a chance to use it. I’m also a fan of the <a href=https://elm-lang.org>Elm programming language</a>,
-<a href=https://guide.elm-lang.org/architecture/>The Elm Architecture</a>(TEA), and I saw TCA as a potential
-version of that for iOS apps. This kind of programming is called <a href=https://en.wikipedia.org/wiki/Functional_reactive_programming>functional reactive programming</a>
-and other frameworks that you may have heard of like this are <a href=https://react.dev/>React</a> and <a href=https://github.com/ReactiveX/RxSwift>RxSwift</a></p><p>Many iOS developers in Utah are on a Slack group where we regularly discuss things related to the industry.
+much interested in TCA and getting a chance to use it. I’m also a fan of the <a href="https://elm-lang.org">Elm programming language</a>,
+<a href="https://guide.elm-lang.org/architecture/">The Elm Architecture</a>(TEA), and I saw TCA as a potential
+version of that for iOS apps. This kind of programming is called <a href="https://en.wikipedia.org/wiki/Functional_reactive_programming">functional reactive programming</a>
+and other frameworks that you may have heard of like this are <a href="https://react.dev/">React</a> and <a href="https://github.com/ReactiveX/RxSwift">RxSwift</a></p>
+<p>Many iOS developers in Utah are on a Slack group where we regularly discuss things related to the industry.
 I reached out to someone I knew that worked at the company and soon had an interview. I interviewed
 with 3 of their lead developers. I must have done well because I started working for the company at
 the beginning of March 2021. I was on a team that had responsibility for one iOS app out of 3 the
-company had on the App Store. It wasn’t long before I ran into my first issue with TCA.</p><h2 id=its-complicated>It’s Complicated</h2><p>TCA has a steep learning curve. You need to learn about reducers, stores, and scoping of state and actions.
+company had on the App Store. It wasn’t long before I ran into my first issue with TCA.</p>
+<h2 id="its-complicated">It’s Complicated</h2>
+<p>TCA has a steep learning curve. You need to learn about reducers, stores, and scoping of state and actions.
 In the beginning, you had to know about view stores and environments as well (These are no longer needed,
 see below). You can’t just use SwiftUI like you learned from Apple. Every view needs a store, and if
 you care about performance, a view store. You need to learn how to use TCA’s top notch testing abilities,
-and use a test store. You can’t just use XCTest by itself.</p><p>In March of 2021, TCA was at version <a href=https://github.com/pointfreeco/swift-composable-architecture/releases/tag/0.16.0>0.16.0</a>.
-Things have improved a lot since then with the latest release (<a href=https://github.com/pointfreeco/swift-composable-architecture/releases/tag/1.9.0>1.9.x</a>),
+and use a test store. You can’t just use XCTest by itself.</p>
+<p>In March of 2021, TCA was at version <a href="https://github.com/pointfreeco/swift-composable-architecture/releases/tag/0.16.0">0.16.0</a>.
+Things have improved a lot since then with the latest release (<a href="https://github.com/pointfreeco/swift-composable-architecture/releases/tag/1.9.0">1.9.x</a>),
 but really the main things that have improved are the ergonomics of using the framework, and its performance.
-View stores are no longer required with Apple&rsquo;s new <a href=https://developer.apple.com/documentation/Observation>Observation</a>
+View stores are no longer required with Apple&rsquo;s new <a href="https://developer.apple.com/documentation/Observation">Observation</a>
 framework and <code>@Observable</code> macro introduced in iOS 17, but you need to know about TCA’s <code>@ObservableState</code>
 macro. If you&rsquo;re on iOS 16 or earlier, you need to know about TCA&rsquo;s <code>withPerceptionTracking</code>, the <code>@Perceptible</code>
-macro, and the <a href=https://github.com/pointfreeco/swift-perception>Perception</a> framework. Environments got
-replaced with the <a href=https://github.com/pointfreeco/swift-dependencies>swift-dependencies</a> framework
+macro, and the <a href="https://github.com/pointfreeco/swift-perception">Perception</a> framework. Environments got
+replaced with the <a href="https://github.com/pointfreeco/swift-dependencies">swift-dependencies</a> framework
 and the <code>@Dependency</code> macro, and you need to learn how to use that. Macros have improved case
-paths and how you refer to scoped actions.</p><p>Even with these improvements, you still need to learn a lot to use TCA. You also have to constantly
+paths and how you refer to scoped actions.</p>
+<p>Even with these improvements, you still need to learn a lot to use TCA. You also have to constantly
 re-learn things as the framework gets updated and changes. All the changes have been improvements, but
-it takes time to learn them, especially when you’re trying to get work done.</p><h2 id=the-churn>The Churn</h2><p>TCA changes a lot, significantly. More than the iOS SDK. When I say significantly, I mean that, while
+it takes time to learn them, especially when you’re trying to get work done.</p>
+<h2 id="the-churn">The Churn</h2>
+<p>TCA changes a lot, significantly. More than the iOS SDK. When I say significantly, I mean that, while
 backward compatibility was kept, the new functionality had significant changes that you wanted to use
-and would improve the code, but would require significant changes to use.</p><p>Over my 3 years, it went from version 0.16.0 to 1.9.2. There were 95 releases over the 3 years, most
-of them minor (<a href=https://semver.org/>semver</a> wise) releases that just added functionality and kept
+and would improve the code, but would require significant changes to use.</p>
+<p>Over my 3 years, it went from version 0.16.0 to 1.9.2. There were 95 releases over the 3 years, most
+of them minor (<a href="https://semver.org/">semver</a> wise) releases that just added functionality and kept
 backward compatibility. Now, we were using a pre-1.0 framework, so you can’t really blame TCA or PointFree,
 but if you look at just the releases between 1.0 (July 2023) and 1.9.2 (March 2024), there were 24 releases
-in less than a year. Again, most of them minor releases, but with significant additions.</p><p>When I left, we were still using 1.6, because when we attempted to migrate to 1.7 with the new Observation
+in less than a year. Again, most of them minor releases, but with significant additions.</p>
+<p>When I left, we were still using 1.6, because when we attempted to migrate to 1.7 with the new Observation
 support, we ran into some issues that would require lots of changes and some other tricky issues to
 resolve because we were still supporting iOS 15. This meant we couldn’t use Apple’s Observation framework.
 Instead, we needed to use PointFree&rsquo;s Perception framework and wrap many views in <code>withPerceptionTracking</code>.
 This in itself is tricky, as you need to start at the root view and work down the view tree. If you
 don’t, you’ll end up with run-time warnings and lots of run-time issues. Using the <code>@ObservableState</code>
 macro presented another problem, because macros don’t play well with property wrappers, which we were
-using in our state. (See Performance Issues).</p><p>More on our team structure later, but when you have 8 teams, all with their own code that needs to be
+using in our state. (See Performance Issues).</p>
+<p>More on our team structure later, but when you have 8 teams, all with their own code that needs to be
 updated at the same time as all the other teams, migrating to a new version is not always easy, especially
-if teams are under pressure to deliver features.</p><h2 id=architectural-issues>Architectural Issues</h2><p>I’ve already talked about how complicated TCA is. You can be much more productive with another architecture,
+if teams are under pressure to deliver features.</p>
+<h2 id="architectural-issues">Architectural Issues</h2>
+<p>I’ve already talked about how complicated TCA is. You can be much more productive with another architecture,
 such as MVVM (with additional pieces), and get the same benefits, such as a unidirectional data flow,
 easier unit testing, and modular code. See some of my other posts on this, but I intend to delve deeper
-into this in future posts.</p><p>The other issue is that TCA is built around functional programming and this is in opposition to the iOS
+into this in future posts.</p>
+<p>The other issue is that TCA is built around functional programming and this is in opposition to the iOS
 SDK’s object-oriented roots. Yes, Swift and SwiftUI are more functional, but they are built on top of
 Objective-C and Cocoa, an object-oriented language and framework. Everything is designed and optimized
 around that. TCA is functional and can’t take advantage of that, resulting in performance issues, and
-an impedance mismatch with the platform.</p><p>Take reducers and actions for example. To me, this is just object-oriented message passing. TCA basically
+an impedance mismatch with the platform.</p>
+<p>Take reducers and actions for example. To me, this is just object-oriented message passing. TCA basically
 implements its own message passing and handling. When using TCA, I just wanted to call a method, which
 would be the equivalent of sending the action. With MVVM, or another architecture, I would be able to
-do just this.</p><p>There’s basically no encapsulation. Code can intercept an action sent from anywhere in the reducer hierarchy,
+do just this.</p>
+<p>There’s basically no encapsulation. Code can intercept an action sent from anywhere in the reducer hierarchy,
 and all the state for a reducer hierarchy has to exist in the root state. You can’t hide a piece of state
-from other areas, nor can you hide actions.</p><p>Another issue is massive reducers. Just like MVC can lead to Massive View Controllers, I’ve seen TCA
+from other areas, nor can you hide actions.</p>
+<p>Another issue is massive reducers. Just like MVC can lead to Massive View Controllers, I’ve seen TCA
 lead to Massive Reducers. Our application reducer was so large, Xcode had problems scrolling through
 it, and it wouldn’t give you valid compiler errors. I ended up splitting it up into about 20 separate
 files containing extensions to the app reducer. Each extension was for handling a related group of actions.
-So, the app reducer was handling at least 20 different responsibilities.</p><p>Reducers are mostly just a switch statement with a case for each action. People tend to just put all
+So, the app reducer was handling at least 20 different responsibilities.</p>
+<p>Reducers are mostly just a switch statement with a case for each action. People tend to just put all
 the action handling in there without calling out to separate functions on the reducer. Composing reducers
 can be a pain (see It’s Complicated), so your usually under pressure developer just throws everything
-into that switch statement.</p><p>One could argue that this is a skill issue (or laziness), and I would be inclined to agree with you.
-We also all know how common an issue like Massive View Controllers is.</p><h2 id=performance-issues>Performance Issues</h2><p>With our large application, we ran into some performance issues.</p><p>First, TCA uses a lot of stack. If you try to debug a TCA application, good luck trying to find where
+into that switch statement.</p>
+<p>One could argue that this is a skill issue (or laziness), and I would be inclined to agree with you.
+We also all know how common an issue like Massive View Controllers is.</p>
+<h2 id="performance-issues">Performance Issues</h2>
+<p>With our large application, we ran into some performance issues.</p>
+<p>First, TCA uses a lot of stack. If you try to debug a TCA application, good luck trying to find where
 your code is being called from. The stack is so large and there’s so many TCA framework functions calls
 to handle actions. With our large application and large application state, we&rsquo;d have stack overflow
 errors, and would have to increase the stack space allocated to our code. We also resorted to creating
 a property wrapper to put references in our application state, which is usually just a struct with value
-types.</p><p>Next, as mentioned above, processing an action can be quite slow. Each action has to go up through the
+types.</p>
+<p>Next, as mentioned above, processing an action can be quite slow. Each action has to go up through the
 entire reducer tree. In a large application, that can be significant. Similar to how Objective-C message
-sending could be slow.</p><p>Also, because of the lack of encapsulation (i.e. free access to state and actions), and the composition
+sending could be slow.</p>
+<p>Also, because of the lack of encapsulation (i.e. free access to state and actions), and the composition
 of reducers, changing some code in one area, would frequently require lots of code to be recompiled,
-resulting in slow build times.</p><h2 id=company-organizational-issues>Company Organizational Issues</h2><p>When I started with the company, I was on a team that had complete control of one app. That app was discontinued,
+resulting in slow build times.</p>
+<h2 id="company-organizational-issues">Company Organizational Issues</h2>
+<p>When I started with the company, I was on a team that had complete control of one app. That app was discontinued,
 and when I left, I was on a platform team, supporting 7 other teams, all working on one app. This made
 things even more complicated. All 8 teams had to use the same version of TCA, so when we wanted to upgrade,
 everyone had to upgrade, due to the Swift Package Manager not allowing multiple version of the same
-framework.</p><p>Since TCA has no encapsulation, and any parent reducer can get access to any child’s state or actions,
+framework.</p>
+<p>Since TCA has no encapsulation, and any parent reducer can get access to any child’s state or actions,
 you run into problems with teams reaching into other stores and relying on code they shouldn’t be. Even
 if your teams are disciplined, this can just happen because a parent’s state contains all the children
 states. That code may change and then the calling code breaks. This happened frequently and we basically
-had to build the entire app during our PR checks to make sure nothing got broken.</p><p>With this many teams, you need to put some measures in place to deal with these issues. One solution is
+had to build the entire app during our PR checks to make sure nothing got broken.</p>
+<p>With this many teams, you need to put some measures in place to deal with these issues. One solution is
 to have separate stores for each team. That way each team’s code would be isolated and executing in
-their own store. The brilliant <a href=https://www.merowing.info/>Krzysztof Zabłocki</a> has written about this
+their own store. The brilliant <a href="https://www.merowing.info/">Krzysztof Zabłocki</a> has written about this
 and I recommend his site for other ways to deal with TCA’s scaling issues, such as partitioning your
 actions into delegate and internal actions. If you use separate stores, you will then need to figure
 out how to communicate between stores. One approach would be to have each team (or store) have a TCA
 client (i.e. a dependency) that another team could use. This client would, in effect, create a clean
-boundary or interface between two teams.</p><h2 id=company-risks>Company Risks</h2><p>Let’s talk about the risks a company takes on when choosing a framework like TCA.</p><p>First off, TCA is a 3rd party framework. This means Apple doesn’t support it or care about it. Something
+boundary or interface between two teams.</p>
+<h2 id="company-risks">Company Risks</h2>
+<p>Let’s talk about the risks a company takes on when choosing a framework like TCA.</p>
+<p>First off, TCA is a 3rd party framework. This means Apple doesn’t support it or care about it. Something
 Apple does may break it (like a new iOS release) and you may have to wait for the framework to get updated.
 The framework can’t take full advantage of the platform like Apple can, because it can’t make use of
 internals like Apple can. This is really an issue with TCA because of the performance issues I talked
-about.</p><p>Next, TCA is primarily the work of 2 guys. 2 brilliant and prolific guys, but 2 guys nonetheless. If
+about.</p>
+<p>Next, TCA is primarily the work of 2 guys. 2 brilliant and prolific guys, but 2 guys nonetheless. If
 they get bored, injured, change careers, whatever, you could be in some trouble. This is mitigated somewhat
 by TCA being open-source and presumably a company and/or the community could take over, but it is still
-an issue.</p><p>Lastly, a company as large as the one I worked for, really shouldn’t be using an immature framework like
+an issue.</p>
+<p>Lastly, a company as large as the one I worked for, really shouldn’t be using an immature framework like
 TCA was. I think, now at 1.9.x, TCA is pretty mature. You don’t want to start at 0.16.0. This is what
 happens when you have inexperienced developers (most software developers have &lt; 5 years experience,
 according to Uncle Bob) wanting to use some cool tech, and managers listening to them, who really should
-know better. Some of these managers, even had technical experience.</p><p>I asked why TCA was chosen and was told they chose it because they needed an architecture to keep all
+know better. Some of these managers, even had technical experience.</p>
+<p>I asked why TCA was chosen and was told they chose it because they needed an architecture to keep all
 the developers from doing whatever they wanted. Their main concern was all the contractors they have
 in Eastern Europe. This doesn’t seem like a very good reason to choose a framework to me. There are
 other architectures to use, such as MVVM (or MVVM+), that are easier to use and serve the same purpose.
 If that is your concern, maybe you should just hire better developers and provide better guidance?
 In all fairness, the developers we had in Eastern Europe were pretty good and they didn’t need an architecture
-like TCA to keep them in line.</p><h2 id=conclusion>Conclusion</h2><p>TCA is an incredible accomplishment, but it has some problems when used in a large application composed
+like TCA to keep them in line.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>TCA is an incredible accomplishment, but it has some problems when used in a large application composed
 of code from multiple teams. Your mileage may vary and it could work for you, especially if you have a
 single team, a relatively small application, or some great disciplined developers. With a large app and
-multiple teams you will need to deal with the lack of encapsulation and other scaling issues.</p><p>TCA is a 3rd party framework without Apple’s support, and it depends on just 2 brilliant guys that you’re
+multiple teams you will need to deal with the lack of encapsulation and other scaling issues.</p>
+<p>TCA is a 3rd party framework without Apple’s support, and it depends on just 2 brilliant guys that you’re
 basically betting your whole code base on. It’s a functional programming based framework that goes against
 SwiftUI’s object-oriented heritage and influence. You might be more productive onboarding new developers
 and adding features with another architecture and still be able to achieve your desired architectural
-discipline with MVVM or Clean Architecture.</p><p>In future posts, I will talk about how you can use a simpler architecture to achieve the same goals as
+discipline with MVVM or Clean Architecture.</p>
+<p>In future posts, I will talk about how you can use a simpler architecture to achieve the same goals as
 you would want to achieve with TCA, and how to establish clean boundaries between different areas of
 your code or between teams. Some of my previous posts have already talked about this, but new posts would
-be more specific to SwiftUI, and address clean boundaries.</p><p>I’m available for consulting, so if you need help addressing these issues, I can provide suggestions
-and guidance.</p></div><script async data-uid=d20275c87b src=https://relentless-teacher-3937.ck.page/d20275c87b/index.js></script><div class="navigation navigation-single"><a href=https://rodschmidt.com/posts/baseball-stl/ class=navigation-prev><i aria-hidden=true class="fa fa-chevron-left"></i>
-<span class=navigation-tittle>St. Louis Cardinals, My Penultimate Baseball Stadium?</span></a>
-<a href=https://rodschmidt.com/posts/syncups/ class=navigation-next><span class=navigation-tittle>Pointfree's SyncUps App: A Great Example Architecture for a SwiftUI App</span>
-<i aria-hidden=true class="fa fa-chevron-right"></i></a></div><div id=disqus_thread></div><script type=text/javascript>(function(){if(location.hostname==="localhost"||location.hostname==="127.0.0.1"||location.hostname==="")return;var t,e=document.createElement("script");e.type="text/javascript",e.async=!0,t="rodschmidt",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script><noscript>Please enable JavaScript to view the
-<a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=http://disqus.com/ class=dsq-brlink>comments powered by
-<span class=logo-disqus>Disqus</span></a></article></div><script defer src=https://use.fontawesome.com/releases/v5.11.2/js/all.js integrity=sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1 crossorigin=anonymous></script></body></html>
+be more specific to SwiftUI, and address clean boundaries.</p>
+<p>I’m available for consulting, so if you need help addressing these issues, I can provide suggestions
+and guidance.</p>
+
+  </div>
+  <script async data-uid="d20275c87b" src="https://relentless-teacher-3937.ck.page/d20275c87b/index.js"></script>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="https://rodschmidt.com/posts/baseball-stl/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">St. Louis Cardinals, My Penultimate Baseball Stadium?</span>
+    </a>
+    
+    
+    <a href="https://rodschmidt.com/posts/syncups/" class="navigation-next">
+      <span class="navigation-tittle">Pointfree&#39;s SyncUps App: A Great Example Architecture for a SwiftUI App</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+  
+    
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+
+    (function () {
+    if (location.hostname === "localhost" ||
+      location.hostname === "127.0.0.1" ||
+      location.hostname === "") {
+      return;
+    }
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    var disqus_shortname = 'rodschmidt';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || 
+      document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<noscript>
+  Please enable JavaScript to view the
+  <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by
+  <span class="logo-disqus">Disqus</span>
+</a>
+
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+
+<script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" integrity="sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1" crossorigin="anonymous"></script>
+
+
+
+
+
+    
+
+
+
+    </body>
+</html>

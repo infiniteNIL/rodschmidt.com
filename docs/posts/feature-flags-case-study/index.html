@@ -17,21 +17,21 @@
     
     
 
-<title>Swift Robot Arm • Rod Schmidt</title>
+<title>Feature Flags Case Study • Rod Schmidt</title>
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Swift Robot Arm"/>
-<meta name="twitter:description" content="In a previous post, I wrote about controlling my OWI robot arm with Elixir. Well, I decided to port that to Swift!
-In that post, there’s a link to some code that does it in Objective-C with IOKit. I first tried to just do a straight port and use IOKit in Swift. That didn’t work to well. The IOKit API is an old Core Foundation library and even has some old COM style APIs."/>
+<meta name="twitter:title" content="Feature Flags Case Study"/>
+<meta name="twitter:description" content="Case Study: Improving the Efficiency of Software Development Teams Dependent on Another Team In my last job, I was on a platform team. One of the responsibilities of a platform team is to support all the other software development teams in an organization by writing libraries and tools that can be used by the other teams.
+One of the libraries the platform team provided was a library that managed feature flags for the iOS app that our company produced."/>
 
-<meta property="og:title" content="Swift Robot Arm" />
-<meta property="og:description" content="In a previous post, I wrote about controlling my OWI robot arm with Elixir. Well, I decided to port that to Swift!
-In that post, there’s a link to some code that does it in Objective-C with IOKit. I first tried to just do a straight port and use IOKit in Swift. That didn’t work to well. The IOKit API is an old Core Foundation library and even has some old COM style APIs." />
+<meta property="og:title" content="Feature Flags Case Study" />
+<meta property="og:description" content="Case Study: Improving the Efficiency of Software Development Teams Dependent on Another Team In my last job, I was on a platform team. One of the responsibilities of a platform team is to support all the other software development teams in an organization by writing libraries and tools that can be used by the other teams.
+One of the libraries the platform team provided was a library that managed feature flags for the iOS app that our company produced." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rodschmidt.com/posts/swift-robot-arm/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2016-10-11T22:36:54+00:00" />
-<meta property="article:modified_time" content="2016-10-11T22:36:54+00:00" />
+<meta property="og:url" content="https://rodschmidt.com/posts/feature-flags-case-study/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-01-16T10:34:43-07:00" />
+<meta property="article:modified_time" content="2025-01-16T10:34:43-07:00" />
 
 
     
@@ -169,13 +169,13 @@ In that post, there’s a link to some code that does it in Objective-C with IOK
     
 <article>
   <header>
-    <h1>Swift Robot Arm</h1>
+    <h1>Feature Flags Case Study</h1>
     
     
 <div class="post__meta">
     
     
-      <i class="fas fa-calendar-alt"></i> Oct 11, 2016
+      <i class="fas fa-calendar-alt"></i> Jan 16, 2025
     
     
     
@@ -186,10 +186,10 @@ In that post, there’s a link to some code that does it in Objective-C with IOK
           <br/>
            <i class="fas fa-tags"></i>
           
-          <a class="badge badge-tag" href="https://rodschmidt.com/tags/robots">robots</a>
+          <a class="badge badge-tag" href="https://rodschmidt.com/tags/architecture">architecture</a>
            
       
-          <a class="badge badge-tag" href="https://rodschmidt.com/tags/swift">swift</a>
+          <a class="badge badge-tag" href="https://rodschmidt.com/tags/software-development">software development</a>
           
       
     
@@ -203,10 +203,19 @@ In that post, there’s a link to some code that does it in Objective-C with IOK
   
   
   <div class="post">
-    <p>In a previous <a href="https://rodschmidt.com/posts/elixir-robots/">post</a>, I wrote about controlling my OWI robot arm with Elixir. Well, I decided to port that to Swift!</p>
-<p>In that <a href="https://rodschmidt.com/posts/elixir-robots/">post</a>, there’s a link to some code that does it in Objective-C with IOKit. I first tried to just do a straight port and use IOKit in Swift. That didn’t work to well. The IOKit API is an old Core Foundation library and even has some old <a href="https://en.wikipedia.org/wiki/Component_Object_Model">COM</a> style APIs. There’s some complex macros as well that do not even get transferred to Swift, so you have to find their definition and and put them in a Swift constant or function. I couldn’t even get it to compile.</p>
-<p>So, I looked at the low-level libusb C code that the Elixir project used and decided to just port that to Swift. It was tricky getting all the C pointer to pointers to variable sized structures working with Swift’s UnsafeMutablePointers and such but once I satisfied the compiler it pretty much worked.</p>
-<p>I then refactored things and created a OWIRobotArm class with a nice API, pretty similar to the Elixir API. I’ve put the code up in a Github repository called SwiftArm. You can find it <a href="https://github.com/infiniteNIL/SwiftArm" title="SwiftArm">here</a>.</p>
+    <h1 id="case-study-improving-the-efficiency-of-software-development-teams-dependent-on-another-team">Case Study: Improving the Efficiency of Software Development Teams Dependent on Another Team</h1>
+<p>In my last job, I was on a platform team. One of the responsibilities of a platform team is to support all the other software development teams in an organization by writing libraries and tools that can be used by the other teams.</p>
+<p>One of the libraries the platform team provided was a library that managed feature flags for the iOS app that our company produced. The primary function of the library was to get the current value of a given feature flag. If you’re not familiar with feature flags see <a href="https://launchdarkly.com/blog/what-are-feature-flags/">Feature Flags 101: Use Cases, Benefits, and Best Practices</a>. Basically, they are used to turn off and on features of an application at runtime.</p>
+<h2 id="problem">Problem</h2>
+<p>Here’s the problem we had. The other teams created lots of feature flags. Almost everyday a new flag would need to be created. This meant updating the library to support the new flag. This led to lots of churn with new versions of the library being released almost everyday. Teams that needed that flag couldn’t move forward with their plans until they had the flag. Any other libraries that depended on the new flag had to be updated, built, and released as well. This led to more testing, increased build times and everything else that goes along with new releases.</p>
+<h2 id="solution">Solution</h2>
+<p>I recogonized this problem, and took it upon myself to solve it. The root of the problem was that in order to add a new feature flag, the platform library had to change, even though all the logic for managing feature flags didn’t change at all. All that changed was a flag was added, removed, or changed.</p>
+<p>The answer was decentralized registration of feature flags. I added the ability for a feature flag to be registed at runtime, rather than basically hard-coded into the library. When the application started, one of the first things it did was register feature flags. Each team would define a feature flag provider in the application. When the application started up, it would ask each provider to register the flags a team needed.</p>
+<p>There was some pushback to this, as some felt it was too complicated and not necessary. I might agree if there was just one team, but in a large project with multiple teams, steps like this are often necessary.</p>
+<p>The new design was successful. The feature flag library became very stable, no longer changing almost everyday.</p>
+<h2 id="i-can-help">I Can Help</h2>
+<p>If you have a problem like this where teams are depending on other teams, and it’s causing problems, I can help. I can also help with any software development problems you are struggling with.</p>
+<p>Just click <a href="https://www.stan.store/infinitenil">here</a> to setup a coaching call. We’ll discuss your problem and some possible solutions.</p>
 
   </div>
   <script async data-uid="d20275c87b" src="https://relentless-teacher-3937.ck.page/d20275c87b/index.js"></script>
@@ -214,16 +223,11 @@ In that post, there’s a link to some code that does it in Objective-C with IOK
 
 <div class="navigation navigation-single">
     
-    <a href="https://rodschmidt.com/posts/3-ways-to-fix-your-ios-testing-woes/" class="navigation-prev">
+    <a href="https://rodschmidt.com/posts/thoughts-on-testing/" class="navigation-prev">
       <i aria-hidden="true" class="fa fa-chevron-left"></i>
-      <span class="navigation-tittle">3 Ways To Fix Your iOS Testing Woes</span>
+      <span class="navigation-tittle">Thoughts on Testing</span>
     </a>
     
-    
-    <a href="https://rodschmidt.com/posts/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate-part-2/" class="navigation-next">
-      <span class="navigation-tittle">Part 2: What Are The Downsides to Putting the Core Data MOC in the App Delegate</span>
-      <i aria-hidden="true" class="fa fa-chevron-right"></i>
-    </a>
     
 </div>
 

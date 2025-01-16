@@ -1,20 +1,370 @@
-<!doctype html><html lang=en-us><head><link href=https://gmpg.org/xfn/11 rel=profile><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta http-equiv=cache-control content="public"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta name=generator content="Hugo 0.119.0"><title>Pointfree's SyncUps App: A Great Example Architecture for a SwiftUI App • Rod Schmidt</title><meta name=twitter:card content="summary"><meta name=twitter:title content="Pointfree's SyncUps App: A Great Example Architecture for a SwiftUI App"><meta name=twitter:description content="In comments to my last article on The Composable Architecture readers have asked about examples of how I think an app should be written. In the article, I did mention my previous posts, which have examples for Clean Swift and MVVM, but those were written for UIKit. SwiftUI didn’t exist at the time.
-So, this article will talk about what I think is a great example of architecture for a SwiftUI app."><meta property="og:title" content="Pointfree's SyncUps App: A Great Example Architecture for a SwiftUI App"><meta property="og:description" content="In comments to my last article on The Composable Architecture readers have asked about examples of how I think an app should be written. In the article, I did mention my previous posts, which have examples for Clean Swift and MVVM, but those were written for UIKit. SwiftUI didn’t exist at the time.
-So, this article will talk about what I think is a great example of architecture for a SwiftUI app."><meta property="og:type" content="article"><meta property="og:url" content="https://rodschmidt.com/posts/syncups/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2024-05-11T10:41:54-06:00"><meta property="article:modified_time" content="2024-05-11T10:41:54-06:00"><link rel=stylesheet href=https://rodschmidt.com/scss/hyde-hyde.0d89d10ddd2f2e23f97e661848b7ad8092fbfcbe8d60e4d1564914cf25d188d8.css integrity="sha256-DYnRDd0vLiP5fmYYSLetgJL7/L6NYOTRVkkUzyXRiNg="><link rel=stylesheet href=https://rodschmidt.com/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58+TzH3icCkSHGoJ+ed7w=" media=print><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js></script>
-<script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=apple-touch-icon-precomposed sizes=144x144 href=https://rodschmidt.com/apple-touch-icon-144-precomposed.png><link rel="shortcut icon" href=https://rodschmidt.com/favicon.png></head><body><div class=sidebar><div class=container><div class=sidebar-about><span class=site__title><a href=https://rodschmidt.com/>Rod Schmidt</a></span><div class=author-image><img src="https://www.gravatar.com/avatar/e72ca1d6149c220065acbb01cd9f5d01?s=240&d=mp" class="img--circle img--headshot element--center" alt=gravatar></div><p class=site__description>Thoughts on Software Development</p></div><div class=collapsible-menu><input type=checkbox id=menuToggle>
-<label for=menuToggle>Rod Schmidt</label><div class=menu-content><div><ul class=sidebar-nav><li><a href=https://rodschmidt.com/about/><span>About</span></a></li><li><a href=https://rodschmidt.com/posts/><span>Posts</span></a></li><li><a href=https://rodschmidt.com/tags/><span>Tags</span></a></li><li><a href=https://rodschmidt.com/index.xml><span>RSS</span></a></li></ul></div><section class=social><a href=https://twitter.com/rodschmidt rel=me><i class="fab fa-twitter fa-lg" aria-hidden=true></i></a>
-<a href=https://github.com/infinitenil rel=me><i class="fab fa-github fa-lg" aria-hidden=true></i></a>
-<a href=https://linkedin.com/in/rodschmidt rel=me><i class="fab fa-linkedin fa-lg" aria-hidden=true></i></a>
-<a href=https://stackoverflow.com/users/117435 rel=me><i class="fab fa-stack-overflow fa-lg" aria-hidden=true></i></a></section></div></div><div class=copyright>&copy; 2024 Rod Schmidt</div></div></div><div class="content container"><article><header><h1>Pointfree's SyncUps App: A Great Example Architecture for a SwiftUI App</h1><div class=post__meta><i class="fas fa-calendar-alt"></i> May 11, 2024<br><i class="fas fa-tags"></i>
-<a class="badge badge-tag" href=https://rodschmidt.com/tags/architecture>architecture</a>
-<a class="badge badge-tag" href=https://rodschmidt.com/tags/apple-platforms>apple platforms</a>
-<a class="badge badge-tag" href=https://rodschmidt.com/tags/swift>swift</a>
-<a class="badge badge-tag" href=https://rodschmidt.com/tags/swiftui>swiftui</a><br></div></header><div class=post><p>In comments to my last article on <a href=https://rodschmidt.com/posts/composable-architecture-experience>The Composable Architecture</a> readers have asked about examples of how I think an app should be written. In the article, I did mention my previous posts, which have examples for Clean Swift and MVVM, but those were written for UIKit. SwiftUI didn’t exist at the time.</p><p>So, this article will talk about what I think is a great example of architecture for a SwiftUI app. Pointfree’s own <a href=https://github.com/pointfreeco/syncups>SyncUps</a> app. The example actually has 2 apps, one showing tree-based navigation, and one showing stack-based navigation. For this article, I will just focus on the stack-based example.</p><p>Despite my criticisms of TCA in my previous article, I’m a big fan of Pointfree. Besides TCA, they have released a lot of great libraries that are very useful to improve SwiftUI apps. These libraries are used to great effect in SyncUps.</p><h2 id=syncups-architecture>SyncUps Architecture</h2><p>SyncUps basically has what I would call a MVVM+ architecture. Each view has a model, which the view forwards user events to, and the view gets data from the model to display. The view model also handles interacting with the data model and outside services, such as <code>DataManager</code> (persistence) and <code>SpeechClient</code>, a wrapper around Apple’s Speech framework that provides speech recognition functionality. The additional services are what I call the ‘+’ in MVVM+. You don’t want to cram all the stuff into the view model and you may need to reuse that functionality across view models. Other examples would be interacting with a REST API, which is probably the most common need.</p><p>Here are the views and associated view models in SyncUps:</p><table><thead><tr><th>View</th><th>View Model</th></tr></thead><tbody><tr><td><code>AppView</code></td><td><code>AppModel</code></td></tr><tr><td><code>SyncUpDetailView</code></td><td><code>SyncUpDetailModel</code></td></tr><tr><td><code>SyncUpFormView</code></td><td><code>SyncUpFormModel</code></td></tr><tr><td><code>SyncUpsListModel</code></td><td><code>SyncUpsList</code></td></tr><tr><td><code>RecordMeetingModel</code></td><td><code>RecordMeetingView</code></td></tr></tbody></table><h2 id=data-model>Data Model</h2><p>In addition to view models, there are traditional data models, with <code>SyncUp</code> being the main one:</p><table><thead><tr><th>Data Model</th></tr></thead><tbody><tr><td><code>SyncUp</code></td></tr><tr><td><code>Attendee</code></td></tr><tr><td><code>Meeting</code></td></tr><tr><td><code>Theme</code></td></tr></tbody></table><p>The <a href=http://github.com/pointfreeco/swift-tagged>swift-tagged</a> library is used to provide more type checking for model identifiers. This prevents bugs such as mistakenly passing an Attendee ID to a function that expects a SyncUp ID.</p><p><a href=http://github.com/pointfreeco/swift-identified-collections>swift-identified-collections</a> provides an “identified” array. With this you can, for example, access an attendee of a SyncUp by its ID, rather than its index. This is a better way to access an attendee, as its index may change, such as when an attendee is deleted.</p><h2 id=dependencies>Dependencies</h2><p>I mentioned services above. Pointfree likes to call these dependencies and they have a library, <a href=http://github.com/pointfreeco/swift-dependencies>swift-dependencies</a>, to manage them. For each external dependency, you wrap it in what is called a client, providing just the API that your app needs. A client can provide a protocol for talking to an outside service, or just a bunch of closures. These dependencies can also be replaced at run-time. This is especially useful for tests and previews, allowing you to mock the dependencies and control them.</p><p>It also provides easy access to services with the <code>@Dependency</code> macro, which works a lot like SwiftUI’s <code>@EnvironmentObject</code> and frees you from having to pass your dependencies around everywhere.</p><h2 id=navigation>Navigation</h2><p>SyncUps uses <code>NavigationStack</code> introduced in iOS 16. This along with the <code>.navigationDestination</code> view modifier, lets you control your app’s navigation by simply having a stack of some state. This stack represents a path to a view in your app. So to navigate somewhere, you just add or remove state to/from the path.</p><p>Pointfree provides the <a href=http://github.com/pointfreeco/swiftui-navigation>swiftui-navigation</a> library and the <a href=https://github.com/pointfreeco/swift-case-paths>swift-case-paths</a> library that lets the app do this in a very elegant way. You can represent every destination in your app with a simple enum with associated data. No need to model it with complicated structs or multiple booleans. Just put a bunch of enums on the path and your app will navigate there. Of course, you have to have the appropriate <code>.navigationDestination</code> and <code>NavigationLinks</code> in place. This also makes it incredibly easy to implement deep linking.</p><h2 id=testing>Testing</h2><p>SyncUps has unit tests that tests each of the view models and exercises all their features. They use the <a href=https://github.com/pointfreeco/xctest-dynamic-overlay>xctest-dynamic-overlay</a> library to help provide test helpers in your main library that you can use in your tests. These helpers provide such things as mock implementations of your dependencies/clients. See the library repo for a more in-depth description of what it provides.</p><p>SyncUps also has some UI tests. This was surprising to me as I don’t recommend writing UI tests. Then in the comments at the top of <code>SyncUpsListUITests</code> you see</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#75715e>// This test case demonstrates how one can write UI tests using the swift-dependencies library. We</span>
-</span></span><span style=display:flex><span><span style=color:#75715e>// do not really recommend writing UI tests in general as they are slow and flakey, but if you must</span>
-</span></span><span style=display:flex><span><span style=color:#75715e>// then this shows how.</span>
-</span></span></code></pre></div><p>I very much agree. I did run the tests and they worked well. I think this has a lot to do with the fact that they use a different root view of the application when running UI tests (<code>UITestingView</code> instead of <code>AppView</code>). In that view they mock a lot of dependencies. This helps in the stability of the test as they are just testing the UI and not the integration of everything.</p><p>One thing the app doesn’t do is demonstrate snapshot testing. Pointfree provides <a href=https://github.com/pointfreeco/swift-snapshot-testing>swift-snapshot-testing</a> to really help with this, making it trivial to use snapshots to test things, whether it be UI or complicated output from a function (maybe a JSON encoding). You can use snapshots to generate screen shots for the App Store as well.</p><h2 id=things-id-do-differently>Things I’d Do Differently</h2><h3 id=put-view-code-in-separate-files>Put View Code in Separate Files</h3><p>I like to keep my view code completely separate from my models. SyncUps puts the view code in the same file. I like to do this because it helps enforce the notion that the view code shouldn’t be doing any business logic. It just display things and tells the view model something happened.</p><h3 id=organize-by-scene>Organize by Scene</h3><p>I like to organize my code by each screen in the app, or “scene” as I like to call it. This could also be by feature or use case. So for each “scene”, I have a folder. In that folder is the code that implements that scene, minus data models and services, which are in their own folders since they are used in multiple places.</p><h3 id=coordinators>Coordinators?</h3><p>Another thing you might consider doing is using the coordinator pattern. See <a href=https://quickbirdstudios.com/blog/coordinator-pattern-in-swiftui/>How to Use the Coordinator Pattern in SwiftUI</a>. This allows you to separate navigation logic from your views and makes it easier to use a view in many places throughout your app. If your view has hard-coded navigation to other views, this isn’t possible.</p><h2 id=mv>M*V?</h2><p>The Composable Architecture, MVVM, MVC, MVP, etc. are really just UI design patterns. They are not the complete architecture of your app. When it comes down to it, a UI design pattern is really just a way of separating your UI from your business logic. In other words, you have a bunch of code that models your domain (i.e. models), and you have a bunch of code that implements the user interface for the user to interact with that domain. It is important to separate these because it is not easy to test UI and your UI is the thing that changes the most. A view model, presenter, interactor, or whatever is just another model that encodes how your business logic interacts with the UI. By separating out this code, you can test that behavior as well. The view just becomes a fairly dumb thing that just displays data and tells your models the user did something. Ideally, the view becomes so simple that there isn’t much need to test it. All the important logic is outside the view and easily testable.</p></div><script async data-uid=d20275c87b src=https://relentless-teacher-3937.ck.page/d20275c87b/index.js></script><div class="navigation navigation-single"><a href=https://rodschmidt.com/posts/composable-architecture-experience/ class=navigation-prev><i aria-hidden=true class="fa fa-chevron-left"></i>
-<span class=navigation-tittle>The Composable Architecture: My 3 Year Experience</span></a>
-<a href=https://rodschmidt.com/posts/pittsburgh/ class=navigation-next><span class=navigation-tittle>Pittsburgh - The Last One?</span>
-<i aria-hidden=true class="fa fa-chevron-right"></i></a></div><div id=disqus_thread></div><script type=text/javascript>(function(){if(location.hostname==="localhost"||location.hostname==="127.0.0.1"||location.hostname==="")return;var t,e=document.createElement("script");e.type="text/javascript",e.async=!0,t="rodschmidt",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script><noscript>Please enable JavaScript to view the
-<a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=http://disqus.com/ class=dsq-brlink>comments powered by
-<span class=logo-disqus>Disqus</span></a></article></div><script defer src=https://use.fontawesome.com/releases/v5.11.2/js/all.js integrity=sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1 crossorigin=anonymous></script></body></html>
+<!DOCTYPE html>
+<html lang="en-us">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.119.0">
+
+    
+    
+    
+
+<title>Pointfree&#39;s SyncUps App: A Great Example Architecture for a SwiftUI App • Rod Schmidt</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Pointfree&#39;s SyncUps App: A Great Example Architecture for a SwiftUI App"/>
+<meta name="twitter:description" content="In comments to my last article on The Composable Architecture readers have asked about examples of how I think an app should be written. In the article, I did mention my previous posts, which have examples for Clean Swift and MVVM, but those were written for UIKit. SwiftUI didn’t exist at the time.
+So, this article will talk about what I think is a great example of architecture for a SwiftUI app."/>
+
+<meta property="og:title" content="Pointfree&#39;s SyncUps App: A Great Example Architecture for a SwiftUI App" />
+<meta property="og:description" content="In comments to my last article on The Composable Architecture readers have asked about examples of how I think an app should be written. In the article, I did mention my previous posts, which have examples for Clean Swift and MVVM, but those were written for UIKit. SwiftUI didn’t exist at the time.
+So, this article will talk about what I think is a great example of architecture for a SwiftUI app." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rodschmidt.com/posts/syncups/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-05-11T10:41:54-06:00" />
+<meta property="article:modified_time" content="2024-05-11T10:41:54-06:00" />
+
+
+    
+
+
+
+
+
+
+<link rel="stylesheet" href="https://rodschmidt.com/scss/hyde-hyde.0d89d10ddd2f2e23f97e661848b7ad8092fbfcbe8d60e4d1564914cf25d188d8.css" integrity="sha256-DYnRDd0vLiP5fmYYSLetgJL7/L6NYOTRVkkUzyXRiNg=">
+
+
+<link rel="stylesheet" href="https://rodschmidt.com/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://rodschmidt.com/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="https://rodschmidt.com/favicon.png">
+    
+    
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://rodschmidt.com/">Rod Schmidt</a>
+      </span>
+      
+      
+        <div class="author-image">
+          <img src="https://www.gravatar.com/avatar/e72ca1d6149c220065acbb01cd9f5d01?s=240&d=mp" class="img--circle img--headshot element--center" alt="gravatar">
+        </div>
+      
+      <p class="site__description">
+         Thoughts on Software Development 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Rod Schmidt</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="https://rodschmidt.com/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://rodschmidt.com/posts/">
+						<span>Posts</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://rodschmidt.com/tags/">
+						<span>Tags</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://rodschmidt.com/index.xml">
+						<span>RSS</span>
+					</a>
+				</li>
+			 
+		
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/rodschmidt" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/infinitenil" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/rodschmidt" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://stackoverflow.com/users/117435" rel="me"><i class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    
+<div class="copyright">
+  &copy; 2025 Rod Schmidt
+  
+</div>
+
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    
+<article>
+  <header>
+    <h1>Pointfree&#39;s SyncUps App: A Great Example Architecture for a SwiftUI App</h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> May 11, 2024
+    
+    
+    
+    
+    
+      
+      
+          <br/>
+           <i class="fas fa-tags"></i>
+          
+          <a class="badge badge-tag" href="https://rodschmidt.com/tags/architecture">architecture</a>
+           
+      
+          <a class="badge badge-tag" href="https://rodschmidt.com/tags/apple-platforms">apple platforms</a>
+           
+      
+          <a class="badge badge-tag" href="https://rodschmidt.com/tags/swift">swift</a>
+           
+      
+          <a class="badge badge-tag" href="https://rodschmidt.com/tags/swiftui">swiftui</a>
+          
+      
+    
+    
+    <br/>
+    
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    <p>In comments to my last article on <a href="https://rodschmidt.com/posts/composable-architecture-experience">The Composable Architecture</a> readers have asked about examples of how I think an app should be written. In the article, I did mention my previous posts, which have examples for Clean Swift and MVVM, but those were written for UIKit. SwiftUI didn’t exist at the time.</p>
+<p>So, this article will talk about what I think is a great example of architecture for a SwiftUI app. Pointfree’s own <a href="https://github.com/pointfreeco/syncups">SyncUps</a> app. The example actually has 2 apps, one showing tree-based navigation, and one showing stack-based navigation. For this article, I will just focus on the stack-based example.</p>
+<p>Despite my criticisms of TCA in my previous article, I’m a big fan of Pointfree. Besides TCA, they have released a lot of great libraries that are very useful to improve SwiftUI apps. These libraries are used to great effect in SyncUps.</p>
+<h2 id="syncups-architecture">SyncUps Architecture</h2>
+<p>SyncUps basically has what I would call a MVVM+ architecture. Each view has a model, which the view forwards user events to, and the view gets data from the model to display. The view model also handles interacting with the data model and outside services, such as <code>DataManager</code> (persistence) and <code>SpeechClient</code>, a wrapper around Apple’s Speech framework that provides speech recognition functionality. The additional services are what I call the ‘+’ in MVVM+. You don’t want to cram all the stuff into the view model and you may need to reuse that functionality across view models. Other examples would be interacting with a REST API, which is probably the most common need.</p>
+<p>Here are the views and associated view models in SyncUps:</p>
+<table>
+<thead>
+<tr>
+<th>View</th>
+<th>View Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AppView</code></td>
+<td><code>AppModel</code></td>
+</tr>
+<tr>
+<td><code>SyncUpDetailView</code></td>
+<td><code>SyncUpDetailModel</code></td>
+</tr>
+<tr>
+<td><code>SyncUpFormView</code></td>
+<td><code>SyncUpFormModel</code></td>
+</tr>
+<tr>
+<td><code>SyncUpsListModel</code></td>
+<td><code>SyncUpsList</code></td>
+</tr>
+<tr>
+<td><code>RecordMeetingModel</code></td>
+<td><code>RecordMeetingView</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="data-model">Data Model</h2>
+<p>In addition to view models, there are traditional data models, with <code>SyncUp</code> being the main one:</p>
+<table>
+<thead>
+<tr>
+<th>Data Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SyncUp</code></td>
+</tr>
+<tr>
+<td><code>Attendee</code></td>
+</tr>
+<tr>
+<td><code>Meeting</code></td>
+</tr>
+<tr>
+<td><code>Theme</code></td>
+</tr>
+</tbody>
+</table>
+<p>The <a href="http://github.com/pointfreeco/swift-tagged">swift-tagged</a> library is used to provide more type checking for model identifiers. This prevents bugs such as mistakenly passing an Attendee ID to a function that expects a SyncUp ID.</p>
+<p><a href="http://github.com/pointfreeco/swift-identified-collections">swift-identified-collections</a> provides an “identified” array. With this you can, for example, access an attendee of a SyncUp by its ID, rather than its index. This is a better way to access an attendee, as its index may change, such as when an attendee is deleted.</p>
+<h2 id="dependencies">Dependencies</h2>
+<p>I mentioned services above. Pointfree likes to call these dependencies and they have a library, <a href="http://github.com/pointfreeco/swift-dependencies">swift-dependencies</a>, to manage them. For each external dependency, you wrap it in what is called a client, providing just the API that your app needs. A client can provide a protocol for talking to an outside service, or just a bunch of closures. These dependencies can also be replaced at run-time. This is especially useful for tests and previews, allowing you to mock the dependencies and control them.</p>
+<p>It also provides easy access to services with the <code>@Dependency</code> macro, which works a lot like SwiftUI’s <code>@EnvironmentObject</code> and frees you from having to pass your dependencies around everywhere.</p>
+<h2 id="navigation">Navigation</h2>
+<p>SyncUps uses <code>NavigationStack</code> introduced in iOS 16. This along with the <code>.navigationDestination</code> view modifier, lets you control your app’s navigation by simply having a stack of some state. This stack represents a path to a view in your app. So to navigate somewhere, you just add or remove state to/from the path.</p>
+<p>Pointfree provides the <a href="http://github.com/pointfreeco/swiftui-navigation">swiftui-navigation</a> library and the <a href="https://github.com/pointfreeco/swift-case-paths">swift-case-paths</a> library that lets the app do this in a very elegant way. You can represent every destination in your app with a simple enum with associated data. No need to model it with complicated structs or multiple booleans. Just put a bunch of enums on the path and your app will navigate there. Of course, you have to have the appropriate <code>.navigationDestination</code> and <code>NavigationLinks</code> in place. This also makes it incredibly easy to implement deep linking.</p>
+<h2 id="testing">Testing</h2>
+<p>SyncUps has unit tests that tests each of the view models and exercises all their features. They use the <a href="https://github.com/pointfreeco/xctest-dynamic-overlay">xctest-dynamic-overlay</a> library to help provide test helpers in your main library that you can use in your tests. These helpers provide such things as mock implementations of your dependencies/clients. See the library repo for a more in-depth description of what it provides.</p>
+<p>SyncUps also has some UI tests. This was surprising to me as I don’t recommend writing UI tests. Then in the comments at the top of <code>SyncUpsListUITests</code> you see</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#75715e">// This test case demonstrates how one can write UI tests using the swift-dependencies library. We</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// do not really recommend writing UI tests in general as they are slow and flakey, but if you must</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// then this shows how.</span>
+</span></span></code></pre></div><p>I very much agree. I did run the tests and they worked well. I think this has a lot to do with the fact that they use a different root view of the application when running UI tests (<code>UITestingView</code> instead of <code>AppView</code>). In that view they mock a lot of dependencies. This helps in the stability of the test as they are just testing the UI and not the integration of everything.</p>
+<p>One thing the app doesn’t do is demonstrate snapshot testing. Pointfree provides <a href="https://github.com/pointfreeco/swift-snapshot-testing">swift-snapshot-testing</a> to really help with this, making it trivial to use snapshots to test things, whether it be UI or complicated output from a function (maybe a JSON encoding). You can use snapshots to generate screen shots for the App Store as well.</p>
+<h2 id="things-id-do-differently">Things I’d Do Differently</h2>
+<h3 id="put-view-code-in-separate-files">Put View Code in Separate Files</h3>
+<p>I like to keep my view code completely separate from my models. SyncUps puts the view code in the same file. I like to do this because it helps enforce the notion that the view code shouldn’t be doing any business logic. It just display things and tells the view model something happened.</p>
+<h3 id="organize-by-scene">Organize by Scene</h3>
+<p>I like to organize my code by each screen in the app, or “scene” as I like to call it. This could also be by feature or use case. So for each “scene”, I have a folder. In that folder is the code that implements that scene, minus data models and services, which are in their own folders since they are used in multiple places.</p>
+<h3 id="coordinators">Coordinators?</h3>
+<p>Another thing you might consider doing is using the coordinator pattern.  See <a href="https://quickbirdstudios.com/blog/coordinator-pattern-in-swiftui/">How to Use the Coordinator Pattern in SwiftUI</a>. This allows you to separate navigation logic from your views and makes it easier to use a view in many places throughout your app. If your view has hard-coded navigation to other views, this isn’t possible.</p>
+<h2 id="mv">M*V?</h2>
+<p>The Composable Architecture, MVVM, MVC, MVP, etc. are really just UI design patterns. They are not the complete architecture of your app. When it comes down to it, a UI design pattern is really just a way of separating your UI from your business logic. In other words, you have a bunch of code that models your domain (i.e. models), and you have a bunch of code that implements the user interface for the user to interact with that domain. It is important to separate these because it is not easy to test UI and your UI is the thing that changes the most. A view model, presenter, interactor, or whatever is just another model that encodes how your business logic interacts with the UI. By separating out this code, you can test that behavior as well. The view just becomes a fairly dumb thing that just displays data and tells your models the user did something. Ideally, the view becomes so simple that there isn’t much need to test it. All the important logic is outside the view and easily testable.</p>
+
+  </div>
+  <script async data-uid="d20275c87b" src="https://relentless-teacher-3937.ck.page/d20275c87b/index.js"></script>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="https://rodschmidt.com/posts/composable-architecture-experience/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">The Composable Architecture: My 3 Year Experience</span>
+    </a>
+    
+    
+    <a href="https://rodschmidt.com/posts/pittsburgh/" class="navigation-next">
+      <span class="navigation-tittle">Pittsburgh - The Last One?</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+  
+    
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+
+    (function () {
+    if (location.hostname === "localhost" ||
+      location.hostname === "127.0.0.1" ||
+      location.hostname === "") {
+      return;
+    }
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    var disqus_shortname = 'rodschmidt';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || 
+      document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<noscript>
+  Please enable JavaScript to view the
+  <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by
+  <span class="logo-disqus">Disqus</span>
+</a>
+
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+
+<script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" integrity="sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1" crossorigin="anonymous"></script>
+
+
+
+
+
+    
+
+
+
+    </body>
+</html>

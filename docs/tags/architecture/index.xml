@@ -1,3 +1,41 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Architecture on Rod Schmidt</title><link>https://rodschmidt.com/tags/architecture/</link><description>Recent content in Architecture on Rod Schmidt</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 11 May 2024 10:41:54 -0600</lastBuildDate><atom:link href="https://rodschmidt.com/tags/architecture/index.xml" rel="self" type="application/rss+xml"/><item><title>Pointfree's SyncUps App: A Great Example Architecture for a SwiftUI App</title><link>https://rodschmidt.com/posts/syncups/</link><pubDate>Sat, 11 May 2024 10:41:54 -0600</pubDate><guid>https://rodschmidt.com/posts/syncups/</guid><description>In comments to my last article on The Composable Architecture readers have asked about examples of how I think an app should be written. In the article, I did mention my previous posts, which have examples for Clean Swift and MVVM, but those were written for UIKit. SwiftUI didn’t exist at the time.
-So, this article will talk about what I think is a great example of architecture for a SwiftUI app.</description></item><item><title>The Composable Architecture: My 3 Year Experience</title><link>https://rodschmidt.com/posts/composable-architecture-experience/</link><pubDate>Fri, 26 Apr 2024 11:35:37 -0600</pubDate><guid>https://rodschmidt.com/posts/composable-architecture-experience/</guid><description>Introduction I recently finished a 3 year stint with a company that uses the Composable Architecture (TCA) from PointFree. I wanted to write about my experiences with TCA and some of the problems I see with it.
-I think Brandon Williams and Stephen Cellis, the creators of TCA, are absolutely brilliant, and what they have managed to pull off with the creation of TCA is amazing. However, It’s just the two of them, and nobody, or no thing, is perfect.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Architecture on Rod Schmidt</title>
+    <link>https://rodschmidt.com/tags/architecture/</link>
+    <description>Recent content in Architecture on Rod Schmidt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 16 Jan 2025 10:34:43 -0700</lastBuildDate><atom:link href="https://rodschmidt.com/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Feature Flags Case Study</title>
+      <link>https://rodschmidt.com/posts/feature-flags-case-study/</link>
+      <pubDate>Thu, 16 Jan 2025 10:34:43 -0700</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/feature-flags-case-study/</guid>
+      <description>Case Study: Improving the Efficiency of Software Development Teams Dependent on Another Team In my last job, I was on a platform team. One of the responsibilities of a platform team is to support all the other software development teams in an organization by writing libraries and tools that can be used by the other teams.
+One of the libraries the platform team provided was a library that managed feature flags for the iOS app that our company produced.</description>
+    </item>
+    
+    <item>
+      <title>Pointfree&#39;s SyncUps App: A Great Example Architecture for a SwiftUI App</title>
+      <link>https://rodschmidt.com/posts/syncups/</link>
+      <pubDate>Sat, 11 May 2024 10:41:54 -0600</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/syncups/</guid>
+      <description>In comments to my last article on The Composable Architecture readers have asked about examples of how I think an app should be written. In the article, I did mention my previous posts, which have examples for Clean Swift and MVVM, but those were written for UIKit. SwiftUI didn’t exist at the time.
+So, this article will talk about what I think is a great example of architecture for a SwiftUI app.</description>
+    </item>
+    
+    <item>
+      <title>The Composable Architecture: My 3 Year Experience</title>
+      <link>https://rodschmidt.com/posts/composable-architecture-experience/</link>
+      <pubDate>Fri, 26 Apr 2024 11:35:37 -0600</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/composable-architecture-experience/</guid>
+      <description>Introduction I recently finished a 3 year stint with a company that uses the Composable Architecture (TCA) from PointFree. I wanted to write about my experiences with TCA and some of the problems I see with it.
+I think Brandon Williams and Stephen Cellis, the creators of TCA, are absolutely brilliant, and what they have managed to pull off with the creation of TCA is amazing. However, It’s just the two of them, and nobody, or no thing, is perfect.</description>
+    </item>
+    
+  </channel>
+</rss>

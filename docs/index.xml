@@ -1,74 +1,544 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rod Schmidt</title><link>https://rodschmidt.com/</link><description>Recent content on Rod Schmidt</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 05 Jul 2024 15:18:45 -0600</lastBuildDate><atom:link href="https://rodschmidt.com/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://rodschmidt.com/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rodschmidt.com/about/</guid><description>Yoshiko &amp;amp; I
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rod Schmidt</title>
+    <link>https://rodschmidt.com/</link>
+    <description>Recent content on Rod Schmidt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 16 Jan 2025 10:34:43 -0700</lastBuildDate><atom:link href="https://rodschmidt.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://rodschmidt.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/about/</guid>
+      <description>Yoshiko &amp;amp; I
 My name is Rod Schmidt. I&amp;rsquo;m a software developer from Sandy, Utah and the founder of infiniteNIL Software. I am also the founder and organizer of CocoaHeads SLC, the Salt Lake City chapter of the international CocoaHeads organization.
-My journey into programming started when my Dad brought home an Apple computer, an Apple ][+. I spent the next two days going through the BASIC programming book and I was hooked.</description></item><item><title>Thoughts on Testing</title><link>https://rodschmidt.com/posts/thoughts-on-testing/</link><pubDate>Fri, 05 Jul 2024 15:18:45 -0600</pubDate><guid>https://rodschmidt.com/posts/thoughts-on-testing/</guid><description>Testing has grown to be a very important part of software development. When I first started my career, I didn’t hear about writing tests until a few years in. Then we started writing tests for all our libraries. When I first got into Cocoa development, testing was not a part of the culture. That slowly changed, and now it is an important part of development on Apple platforms.
-In many ways we are still catching up to other development cultures where testing has been much more ingrained in the culture, such as the web development world.</description></item><item><title>Pittsburgh - The Last One?</title><link>https://rodschmidt.com/posts/pittsburgh/</link><pubDate>Thu, 20 Jun 2024 16:29:12 -0600</pubDate><guid>https://rodschmidt.com/posts/pittsburgh/</guid><description>On June 6th, I flew out to Pittsburgh to see the Pirates play the Dodgers for the final stop in my lifetime goal to see a home game for every MLB team. What’s interesting is that the very first game I ever saw was the Dodgers vs. the Pirates in Los Angeles in 1976. So a fitting end. I didn’t plan it the way, it just happened. It took 48 years of being in the right city at the right time (due to business trips, vacations, etc.</description></item><item><title>Pointfree's SyncUps App: A Great Example Architecture for a SwiftUI App</title><link>https://rodschmidt.com/posts/syncups/</link><pubDate>Sat, 11 May 2024 10:41:54 -0600</pubDate><guid>https://rodschmidt.com/posts/syncups/</guid><description>In comments to my last article on The Composable Architecture readers have asked about examples of how I think an app should be written. In the article, I did mention my previous posts, which have examples for Clean Swift and MVVM, but those were written for UIKit. SwiftUI didn’t exist at the time.
-So, this article will talk about what I think is a great example of architecture for a SwiftUI app.</description></item><item><title>The Composable Architecture: My 3 Year Experience</title><link>https://rodschmidt.com/posts/composable-architecture-experience/</link><pubDate>Fri, 26 Apr 2024 11:35:37 -0600</pubDate><guid>https://rodschmidt.com/posts/composable-architecture-experience/</guid><description>Introduction I recently finished a 3 year stint with a company that uses the Composable Architecture (TCA) from PointFree. I wanted to write about my experiences with TCA and some of the problems I see with it.
-I think Brandon Williams and Stephen Cellis, the creators of TCA, are absolutely brilliant, and what they have managed to pull off with the creation of TCA is amazing. However, It’s just the two of them, and nobody, or no thing, is perfect.</description></item><item><title>St. Louis Cardinals, My Penultimate Baseball Stadium?</title><link>https://rodschmidt.com/posts/baseball-stl/</link><pubDate>Wed, 20 Sep 2023 17:48:29 -0600</pubDate><guid>https://rodschmidt.com/posts/baseball-stl/</guid><description>Busch Stadium
+My journey into programming started when my Dad brought home an Apple computer, an Apple ][+. I spent the next two days going through the BASIC programming book and I was hooked.</description>
+    </item>
+    
+    <item>
+      <title>Feature Flags Case Study</title>
+      <link>https://rodschmidt.com/posts/feature-flags-case-study/</link>
+      <pubDate>Thu, 16 Jan 2025 10:34:43 -0700</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/feature-flags-case-study/</guid>
+      <description>Case Study: Improving the Efficiency of Software Development Teams Dependent on Another Team In my last job, I was on a platform team. One of the responsibilities of a platform team is to support all the other software development teams in an organization by writing libraries and tools that can be used by the other teams.
+One of the libraries the platform team provided was a library that managed feature flags for the iOS app that our company produced.</description>
+    </item>
+    
+    <item>
+      <title>Thoughts on Testing</title>
+      <link>https://rodschmidt.com/posts/thoughts-on-testing/</link>
+      <pubDate>Fri, 05 Jul 2024 15:18:45 -0600</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/thoughts-on-testing/</guid>
+      <description>Testing has grown to be a very important part of software development. When I first started my career, I didn’t hear about writing tests until a few years in. Then we started writing tests for all our libraries. When I first got into Cocoa development, testing was not a part of the culture. That slowly changed, and now it is an important part of development on Apple platforms.
+In many ways we are still catching up to other development cultures where testing has been much more ingrained in the culture, such as the web development world.</description>
+    </item>
+    
+    <item>
+      <title>Pittsburgh - The Last One?</title>
+      <link>https://rodschmidt.com/posts/pittsburgh/</link>
+      <pubDate>Thu, 20 Jun 2024 16:29:12 -0600</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/pittsburgh/</guid>
+      <description>On June 6th, I flew out to Pittsburgh to see the Pirates play the Dodgers for the final stop in my lifetime goal to see a home game for every MLB team. What’s interesting is that the very first game I ever saw was the Dodgers vs. the Pirates in Los Angeles in 1976. So a fitting end. I didn’t plan it the way, it just happened. It took 48 years of being in the right city at the right time (due to business trips, vacations, etc.</description>
+    </item>
+    
+    <item>
+      <title>Pointfree&#39;s SyncUps App: A Great Example Architecture for a SwiftUI App</title>
+      <link>https://rodschmidt.com/posts/syncups/</link>
+      <pubDate>Sat, 11 May 2024 10:41:54 -0600</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/syncups/</guid>
+      <description>In comments to my last article on The Composable Architecture readers have asked about examples of how I think an app should be written. In the article, I did mention my previous posts, which have examples for Clean Swift and MVVM, but those were written for UIKit. SwiftUI didn’t exist at the time.
+So, this article will talk about what I think is a great example of architecture for a SwiftUI app.</description>
+    </item>
+    
+    <item>
+      <title>The Composable Architecture: My 3 Year Experience</title>
+      <link>https://rodschmidt.com/posts/composable-architecture-experience/</link>
+      <pubDate>Fri, 26 Apr 2024 11:35:37 -0600</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/composable-architecture-experience/</guid>
+      <description>Introduction I recently finished a 3 year stint with a company that uses the Composable Architecture (TCA) from PointFree. I wanted to write about my experiences with TCA and some of the problems I see with it.
+I think Brandon Williams and Stephen Cellis, the creators of TCA, are absolutely brilliant, and what they have managed to pull off with the creation of TCA is amazing. However, It’s just the two of them, and nobody, or no thing, is perfect.</description>
+    </item>
+    
+    <item>
+      <title>St. Louis Cardinals, My Penultimate Baseball Stadium?</title>
+      <link>https://rodschmidt.com/posts/baseball-stl/</link>
+      <pubDate>Wed, 20 Sep 2023 17:48:29 -0600</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/baseball-stl/</guid>
+      <description>Busch Stadium
 I finally went to another baseball game in my goal to see every MLB team at their home stadium. This time I went to St. Louis to see the Cardinals. I call this my penultimate stadium because just Pittsburgh is left after this one. More on that later.
 Here&amp;rsquo;s the box score: Box Score
 Click here to see a rundown of the game.
-The Cardinals lost to the Milwaukee Brewers, 8-2.</description></item><item><title>From WordPress to Hugo</title><link>https://rodschmidt.com/posts/from-wordpress-to-hugo/</link><pubDate>Wed, 29 Apr 2020 16:55:00 +0000</pubDate><guid>https://rodschmidt.com/posts/from-wordpress-to-hugo/</guid><description>If you’ve visited this site in the past, you’ve probably noticed a change. I recently changed my blogging platform from WordPress to Hugo. Hugo is static site generator. I also changed my theme.
-Why? I was never really satisfied with the performance of my WordPress site. Combine that with the fact that my site kept going down every month, I decided that it was time to do something and be more in control.</description></item><item><title>A Tale of 2 Steve Jobses</title><link>https://rodschmidt.com/posts/a-tale-of-2-steve-jobses/</link><pubDate>Fri, 23 Aug 2019 23:36:43 +0000</pubDate><guid>https://rodschmidt.com/posts/a-tale-of-2-steve-jobses/</guid><description>Believe or not, I just got around to watching the 2 Steve Jobs movies that came out a few years ago: Steve Jobs, starring Michael Fassbender, and Jobs, starring Ashton Kutcher
+The Cardinals lost to the Milwaukee Brewers, 8-2.</description>
+    </item>
+    
+    <item>
+      <title>From WordPress to Hugo</title>
+      <link>https://rodschmidt.com/posts/from-wordpress-to-hugo/</link>
+      <pubDate>Wed, 29 Apr 2020 16:55:00 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/from-wordpress-to-hugo/</guid>
+      <description>If you’ve visited this site in the past, you’ve probably noticed a change. I recently changed my blogging platform from WordPress to Hugo. Hugo is static site generator. I also changed my theme.
+Why? I was never really satisfied with the performance of my WordPress site. Combine that with the fact that my site kept going down every month, I decided that it was time to do something and be more in control.</description>
+    </item>
+    
+    <item>
+      <title>A Tale of 2 Steve Jobses</title>
+      <link>https://rodschmidt.com/posts/a-tale-of-2-steve-jobses/</link>
+      <pubDate>Fri, 23 Aug 2019 23:36:43 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/a-tale-of-2-steve-jobses/</guid>
+      <description>Believe or not, I just got around to watching the 2 Steve Jobs movies that came out a few years ago: Steve Jobs, starring Michael Fassbender, and Jobs, starring Ashton Kutcher
 I’ve held off watching them because I knew there would be a lot of inaccuracies. I grew up with Steve Jobs. I followed him. I didn’t want to see him distorted the way Hollywood does.
-I actually liked Jobs.</description></item><item><title>Swift UI &amp; App Architecture: A New Approach Required</title><link>https://rodschmidt.com/posts/swift-ui-app-architecture-a-new-approach-required/</link><pubDate>Sun, 04 Aug 2019 17:47:09 +0000</pubDate><guid>https://rodschmidt.com/posts/swift-ui-app-architecture-a-new-approach-required/</guid><description>With SwiftUI, everything has changed. As Brent Simmons said, it’s the end of the NeXT era and the beginning of the Swift era.
-With the coming of SwiftUI, most of our app architectures are no longer valid (or at least parts of them). They need to be adjusted. MVC is certainly out. In fact, even controllers seem to be out. From Apple’s content, it seems all we have is models and views, and that’s true.</description></item><item><title>Two More Examples of Clean Architecture</title><link>https://rodschmidt.com/posts/two-more-examples-of-clean-architecture/</link><pubDate>Sat, 01 Apr 2017 18:16:00 +0000</pubDate><guid>https://rodschmidt.com/posts/two-more-examples-of-clean-architecture/</guid><description>I recently found two more examples of Clean Architecture.
+I actually liked Jobs.</description>
+    </item>
+    
+    <item>
+      <title>Swift UI &amp; App Architecture: A New Approach Required</title>
+      <link>https://rodschmidt.com/posts/swift-ui-app-architecture-a-new-approach-required/</link>
+      <pubDate>Sun, 04 Aug 2019 17:47:09 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/swift-ui-app-architecture-a-new-approach-required/</guid>
+      <description>With SwiftUI, everything has changed. As Brent Simmons said, it’s the end of the NeXT era and the beginning of the Swift era.
+With the coming of SwiftUI, most of our app architectures are no longer valid (or at least parts of them). They need to be adjusted. MVC is certainly out. In fact, even controllers seem to be out. From Apple’s content, it seems all we have is models and views, and that’s true.</description>
+    </item>
+    
+    <item>
+      <title>Two More Examples of Clean Architecture</title>
+      <link>https://rodschmidt.com/posts/two-more-examples-of-clean-architecture/</link>
+      <pubDate>Sat, 01 Apr 2017 18:16:00 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/two-more-examples-of-clean-architecture/</guid>
+      <description>I recently found two more examples of Clean Architecture.
 The first one is called CosyHome and is an example iOS application for a home heating system developed using Clean Architecture and developed with Acceptance Test Driven Development (ATDD) using Fitnesse. Fitnesse is something I&amp;rsquo;d like to dive more into and could be a future post. Let me know if you&amp;rsquo;re interested. You can find CosyHome here.
-The other example is CleanNote that applies Clean Architecture to an iOS and Mac application.</description></item><item><title>The Clean Architecture: An Example</title><link>https://rodschmidt.com/posts/the-clean-architecture-an-example/</link><pubDate>Sun, 29 Jan 2017 21:33:02 +0000</pubDate><guid>https://rodschmidt.com/posts/the-clean-architecture-an-example/</guid><description>Today, I’d like to take an example iOS app written with an MVC architecture and show you what the example would be with a Clean Swift architecture. The example I’ve chosen to use is the Quiz app from chapter 1 of the 3rd edition of iOS Programming: The Big Nerd Ranch Guide.
+The other example is CleanNote that applies Clean Architecture to an iOS and Mac application.</description>
+    </item>
+    
+    <item>
+      <title>The Clean Architecture: An Example</title>
+      <link>https://rodschmidt.com/posts/the-clean-architecture-an-example/</link>
+      <pubDate>Sun, 29 Jan 2017 21:33:02 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/the-clean-architecture-an-example/</guid>
+      <description>Today, I’d like to take an example iOS app written with an MVC architecture and show you what the example would be with a Clean Swift architecture. The example I’ve chosen to use is the Quiz app from chapter 1 of the 3rd edition of iOS Programming: The Big Nerd Ranch Guide.
 The Quiz is a simple app that is like flash cards. It looks like this:
-The Show Answer button will reveal the answer to the question and tapping on the Next Question button will display the next question.</description></item><item><title>The Clean Architecture: An Introduction</title><link>https://rodschmidt.com/posts/the-clean-architecture-an-introduction/</link><pubDate>Fri, 09 Dec 2016 00:33:44 +0000</pubDate><guid>https://rodschmidt.com/posts/the-clean-architecture-an-introduction/</guid><description>In the last post, I talked about various architectures used as alternatives to MVC, in a attempt to solve MVCs problems, such as Massive View Controller.
+The Show Answer button will reveal the answer to the question and tapping on the Next Question button will display the next question.</description>
+    </item>
+    
+    <item>
+      <title>The Clean Architecture: An Introduction</title>
+      <link>https://rodschmidt.com/posts/the-clean-architecture-an-introduction/</link>
+      <pubDate>Fri, 09 Dec 2016 00:33:44 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/the-clean-architecture-an-introduction/</guid>
+      <description>In the last post, I talked about various architectures used as alternatives to MVC, in a attempt to solve MVCs problems, such as Massive View Controller.
 In this post, I would like to introduce you to another architecture, which seems to me to be the best starting point for your app’s architecture: the Clean Architecture.
-I think I first ran into the Clean Architecture in one of Uncle Bob’s presentations on YouTube.</description></item><item><title>Moving Towards The Clean Architecture for Apple Development</title><link>https://rodschmidt.com/posts/moving-towards-the-clean-architecture-for-apple-development/</link><pubDate>Wed, 30 Nov 2016 18:09:30 +0000</pubDate><guid>https://rodschmidt.com/posts/moving-towards-the-clean-architecture-for-apple-development/</guid><description>In the last post, I talked about MVC, its problems, and how it could be done right. Various architectures have emerged to try to address the deficiencies of MVC. Before I talk about the Clean architecture, I&amp;rsquo;d like to talk about some of them.
-Alternative Architectures to MVC Up front, I don’t have a lot of experience with these, but I have studied them and I believe they are a step in the right direction.</description></item><item><title>Model View Controller: Problems and Solutions</title><link>https://rodschmidt.com/posts/model-view-controller-problems-and-solutions/</link><pubDate>Tue, 22 Nov 2016 21:41:19 +0000</pubDate><guid>https://rodschmidt.com/posts/model-view-controller-problems-and-solutions/</guid><description>Model View Controller or MVC is the application architecture used by default for applications on all Apple platforms. Most of the tools, frameworks, and docs from Apple all talk about it and support it. In MVC, objects are assigned 1 of 3 roles:
-Model - objects that encapsulate and manage the data the application works with (this includes persistence). The data typically represents things in the real world like an employee, hardware part, or a picture that is being drawn.</description></item><item><title>5 Ways to Avoid Force Unwrapping</title><link>https://rodschmidt.com/posts/5-ways-to-avoid-force-unwrapping/</link><pubDate>Wed, 16 Nov 2016 18:02:53 +0000</pubDate><guid>https://rodschmidt.com/posts/5-ways-to-avoid-force-unwrapping/</guid><description>Someone on the reddit iOS Programming group asked “What are the mistakes generally done by iOS developers while coding in Swift?”A lot of comments were about using force unwrapping on optionals. Comments such as:
-Force unwrapping everything Using pyramids of if-let as opposed to guard statements var firstName: String! ugh Overuse of force unwrapped optionals. I cringe when I see that especially when a simple one-liner guard statement would make the code a ton safer.</description></item><item><title>Do You Find The Whole Planning Process Painful?</title><link>https://rodschmidt.com/posts/do-you-find-the-whole-planning-process-painful/</link><pubDate>Wed, 09 Nov 2016 22:51:27 +0000</pubDate><guid>https://rodschmidt.com/posts/do-you-find-the-whole-planning-process-painful/</guid><description>A thread in the AskPrograming forum on reddit started with this question and I thought I would share my thoughts on planning and up-front design.
-Basically, the originator of the thread is expressing his dislike of planning before coding, but thinks it’s a good idea because they’ve either been told that or seen others do it. They also expresses dislike for planning tools and wonders if there’s a better way. Basically, they want to know how do you plan and how do you break up a project into tasks that you need to do.</description></item><item><title>Part 4: What Are the Downsides to Putting the Core Data MOC in the App Delegate</title><link>https://rodschmidt.com/posts/part-4-what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</link><pubDate>Tue, 01 Nov 2016 21:49:48 +0000</pubDate><guid>https://rodschmidt.com/posts/part-4-what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</guid><description>In part 3, I talked about why putting the MOC in the app delegate makes any code that uses the MOC will be dependent on the app delegate and why that’s not a good thing.
+I think I first ran into the Clean Architecture in one of Uncle Bob’s presentations on YouTube.</description>
+    </item>
+    
+    <item>
+      <title>Moving Towards The Clean Architecture for Apple Development</title>
+      <link>https://rodschmidt.com/posts/moving-towards-the-clean-architecture-for-apple-development/</link>
+      <pubDate>Wed, 30 Nov 2016 18:09:30 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/moving-towards-the-clean-architecture-for-apple-development/</guid>
+      <description>In the last post, I talked about MVC, its problems, and how it could be done right. Various architectures have emerged to try to address the deficiencies of MVC. Before I talk about the Clean architecture, I&amp;rsquo;d like to talk about some of them.
+Alternative Architectures to MVC Up front, I don’t have a lot of experience with these, but I have studied them and I believe they are a step in the right direction.</description>
+    </item>
+    
+    <item>
+      <title>Model View Controller: Problems and Solutions</title>
+      <link>https://rodschmidt.com/posts/model-view-controller-problems-and-solutions/</link>
+      <pubDate>Tue, 22 Nov 2016 21:41:19 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/model-view-controller-problems-and-solutions/</guid>
+      <description>Model View Controller or MVC is the application architecture used by default for applications on all Apple platforms. Most of the tools, frameworks, and docs from Apple all talk about it and support it. In MVC, objects are assigned 1 of 3 roles:
+Model - objects that encapsulate and manage the data the application works with (this includes persistence). The data typically represents things in the real world like an employee, hardware part, or a picture that is being drawn.</description>
+    </item>
+    
+    <item>
+      <title>5 Ways to Avoid Force Unwrapping</title>
+      <link>https://rodschmidt.com/posts/5-ways-to-avoid-force-unwrapping/</link>
+      <pubDate>Wed, 16 Nov 2016 18:02:53 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/5-ways-to-avoid-force-unwrapping/</guid>
+      <description>Someone on the reddit iOS Programming group asked “What are the mistakes generally done by iOS developers while coding in Swift?”A lot of comments were about using force unwrapping on optionals. Comments such as:
+Force unwrapping everything Using pyramids of if-let as opposed to guard statements var firstName: String! ugh Overuse of force unwrapped optionals. I cringe when I see that especially when a simple one-liner guard statement would make the code a ton safer.</description>
+    </item>
+    
+    <item>
+      <title>Do You Find The Whole Planning Process Painful?</title>
+      <link>https://rodschmidt.com/posts/do-you-find-the-whole-planning-process-painful/</link>
+      <pubDate>Wed, 09 Nov 2016 22:51:27 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/do-you-find-the-whole-planning-process-painful/</guid>
+      <description>A thread in the AskPrograming forum on reddit started with this question and I thought I would share my thoughts on planning and up-front design.
+Basically, the originator of the thread is expressing his dislike of planning before coding, but thinks it’s a good idea because they’ve either been told that or seen others do it. They also expresses dislike for planning tools and wonders if there’s a better way. Basically, they want to know how do you plan and how do you break up a project into tasks that you need to do.</description>
+    </item>
+    
+    <item>
+      <title>Part 4: What Are the Downsides to Putting the Core Data MOC in the App Delegate</title>
+      <link>https://rodschmidt.com/posts/part-4-what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</link>
+      <pubDate>Tue, 01 Nov 2016 21:49:48 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/part-4-what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</guid>
+      <description>In part 3, I talked about why putting the MOC in the app delegate makes any code that uses the MOC will be dependent on the app delegate and why that’s not a good thing.
 In part 2, I talked about why putting the MOC in the app delegate is a violation of the Single Responsibility Principle.
-In part 1, I talked about why putting the MOC in your app delegate makes you dependent on Core Data for your application’s persistence.</description></item><item><title>Part 3: What Are The Downsides to Putting the Core Data MOC in the App Delegate</title><link>https://rodschmidt.com/posts/part-3-what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</link><pubDate>Tue, 25 Oct 2016 21:28:08 +0000</pubDate><guid>https://rodschmidt.com/posts/part-3-what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</guid><description>In part 2, I talked about why putting the MOC in the app delegate is a violation of the Single Responsibility Principle.
+In part 1, I talked about why putting the MOC in your app delegate makes you dependent on Core Data for your application’s persistence.</description>
+    </item>
+    
+    <item>
+      <title>Part 3: What Are The Downsides to Putting the Core Data MOC in the App Delegate</title>
+      <link>https://rodschmidt.com/posts/part-3-what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</link>
+      <pubDate>Tue, 25 Oct 2016 21:28:08 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/part-3-what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</guid>
+      <description>In part 2, I talked about why putting the MOC in the app delegate is a violation of the Single Responsibility Principle.
 In part 1, I talked about why putting the MOC in your app delegate makes you dependent on Core Data for your application’s persistence.
 Today I like to talk about the 3rd reason I gave in part 1, which is:
-Any code you write that uses myManagedObjectContext will be dependent on the App Delegate.</description></item><item><title>Part 2: What Are The Downsides to Putting the Core Data MOC in the App Delegate</title><link>https://rodschmidt.com/posts/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate-part-2/</link><pubDate>Tue, 18 Oct 2016 22:33:49 +0000</pubDate><guid>https://rodschmidt.com/posts/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate-part-2/</guid><description>In my previous post, I gave some reasons why putting the Core Data MOC in your app delegate was a bad idea. Those reasons were:
-The app delegate is managing the Core Data stack. Classes should only have one responsibility. The app delegate is already responsible for managing application lifecycle. It shouldn’t be managing the Core Data stack as well. You are completely dependent on Core Data and using it as your persistence method for your app.</description></item><item><title>Swift Robot Arm</title><link>https://rodschmidt.com/posts/swift-robot-arm/</link><pubDate>Tue, 11 Oct 2016 22:36:54 +0000</pubDate><guid>https://rodschmidt.com/posts/swift-robot-arm/</guid><description>In a previous post, I wrote about controlling my OWI robot arm with Elixir. Well, I decided to port that to Swift!
-In that post, there’s a link to some code that does it in Objective-C with IOKit. I first tried to just do a straight port and use IOKit in Swift. That didn’t work to well. The IOKit API is an old Core Foundation library and even has some old COM style APIs.</description></item><item><title>3 Ways To Fix Your iOS Testing Woes</title><link>https://rodschmidt.com/posts/3-ways-to-fix-your-ios-testing-woes/</link><pubDate>Mon, 03 Oct 2016 16:55:28 +0000</pubDate><guid>https://rodschmidt.com/posts/3-ways-to-fix-your-ios-testing-woes/</guid><description>Lots of companies have constant problems testing their iOS apps. Here are some ways to fix or ease them.
-1. Don’t Make Developers Run or Write UI Tests UI tests are black box tests and test the app from the perspective of the user. Your developers are the worst choice to test the app from this viewpoint and you need a fresh set of eyes for those tests. The QA engineer’s job is to test the app from the user’s viewpoint.</description></item><item><title>What are the Downsides to Putting the Core Data MOC in the App Delegate?</title><link>https://rodschmidt.com/posts/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</link><pubDate>Thu, 25 Aug 2016 20:59:37 +0000</pubDate><guid>https://rodschmidt.com/posts/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</guid><description>I saw this question on the iOSProgramming topic in reddit:
-I&amp;rsquo;ve seen a number of different ways to access the NSManagedObjectContext when working with Core Data, but I was wondering if there are any downsides to the way I&amp;rsquo;ve been doing it. Basically, I stick a computed variable in the AppDelegate, and grab it when I need it&amp;hellip; Please let me know if you see any flaws&amp;hellip; If not, feel free to use it!</description></item><item><title>Elixir Robots</title><link>https://rodschmidt.com/posts/elixir-robots/</link><pubDate>Fri, 22 May 2015 22:11:23 +0000</pubDate><guid>https://rodschmidt.com/posts/elixir-robots/</guid><description>My robot hobby is picking up steam. After going through the Python examples that came with the GoPiGo, I got inspired by some embedded Erlang videos on YouTube and decided to see if I could control the GoPiGo with Elixir. After watching Elixir Sips, I learned of a project called Elixir/Ale, an Elixir library for embedded programming. With Elixir/Ale, you can talk to the GPIO ports on the Raspberry Pi and some common hardware bus protocols: I2C and SPI.</description></item><item><title>Robots! Robots! Robots!</title><link>https://rodschmidt.com/posts/robots-robots-robots/</link><pubDate>Thu, 14 May 2015 00:21:25 +0000</pubDate><guid>https://rodschmidt.com/posts/robots-robots-robots/</guid><description>I’ve been getting into robots lately. For a long time I was searching for the perfect robot kit to use with my Arduino. Then I decided I’d rather use my Raspberry Pi to control my robots so I could use better programming languages like Clojure, Elixir, Scala, Ruby, etc. So I was looking around for the perfect Raspberry Pi robot kit.
-For Christmas, my parents gave me the OWI Robotic Arm Edge.</description></item><item><title>Sticky Footers with UITableView</title><link>https://rodschmidt.com/posts/sticky-footers-with-uitableview/</link><pubDate>Mon, 16 Feb 2015 23:49:00 +0000</pubDate><guid>https://rodschmidt.com/posts/sticky-footers-with-uitableview/</guid><description>The Problem Last week, I had to implement sticky footers in a table view. Sticky footers are where the footer comes at the end of all the table contents, but if the contents are such that the scrollable content height of the table view is less than the height of the view, the footer will still appear at the bottom of the view.
+Any code you write that uses myManagedObjectContext will be dependent on the App Delegate.</description>
+    </item>
+    
+    <item>
+      <title>Part 2: What Are The Downsides to Putting the Core Data MOC in the App Delegate</title>
+      <link>https://rodschmidt.com/posts/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate-part-2/</link>
+      <pubDate>Tue, 18 Oct 2016 22:33:49 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate-part-2/</guid>
+      <description>In my previous post, I gave some reasons why putting the Core Data MOC in your app delegate was a bad idea. Those reasons were:
+The app delegate is managing the Core Data stack. Classes should only have one responsibility. The app delegate is already responsible for managing application lifecycle. It shouldn’t be managing the Core Data stack as well. You are completely dependent on Core Data and using it as your persistence method for your app.</description>
+    </item>
+    
+    <item>
+      <title>Swift Robot Arm</title>
+      <link>https://rodschmidt.com/posts/swift-robot-arm/</link>
+      <pubDate>Tue, 11 Oct 2016 22:36:54 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/swift-robot-arm/</guid>
+      <description>In a previous post, I wrote about controlling my OWI robot arm with Elixir. Well, I decided to port that to Swift!
+In that post, there’s a link to some code that does it in Objective-C with IOKit. I first tried to just do a straight port and use IOKit in Swift. That didn’t work to well. The IOKit API is an old Core Foundation library and even has some old COM style APIs.</description>
+    </item>
+    
+    <item>
+      <title>3 Ways To Fix Your iOS Testing Woes</title>
+      <link>https://rodschmidt.com/posts/3-ways-to-fix-your-ios-testing-woes/</link>
+      <pubDate>Mon, 03 Oct 2016 16:55:28 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/3-ways-to-fix-your-ios-testing-woes/</guid>
+      <description>Lots of companies have constant problems testing their iOS apps. Here are some ways to fix or ease them.
+1. Don’t Make Developers Run or Write UI Tests UI tests are black box tests and test the app from the perspective of the user. Your developers are the worst choice to test the app from this viewpoint and you need a fresh set of eyes for those tests. The QA engineer’s job is to test the app from the user’s viewpoint.</description>
+    </item>
+    
+    <item>
+      <title>What are the Downsides to Putting the Core Data MOC in the App Delegate?</title>
+      <link>https://rodschmidt.com/posts/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</link>
+      <pubDate>Thu, 25 Aug 2016 20:59:37 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</guid>
+      <description>I saw this question on the iOSProgramming topic in reddit:
+I&amp;rsquo;ve seen a number of different ways to access the NSManagedObjectContext when working with Core Data, but I was wondering if there are any downsides to the way I&amp;rsquo;ve been doing it. Basically, I stick a computed variable in the AppDelegate, and grab it when I need it&amp;hellip; Please let me know if you see any flaws&amp;hellip; If not, feel free to use it!</description>
+    </item>
+    
+    <item>
+      <title>Elixir Robots</title>
+      <link>https://rodschmidt.com/posts/elixir-robots/</link>
+      <pubDate>Fri, 22 May 2015 22:11:23 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/elixir-robots/</guid>
+      <description>My robot hobby is picking up steam. After going through the Python examples that came with the GoPiGo, I got inspired by some embedded Erlang videos on YouTube and decided to see if I could control the GoPiGo with Elixir. After watching Elixir Sips, I learned of a project called Elixir/Ale, an Elixir library for embedded programming. With Elixir/Ale, you can talk to the GPIO ports on the Raspberry Pi and some common hardware bus protocols: I2C and SPI.</description>
+    </item>
+    
+    <item>
+      <title>Robots! Robots! Robots!</title>
+      <link>https://rodschmidt.com/posts/robots-robots-robots/</link>
+      <pubDate>Thu, 14 May 2015 00:21:25 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/robots-robots-robots/</guid>
+      <description>I’ve been getting into robots lately. For a long time I was searching for the perfect robot kit to use with my Arduino. Then I decided I’d rather use my Raspberry Pi to control my robots so I could use better programming languages like Clojure, Elixir, Scala, Ruby, etc. So I was looking around for the perfect Raspberry Pi robot kit.
+For Christmas, my parents gave me the OWI Robotic Arm Edge.</description>
+    </item>
+    
+    <item>
+      <title>Sticky Footers with UITableView</title>
+      <link>https://rodschmidt.com/posts/sticky-footers-with-uitableview/</link>
+      <pubDate>Mon, 16 Feb 2015 23:49:00 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/sticky-footers-with-uitableview/</guid>
+      <description>The Problem Last week, I had to implement sticky footers in a table view. Sticky footers are where the footer comes at the end of all the table contents, but if the contents are such that the scrollable content height of the table view is less than the height of the view, the footer will still appear at the bottom of the view.
 A non-sticky footer
 A sticky footer
-I searched for a solution to this, but all I found were solutions where the footer was always at the bottom of the view.</description></item><item><title>Back to Wordpress</title><link>https://rodschmidt.com/posts/back-to-wordpress/</link><pubDate>Sat, 14 Feb 2015 00:31:21 +0000</pubDate><guid>https://rodschmidt.com/posts/back-to-wordpress/</guid><description>You&amp;rsquo;ve probably noticed that my blog has changed again. I&amp;rsquo;ve moved back to Wordpress from Octopress. I could never find a plugin for Octopress that did image captions right. I spent way too much time on it and just decided to use something that just worked. I looked at a lot of static blogging engines and they all had their issues.
-With Wordpress, I have to use the web based editor, but it works and their is a lot of plugins and support behind it.</description></item><item><title>App: The Human Story - My Prize</title><link>https://rodschmidt.com/posts/app-the-human-story-my-prize/</link><pubDate>Sun, 18 Jan 2015 00:09:53 +0000</pubDate><guid>https://rodschmidt.com/posts/app-the-human-story-my-prize/</guid><description>A while back I wrote a blog post and entered it in a contest for App: The Human Story. I came in second, and for that I was awarded a custom app token from Matic. It finally came last week and here it is:
+I searched for a solution to this, but all I found were solutions where the footer was always at the bottom of the view.</description>
+    </item>
+    
+    <item>
+      <title>Back to Wordpress</title>
+      <link>https://rodschmidt.com/posts/back-to-wordpress/</link>
+      <pubDate>Sat, 14 Feb 2015 00:31:21 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/back-to-wordpress/</guid>
+      <description>You&amp;rsquo;ve probably noticed that my blog has changed again. I&amp;rsquo;ve moved back to Wordpress from Octopress. I could never find a plugin for Octopress that did image captions right. I spent way too much time on it and just decided to use something that just worked. I looked at a lot of static blogging engines and they all had their issues.
+With Wordpress, I have to use the web based editor, but it works and their is a lot of plugins and support behind it.</description>
+    </item>
+    
+    <item>
+      <title>App: The Human Story - My Prize</title>
+      <link>https://rodschmidt.com/posts/app-the-human-story-my-prize/</link>
+      <pubDate>Sun, 18 Jan 2015 00:09:53 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/app-the-human-story-my-prize/</guid>
+      <description>A while back I wrote a blog post and entered it in a contest for App: The Human Story. I came in second, and for that I was awarded a custom app token from Matic. It finally came last week and here it is:
 My app token
-Now, I finally have a sign for my office.</description></item><item><title>App: The Human Story - My Story</title><link>https://rodschmidt.com/posts/app-the-human-story-my-story/</link><pubDate>Wed, 09 Jul 2014 22:47:34 +0000</pubDate><guid>https://rodschmidt.com/posts/app-the-human-story-my-story/</guid><description>There is a Kickstarter project that was started recently for a film titled App: The Human Story. It &amp;ldquo;is the story of the cultural phenomenon that touches all our lives.&amp;rdquo; It is about the people who make apps. Many of them are people I follow on blogs, and listen to on podcasts, and look up to. I simply had to back the project, and I did. The producers of the film, on their blog, have asked that others involved in apps write about their own stories.</description></item><item><title>A New Start</title><link>https://rodschmidt.com/posts/a-new-start/</link><pubDate>Fri, 27 Jun 2014 22:44:25 +0000</pubDate><guid>https://rodschmidt.com/posts/a-new-start/</guid><description>If you haven&amp;rsquo;t noticed, my weblog has a new design and new content. I have switched from WordPress to Octopress and have used a new theme. So far, I like it. It&amp;rsquo;s nice to be able to use Markdown instead of some slow web tool to write my posts.
-My old blog was mostly political commentary and I&amp;rsquo;ve decided to remove that. Some of my most popular posts were the posts about my sabbatical that I took in the summer of 2002.</description></item><item><title>The Sabbatical is Over</title><link>https://rodschmidt.com/posts/the-sabbatical-is-over/</link><pubDate>Sun, 08 Sep 2002 22:37:10 +0000</pubDate><guid>https://rodschmidt.com/posts/the-sabbatical-is-over/</guid><description>Today is officially the last day of my sabbatical. Friday was my birthday and Monday is the day to begin anew. I had hoped that my sabbatical would bring spectacular changes to my world, but it did not. However I still think it was a good thing. It gave me a lot of time to reflect on what I want to do with my life and it helped me come to peace with how things are.</description></item><item><title>Texas Tour - Lubbock Again</title><link>https://rodschmidt.com/posts/texas-tour-lubbock-again/</link><pubDate>Wed, 14 Aug 2002 22:33:44 +0000</pubDate><guid>https://rodschmidt.com/posts/texas-tour-lubbock-again/</guid><description>Wednesday, August 14th, 2002
-Wednesday morning I got back in the Jeep and started my trip home. My plan was to stay the night in Lubbock, then Albuquerque for a day with my folks and then back home. I got to Lubbock in the afternoon, but Patricia and Robert weren&amp;rsquo;t there. Instead, I was greeted by their 16 year old daughter, Christine. On my previous visit, Christine had been in Vietnam, where she had been for the last 6 weeks.</description></item><item><title>Texas Tour - JFK</title><link>https://rodschmidt.com/posts/texas-tour-jfk/</link><pubDate>Tue, 13 Aug 2002 22:27:16 +0000</pubDate><guid>https://rodschmidt.com/posts/texas-tour-jfk/</guid><description>Sunday, August 11th, 2002
-Sunday morning, I decided to go downtown and check out the JFK museum. John F. Kennedy was assasinated in Dallas on November 3rd, 1963. I wasn&amp;rsquo;t alive then, but I can imagine and I believe that it was a day that affected America even more than September 11th. Here was a president that many people admired and looked up to. Shortly after he was assasinated the decade of the 60&amp;rsquo;s went into full swing and changed America forever.</description></item><item><title>Texas Tour - Arlington</title><link>https://rodschmidt.com/posts/texas-tour-arlington/</link><pubDate>Tue, 13 Aug 2002 22:20:07 +0000</pubDate><guid>https://rodschmidt.com/posts/texas-tour-arlington/</guid><description>Wednesday, August 13th, 2002
+Now, I finally have a sign for my office.</description>
+    </item>
+    
+    <item>
+      <title>App: The Human Story - My Story</title>
+      <link>https://rodschmidt.com/posts/app-the-human-story-my-story/</link>
+      <pubDate>Wed, 09 Jul 2014 22:47:34 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/app-the-human-story-my-story/</guid>
+      <description>There is a Kickstarter project that was started recently for a film titled App: The Human Story. It &amp;ldquo;is the story of the cultural phenomenon that touches all our lives.&amp;rdquo; It is about the people who make apps. Many of them are people I follow on blogs, and listen to on podcasts, and look up to. I simply had to back the project, and I did. The producers of the film, on their blog, have asked that others involved in apps write about their own stories.</description>
+    </item>
+    
+    <item>
+      <title>A New Start</title>
+      <link>https://rodschmidt.com/posts/a-new-start/</link>
+      <pubDate>Fri, 27 Jun 2014 22:44:25 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/a-new-start/</guid>
+      <description>If you haven&amp;rsquo;t noticed, my weblog has a new design and new content. I have switched from WordPress to Octopress and have used a new theme. So far, I like it. It&amp;rsquo;s nice to be able to use Markdown instead of some slow web tool to write my posts.
+My old blog was mostly political commentary and I&amp;rsquo;ve decided to remove that. Some of my most popular posts were the posts about my sabbatical that I took in the summer of 2002.</description>
+    </item>
+    
+    <item>
+      <title>The Sabbatical is Over</title>
+      <link>https://rodschmidt.com/posts/the-sabbatical-is-over/</link>
+      <pubDate>Sun, 08 Sep 2002 22:37:10 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/the-sabbatical-is-over/</guid>
+      <description>Today is officially the last day of my sabbatical. Friday was my birthday and Monday is the day to begin anew. I had hoped that my sabbatical would bring spectacular changes to my world, but it did not. However I still think it was a good thing. It gave me a lot of time to reflect on what I want to do with my life and it helped me come to peace with how things are.</description>
+    </item>
+    
+    <item>
+      <title>Texas Tour - Lubbock Again</title>
+      <link>https://rodschmidt.com/posts/texas-tour-lubbock-again/</link>
+      <pubDate>Wed, 14 Aug 2002 22:33:44 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/texas-tour-lubbock-again/</guid>
+      <description>Wednesday, August 14th, 2002
+Wednesday morning I got back in the Jeep and started my trip home. My plan was to stay the night in Lubbock, then Albuquerque for a day with my folks and then back home. I got to Lubbock in the afternoon, but Patricia and Robert weren&amp;rsquo;t there. Instead, I was greeted by their 16 year old daughter, Christine. On my previous visit, Christine had been in Vietnam, where she had been for the last 6 weeks.</description>
+    </item>
+    
+    <item>
+      <title>Texas Tour - JFK</title>
+      <link>https://rodschmidt.com/posts/texas-tour-jfk/</link>
+      <pubDate>Tue, 13 Aug 2002 22:27:16 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/texas-tour-jfk/</guid>
+      <description>Sunday, August 11th, 2002
+Sunday morning, I decided to go downtown and check out the JFK museum. John F. Kennedy was assasinated in Dallas on November 3rd, 1963. I wasn&amp;rsquo;t alive then, but I can imagine and I believe that it was a day that affected America even more than September 11th. Here was a president that many people admired and looked up to. Shortly after he was assasinated the decade of the 60&amp;rsquo;s went into full swing and changed America forever.</description>
+    </item>
+    
+    <item>
+      <title>Texas Tour - Arlington</title>
+      <link>https://rodschmidt.com/posts/texas-tour-arlington/</link>
+      <pubDate>Tue, 13 Aug 2002 22:20:07 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/texas-tour-arlington/</guid>
+      <description>Wednesday, August 13th, 2002
 I met my friend Marc at his house and we headed off to the game. This game is kind of a milestone in my quest to visit every major league ball park. It will be my 20th team. Just ten more to go (barring expansion or contraction).
 The Ballpark at Arlington
-The Ranger&amp;rsquo;s stadium has the rather ordinary name of The Ballpark At Arlington. Arlington is a town just outside of Dallas/Ft.</description></item><item><title>Dallas</title><link>https://rodschmidt.com/posts/dallas/</link><pubDate>Thu, 08 Aug 2002 22:15:11 +0000</pubDate><guid>https://rodschmidt.com/posts/dallas/</guid><description>August 8th - August 14th, 2002
+The Ranger&amp;rsquo;s stadium has the rather ordinary name of The Ballpark At Arlington. Arlington is a town just outside of Dallas/Ft.</description>
+    </item>
+    
+    <item>
+      <title>Dallas</title>
+      <link>https://rodschmidt.com/posts/dallas/</link>
+      <pubDate>Thu, 08 Aug 2002 22:15:11 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/dallas/</guid>
+      <description>August 8th - August 14th, 2002
 Thurday morning I drove up to Dallas. It took about 4 hours and I checked into another extended stay motel. Originally, I had planned to stay in Dallas for a week, just like in Austin, but my Austin experience changed my plans. I was going to leave on the 14th, after the baseball game.
-Again, the idea was the same. To just be there and experience Dallas.</description></item><item><title>Austin</title><link>https://rodschmidt.com/posts/austin/</link><pubDate>Tue, 06 Aug 2002 22:08:26 +0000</pubDate><guid>https://rodschmidt.com/posts/austin/</guid><description>August 4th - August 8th, 2002
-I spent Sunday through Thursday morning in Austin. Austin was the main reason I came to Texas. I wanted to get a feel for it and see if I might want to live here. Austin has a lot of high technology companies and has a lot of culture and art. Basically a lot of creative people. Fortune has ranked it in the top 10 for the best cities for singles.</description></item><item><title>Texas Tour - San Antonio</title><link>https://rodschmidt.com/posts/texas-tour-san-antonio/</link><pubDate>Mon, 05 Aug 2002 22:03:43 +0000</pubDate><guid>https://rodschmidt.com/posts/texas-tour-san-antonio/</guid><description>Monday, August 5th, 2002
+Again, the idea was the same. To just be there and experience Dallas.</description>
+    </item>
+    
+    <item>
+      <title>Austin</title>
+      <link>https://rodschmidt.com/posts/austin/</link>
+      <pubDate>Tue, 06 Aug 2002 22:08:26 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/austin/</guid>
+      <description>August 4th - August 8th, 2002
+I spent Sunday through Thursday morning in Austin. Austin was the main reason I came to Texas. I wanted to get a feel for it and see if I might want to live here. Austin has a lot of high technology companies and has a lot of culture and art. Basically a lot of creative people. Fortune has ranked it in the top 10 for the best cities for singles.</description>
+    </item>
+    
+    <item>
+      <title>Texas Tour - San Antonio</title>
+      <link>https://rodschmidt.com/posts/texas-tour-san-antonio/</link>
+      <pubDate>Mon, 05 Aug 2002 22:03:43 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/texas-tour-san-antonio/</guid>
+      <description>Monday, August 5th, 2002
 Today was my first full day in Austin. I decided to take a drive down to San Antonio, which was just about an hour and half south. I wanted to see the Alamo, and my friend Laury had told me about the cool river walk there. So off I went.
 The Alamo
-For those of you who are not familiar with the Alamo (miss a little school, did we?</description></item><item><title>Texas Tour - Lubbock</title><link>https://rodschmidt.com/posts/texas-tour-lubbock/</link><pubDate>Sat, 03 Aug 2002 21:58:07 +0000</pubDate><guid>https://rodschmidt.com/posts/texas-tour-lubbock/</guid><description>Saturday, August 3rd
-From Albuquerque, I decided to go half way to Austin, and stay the night with a recent friend of the family and her family. I had just met her when I had been up to Montana this summer and she had offered to let me stay with her and her family when I went to Texas. In the directions she gave me to get to her house she mentioned that there was a steel house that I couldn&amp;rsquo;t miss.</description></item><item><title>Texas Tour - Albuquerque</title><link>https://rodschmidt.com/posts/texas-tour-albuquerque/</link><pubDate>Tue, 30 Jul 2002 21:54:07 +0000</pubDate><guid>https://rodschmidt.com/posts/texas-tour-albuquerque/</guid><description>Tuesday, July 30th - Friday, August 2nd
-Today, I left for my trip to Texas. On the way though I stopped in Albuquerque. I was born there and my parents currently live there. I stayed until Saturday. I was a nice relaxing time and it was nice to see my parents. We went out to dinner one night at a New Orleans place and we saw K-19: The WidowMaker and Signs.</description></item><item><title>Never Say Never (Again)</title><link>https://rodschmidt.com/posts/never-say-never-again/</link><pubDate>Tue, 02 Jul 2002 04:59:17 +0000</pubDate><guid>https://rodschmidt.com/posts/never-say-never-again/</guid><description>July 1st, 2002 - Gardiner, Montana
-This week I went up to Montana with my parents. Today, my mom and I decided to take a raft trip down the river that flows through Gardiner and down Yankee Jim Canyon. We&amp;rsquo;ve been on rafting trips before. Nothing tricky, just nice gentle trips with a few small rapids. We asked around and were pointed towards an outfit about a mile down the road.</description></item><item><title>Steve Garvey</title><link>https://rodschmidt.com/posts/steve-garvey/</link><pubDate>Fri, 21 Jun 2002 04:53:20 +0000</pubDate><guid>https://rodschmidt.com/posts/steve-garvey/</guid><description>I always like to see the Dodger&amp;rsquo;a AAA team when they come to Salt Lake. Last year, that team, moved from Albuquerque to Las Vegas and became the Las Vegas 51&amp;rsquo;s (51 being a reference to Area 51). After my trip I checked the Salt Lake Stingers&amp;rsquo; schedule and saw that the 51&amp;rsquo;s were in town. I further noticed that Thursday night was Steve Garvey night!
-Steve Garvey was my favorite player when I was a kid.</description></item><item><title>West Coast Tour - Home</title><link>https://rodschmidt.com/posts/west-coast-tour-home/</link><pubDate>Wed, 19 Jun 2002 04:48:13 +0000</pubDate><guid>https://rodschmidt.com/posts/west-coast-tour-home/</guid><description>Tuesday, June 18, 2002
+For those of you who are not familiar with the Alamo (miss a little school, did we?</description>
+    </item>
+    
+    <item>
+      <title>Texas Tour - Lubbock</title>
+      <link>https://rodschmidt.com/posts/texas-tour-lubbock/</link>
+      <pubDate>Sat, 03 Aug 2002 21:58:07 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/texas-tour-lubbock/</guid>
+      <description>Saturday, August 3rd
+From Albuquerque, I decided to go half way to Austin, and stay the night with a recent friend of the family and her family. I had just met her when I had been up to Montana this summer and she had offered to let me stay with her and her family when I went to Texas. In the directions she gave me to get to her house she mentioned that there was a steel house that I couldn&amp;rsquo;t miss.</description>
+    </item>
+    
+    <item>
+      <title>Texas Tour - Albuquerque</title>
+      <link>https://rodschmidt.com/posts/texas-tour-albuquerque/</link>
+      <pubDate>Tue, 30 Jul 2002 21:54:07 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/texas-tour-albuquerque/</guid>
+      <description>Tuesday, July 30th - Friday, August 2nd
+Today, I left for my trip to Texas. On the way though I stopped in Albuquerque. I was born there and my parents currently live there. I stayed until Saturday. I was a nice relaxing time and it was nice to see my parents. We went out to dinner one night at a New Orleans place and we saw K-19: The WidowMaker and Signs.</description>
+    </item>
+    
+    <item>
+      <title>Never Say Never (Again)</title>
+      <link>https://rodschmidt.com/posts/never-say-never-again/</link>
+      <pubDate>Tue, 02 Jul 2002 04:59:17 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/never-say-never-again/</guid>
+      <description>July 1st, 2002 - Gardiner, Montana
+This week I went up to Montana with my parents. Today, my mom and I decided to take a raft trip down the river that flows through Gardiner and down Yankee Jim Canyon. We&amp;rsquo;ve been on rafting trips before. Nothing tricky, just nice gentle trips with a few small rapids. We asked around and were pointed towards an outfit about a mile down the road.</description>
+    </item>
+    
+    <item>
+      <title>Steve Garvey</title>
+      <link>https://rodschmidt.com/posts/steve-garvey/</link>
+      <pubDate>Fri, 21 Jun 2002 04:53:20 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/steve-garvey/</guid>
+      <description>I always like to see the Dodger&amp;rsquo;a AAA team when they come to Salt Lake. Last year, that team, moved from Albuquerque to Las Vegas and became the Las Vegas 51&amp;rsquo;s (51 being a reference to Area 51). After my trip I checked the Salt Lake Stingers&amp;rsquo; schedule and saw that the 51&amp;rsquo;s were in town. I further noticed that Thursday night was Steve Garvey night!
+Steve Garvey was my favorite player when I was a kid.</description>
+    </item>
+    
+    <item>
+      <title>West Coast Tour - Home</title>
+      <link>https://rodschmidt.com/posts/west-coast-tour-home/</link>
+      <pubDate>Wed, 19 Jun 2002 04:48:13 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/west-coast-tour-home/</guid>
+      <description>Tuesday, June 18, 2002
 The trip home was uneventful. Got back about 2 pm. Once back, I felt strangely alone and isolated. On the road, I hadn&amp;rsquo;t felt like this at all, despite the fact that I had been alone most of the time.
-But, it also nice to be back in my nice house, with my own bed. Later that night I played softball on DSW&amp;rsquo;s team. DSW (Dahlin, Smith, and White), was the company I worked before I took my sabbatical.</description></item><item><title>West Coast Tour - Mission Viejo</title><link>https://rodschmidt.com/posts/west-coast-tour-mission-viejo/</link><pubDate>Tue, 18 Jun 2002 04:43:13 +0000</pubDate><guid>https://rodschmidt.com/posts/west-coast-tour-mission-viejo/</guid><description>Monday, June 17th, 2002
-I left early, about 8am. I wanted to get an early start so I could check out Mission Viejo and then make a good start on my way home. I lived in Mission Viejo for about 10 years. I went to grade school and junior high school there. I really loved the California life style there. The athletic programs were excellent and I was a well known baseball and soccer player in the community.</description></item><item><title>West Coast Tour - San Diego</title><link>https://rodschmidt.com/posts/west-coast-tour-san-diego/</link><pubDate>Mon, 17 Jun 2002 04:36:11 +0000</pubDate><guid>https://rodschmidt.com/posts/west-coast-tour-san-diego/</guid><description>Sunday, June 16th, 2002
+But, it also nice to be back in my nice house, with my own bed. Later that night I played softball on DSW&amp;rsquo;s team. DSW (Dahlin, Smith, and White), was the company I worked before I took my sabbatical.</description>
+    </item>
+    
+    <item>
+      <title>West Coast Tour - Mission Viejo</title>
+      <link>https://rodschmidt.com/posts/west-coast-tour-mission-viejo/</link>
+      <pubDate>Tue, 18 Jun 2002 04:43:13 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/west-coast-tour-mission-viejo/</guid>
+      <description>Monday, June 17th, 2002
+I left early, about 8am. I wanted to get an early start so I could check out Mission Viejo and then make a good start on my way home. I lived in Mission Viejo for about 10 years. I went to grade school and junior high school there. I really loved the California life style there. The athletic programs were excellent and I was a well known baseball and soccer player in the community.</description>
+    </item>
+    
+    <item>
+      <title>West Coast Tour - San Diego</title>
+      <link>https://rodschmidt.com/posts/west-coast-tour-san-diego/</link>
+      <pubDate>Mon, 17 Jun 2002 04:36:11 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/west-coast-tour-san-diego/</guid>
+      <description>Sunday, June 16th, 2002
 In the morning, Ron and Roe took me out to breakfast in downtown LA at a cozy little old restaurant surrounded by skyscrapers. It was good standard fare. After we got back I packed up and headed south to San Diego.
-About halfway between LA and San Diego is a town called Mission Viejo. I had lived there for 10 years before I moved to Utah. My plan was to stop there and revisit my childhood.</description></item><item><title>West Coast Tour - Los Angeles</title><link>https://rodschmidt.com/posts/west-coast-tour-los-angeles/</link><pubDate>Sun, 16 Jun 2002 03:05:48 +0000</pubDate><guid>https://rodschmidt.com/posts/west-coast-tour-los-angeles/</guid><description>Saturday, June 15th, 2002
+About halfway between LA and San Diego is a town called Mission Viejo. I had lived there for 10 years before I moved to Utah. My plan was to stop there and revisit my childhood.</description>
+    </item>
+    
+    <item>
+      <title>West Coast Tour - Los Angeles</title>
+      <link>https://rodschmidt.com/posts/west-coast-tour-los-angeles/</link>
+      <pubDate>Sun, 16 Jun 2002 03:05:48 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/west-coast-tour-los-angeles/</guid>
+      <description>Saturday, June 15th, 2002
 After spending the night in Palo Alto, I started down the freeway to LA the next morning. Nothing really to write about here. Just your standard freeway drive. However, the traffic was horrible. Seemed like every half-hour or so you ran into stop and go traffic. Not fun. Just this alone made me think I didn&amp;rsquo;t want to live here.
-My friend, Laury&amp;rsquo;s sister and brother-in-law live in LA.</description></item><item><title>Zen and the Art of Nothing</title><link>https://rodschmidt.com/posts/zen-and-the-art-of-nothing/</link><pubDate>Sat, 15 Jun 2002 03:00:41 +0000</pubDate><guid>https://rodschmidt.com/posts/zen-and-the-art-of-nothing/</guid><description>I&amp;rsquo;ve tried everything when it comes to trying to meet women. I&amp;rsquo;ve tried dating services, personal ads, phone ads, internet dating, blind dates, being set up by friends, going to bars, and even asking out complete strangers. The most I&amp;rsquo;ve ended up with is a relationship that lasts for 6 months, but feels more like 2. I&amp;rsquo;ve told myself that I&amp;rsquo;ve tried everything.
-I was thinking about this today when suddenly I had a Zen moment.</description></item><item><title>West Coast Tour - San Francisco</title><link>https://rodschmidt.com/posts/west-coast-tour-san-francisco/</link><pubDate>Sat, 15 Jun 2002 02:55:40 +0000</pubDate><guid>https://rodschmidt.com/posts/west-coast-tour-san-francisco/</guid><description>Friday, June 14th, 2002
-Today started off with a great drive through more evergreen lined roads. That lasted till about midday. Then the road turned into a more freeway like drive with the golden hills of central California as the view, Eventually, I passed through the Golden Gate Bridge (horrible traffic) and settled in Palo Alto.</description></item><item><title>West Coast Tour - Oregon Coast</title><link>https://rodschmidt.com/posts/west-coast-tour-oregon-coast/</link><pubDate>Fri, 14 Jun 2002 02:09:13 +0000</pubDate><guid>https://rodschmidt.com/posts/west-coast-tour-oregon-coast/</guid><description>Thursday, June 13th, 2002
-Today started off well. Found my way to the PCH, flipped the top down, and right away I was on a single lane road with no one in front of or behind me. That didn&amp;rsquo;t last long however. Kept going through towns where you have to slow down for the traffic. But every so often you hit a stretch of road and its just you and the road.</description></item><item><title>West Coast Tour - Seattle</title><link>https://rodschmidt.com/posts/west-coast-tour-seattle/</link><pubDate>Thu, 13 Jun 2002 00:47:07 +0000</pubDate><guid>https://rodschmidt.com/posts/west-coast-tour-seattle/</guid><description>Wednesday, June 12th, 2002
+My friend, Laury&amp;rsquo;s sister and brother-in-law live in LA.</description>
+    </item>
+    
+    <item>
+      <title>Zen and the Art of Nothing</title>
+      <link>https://rodschmidt.com/posts/zen-and-the-art-of-nothing/</link>
+      <pubDate>Sat, 15 Jun 2002 03:00:41 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/zen-and-the-art-of-nothing/</guid>
+      <description>I&amp;rsquo;ve tried everything when it comes to trying to meet women. I&amp;rsquo;ve tried dating services, personal ads, phone ads, internet dating, blind dates, being set up by friends, going to bars, and even asking out complete strangers. The most I&amp;rsquo;ve ended up with is a relationship that lasts for 6 months, but feels more like 2. I&amp;rsquo;ve told myself that I&amp;rsquo;ve tried everything.
+I was thinking about this today when suddenly I had a Zen moment.</description>
+    </item>
+    
+    <item>
+      <title>West Coast Tour - San Francisco</title>
+      <link>https://rodschmidt.com/posts/west-coast-tour-san-francisco/</link>
+      <pubDate>Sat, 15 Jun 2002 02:55:40 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/west-coast-tour-san-francisco/</guid>
+      <description>Friday, June 14th, 2002
+Today started off with a great drive through more evergreen lined roads. That lasted till about midday. Then the road turned into a more freeway like drive with the golden hills of central California as the view, Eventually, I passed through the Golden Gate Bridge (horrible traffic) and settled in Palo Alto.</description>
+    </item>
+    
+    <item>
+      <title>West Coast Tour - Oregon Coast</title>
+      <link>https://rodschmidt.com/posts/west-coast-tour-oregon-coast/</link>
+      <pubDate>Fri, 14 Jun 2002 02:09:13 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/west-coast-tour-oregon-coast/</guid>
+      <description>Thursday, June 13th, 2002
+Today started off well. Found my way to the PCH, flipped the top down, and right away I was on a single lane road with no one in front of or behind me. That didn&amp;rsquo;t last long however. Kept going through towns where you have to slow down for the traffic. But every so often you hit a stretch of road and its just you and the road.</description>
+    </item>
+    
+    <item>
+      <title>West Coast Tour - Seattle</title>
+      <link>https://rodschmidt.com/posts/west-coast-tour-seattle/</link>
+      <pubDate>Thu, 13 Jun 2002 00:47:07 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/west-coast-tour-seattle/</guid>
+      <description>Wednesday, June 12th, 2002
 Took my time getting started and probably left Portland around 10am. Dez lent me some audio books (Thanks Dez) and I leisurely drove to Seattle arriving at about 3pm. Had the top down most of the way, but had to put it up about an hour outside of Seattle because I was starting to get sunburned. Its 90 degrees in Seattle today!
 Safeco Field
-Caught a shuttle from the hotel to the ballpark and arrived about 5:30 pm.</description></item><item><title>West Coast Tour - Portland</title><link>https://rodschmidt.com/posts/west-coast-tour-portland/</link><pubDate>Tue, 11 Jun 2002 23:08:43 +0000</pubDate><guid>https://rodschmidt.com/posts/west-coast-tour-portland/</guid><description>Tuesday, June 11th, 2002
+Caught a shuttle from the hotel to the ballpark and arrived about 5:30 pm.</description>
+    </item>
+    
+    <item>
+      <title>West Coast Tour - Portland</title>
+      <link>https://rodschmidt.com/posts/west-coast-tour-portland/</link>
+      <pubDate>Tue, 11 Jun 2002 23:08:43 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/west-coast-tour-portland/</guid>
+      <description>Tuesday, June 11th, 2002
 The whole purpose of the west coast tour is too see the west coast baseball teams I haven&amp;rsquo;t seen yet (Seattle and San Diego) and to drive my Miata down the coast. So to that end I got up early and left at 5am and drove 12 hours with a few stops for lunch and rest.
 On the way to Portland
 bug plastered Miata
-Arrived at my friend Dez&amp;rsquo;s place at about 4pm PST.</description></item><item><title>Atlanta</title><link>https://rodschmidt.com/posts/atlanta/</link><pubDate>Fri, 07 Jun 2002 20:00:16 +0000</pubDate><guid>https://rodschmidt.com/posts/atlanta/</guid><description>Wednesday, June 7th, 2002
-On Wednesday I caught a flight to Atlanta (thanks to my sister&amp;rsquo;s buddy pass) and arrived at about 2:30 PM EST. Caught the MARTA (Atlanta equivalent of TRAX) right from the airport to downtown. My hotel was only a couple of blocks from my stop. One thing I notice is the humidity. To me, it actually felt good. Keeps your skin moist and when it&amp;rsquo;s hot you actually sweat.</description></item></channel></rss>
+Arrived at my friend Dez&amp;rsquo;s place at about 4pm PST.</description>
+    </item>
+    
+    <item>
+      <title>Atlanta</title>
+      <link>https://rodschmidt.com/posts/atlanta/</link>
+      <pubDate>Fri, 07 Jun 2002 20:00:16 +0000</pubDate>
+      
+      <guid>https://rodschmidt.com/posts/atlanta/</guid>
+      <description>Wednesday, June 7th, 2002
+On Wednesday I caught a flight to Atlanta (thanks to my sister&amp;rsquo;s buddy pass) and arrived at about 2:30 PM EST. Caught the MARTA (Atlanta equivalent of TRAX) right from the airport to downtown. My hotel was only a couple of blocks from my stop. One thing I notice is the humidity. To me, it actually felt good. Keeps your skin moist and when it&amp;rsquo;s hot you actually sweat.</description>
+    </item>
+    
+  </channel>
+</rss>
