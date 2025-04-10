@@ -23,4 +23,4 @@ The new design was successful. The feature flag library became very stable, no l
 ## I Can Help
 If you have a problem like this where teams are depending on other teams, and it’s causing problems, I can help. I can also help with any software development problems you are struggling with.
 
-Just click [here](https://www.stan.store/infinitenil) to setup a coaching call. We’ll discuss your problem and some possible solutions.
+Just email me at <a href="mailto:rod@infinitenil.com">rod@infinitenil.com</a> describing what you need help with and we'll go from there.
