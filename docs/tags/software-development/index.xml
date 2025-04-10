@@ -1,136 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Software Development on Rod Schmidt</title>
-    <link>https://rodschmidt.com/tags/software-development/</link>
-    <description>Recent content in Software Development on Rod Schmidt</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jan 2025 10:34:43 -0700</lastBuildDate><atom:link href="https://rodschmidt.com/tags/software-development/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Case Study: Improving the Effeciency of Software Development Teams Dependent on Another Team</title>
-      <link>https://rodschmidt.com/posts/feature-flags-case-study/</link>
-      <pubDate>Thu, 16 Jan 2025 10:34:43 -0700</pubDate>
-      
-      <guid>https://rodschmidt.com/posts/feature-flags-case-study/</guid>
-      <description>In my last job, I was on a platform team. One of the responsibilities of a platform team is to support all the other software development teams in an organization by writing libraries and tools that can be used by the other teams.
-One of the libraries the platform team provided was a library that managed feature flags for the iOS app that our company produced. The primary function of the library was to get the current value of a given feature flag.</description>
-    </item>
-    
-    <item>
-      <title>Swift UI &amp; App Architecture: A New Approach Required</title>
-      <link>https://rodschmidt.com/posts/swift-ui-app-architecture-a-new-approach-required/</link>
-      <pubDate>Sun, 04 Aug 2019 17:47:09 +0000</pubDate>
-      
-      <guid>https://rodschmidt.com/posts/swift-ui-app-architecture-a-new-approach-required/</guid>
-      <description>With SwiftUI, everything has changed. As Brent Simmons said, it’s the end of the NeXT era and the beginning of the Swift era.
-With the coming of SwiftUI, most of our app architectures are no longer valid (or at least parts of them). They need to be adjusted. MVC is certainly out. In fact, even controllers seem to be out. From Apple’s content, it seems all we have is models and views, and that’s true.</description>
-    </item>
-    
-    <item>
-      <title>The Clean Architecture: An Example</title>
-      <link>https://rodschmidt.com/posts/the-clean-architecture-an-example/</link>
-      <pubDate>Sun, 29 Jan 2017 21:33:02 +0000</pubDate>
-      
-      <guid>https://rodschmidt.com/posts/the-clean-architecture-an-example/</guid>
-      <description>Today, I’d like to take an example iOS app written with an MVC architecture and show you what the example would be with a Clean Swift architecture. The example I’ve chosen to use is the Quiz app from chapter 1 of the 3rd edition of iOS Programming: The Big Nerd Ranch Guide.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software Development on Rod Schmidt</title><link>https://rodschmidt.com/tags/software-development/</link><description>Recent content in Software Development on Rod Schmidt</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 16 Jan 2025 10:34:43 -0700</lastBuildDate><atom:link href="https://rodschmidt.com/tags/software-development/index.xml" rel="self" type="application/rss+xml"/><item><title>Case Study: Improving the Effeciency of Software Development Teams Dependent on Another Team</title><link>https://rodschmidt.com/posts/feature-flags-case-study/</link><pubDate>Thu, 16 Jan 2025 10:34:43 -0700</pubDate><guid>https://rodschmidt.com/posts/feature-flags-case-study/</guid><description>In my last job, I was on a platform team. One of the responsibilities of a platform team is to support all the other software development teams in an organization by writing libraries and tools that can be used by the other teams.
+One of the libraries the platform team provided was a library that managed feature flags for the iOS app that our company produced. The primary function of the library was to get the current value of a given feature flag.</description></item><item><title>Swift UI &amp; App Architecture: A New Approach Required</title><link>https://rodschmidt.com/posts/swift-ui-app-architecture-a-new-approach-required/</link><pubDate>Sun, 04 Aug 2019 17:47:09 +0000</pubDate><guid>https://rodschmidt.com/posts/swift-ui-app-architecture-a-new-approach-required/</guid><description>With SwiftUI, everything has changed. As Brent Simmons said, it’s the end of the NeXT era and the beginning of the Swift era.
+With the coming of SwiftUI, most of our app architectures are no longer valid (or at least parts of them). They need to be adjusted. MVC is certainly out. In fact, even controllers seem to be out. From Apple’s content, it seems all we have is models and views, and that’s true.</description></item><item><title>The Clean Architecture: An Example</title><link>https://rodschmidt.com/posts/the-clean-architecture-an-example/</link><pubDate>Sun, 29 Jan 2017 21:33:02 +0000</pubDate><guid>https://rodschmidt.com/posts/the-clean-architecture-an-example/</guid><description>Today, I’d like to take an example iOS app written with an MVC architecture and show you what the example would be with a Clean Swift architecture. The example I’ve chosen to use is the Quiz app from chapter 1 of the 3rd edition of iOS Programming: The Big Nerd Ranch Guide.
 The Quiz is a simple app that is like flash cards. It looks like this:
-The Show Answer button will reveal the answer to the question and tapping on the Next Question button will display the next question.</description>
-    </item>
-    
-    <item>
-      <title>The Clean Architecture: An Introduction</title>
-      <link>https://rodschmidt.com/posts/the-clean-architecture-an-introduction/</link>
-      <pubDate>Fri, 09 Dec 2016 00:33:44 +0000</pubDate>
-      
-      <guid>https://rodschmidt.com/posts/the-clean-architecture-an-introduction/</guid>
-      <description>In the last post, I talked about various architectures used as alternatives to MVC, in a attempt to solve MVCs problems, such as Massive View Controller.
+The Show Answer button will reveal the answer to the question and tapping on the Next Question button will display the next question.</description></item><item><title>The Clean Architecture: An Introduction</title><link>https://rodschmidt.com/posts/the-clean-architecture-an-introduction/</link><pubDate>Fri, 09 Dec 2016 00:33:44 +0000</pubDate><guid>https://rodschmidt.com/posts/the-clean-architecture-an-introduction/</guid><description>In the last post, I talked about various architectures used as alternatives to MVC, in a attempt to solve MVCs problems, such as Massive View Controller.
 In this post, I would like to introduce you to another architecture, which seems to me to be the best starting point for your app’s architecture: the Clean Architecture.
-I think I first ran into the Clean Architecture in one of Uncle Bob’s presentations on YouTube.</description>
-    </item>
-    
-    <item>
-      <title>Moving Towards The Clean Architecture for Apple Development</title>
-      <link>https://rodschmidt.com/posts/moving-towards-the-clean-architecture-for-apple-development/</link>
-      <pubDate>Wed, 30 Nov 2016 18:09:30 +0000</pubDate>
-      
-      <guid>https://rodschmidt.com/posts/moving-towards-the-clean-architecture-for-apple-development/</guid>
-      <description>In the last post, I talked about MVC, its problems, and how it could be done right. Various architectures have emerged to try to address the deficiencies of MVC. Before I talk about the Clean architecture, I&amp;rsquo;d like to talk about some of them.
-Alternative Architectures to MVC Up front, I don’t have a lot of experience with these, but I have studied them and I believe they are a step in the right direction.</description>
-    </item>
-    
-    <item>
-      <title>Model View Controller: Problems and Solutions</title>
-      <link>https://rodschmidt.com/posts/model-view-controller-problems-and-solutions/</link>
-      <pubDate>Tue, 22 Nov 2016 21:41:19 +0000</pubDate>
-      
-      <guid>https://rodschmidt.com/posts/model-view-controller-problems-and-solutions/</guid>
-      <description>Model View Controller or MVC is the application architecture used by default for applications on all Apple platforms. Most of the tools, frameworks, and docs from Apple all talk about it and support it. In MVC, objects are assigned 1 of 3 roles:
-Model - objects that encapsulate and manage the data the application works with (this includes persistence). The data typically represents things in the real world like an employee, hardware part, or a picture that is being drawn.</description>
-    </item>
-    
-    <item>
-      <title>Do You Find The Whole Planning Process Painful?</title>
-      <link>https://rodschmidt.com/posts/do-you-find-the-whole-planning-process-painful/</link>
-      <pubDate>Wed, 09 Nov 2016 22:51:27 +0000</pubDate>
-      
-      <guid>https://rodschmidt.com/posts/do-you-find-the-whole-planning-process-painful/</guid>
-      <description>A thread in the AskPrograming forum on reddit started with this question and I thought I would share my thoughts on planning and up-front design.
-Basically, the originator of the thread is expressing his dislike of planning before coding, but thinks it’s a good idea because they’ve either been told that or seen others do it. They also expresses dislike for planning tools and wonders if there’s a better way. Basically, they want to know how do you plan and how do you break up a project into tasks that you need to do.</description>
-    </item>
-    
-    <item>
-      <title>Part 4: What Are the Downsides to Putting the Core Data MOC in the App Delegate</title>
-      <link>https://rodschmidt.com/posts/part-4-what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</link>
-      <pubDate>Tue, 01 Nov 2016 21:49:48 +0000</pubDate>
-      
-      <guid>https://rodschmidt.com/posts/part-4-what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</guid>
-      <description>In part 3, I talked about why putting the MOC in the app delegate makes any code that uses the MOC will be dependent on the app delegate and why that’s not a good thing.
+I think I first ran into the Clean Architecture in one of Uncle Bob’s presentations on YouTube.</description></item><item><title>Moving Towards The Clean Architecture for Apple Development</title><link>https://rodschmidt.com/posts/moving-towards-the-clean-architecture-for-apple-development/</link><pubDate>Wed, 30 Nov 2016 18:09:30 +0000</pubDate><guid>https://rodschmidt.com/posts/moving-towards-the-clean-architecture-for-apple-development/</guid><description>In the last post, I talked about MVC, its problems, and how it could be done right. Various architectures have emerged to try to address the deficiencies of MVC. Before I talk about the Clean architecture, I&amp;rsquo;d like to talk about some of them.
+Alternative Architectures to MVC Up front, I don’t have a lot of experience with these, but I have studied them and I believe they are a step in the right direction.</description></item><item><title>Model View Controller: Problems and Solutions</title><link>https://rodschmidt.com/posts/model-view-controller-problems-and-solutions/</link><pubDate>Tue, 22 Nov 2016 21:41:19 +0000</pubDate><guid>https://rodschmidt.com/posts/model-view-controller-problems-and-solutions/</guid><description>Model View Controller or MVC is the application architecture used by default for applications on all Apple platforms. Most of the tools, frameworks, and docs from Apple all talk about it and support it. In MVC, objects are assigned 1 of 3 roles:
+Model - objects that encapsulate and manage the data the application works with (this includes persistence). The data typically represents things in the real world like an employee, hardware part, or a picture that is being drawn.</description></item><item><title>Do You Find The Whole Planning Process Painful?</title><link>https://rodschmidt.com/posts/do-you-find-the-whole-planning-process-painful/</link><pubDate>Wed, 09 Nov 2016 22:51:27 +0000</pubDate><guid>https://rodschmidt.com/posts/do-you-find-the-whole-planning-process-painful/</guid><description>A thread in the AskPrograming forum on reddit started with this question and I thought I would share my thoughts on planning and up-front design.
+Basically, the originator of the thread is expressing his dislike of planning before coding, but thinks it’s a good idea because they’ve either been told that or seen others do it. They also expresses dislike for planning tools and wonders if there’s a better way. Basically, they want to know how do you plan and how do you break up a project into tasks that you need to do.</description></item><item><title>Part 4: What Are the Downsides to Putting the Core Data MOC in the App Delegate</title><link>https://rodschmidt.com/posts/part-4-what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</link><pubDate>Tue, 01 Nov 2016 21:49:48 +0000</pubDate><guid>https://rodschmidt.com/posts/part-4-what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</guid><description>In part 3, I talked about why putting the MOC in the app delegate makes any code that uses the MOC will be dependent on the app delegate and why that’s not a good thing.
 In part 2, I talked about why putting the MOC in the app delegate is a violation of the Single Responsibility Principle.
-In part 1, I talked about why putting the MOC in your app delegate makes you dependent on Core Data for your application’s persistence.</description>
-    </item>
-    
-    <item>
-      <title>Part 3: What Are The Downsides to Putting the Core Data MOC in the App Delegate</title>
-      <link>https://rodschmidt.com/posts/part-3-what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</link>
-      <pubDate>Tue, 25 Oct 2016 21:28:08 +0000</pubDate>
-      
-      <guid>https://rodschmidt.com/posts/part-3-what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</guid>
-      <description>In part 2, I talked about why putting the MOC in the app delegate is a violation of the Single Responsibility Principle.
+In part 1, I talked about why putting the MOC in your app delegate makes you dependent on Core Data for your application’s persistence.</description></item><item><title>Part 3: What Are The Downsides to Putting the Core Data MOC in the App Delegate</title><link>https://rodschmidt.com/posts/part-3-what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</link><pubDate>Tue, 25 Oct 2016 21:28:08 +0000</pubDate><guid>https://rodschmidt.com/posts/part-3-what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</guid><description>In part 2, I talked about why putting the MOC in the app delegate is a violation of the Single Responsibility Principle.
 In part 1, I talked about why putting the MOC in your app delegate makes you dependent on Core Data for your application’s persistence.
 Today I like to talk about the 3rd reason I gave in part 1, which is:
-Any code you write that uses myManagedObjectContext will be dependent on the App Delegate.</description>
-    </item>
-    
-    <item>
-      <title>Part 2: What Are The Downsides to Putting the Core Data MOC in the App Delegate</title>
-      <link>https://rodschmidt.com/posts/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate-part-2/</link>
-      <pubDate>Tue, 18 Oct 2016 22:33:49 +0000</pubDate>
-      
-      <guid>https://rodschmidt.com/posts/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate-part-2/</guid>
-      <description>In my previous post, I gave some reasons why putting the Core Data MOC in your app delegate was a bad idea. Those reasons were:
-The app delegate is managing the Core Data stack. Classes should only have one responsibility. The app delegate is already responsible for managing application lifecycle. It shouldn’t be managing the Core Data stack as well. You are completely dependent on Core Data and using it as your persistence method for your app.</description>
-    </item>
-    
-    <item>
-      <title>3 Ways To Fix Your iOS Testing Woes</title>
-      <link>https://rodschmidt.com/posts/3-ways-to-fix-your-ios-testing-woes/</link>
-      <pubDate>Mon, 03 Oct 2016 16:55:28 +0000</pubDate>
-      
-      <guid>https://rodschmidt.com/posts/3-ways-to-fix-your-ios-testing-woes/</guid>
-      <description>Lots of companies have constant problems testing their iOS apps. Here are some ways to fix or ease them.
-1. Don’t Make Developers Run or Write UI Tests UI tests are black box tests and test the app from the perspective of the user. Your developers are the worst choice to test the app from this viewpoint and you need a fresh set of eyes for those tests. The QA engineer’s job is to test the app from the user’s viewpoint.</description>
-    </item>
-    
-    <item>
-      <title>What are the Downsides to Putting the Core Data MOC in the App Delegate?</title>
-      <link>https://rodschmidt.com/posts/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</link>
-      <pubDate>Thu, 25 Aug 2016 20:59:37 +0000</pubDate>
-      
-      <guid>https://rodschmidt.com/posts/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</guid>
-      <description>I saw this question on the iOSProgramming topic in reddit:
-I&amp;rsquo;ve seen a number of different ways to access the NSManagedObjectContext when working with Core Data, but I was wondering if there are any downsides to the way I&amp;rsquo;ve been doing it. Basically, I stick a computed variable in the AppDelegate, and grab it when I need it&amp;hellip; Please let me know if you see any flaws&amp;hellip; If not, feel free to use it!</description>
-    </item>
-    
-  </channel>
-</rss>
+Any code you write that uses myManagedObjectContext will be dependent on the App Delegate.</description></item><item><title>Part 2: What Are The Downsides to Putting the Core Data MOC in the App Delegate</title><link>https://rodschmidt.com/posts/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate-part-2/</link><pubDate>Tue, 18 Oct 2016 22:33:49 +0000</pubDate><guid>https://rodschmidt.com/posts/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate-part-2/</guid><description>In my previous post, I gave some reasons why putting the Core Data MOC in your app delegate was a bad idea. Those reasons were:
+The app delegate is managing the Core Data stack. Classes should only have one responsibility. The app delegate is already responsible for managing application lifecycle. It shouldn’t be managing the Core Data stack as well. You are completely dependent on Core Data and using it as your persistence method for your app.</description></item><item><title>3 Ways To Fix Your iOS Testing Woes</title><link>https://rodschmidt.com/posts/3-ways-to-fix-your-ios-testing-woes/</link><pubDate>Mon, 03 Oct 2016 16:55:28 +0000</pubDate><guid>https://rodschmidt.com/posts/3-ways-to-fix-your-ios-testing-woes/</guid><description>Lots of companies have constant problems testing their iOS apps. Here are some ways to fix or ease them.
+1. Don’t Make Developers Run or Write UI Tests UI tests are black box tests and test the app from the perspective of the user. Your developers are the worst choice to test the app from this viewpoint and you need a fresh set of eyes for those tests. The QA engineer’s job is to test the app from the user’s viewpoint.</description></item><item><title>What are the Downsides to Putting the Core Data MOC in the App Delegate?</title><link>https://rodschmidt.com/posts/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</link><pubDate>Thu, 25 Aug 2016 20:59:37 +0000</pubDate><guid>https://rodschmidt.com/posts/what-are-the-downsides-to-putting-the-core-data-moc-in-the-app-delegate/</guid><description>I saw this question on the iOSProgramming topic in reddit:
+I&amp;rsquo;ve seen a number of different ways to access the NSManagedObjectContext when working with Core Data, but I was wondering if there are any downsides to the way I&amp;rsquo;ve been doing it. Basically, I stick a computed variable in the AppDelegate, and grab it when I need it&amp;hellip; Please let me know if you see any flaws&amp;hellip; If not, feel free to use it!</description></item></channel></rss>
