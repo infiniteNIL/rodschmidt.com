@@ -8,7 +8,7 @@ This is part 2 of my blog series on the history of my app Numerology. See Part 1
 
 ## The First Version
 
-It was the very early 90’s. Steve Jobs was at NeXT. Apple was struggling. I had some model of Macintosh II running on a 680x0 processor. I also had a compiler for C with object-oriented extensions (basically a subset of C++), called [THINK C](https://en.wikipedia.org/wiki/THINK_C), with a class library called TCL, or the Think Class Library. For more about THINK C, see this [article](http://preserve.mactech.com/articles/mactech/Vol.05/05.10/ThinkCTutor/index.html).
+It was the very early 90’s. Steve Jobs was at NeXT. I had some model of Macintosh II running on a 680x0 processor. I also had a compiler for C with object-oriented extensions (basically a subset of C++), called [THINK C](https://en.wikipedia.org/wiki/THINK_C), with a class library called TCL, or the Think Class Library. For more about THINK C, see this [article](http://preserve.mactech.com/articles/mactech/Vol.05/05.10/ThinkCTutor/index.html).
 
 {{<img-center src="/images/think-c.jpg" width="256" title="THINK C Manual">}}
 
