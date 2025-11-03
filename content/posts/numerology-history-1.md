@@ -2,7 +2,7 @@
 title: "Numerology: 17 Years in the App Store (Part 1)"
 date: 2025-10-28T16:31:32-06:00
 draft: false
-tags: ['Apple Platforms', 'Software Development']
+tags: ['Apple Platforms', 'Numerology', 'Software Development']
 ---
 ## Introduction
 
@@ -29,4 +29,4 @@ I think I was out of college,  on my own, and visiting my parents for the weeken
 
 I found numerology interesting, and it dawned on me that it would be pretty easy to write a program that did all the calculations in the book.
 
-Keep a lookout for part 2, where I’ll talk about the first version of the app, before the App Store, or even the World Wide Web.
+Keep a lookout for [part 2](/posts/numerology-history-2), where I’ll talk about the first version of the app, before the App Store, or even the World Wide Web.
