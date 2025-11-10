@@ -26,4 +26,4 @@ So, this version was not sold anywhere. The source code  just sat on my hard dri
 
 I went to NeXT World in 1993, where everybody received the Intel version of [NeXTSTEP](https://en.wikipedia.org/wiki/NeXTSTEP). I tried to get it to work on my PCs at the time, but couldn’t get it to work. I just read about Objective-C and the great NeXT frameworks and wished I could use them. In 2001, I would finally get my chance.
 
-Stay tuned  for part 3, where I’ll talk about the era before the App Store.
+Stay tuned for [part 3](/posts/numerology-history-3), where I’ll talk about the era before the App Store.
