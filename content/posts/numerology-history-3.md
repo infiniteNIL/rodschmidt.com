@@ -32,5 +32,5 @@ Around this time, the world was in the midst of the 2008 financial crisis. I was
 
 However, lots of people wanted to write iPhone apps. I started freelancing and finding contracts to write apps and of course I applied for my Apple Developer account so I could sell my apps on the App Store.
 
-Stay tuned  for part 4, where I’ll talk about the beginning of Numerology on the App Store.
+Stay tuned for [part 4](/posts/numerology-history-4), where I’ll talk about the beginning of Numerology on the App Store.
 
