@@ -43,4 +43,4 @@ As you can see, my best year was 2012. I think the was effectively the peak of A
 
 For a few years I lived completely off my App Store sales (my expenses were pretty low), but after January 2012 it was all downhill, as you can see (until 2024).
 
-Stay tuned  for part 5, where I’ll talk about the struggles to make money on the app store.
+Stay tuned for [part 5](/posts/numerology-history-5), where I’ll talk about the struggles to make money on the app store.
