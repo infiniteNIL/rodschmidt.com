@@ -24,8 +24,8 @@ I debated whether I should do it or not. Eventually, I decided to do it, reasoni
 
 As far as I could tell, the segment brought in absolutely 0 sales. I didn’t perceive any uptick in traffic. No indication at all that it had any effect.
 
-As a side note, when you see products being features on shows and even the news, realize, that in a lot of cases, the segment is being paid for by the company producing that product.
+As a side note, when you see products being featured on shows and even the news, realize, that in a lot of cases, the segment is being paid for by the company producing that product.
 
-No matter, what I did to promote my apps in the App Store, nothing seemed to have an effect. I pretty much lost interest in doing anything about it. Numerology kept chugging along, averaging around $200 a month or so. I let it sit there and do that for a few years.
+No matter what I did to promote my apps in the App Store, nothing seemed to have an effect. I pretty much lost interest in doing anything about it. Numerology kept chugging along, averaging around $200 a month or so. I let it sit there and do that for a few years.
 
-Stay tuned for final part, part 6, where I talk about the current state of Numerology.
+Stay tuned for final part, [part 6](/posts/numerology-history-6), where I talk about the current state of Numerology.
