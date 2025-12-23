@@ -1,33 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Architecture on Rod Schmidt</title>
-    <link>http://localhost:1313/tags/architecture/</link>
-    <description>Recent content in Architecture on Rod Schmidt</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jan 2025 10:34:43 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Case Study: Improving the Effeciency of Software Development Teams Dependent on Another Team</title>
-      <link>http://localhost:1313/posts/feature-flags-case-study/</link>
-      <pubDate>Thu, 16 Jan 2025 10:34:43 -0700</pubDate>
-      <guid>http://localhost:1313/posts/feature-flags-case-study/</guid>
-      <description>&lt;p&gt;In my last job, I was on a platform team. One of the responsibilities of a platform team is to support all the other software development teams in an organization by writing libraries and tools that can be used by the other teams.&lt;/p&gt;&#xA;&lt;p&gt;One of the libraries the platform team provided was a library that managed feature flags for the iOS app that our company produced. The primary function of the library was to get the current value of a given feature flag. If you’re not familiar with feature flags see &lt;a href=&#34;https://launchdarkly.com/blog/what-are-feature-flags/&#34;&gt;Feature Flags 101: Use Cases, Benefits, and Best Practices&lt;/a&gt;. Basically, they are used to turn off and on features of an application at runtime.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Pointfree&#39;s SyncUps App: A Great Example Architecture for a SwiftUI App</title>
-      <link>http://localhost:1313/posts/syncups/</link>
-      <pubDate>Sat, 11 May 2024 10:41:54 -0600</pubDate>
-      <guid>http://localhost:1313/posts/syncups/</guid>
-      <description>&lt;p&gt;In comments to my last article on &lt;a href=&#34;http://localhost:1313/posts/composable-architecture-experience&#34;&gt;The Composable Architecture&lt;/a&gt; readers have asked about examples of how I think an app should be written. In the article, I did mention my previous posts, which have examples for Clean Swift and MVVM, but those were written for UIKit. SwiftUI didn’t exist at the time.&lt;/p&gt;&#xA;&lt;p&gt;So, this article will talk about what I think is a great example of architecture for a SwiftUI app. Pointfree’s own &lt;a href=&#34;https://github.com/pointfreeco/syncups&#34;&gt;SyncUps&lt;/a&gt; app. The example actually has 2 apps, one showing tree-based navigation, and one showing stack-based navigation. For this article, I will just focus on the stack-based example.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>The Composable Architecture: My 3 Year Experience</title>
-      <link>http://localhost:1313/posts/composable-architecture-experience/</link>
-      <pubDate>Fri, 26 Apr 2024 11:35:37 -0600</pubDate>
-      <guid>http://localhost:1313/posts/composable-architecture-experience/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;I recently finished a 3 year stint with a company that uses the Composable Architecture (&lt;a href=&#34;https://github.com/pointfreeco/swift-composable-architecture&#34;&gt;TCA&lt;/a&gt;)&#xA;from &lt;a href=&#34;https://pointfree.co&#34;&gt;PointFree&lt;/a&gt;. I wanted to write about my experiences with TCA and some of&#xA;the problems I see with it.&lt;/p&gt;&#xA;&lt;p&gt;I think Brandon Williams and Stephen Cellis, the creators of TCA, are absolutely brilliant, and what&#xA;they have managed to pull off with the creation of TCA is amazing. However, It’s just the two of them,&#xA;and nobody, or no thing, is perfect.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Architecture on Rod Schmidt</title><link>https://rodschmidt.com/tags/architecture/</link><description>Recent content in Architecture on Rod Schmidt</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 16 Jan 2025 10:34:43 -0700</lastBuildDate><atom:link href="https://rodschmidt.com/tags/architecture/index.xml" rel="self" type="application/rss+xml"/><item><title>Case Study: Improving the Effeciency of Software Development Teams Dependent on Another Team</title><link>https://rodschmidt.com/posts/feature-flags-case-study/</link><pubDate>Thu, 16 Jan 2025 10:34:43 -0700</pubDate><guid>https://rodschmidt.com/posts/feature-flags-case-study/</guid><description>&lt;p&gt;In my last job, I was on a platform team. One of the responsibilities of a platform team is to support all the other software development teams in an organization by writing libraries and tools that can be used by the other teams.&lt;/p&gt;
+&lt;p&gt;One of the libraries the platform team provided was a library that managed feature flags for the iOS app that our company produced. The primary function of the library was to get the current value of a given feature flag. If you’re not familiar with feature flags see &lt;a href="https://launchdarkly.com/blog/what-are-feature-flags/"&gt;Feature Flags 101: Use Cases, Benefits, and Best Practices&lt;/a&gt;. Basically, they are used to turn off and on features of an application at runtime.&lt;/p&gt;</description></item><item><title>Pointfree's SyncUps App: A Great Example Architecture for a SwiftUI App</title><link>https://rodschmidt.com/posts/syncups/</link><pubDate>Sat, 11 May 2024 10:41:54 -0600</pubDate><guid>https://rodschmidt.com/posts/syncups/</guid><description>&lt;p&gt;In comments to my last article on &lt;a href="https://rodschmidt.com/posts/composable-architecture-experience"&gt;The Composable Architecture&lt;/a&gt; readers have asked about examples of how I think an app should be written. In the article, I did mention my previous posts, which have examples for Clean Swift and MVVM, but those were written for UIKit. SwiftUI didn’t exist at the time.&lt;/p&gt;
+&lt;p&gt;So, this article will talk about what I think is a great example of architecture for a SwiftUI app. Pointfree’s own &lt;a href="https://github.com/pointfreeco/syncups"&gt;SyncUps&lt;/a&gt; app. The example actually has 2 apps, one showing tree-based navigation, and one showing stack-based navigation. For this article, I will just focus on the stack-based example.&lt;/p&gt;</description></item><item><title>The Composable Architecture: My 3 Year Experience</title><link>https://rodschmidt.com/posts/composable-architecture-experience/</link><pubDate>Fri, 26 Apr 2024 11:35:37 -0600</pubDate><guid>https://rodschmidt.com/posts/composable-architecture-experience/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;I recently finished a 3 year stint with a company that uses the Composable Architecture (&lt;a href="https://github.com/pointfreeco/swift-composable-architecture"&gt;TCA&lt;/a&gt;)
+from &lt;a href="https://pointfree.co"&gt;PointFree&lt;/a&gt;. I wanted to write about my experiences with TCA and some of
+the problems I see with it.&lt;/p&gt;
+&lt;p&gt;I think Brandon Williams and Stephen Cellis, the creators of TCA, are absolutely brilliant, and what
+they have managed to pull off with the creation of TCA is amazing. However, It’s just the two of them,
+and nobody, or no thing, is perfect.&lt;/p&gt;</description></item></channel></rss>

@@ -1,68 +1,47 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Baseball on Rod Schmidt</title>
-    <link>http://localhost:1313/tags/baseball/</link>
-    <description>Recent content in Baseball on Rod Schmidt</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 20 Jun 2024 16:29:12 -0600</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/baseball/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Pittsburgh - The Last One?</title>
-      <link>http://localhost:1313/posts/pittsburgh/</link>
-      <pubDate>Thu, 20 Jun 2024 16:29:12 -0600</pubDate>
-      <guid>http://localhost:1313/posts/pittsburgh/</guid>
-      <description>&lt;p&gt;On June 6th, I flew out to Pittsburgh to see the Pirates play the Dodgers for the final stop in my lifetime goal to see a home game for every MLB team. What’s interesting is that the very first game I ever saw was the Dodgers vs. the Pirates in Los Angeles in 1976. So a fitting end. I didn’t plan it the way, it just happened. It took 48 years of being in the right city at the right time (due to business trips, vacations, etc.), and some extra effort for the last 10 or so, where I had to actually plan trips just to see some teams.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>St. Louis Cardinals, My Penultimate Baseball Stadium?</title>
-      <link>http://localhost:1313/posts/baseball-stl/</link>
-      <pubDate>Wed, 20 Sep 2023 17:48:29 -0600</pubDate>
-      <guid>http://localhost:1313/posts/baseball-stl/</guid>
-      <description>&lt;div&gt;&#xA;  &lt;img style=&#34;display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;&#34; &#xA;       src=&#34;http://localhost:1313/images/BuschStadium.jpeg&#34; &#xA;       title=&#34;Busch Stadium&#34; &#xA;       alt=&#34;Busch Stadium&#34;&#xA;       &#xA;  &gt;&#xA;  &lt;p style=&#34;text-align: center; font-size: smaller;&#34;&gt;Busch Stadium&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&#xA;&lt;p&gt;I finally went to another baseball game in my goal to see every MLB team at their home stadium.&#xA;This time I went to St. Louis to see the Cardinals. I call this my penultimate stadium because just&#xA;Pittsburgh is left after this one. More on that later.&lt;/p&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s the box score:&#xA;&lt;div&gt;&#xA;  &lt;img style=&#34;display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;&#34; &#xA;       src=&#34;http://localhost:1313/images/CardinalsBoxScore.png&#34; &#xA;       title=&#34;Box Score&#34; &#xA;       alt=&#34;Box Score&#34;&#xA;       &#xA;  &gt;&#xA;  &lt;p style=&#34;text-align: center; font-size: smaller;&#34;&gt;Box Score&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Texas Tour - Arlington</title>
-      <link>http://localhost:1313/posts/texas-tour-arlington/</link>
-      <pubDate>Tue, 13 Aug 2002 22:20:07 +0000</pubDate>
-      <guid>http://localhost:1313/posts/texas-tour-arlington/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Wednesday, August 13th, 2002&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;I met my friend Marc at his house and we headed off to the game. This game is kind of a milestone in my quest to visit every major league ball park. It will be my 20th team. Just ten more to go (barring expansion or contraction).&lt;/p&gt;&#xA;&lt;span style=&#34;float: right; padding-left: 10px; &#34;&gt;&#xA;  &lt;img style=&#34;border: 1px solid black;&#34; src=&#34;http://localhost:1313/images/The_Ballpark_at_Arlington.jpg&#34; title=&#34;The Ballpark at Arlington&#34; alt=&#34;The Ballpark at Arlington&#34;&gt;&#xA;  &lt;p style=&#34;text-align: center; font-size: smaller&#34;&gt;The Ballpark at Arlington&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Steve Garvey</title>
-      <link>http://localhost:1313/posts/steve-garvey/</link>
-      <pubDate>Fri, 21 Jun 2002 04:53:20 +0000</pubDate>
-      <guid>http://localhost:1313/posts/steve-garvey/</guid>
-      <description>&lt;p&gt;I always like to see the Dodger&amp;rsquo;a AAA team when they come to Salt Lake. Last year, that team, moved from Albuquerque to Las Vegas and became the Las Vegas 51&amp;rsquo;s (51 being a reference to Area 51). After my trip I checked the Salt Lake Stingers&amp;rsquo; schedule and saw that the 51&amp;rsquo;s were in town. I further noticed that Thursday night was Steve Garvey night!&lt;/p&gt;&#xA;&lt;p&gt;Steve Garvey was my favorite player when I was a kid. At first it didn&amp;rsquo;t seem like much of a big deal. I thought I go down and get his autograph and it would be no big thing. But, as the game got closer I got a little more excited. I went to Gart&amp;rsquo;s Sporting Goods and bought an official major league baseball in a little display case.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>West Coast Tour - San Diego</title>
-      <link>http://localhost:1313/posts/west-coast-tour-san-diego/</link>
-      <pubDate>Mon, 17 Jun 2002 04:36:11 +0000</pubDate>
-      <guid>http://localhost:1313/posts/west-coast-tour-san-diego/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Sunday, June 16th, 2002&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;In the morning, Ron and Roe took me out to breakfast in downtown LA at a cozy little old restaurant surrounded by skyscrapers. It was good standard fare. After we got back I packed up and headed south to San Diego.&lt;/p&gt;&#xA;&lt;p&gt;About halfway between LA and San Diego is a town called Mission Viejo. I had lived there for 10 years before I moved to Utah. My plan was to stop there and revisit my childhood. I did exit off the freeway, but I couldn&amp;rsquo;t find anything and I didn&amp;rsquo;t really have the time. The Padres game started at 2pm. So I got back on the freeway. I would come back to Mission Viejo later.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>West Coast Tour - Los Angeles</title>
-      <link>http://localhost:1313/posts/west-coast-tour-los-angeles/</link>
-      <pubDate>Sun, 16 Jun 2002 03:05:48 +0000</pubDate>
-      <guid>http://localhost:1313/posts/west-coast-tour-los-angeles/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Saturday, June 15th, 2002&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;After spending the night in Palo Alto, I started down the freeway to LA the next morning. Nothing really to write about here. Just your standard freeway drive. However, the traffic was horrible. Seemed like every half-hour or so you ran into stop and go traffic. Not fun. Just this alone made me think I didn&amp;rsquo;t want to live here.&lt;/p&gt;&#xA;&lt;p&gt;My friend, Laury&amp;rsquo;s sister and brother-in-law live in LA. Laury let them know I was coming so I called them and got directions to their place. Arrived about 5pm. Ron and Roe were very nice and gracious to let me stay in their place. I convinced Ron to come to game with me (Yea, I didn&amp;rsquo;t have to drive) and we headed off to the Dodger game.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>West Coast Tour - Seattle</title>
-      <link>http://localhost:1313/posts/west-coast-tour-seattle/</link>
-      <pubDate>Thu, 13 Jun 2002 00:47:07 +0000</pubDate>
-      <guid>http://localhost:1313/posts/west-coast-tour-seattle/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Wednesday, June 12th, 2002&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Took my time getting started and probably left Portland around 10am. Dez lent me some audio books (Thanks Dez) and I leisurely drove to Seattle arriving at about 3pm. Had the top down most of the way, but had to put it up about an hour outside of Seattle because I was starting to get sunburned. Its 90 degrees in Seattle today!&lt;/p&gt;&#xA;&lt;div&gt;&#xA;  &lt;img style=&#34;display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;&#34; &#xA;       src=&#34;http://localhost:1313/images/Safeco_Field-300x225.jpg&#34; &#xA;       title=&#34;Safeco Field&#34; &#xA;       alt=&#34;Safeco Field&#34;&#xA;       &#xA;  &gt;&#xA;  &lt;p style=&#34;text-align: center; font-size: smaller;&#34;&gt;Safeco Field&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Atlanta</title>
-      <link>http://localhost:1313/posts/atlanta/</link>
-      <pubDate>Fri, 07 Jun 2002 20:00:16 +0000</pubDate>
-      <guid>http://localhost:1313/posts/atlanta/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Wednesday, June 7th, 2002&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;On Wednesday I caught a flight to Atlanta&#xA;(thanks to my sister&amp;rsquo;s buddy pass) and arrived at about 2:30 PM EST. Caught&#xA;the MARTA (Atlanta equivalent of TRAX) right from the airport to downtown.&#xA;My hotel was only a couple of blocks from my stop. One thing I notice is the&#xA;humidity. To me, it actually felt good. Keeps your skin moist and when it&amp;rsquo;s&#xA;hot you actually sweat. Just the way it should be.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Baseball on Rod Schmidt</title><link>https://rodschmidt.com/tags/baseball/</link><description>Recent content in Baseball on Rod Schmidt</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 20 Jun 2024 16:29:12 -0600</lastBuildDate><atom:link href="https://rodschmidt.com/tags/baseball/index.xml" rel="self" type="application/rss+xml"/><item><title>Pittsburgh - The Last One?</title><link>https://rodschmidt.com/posts/pittsburgh/</link><pubDate>Thu, 20 Jun 2024 16:29:12 -0600</pubDate><guid>https://rodschmidt.com/posts/pittsburgh/</guid><description>&lt;p&gt;On June 6th, I flew out to Pittsburgh to see the Pirates play the Dodgers for the final stop in my lifetime goal to see a home game for every MLB team. What’s interesting is that the very first game I ever saw was the Dodgers vs. the Pirates in Los Angeles in 1976. So a fitting end. I didn’t plan it the way, it just happened. It took 48 years of being in the right city at the right time (due to business trips, vacations, etc.), and some extra effort for the last 10 or so, where I had to actually plan trips just to see some teams.&lt;/p&gt;</description></item><item><title>St. Louis Cardinals, My Penultimate Baseball Stadium?</title><link>https://rodschmidt.com/posts/baseball-stl/</link><pubDate>Wed, 20 Sep 2023 17:48:29 -0600</pubDate><guid>https://rodschmidt.com/posts/baseball-stl/</guid><description>&lt;div&gt;
+ &lt;img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
+ src="https://rodschmidt.com/images/BuschStadium.jpeg" 
+ title="Busch Stadium" 
+ alt="Busch Stadium"
+ 
+ &gt;
+ &lt;p style="text-align: center; font-size: smaller;"&gt;Busch Stadium&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;I finally went to another baseball game in my goal to see every MLB team at their home stadium.
+This time I went to St. Louis to see the Cardinals. I call this my penultimate stadium because just
+Pittsburgh is left after this one. More on that later.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s the box score:
+&lt;div&gt;
+ &lt;img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
+ src="https://rodschmidt.com/images/CardinalsBoxScore.png" 
+ title="Box Score" 
+ alt="Box Score"
+ 
+ &gt;
+ &lt;p style="text-align: center; font-size: smaller;"&gt;Box Score&lt;/p&gt;</description></item><item><title>Texas Tour - Arlington</title><link>https://rodschmidt.com/posts/texas-tour-arlington/</link><pubDate>Tue, 13 Aug 2002 22:20:07 +0000</pubDate><guid>https://rodschmidt.com/posts/texas-tour-arlington/</guid><description>&lt;p&gt;&lt;strong&gt;Wednesday, August 13th, 2002&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I met my friend Marc at his house and we headed off to the game. This game is kind of a milestone in my quest to visit every major league ball park. It will be my 20th team. Just ten more to go (barring expansion or contraction).&lt;/p&gt;
+&lt;span style="float: right; padding-left: 10px; "&gt;
+ &lt;img style="border: 1px solid black;" src="https://rodschmidt.com/images/The_Ballpark_at_Arlington.jpg" title="The Ballpark at Arlington" alt="The Ballpark at Arlington"&gt;
+ &lt;p style="text-align: center; font-size: smaller"&gt;The Ballpark at Arlington&lt;/p&gt;</description></item><item><title>Steve Garvey</title><link>https://rodschmidt.com/posts/steve-garvey/</link><pubDate>Fri, 21 Jun 2002 04:53:20 +0000</pubDate><guid>https://rodschmidt.com/posts/steve-garvey/</guid><description>&lt;p&gt;I always like to see the Dodger&amp;rsquo;a AAA team when they come to Salt Lake. Last year, that team, moved from Albuquerque to Las Vegas and became the Las Vegas 51&amp;rsquo;s (51 being a reference to Area 51). After my trip I checked the Salt Lake Stingers&amp;rsquo; schedule and saw that the 51&amp;rsquo;s were in town. I further noticed that Thursday night was Steve Garvey night!&lt;/p&gt;
+&lt;p&gt;Steve Garvey was my favorite player when I was a kid. At first it didn&amp;rsquo;t seem like much of a big deal. I thought I go down and get his autograph and it would be no big thing. But, as the game got closer I got a little more excited. I went to Gart&amp;rsquo;s Sporting Goods and bought an official major league baseball in a little display case.&lt;/p&gt;</description></item><item><title>West Coast Tour - San Diego</title><link>https://rodschmidt.com/posts/west-coast-tour-san-diego/</link><pubDate>Mon, 17 Jun 2002 04:36:11 +0000</pubDate><guid>https://rodschmidt.com/posts/west-coast-tour-san-diego/</guid><description>&lt;p&gt;&lt;strong&gt;Sunday, June 16th, 2002&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In the morning, Ron and Roe took me out to breakfast in downtown LA at a cozy little old restaurant surrounded by skyscrapers. It was good standard fare. After we got back I packed up and headed south to San Diego.&lt;/p&gt;
+&lt;p&gt;About halfway between LA and San Diego is a town called Mission Viejo. I had lived there for 10 years before I moved to Utah. My plan was to stop there and revisit my childhood. I did exit off the freeway, but I couldn&amp;rsquo;t find anything and I didn&amp;rsquo;t really have the time. The Padres game started at 2pm. So I got back on the freeway. I would come back to Mission Viejo later.&lt;/p&gt;</description></item><item><title>West Coast Tour - Los Angeles</title><link>https://rodschmidt.com/posts/west-coast-tour-los-angeles/</link><pubDate>Sun, 16 Jun 2002 03:05:48 +0000</pubDate><guid>https://rodschmidt.com/posts/west-coast-tour-los-angeles/</guid><description>&lt;p&gt;&lt;strong&gt;Saturday, June 15th, 2002&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;After spending the night in Palo Alto, I started down the freeway to LA the next morning. Nothing really to write about here. Just your standard freeway drive. However, the traffic was horrible. Seemed like every half-hour or so you ran into stop and go traffic. Not fun. Just this alone made me think I didn&amp;rsquo;t want to live here.&lt;/p&gt;
+&lt;p&gt;My friend, Laury&amp;rsquo;s sister and brother-in-law live in LA. Laury let them know I was coming so I called them and got directions to their place. Arrived about 5pm. Ron and Roe were very nice and gracious to let me stay in their place. I convinced Ron to come to game with me (Yea, I didn&amp;rsquo;t have to drive) and we headed off to the Dodger game.&lt;/p&gt;</description></item><item><title>West Coast Tour - Seattle</title><link>https://rodschmidt.com/posts/west-coast-tour-seattle/</link><pubDate>Thu, 13 Jun 2002 00:47:07 +0000</pubDate><guid>https://rodschmidt.com/posts/west-coast-tour-seattle/</guid><description>&lt;p&gt;&lt;strong&gt;Wednesday, June 12th, 2002&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Took my time getting started and probably left Portland around 10am. Dez lent me some audio books (Thanks Dez) and I leisurely drove to Seattle arriving at about 3pm. Had the top down most of the way, but had to put it up about an hour outside of Seattle because I was starting to get sunburned. Its 90 degrees in Seattle today!&lt;/p&gt;
+&lt;div&gt;
+ &lt;img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
+ src="https://rodschmidt.com/images/Safeco_Field-300x225.jpg" 
+ title="Safeco Field" 
+ alt="Safeco Field"
+ 
+ &gt;
+ &lt;p style="text-align: center; font-size: smaller;"&gt;Safeco Field&lt;/p&gt;</description></item><item><title>Atlanta</title><link>https://rodschmidt.com/posts/atlanta/</link><pubDate>Fri, 07 Jun 2002 20:00:16 +0000</pubDate><guid>https://rodschmidt.com/posts/atlanta/</guid><description>&lt;p&gt;&lt;strong&gt;Wednesday, June 7th, 2002&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;On Wednesday I caught a flight to Atlanta
+(thanks to my sister&amp;rsquo;s buddy pass) and arrived at about 2:30 PM EST. Caught
+the MARTA (Atlanta equivalent of TRAX) right from the airport to downtown.
+My hotel was only a couple of blocks from my stop. One thing I notice is the
+humidity. To me, it actually felt good. Keeps your skin moist and when it&amp;rsquo;s
+hot you actually sweat. Just the way it should be.&lt;/p&gt;</description></item></channel></rss>

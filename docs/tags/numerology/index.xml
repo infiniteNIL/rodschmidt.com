@@ -1,54 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Numerology on Rod Schmidt</title>
-    <link>http://localhost:1313/tags/numerology/</link>
-    <description>Recent content in Numerology on Rod Schmidt</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 03 Dec 2025 11:43:03 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/numerology/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Numerology: 17 Years in the App Store (Part 6)</title>
-      <link>http://localhost:1313/posts/numerology-history-6/</link>
-      <pubDate>Wed, 03 Dec 2025 11:43:03 -0700</pubDate>
-      <guid>http://localhost:1313/posts/numerology-history-6/</guid>
-      <description>&lt;p&gt;This is part 6 of my blog series on the history of my app Numerology. See Part 5 &lt;a href=&#34;http://localhost:1313/posts/numerology-history-5&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;When we left off, Numerology was chugging along, slowly making less and less each month. First $300, then $200, sometimes as low as $100. Sometimes it would spurt back up to $300.&lt;/p&gt;&#xA;&lt;p&gt;This continued until fairly recently. In 2024, I noticed a competitor that always showed up first in the App Store search results when you searched for ‘numerology’. I decided to look into them a little more. According to Sensor Tower, their app was making over $5,000/month on the Apple App Store. They had an Android app as well, and it was making $5,000/month as well.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Numerology: 17 Years in the App Store (Part 5)</title>
-      <link>http://localhost:1313/posts/numerology-history-5/</link>
-      <pubDate>Mon, 24 Nov 2025 12:30:26 -0700</pubDate>
-      <guid>http://localhost:1313/posts/numerology-history-5/</guid>
-      <description>&lt;p&gt;This is part 5 of my blog series on the history of my app Numerology. See Part 4 &lt;a href=&#34;http://localhost:1313/posts/numerology-history-4&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I was probably the first numerology app on the App Store. If you searched for numerology, my app would be first in the results.  At some point this was no longer true. A competitor came out and my sales started to go down. Today, in 2025, there are possibly over a 100 numerology apps on the store.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Numerology: 17 Years in the App Store (Part 4)</title>
-      <link>http://localhost:1313/posts/numerology-history-4/</link>
-      <pubDate>Wed, 19 Nov 2025 11:26:12 -0700</pubDate>
-      <guid>http://localhost:1313/posts/numerology-history-4/</guid>
-      <description>&lt;p&gt;This is part 4 of my blog series on the history of my app Numerology. See Part 3 &lt;a href=&#34;http://localhost:1313/posts/numerology-history-3&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-first-app-store-version&#34;&gt;The First App Store Version&lt;/h2&gt;&#xA;&lt;p&gt;In 2008, Apple announced the App Store and I applied for an Apple Developer membership ($99/year), so I could sell apps on the App Store. Everyone else did the same and Apple was swamped. Despite applying as soon as possible, I didn’t get approved for about 6 months.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Numerology: 17 Years in the App Store (Part 3)</title>
-      <link>http://localhost:1313/posts/numerology-history-3/</link>
-      <pubDate>Mon, 10 Nov 2025 10:27:03 -0700</pubDate>
-      <guid>http://localhost:1313/posts/numerology-history-3/</guid>
-      <description>&lt;p&gt;This is part 3 of my blog series on the history of my app Numerology. See Part 2 &lt;a href=&#34;http://localhost:1313/posts/numerology-history-2&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-birth-of-cocoa&#34;&gt;The Birth of Cocoa&lt;/h2&gt;&#xA;&lt;p&gt;In 2001, Apple released the first version of Mac OS X 10.0, the first desktop version of their new OS based on NEXTStep. All the great APIs from NeXTStep (hence the NS prefixes to all the class names and such) together were called Cocoa.&lt;/p&gt;&#xA;&lt;p&gt;Now I finally had my chance to use the wonderful platform I’d been wanting to use for almost a decade. My full-time job was still with Java and enterprise world and it was increasingly not fun. I spent my off-time learning Cocoa. My first app was not Numerology though. It was an app called PhoneWord that found all the words you could make from a phone number. For example, from the phone number 555-5299 you could get 555-JAZZ.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Numerology: 17 Years in the App Store (Part 2)</title>
-      <link>http://localhost:1313/posts/numerology-history-2/</link>
-      <pubDate>Mon, 03 Nov 2025 15:59:09 -0700</pubDate>
-      <guid>http://localhost:1313/posts/numerology-history-2/</guid>
-      <description>&lt;p&gt;This is part 2 of my blog series on the history of my app Numerology. See Part 1 &lt;a href=&#34;http://localhost:1313/posts/numerology-history-1&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-first-version&#34;&gt;The First Version&lt;/h2&gt;&#xA;&lt;p&gt;It was the very early 90’s. Steve Jobs was at NeXT. I had some model of Macintosh II running on a 680x0 processor. I also had a compiler for C with object-oriented extensions (basically a subset of C++), called &lt;a href=&#34;https://en.wikipedia.org/wiki/THINK_C&#34;&gt;THINK C&lt;/a&gt;, with a class library called TCL, or the Think Class Library. For more about THINK C, see this &lt;a href=&#34;http://preserve.mactech.com/articles/mactech/Vol.05/05.10/ThinkCTutor/index.html&#34;&gt;article&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Numerology: 17 Years in the App Store (Part 1)</title>
-      <link>http://localhost:1313/posts/numerology-history-1/</link>
-      <pubDate>Tue, 28 Oct 2025 16:31:32 -0600</pubDate>
-      <guid>http://localhost:1313/posts/numerology-history-1/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;My app, &lt;a href=&#34;https://apps.apple.com/us/app/id292749698&#34;&gt;Numerology&lt;/a&gt;, has been in the Apple app store for over 17 years. During that time, it and its variations (lite version, Mac version) have been downloaded over 188,000 times, and made almost $150,000 in profit.&lt;/p&gt;&#xA;&lt;div&gt;&#xA;  &lt;img style=&#34;display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;&#34; &#xA;       src=&#34;http://localhost:1313/images/numerology-logo.png&#34; &#xA;       title=&#34;Numerology Icon&#34; &#xA;       alt=&#34;Numerology Icon&#34;&#xA;       &#xA;       width=&#34;128&#34;&#xA;       &#xA;  &gt;&#xA;  &lt;p style=&#34;text-align: center; font-size: smaller;&#34;&gt;Numerology Icon&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&#xA;&lt;p&gt;It’s ran on just about every Apple iPhone, iPad, and Mac. Before the App Store, it even ran on classic macOS machines.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Numerology on Rod Schmidt</title><link>https://rodschmidt.com/tags/numerology/</link><description>Recent content in Numerology on Rod Schmidt</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 03 Dec 2025 11:43:03 -0700</lastBuildDate><atom:link href="https://rodschmidt.com/tags/numerology/index.xml" rel="self" type="application/rss+xml"/><item><title>Numerology: 17 Years in the App Store (Part 6)</title><link>https://rodschmidt.com/posts/numerology-history-6/</link><pubDate>Wed, 03 Dec 2025 11:43:03 -0700</pubDate><guid>https://rodschmidt.com/posts/numerology-history-6/</guid><description>&lt;p&gt;This is part 6 of my blog series on the history of my app Numerology. See Part 5 &lt;a href="https://rodschmidt.com/posts/numerology-history-5"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;When we left off, Numerology was chugging along, slowly making less and less each month. First $300, then $200, sometimes as low as $100. Sometimes it would spurt back up to $300.&lt;/p&gt;
+&lt;p&gt;This continued until fairly recently. In 2024, I noticed a competitor that always showed up first in the App Store search results when you searched for ‘numerology’. I decided to look into them a little more. According to Sensor Tower, their app was making over $5,000/month on the Apple App Store. They had an Android app as well, and it was making $5,000/month as well.&lt;/p&gt;</description></item><item><title>Numerology: 17 Years in the App Store (Part 5)</title><link>https://rodschmidt.com/posts/numerology-history-5/</link><pubDate>Mon, 24 Nov 2025 12:30:26 -0700</pubDate><guid>https://rodschmidt.com/posts/numerology-history-5/</guid><description>&lt;p&gt;This is part 5 of my blog series on the history of my app Numerology. See Part 4 &lt;a href="https://rodschmidt.com/posts/numerology-history-4"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I was probably the first numerology app on the App Store. If you searched for numerology, my app would be first in the results. At some point this was no longer true. A competitor came out and my sales started to go down. Today, in 2025, there are possibly over a 100 numerology apps on the store.&lt;/p&gt;</description></item><item><title>Numerology: 17 Years in the App Store (Part 4)</title><link>https://rodschmidt.com/posts/numerology-history-4/</link><pubDate>Wed, 19 Nov 2025 11:26:12 -0700</pubDate><guid>https://rodschmidt.com/posts/numerology-history-4/</guid><description>&lt;p&gt;This is part 4 of my blog series on the history of my app Numerology. See Part 3 &lt;a href="https://rodschmidt.com/posts/numerology-history-3"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="the-first-app-store-version"&gt;The First App Store Version&lt;/h2&gt;
+&lt;p&gt;In 2008, Apple announced the App Store and I applied for an Apple Developer membership ($99/year), so I could sell apps on the App Store. Everyone else did the same and Apple was swamped. Despite applying as soon as possible, I didn’t get approved for about 6 months.&lt;/p&gt;</description></item><item><title>Numerology: 17 Years in the App Store (Part 3)</title><link>https://rodschmidt.com/posts/numerology-history-3/</link><pubDate>Mon, 10 Nov 2025 10:27:03 -0700</pubDate><guid>https://rodschmidt.com/posts/numerology-history-3/</guid><description>&lt;p&gt;This is part 3 of my blog series on the history of my app Numerology. See Part 2 &lt;a href="https://rodschmidt.com/posts/numerology-history-2"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="the-birth-of-cocoa"&gt;The Birth of Cocoa&lt;/h2&gt;
+&lt;p&gt;In 2001, Apple released the first version of Mac OS X 10.0, the first desktop version of their new OS based on NEXTStep. All the great APIs from NeXTStep (hence the NS prefixes to all the class names and such) together were called Cocoa.&lt;/p&gt;
+&lt;p&gt;Now I finally had my chance to use the wonderful platform I’d been wanting to use for almost a decade. My full-time job was still with Java and enterprise world and it was increasingly not fun. I spent my off-time learning Cocoa. My first app was not Numerology though. It was an app called PhoneWord that found all the words you could make from a phone number. For example, from the phone number 555-5299 you could get 555-JAZZ.&lt;/p&gt;</description></item><item><title>Numerology: 17 Years in the App Store (Part 2)</title><link>https://rodschmidt.com/posts/numerology-history-2/</link><pubDate>Mon, 03 Nov 2025 15:59:09 -0700</pubDate><guid>https://rodschmidt.com/posts/numerology-history-2/</guid><description>&lt;p&gt;This is part 2 of my blog series on the history of my app Numerology. See Part 1 &lt;a href="https://rodschmidt.com/posts/numerology-history-1"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="the-first-version"&gt;The First Version&lt;/h2&gt;
+&lt;p&gt;It was the very early 90’s. Steve Jobs was at NeXT. I had some model of Macintosh II running on a 680x0 processor. I also had a compiler for C with object-oriented extensions (basically a subset of C++), called &lt;a href="https://en.wikipedia.org/wiki/THINK_C"&gt;THINK C&lt;/a&gt;, with a class library called TCL, or the Think Class Library. For more about THINK C, see this &lt;a href="http://preserve.mactech.com/articles/mactech/Vol.05/05.10/ThinkCTutor/index.html"&gt;article&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Numerology: 17 Years in the App Store (Part 1)</title><link>https://rodschmidt.com/posts/numerology-history-1/</link><pubDate>Tue, 28 Oct 2025 16:31:32 -0600</pubDate><guid>https://rodschmidt.com/posts/numerology-history-1/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;My app, &lt;a href="https://apps.apple.com/us/app/id292749698"&gt;Numerology&lt;/a&gt;, has been in the Apple app store for over 17 years. During that time, it and its variations (lite version, Mac version) have been downloaded over 188,000 times, and made almost $150,000 in profit.&lt;/p&gt;
+&lt;div&gt;
+ &lt;img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
+ src="https://rodschmidt.com/images/numerology-logo.png" 
+ title="Numerology Icon" 
+ alt="Numerology Icon"
+ 
+ width="128"
+ 
+ &gt;
+ &lt;p style="text-align: center; font-size: smaller;"&gt;Numerology Icon&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;It’s ran on just about every Apple iPhone, iPad, and Mac. Before the App Store, it even ran on classic macOS machines.&lt;/p&gt;</description></item></channel></rss>

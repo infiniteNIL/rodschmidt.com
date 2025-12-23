@@ -1,33 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>General on Rod Schmidt</title>
-    <link>http://localhost:1313/tags/general/</link>
-    <description>Recent content in General on Rod Schmidt</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 18 Jan 2015 00:09:53 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/general/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>App: The Human Story - My Prize</title>
-      <link>http://localhost:1313/posts/app-the-human-story-my-prize/</link>
-      <pubDate>Sun, 18 Jan 2015 00:09:53 +0000</pubDate>
-      <guid>http://localhost:1313/posts/app-the-human-story-my-prize/</guid>
-      <description>&lt;p&gt;A while back I wrote a &lt;a href=&#34;http://localhost:1313/app-the-human-story-my-story/&#34;&gt;blog post&lt;/a&gt; and entered it in a contest for &lt;a href=&#34;http://appdocumentary.com/app-stories/submitted&#34;&gt;App: The Human Story&lt;/a&gt;. I came in second, and for that I was awarded a custom app token from Matic. It finally came last week and here it is:&lt;/p&gt;&#xA;&lt;div&gt;&#xA;  &lt;img style=&#34;display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;&#34; &#xA;       src=&#34;http://localhost:1313/images/apptoken-300x300.jpg&#34; &#xA;       title=&#34;My app token&#34; &#xA;       alt=&#34;My app token&#34;&#xA;       &#xA;  &gt;&#xA;  &lt;p style=&#34;text-align: center; font-size: smaller;&#34;&gt;My app token&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&#xA;&lt;p&gt;Now, I finally have a sign for my office.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>App: The Human Story - My Story</title>
-      <link>http://localhost:1313/posts/app-the-human-story-my-story/</link>
-      <pubDate>Wed, 09 Jul 2014 22:47:34 +0000</pubDate>
-      <guid>http://localhost:1313/posts/app-the-human-story-my-story/</guid>
-      <description>&lt;p&gt;There is a Kickstarter project that was started recently for a film titled &lt;a href=&#34;https://www.kickstarter.com/projects/appdocu/app-the-human-story&#34;&gt;&lt;strong&gt;App: The Human Story&lt;/strong&gt;&lt;/a&gt;. It &amp;ldquo;is the story of the cultural phenomenon that touches all our lives.&amp;rdquo; It is about the people who make apps. Many of them are people I follow on blogs, and listen to on podcasts, and look up to. I simply had to back the project, and I did. The producers of the film, on their blog, have asked that others involved in apps write about their own stories. This is my story.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>A New Start</title>
-      <link>http://localhost:1313/posts/a-new-start/</link>
-      <pubDate>Fri, 27 Jun 2014 22:44:25 +0000</pubDate>
-      <guid>http://localhost:1313/posts/a-new-start/</guid>
-      <description>&lt;p&gt;If you haven&amp;rsquo;t noticed, my weblog has a new design and new content. I have switched from WordPress to Octopress and have used a new theme. So far, I like it. It&amp;rsquo;s nice to be able to use Markdown instead of some slow web tool to write my posts.&lt;/p&gt;&#xA;&lt;p&gt;My old blog was mostly political commentary and I&amp;rsquo;ve decided to remove that. Some of my most popular posts were the posts about my sabbatical that I took in the summer of 2002. Those, I have preserved and ported over to the new system. I enjoyed reading them myself. You can find them in the &lt;a href=&#34;http://localhost:1313/tags/sabbatical/&#34;&gt;Sabbatical&lt;/a&gt; category.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>General on Rod Schmidt</title><link>https://rodschmidt.com/tags/general/</link><description>Recent content in General on Rod Schmidt</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 18 Jan 2015 00:09:53 +0000</lastBuildDate><atom:link href="https://rodschmidt.com/tags/general/index.xml" rel="self" type="application/rss+xml"/><item><title>App: The Human Story - My Prize</title><link>https://rodschmidt.com/posts/app-the-human-story-my-prize/</link><pubDate>Sun, 18 Jan 2015 00:09:53 +0000</pubDate><guid>https://rodschmidt.com/posts/app-the-human-story-my-prize/</guid><description>&lt;p&gt;A while back I wrote a &lt;a href="https://rodschmidt.com/app-the-human-story-my-story/"&gt;blog post&lt;/a&gt; and entered it in a contest for &lt;a href="http://appdocumentary.com/app-stories/submitted"&gt;App: The Human Story&lt;/a&gt;. I came in second, and for that I was awarded a custom app token from Matic. It finally came last week and here it is:&lt;/p&gt;
+&lt;div&gt;
+ &lt;img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
+ src="https://rodschmidt.com/images/apptoken-300x300.jpg" 
+ title="My app token" 
+ alt="My app token"
+ 
+ &gt;
+ &lt;p style="text-align: center; font-size: smaller;"&gt;My app token&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Now, I finally have a sign for my office.&lt;/p&gt;</description></item><item><title>App: The Human Story - My Story</title><link>https://rodschmidt.com/posts/app-the-human-story-my-story/</link><pubDate>Wed, 09 Jul 2014 22:47:34 +0000</pubDate><guid>https://rodschmidt.com/posts/app-the-human-story-my-story/</guid><description>&lt;p&gt;There is a Kickstarter project that was started recently for a film titled &lt;a href="https://www.kickstarter.com/projects/appdocu/app-the-human-story"&gt;&lt;strong&gt;App: The Human Story&lt;/strong&gt;&lt;/a&gt;. It &amp;ldquo;is the story of the cultural phenomenon that touches all our lives.&amp;rdquo; It is about the people who make apps. Many of them are people I follow on blogs, and listen to on podcasts, and look up to. I simply had to back the project, and I did. The producers of the film, on their blog, have asked that others involved in apps write about their own stories. This is my story.&lt;/p&gt;</description></item><item><title>A New Start</title><link>https://rodschmidt.com/posts/a-new-start/</link><pubDate>Fri, 27 Jun 2014 22:44:25 +0000</pubDate><guid>https://rodschmidt.com/posts/a-new-start/</guid><description>&lt;p&gt;If you haven&amp;rsquo;t noticed, my weblog has a new design and new content. I have switched from WordPress to Octopress and have used a new theme. So far, I like it. It&amp;rsquo;s nice to be able to use Markdown instead of some slow web tool to write my posts.&lt;/p&gt;
+&lt;p&gt;My old blog was mostly political commentary and I&amp;rsquo;ve decided to remove that. Some of my most popular posts were the posts about my sabbatical that I took in the summer of 2002. Those, I have preserved and ported over to the new system. I enjoyed reading them myself. You can find them in the &lt;a href="https://rodschmidt.com/tags/sabbatical/"&gt;Sabbatical&lt;/a&gt; category.&lt;/p&gt;</description></item></channel></rss>
