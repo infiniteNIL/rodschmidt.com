@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lisp on Rod Schmidt</title>
+    <link>http://localhost:1313/tags/lisp/</link>
+    <description>Recent content in Lisp on Rod Schmidt</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 Dec 2025 21:07:11 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/lisp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>S7 Scheme</title>
+      <link>http://localhost:1313/posts/s7-scheme/</link>
+      <pubDate>Mon, 22 Dec 2025 21:07:11 -0700</pubDate>
+      <guid>http://localhost:1313/posts/s7-scheme/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

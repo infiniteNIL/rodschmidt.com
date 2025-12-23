@@ -1,6 +1,7 @@
 ---
 title: 'About'
-date: Thu, 12 Feb 2015 21:54:03 +
+# date: Thu, 12 Feb 2015 21:54:03 +
+date: 2015-02-12T00:00:00-00:00
 menu: "main"
 meta: false
 showcomments: false

@@ -1,3 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Robots on Rod Schmidt</title><link>https://rodschmidt.com/tags/robots/</link><description>Recent content in Robots on Rod Schmidt</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 11 Oct 2016 22:36:54 +0000</lastBuildDate><atom:link href="https://rodschmidt.com/tags/robots/index.xml" rel="self" type="application/rss+xml"/><item><title>Swift Robot Arm</title><link>https://rodschmidt.com/posts/swift-robot-arm/</link><pubDate>Tue, 11 Oct 2016 22:36:54 +0000</pubDate><guid>https://rodschmidt.com/posts/swift-robot-arm/</guid><description>In a previous post, I wrote about controlling my OWI robot arm with Elixir. Well, I decided to port that to Swift!
-In that post, there’s a link to some code that does it in Objective-C with IOKit. I first tried to just do a straight port and use IOKit in Swift. That didn’t work to well. The IOKit API is an old Core Foundation library and even has some old COM style APIs.</description></item><item><title>Elixir Robots</title><link>https://rodschmidt.com/posts/elixir-robots/</link><pubDate>Fri, 22 May 2015 22:11:23 +0000</pubDate><guid>https://rodschmidt.com/posts/elixir-robots/</guid><description>My robot hobby is picking up steam. After going through the Python examples that came with the GoPiGo, I got inspired by some embedded Erlang videos on YouTube and decided to see if I could control the GoPiGo with Elixir. After watching Elixir Sips, I learned of a project called Elixir/Ale, an Elixir library for embedded programming. With Elixir/Ale, you can talk to the GPIO ports on the Raspberry Pi and some common hardware bus protocols: I2C and SPI.</description></item><item><title>Robots! Robots! Robots!</title><link>https://rodschmidt.com/posts/robots-robots-robots/</link><pubDate>Thu, 14 May 2015 00:21:25 +0000</pubDate><guid>https://rodschmidt.com/posts/robots-robots-robots/</guid><description>I’ve been getting into robots lately. For a long time I was searching for the perfect robot kit to use with my Arduino. Then I decided I’d rather use my Raspberry Pi to control my robots so I could use better programming languages like Clojure, Elixir, Scala, Ruby, etc. So I was looking around for the perfect Raspberry Pi robot kit.
-For Christmas, my parents gave me the OWI Robotic Arm Edge.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Robots on Rod Schmidt</title>
+    <link>http://localhost:1313/tags/robots/</link>
+    <description>Recent content in Robots on Rod Schmidt</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 11 Oct 2016 22:36:54 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/robots/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Swift Robot Arm</title>
+      <link>http://localhost:1313/posts/swift-robot-arm/</link>
+      <pubDate>Tue, 11 Oct 2016 22:36:54 +0000</pubDate>
+      <guid>http://localhost:1313/posts/swift-robot-arm/</guid>
+      <description>&lt;p&gt;In a previous &lt;a href=&#34;http://localhost:1313/posts/elixir-robots/&#34;&gt;post&lt;/a&gt;, I wrote about controlling my OWI robot arm with Elixir. Well, I decided to port that to Swift!&lt;/p&gt;&#xA;&lt;p&gt;In that &lt;a href=&#34;http://localhost:1313/posts/elixir-robots/&#34;&gt;post&lt;/a&gt;, there’s a link to some code that does it in Objective-C with IOKit. I first tried to just do a straight port and use IOKit in Swift. That didn’t work to well. The IOKit API is an old Core Foundation library and even has some old &lt;a href=&#34;https://en.wikipedia.org/wiki/Component_Object_Model&#34;&gt;COM&lt;/a&gt; style APIs. There’s some complex macros as well that do not even get transferred to Swift, so you have to find their definition and and put them in a Swift constant or function. I couldn’t even get it to compile.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Elixir Robots</title>
+      <link>http://localhost:1313/posts/elixir-robots/</link>
+      <pubDate>Fri, 22 May 2015 22:11:23 +0000</pubDate>
+      <guid>http://localhost:1313/posts/elixir-robots/</guid>
+      <description>&lt;p&gt;My robot hobby is picking up steam. After going through the Python examples that came with the GoPiGo, I got inspired by some embedded Erlang videos on YouTube and decided to see if I could control the GoPiGo with &lt;a href=&#34;https://elixir-lang.org/&#34;&gt;Elixir&lt;/a&gt;. After watching Elixir Sips, I learned of a project called &lt;a href=&#34;https://github.com/fhunleth/elixir_ale&#34;&gt;Elixir/Ale&lt;/a&gt;, an Elixir library for embedded programming. With Elixir/Ale, you can talk to the GPIO ports on the Raspberry Pi and some common hardware bus protocols: I2C and SPI. I2C is used by the GoPiGo board, so Elixir/Ale looked like what I needed. So I looked up some Elixir docs, typed &lt;code&gt;mix new exgopigo&lt;/code&gt;, and started coding. The result is &lt;a href=&#34;https://github.com/infiniteNIL/exgopigo&#34;&gt;ExGoPiGo&lt;/a&gt;. All it lets you do right now is turn on and off the robot’s two front LEDs, but it does that by writing to the I2c bus. Controlling the motor and such shouldn’t be too hard.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Robots! Robots! Robots!</title>
+      <link>http://localhost:1313/posts/robots-robots-robots/</link>
+      <pubDate>Thu, 14 May 2015 00:21:25 +0000</pubDate>
+      <guid>http://localhost:1313/posts/robots-robots-robots/</guid>
+      <description>&lt;p&gt;I’ve been getting into robots lately. For a long time I was searching for the perfect robot kit to use with my Arduino. Then I decided I’d rather use my Raspberry Pi to control my robots so I could use better programming languages like Clojure, Elixir, Scala, Ruby, etc. So I was looking around for the perfect Raspberry Pi robot kit.&lt;/p&gt;&#xA;&lt;p&gt;For Christmas, my parents gave me the &lt;a href=&#34;https://www.amazon.com/gp/product/B0017OFRCY/ref=as_li_tl?ie=UTF8&amp;amp;tag=rodschmidt-20&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;linkCode=as2&amp;amp;creativeASIN=B0017OFRCY&amp;amp;linkId=bf904572cfaa824e0d4a13b79c042132&#34;&gt;OWI Robotic Arm Edge&lt;/a&gt;. For the longest time, I didn’t like it. I wanted a moving robot and something I could program.  &lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

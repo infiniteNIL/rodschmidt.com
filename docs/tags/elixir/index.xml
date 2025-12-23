@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Elixir on Rod Schmidt</title><link>https://rodschmidt.com/tags/elixir/</link><description>Recent content in Elixir on Rod Schmidt</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 22 May 2015 22:11:23 +0000</lastBuildDate><atom:link href="https://rodschmidt.com/tags/elixir/index.xml" rel="self" type="application/rss+xml"/><item><title>Elixir Robots</title><link>https://rodschmidt.com/posts/elixir-robots/</link><pubDate>Fri, 22 May 2015 22:11:23 +0000</pubDate><guid>https://rodschmidt.com/posts/elixir-robots/</guid><description>My robot hobby is picking up steam. After going through the Python examples that came with the GoPiGo, I got inspired by some embedded Erlang videos on YouTube and decided to see if I could control the GoPiGo with Elixir. After watching Elixir Sips, I learned of a project called Elixir/Ale, an Elixir library for embedded programming. With Elixir/Ale, you can talk to the GPIO ports on the Raspberry Pi and some common hardware bus protocols: I2C and SPI.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elixir on Rod Schmidt</title>
+    <link>http://localhost:1313/tags/elixir/</link>
+    <description>Recent content in Elixir on Rod Schmidt</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 May 2015 22:11:23 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/elixir/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Elixir Robots</title>
+      <link>http://localhost:1313/posts/elixir-robots/</link>
+      <pubDate>Fri, 22 May 2015 22:11:23 +0000</pubDate>
+      <guid>http://localhost:1313/posts/elixir-robots/</guid>
+      <description>&lt;p&gt;My robot hobby is picking up steam. After going through the Python examples that came with the GoPiGo, I got inspired by some embedded Erlang videos on YouTube and decided to see if I could control the GoPiGo with &lt;a href=&#34;https://elixir-lang.org/&#34;&gt;Elixir&lt;/a&gt;. After watching Elixir Sips, I learned of a project called &lt;a href=&#34;https://github.com/fhunleth/elixir_ale&#34;&gt;Elixir/Ale&lt;/a&gt;, an Elixir library for embedded programming. With Elixir/Ale, you can talk to the GPIO ports on the Raspberry Pi and some common hardware bus protocols: I2C and SPI. I2C is used by the GoPiGo board, so Elixir/Ale looked like what I needed. So I looked up some Elixir docs, typed &lt;code&gt;mix new exgopigo&lt;/code&gt;, and started coding. The result is &lt;a href=&#34;https://github.com/infiniteNIL/exgopigo&#34;&gt;ExGoPiGo&lt;/a&gt;. All it lets you do right now is turn on and off the robot’s two front LEDs, but it does that by writing to the I2c bus. Controlling the motor and such shouldn’t be too hard.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,7 +1,8 @@
 baseURL = "https://rodschmidt.com/"
 languageCode = "en-us"
 title = "Rod Schmidt"
-theme = "hyde-hyde"
+# theme = "hyde-hyde"
+theme = "triple-hyde"
 # disqusShortname = "rodschmidt"
 publishDir = "docs"
 canonifyURLs = true
@@ -16,7 +17,7 @@ copyright = "Rod Schmidt"
 github = "infinitenil"
 twitter = "rodschmidt"
 linkedin = "rodschmidt"
-stackoverflow = "117435"
+# stackoverflow = "117435"
 gravatar = "rod@infinitenil.com"
 
 [menu]
