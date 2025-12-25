@@ -33,4 +33,4 @@ ScittleTest shows how to:
 ## Conclusion
 That’s it. A working ClojureScript interpreter embedded in your iOS app. Another way to experience Lisp in your app.
 
-You can find the ScittleTest repo [here](https://github.com/infiniteNIL/scittle).
+You can find the ScittleTest repo [here](https://github.com/infiniteNIL/ScittleTest).
