@@ -11,9 +11,9 @@
 &lt;p&gt;It was the very early 90’s. Steve Jobs was at NeXT. I had some model of Macintosh II running on a 680x0 processor. I also had a compiler for C with object-oriented extensions (basically a subset of C++), called &lt;a href="https://en.wikipedia.org/wiki/THINK_C"&gt;THINK C&lt;/a&gt;, with a class library called TCL, or the Think Class Library. For more about THINK C, see this &lt;a href="http://preserve.mactech.com/articles/mactech/Vol.05/05.10/ThinkCTutor/index.html"&gt;article&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Numerology: 17 Years in the App Store (Part 1)</title><link>https://rodschmidt.com/posts/numerology-history-1/</link><pubDate>Tue, 28 Oct 2025 16:31:32 -0600</pubDate><guid>https://rodschmidt.com/posts/numerology-history-1/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;My app, &lt;a href="https://apps.apple.com/us/app/id292749698"&gt;Numerology&lt;/a&gt;, has been in the Apple app store for over 17 years. During that time, it and its variations (lite version, Mac version) have been downloaded over 188,000 times, and made almost $150,000 in profit.&lt;/p&gt;
 &lt;div&gt;
- &lt;img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
- src="https://rodschmidt.com/images/numerology-logo.png" 
- title="Numerology Icon" 
+ &lt;img style="display: block; margin: 0.7rem auto; border: /*none*/ 1px solid black; margin-bottom: 0px;"
+ src="https://rodschmidt.com/images/numerology-logo.png"
+ title="Numerology Icon"
  alt="Numerology Icon"
  
  width="128"

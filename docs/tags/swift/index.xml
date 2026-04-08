@@ -1,4 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Swift on Rod Schmidt</title><link>https://rodschmidt.com/tags/swift/</link><description>Recent content in Swift on Rod Schmidt</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 24 Dec 2025 18:10:57 -0700</lastBuildDate><atom:link href="https://rodschmidt.com/tags/swift/index.xml" rel="self" type="application/rss+xml"/><item><title>Mixing Swift and Clojure in Your iOS App - Scittle</title><link>https://rodschmidt.com/posts/scittle/</link><pubDate>Wed, 24 Dec 2025 18:10:57 -0700</pubDate><guid>https://rodschmidt.com/posts/scittle/</guid><description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;Featured in Clojure Deref on &lt;a href="https://clojure.org/news/2025/12/30/deref"&gt;December 30th, 2025&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Swift on Rod Schmidt</title><link>https://rodschmidt.com/tags/swift/</link><description>Recent content in Swift on Rod Schmidt</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 08 Apr 2026 11:16:15 -0600</lastBuildDate><atom:link href="https://rodschmidt.com/tags/swift/index.xml" rel="self" type="application/rss+xml"/><item><title>Swish - Clojure-like Lisp for Swift Video Series</title><link>https://rodschmidt.com/posts/swish-video-series/</link><pubDate>Wed, 08 Apr 2026 11:16:15 -0600</pubDate><guid>https://rodschmidt.com/posts/swish-video-series/</guid><description>&lt;p&gt;Since February of 2026, I&amp;rsquo;ve been publishing a series of videos on implementing Swish, a Clojure-like Lisp
+in Swift using Claude Code. You can find it &lt;a href="https://www.youtube.com/playlist?list=PLgZNfD3JAd4_2JeJQaFaOwuXV3Z5OX-SB"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;div&gt;
+ &lt;img style="display: block; margin: 0.7rem auto; border: /*none*/ 1px solid black; margin-bottom: 0px;"
+ src="https://rodschmidt.com/images/swish-logo.png"
+ title="Swish Logo"
+ alt="Swish Logo"
+ 
+ width="256"
+ 
+ &gt;
+ &lt;p style="text-align: center; font-size: smaller;"&gt;Swish Logo&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;I used Common Lisp for a solid year in college, and really enjoyed it. I always wanted to use it
+professionally, but never really had the chance.&lt;/p&gt;</description></item><item><title>Mixing Swift and Clojure in Your iOS App - Scittle</title><link>https://rodschmidt.com/posts/scittle/</link><pubDate>Wed, 24 Dec 2025 18:10:57 -0700</pubDate><guid>https://rodschmidt.com/posts/scittle/</guid><description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;Featured in Clojure Deref on &lt;a href="https://clojure.org/news/2025/12/30/deref"&gt;December 30th, 2025&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;In my &lt;a href="https://rodschmidt.com/posts/s7-scheme/"&gt;previous article&lt;/a&gt;, I showed how to embed a S7 Scheme interpreter in an iOS app. This time, I will show you how to embed a &lt;a href="https://clojurescript.org"&gt;ClojureScript&lt;/a&gt; interpreter, or at least a dialect of it.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://clojure.org"&gt;Clojure&lt;/a&gt; itself, runs on the JVM, and there’s not really a way to embed the JVM in an iOS app. Maybe once &lt;a href="https://github.com/swiftlang/swift-java"&gt;swift-java&lt;/a&gt; gets rolling.&lt;/p&gt;
 &lt;p&gt;There is &lt;a href="https://www.graalvm.org/"&gt;GraalVM&lt;/a&gt;, which lets you compile java code to native code, but it doesn’t support compiling for iOS. &lt;a href="https://babashka.org"&gt;Babashka&lt;/a&gt;, which is a native Clojure dialect interpreter uses GraalVM.&lt;/p&gt;</description></item><item><title>Mixing Swift and Lisp in Your iOS App - S7 Scheme</title><link>https://rodschmidt.com/posts/s7-scheme/</link><pubDate>Mon, 22 Dec 2025 21:07:11 -0700</pubDate><guid>https://rodschmidt.com/posts/s7-scheme/</guid><description>&lt;p&gt;I am a fan of &lt;a href="https://en.wikipedia.org/wiki/Lisp_%28programming_language%29"&gt;Lisp&lt;/a&gt;. I was first attracted to it because it was the original language of artificial intelligence because of its ability to manipulate symbols and its own code. I spent a whole year using Lisp in a series of courses on artificial intelligence in college. I became quite adept at using it and quite enjoyed using it as well.&lt;/p&gt;
@@ -14,9 +30,9 @@ and nobody, or no thing, is perfect.&lt;/p&gt;</description></item><item><title>
 &lt;p&gt;With the coming of SwiftUI, most of our app architectures are no longer valid (or at least parts of them). They need to be adjusted. MVC is certainly out. In fact, even controllers seem to be out. From Apple’s content, it seems all we have is models and views, and that’s true. Bindings have seemingly replaced controllers.&lt;/p&gt;</description></item><item><title>The Clean Architecture: An Example</title><link>https://rodschmidt.com/posts/the-clean-architecture-an-example/</link><pubDate>Sun, 29 Jan 2017 21:33:02 +0000</pubDate><guid>https://rodschmidt.com/posts/the-clean-architecture-an-example/</guid><description>&lt;p&gt;Today, I’d like to take an example iOS app written with an MVC architecture and show you what the example would be with a Clean Swift architecture. The example I’ve chosen to use is the Quiz app from chapter 1 of the 3rd edition of &lt;a href="https://www.amazon.com/iOS-Programming-Ranch-Guide-Guides/dp/0321821521/ref=sr_1_7?crid=393OBE770KCSR&amp;amp;dchild=1&amp;amp;keywords=big+nerd+ranch+ios+programming&amp;amp;qid=1586836438&amp;amp;sprefix=Big+nerd+ranch%2Caps%2C182&amp;amp;sr=8-7"&gt;iOS Programming: The Big Nerd Ranch Guide&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The Quiz is a simple app that is like flash cards. It looks like this:&lt;/p&gt;
 &lt;div&gt;
- &lt;img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
- src="https://rodschmidt.com/images/quiz.png" 
- title="" 
+ &lt;img style="display: block; margin: 0.7rem auto; border: /*none*/ 1px solid black; margin-bottom: 0px;"
+ src="https://rodschmidt.com/images/quiz.png"
+ title=""
  alt=""
  
  &gt;

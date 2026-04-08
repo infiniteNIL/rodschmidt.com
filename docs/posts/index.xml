@@ -1,4 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Rod Schmidt</title><link>https://rodschmidt.com/posts/</link><description>Recent content in Posts on Rod Schmidt</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 24 Dec 2025 18:10:57 -0700</lastBuildDate><atom:link href="https://rodschmidt.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Mixing Swift and Clojure in Your iOS App - Scittle</title><link>https://rodschmidt.com/posts/scittle/</link><pubDate>Wed, 24 Dec 2025 18:10:57 -0700</pubDate><guid>https://rodschmidt.com/posts/scittle/</guid><description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;Featured in Clojure Deref on &lt;a href="https://clojure.org/news/2025/12/30/deref"&gt;December 30th, 2025&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Rod Schmidt</title><link>https://rodschmidt.com/posts/</link><description>Recent content in Posts on Rod Schmidt</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 08 Apr 2026 11:16:15 -0600</lastBuildDate><atom:link href="https://rodschmidt.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Swish - Clojure-like Lisp for Swift Video Series</title><link>https://rodschmidt.com/posts/swish-video-series/</link><pubDate>Wed, 08 Apr 2026 11:16:15 -0600</pubDate><guid>https://rodschmidt.com/posts/swish-video-series/</guid><description>&lt;p&gt;Since February of 2026, I&amp;rsquo;ve been publishing a series of videos on implementing Swish, a Clojure-like Lisp
+in Swift using Claude Code. You can find it &lt;a href="https://www.youtube.com/playlist?list=PLgZNfD3JAd4_2JeJQaFaOwuXV3Z5OX-SB"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;div&gt;
+ &lt;img style="display: block; margin: 0.7rem auto; border: /*none*/ 1px solid black; margin-bottom: 0px;"
+ src="https://rodschmidt.com/images/swish-logo.png"
+ title="Swish Logo"
+ alt="Swish Logo"
+ 
+ width="256"
+ 
+ &gt;
+ &lt;p style="text-align: center; font-size: smaller;"&gt;Swish Logo&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;I used Common Lisp for a solid year in college, and really enjoyed it. I always wanted to use it
+professionally, but never really had the chance.&lt;/p&gt;</description></item><item><title>Mixing Swift and Clojure in Your iOS App - Scittle</title><link>https://rodschmidt.com/posts/scittle/</link><pubDate>Wed, 24 Dec 2025 18:10:57 -0700</pubDate><guid>https://rodschmidt.com/posts/scittle/</guid><description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;Featured in Clojure Deref on &lt;a href="https://clojure.org/news/2025/12/30/deref"&gt;December 30th, 2025&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;In my &lt;a href="https://rodschmidt.com/posts/s7-scheme/"&gt;previous article&lt;/a&gt;, I showed how to embed a S7 Scheme interpreter in an iOS app. This time, I will show you how to embed a &lt;a href="https://clojurescript.org"&gt;ClojureScript&lt;/a&gt; interpreter, or at least a dialect of it.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://clojure.org"&gt;Clojure&lt;/a&gt; itself, runs on the JVM, and there’s not really a way to embed the JVM in an iOS app. Maybe once &lt;a href="https://github.com/swiftlang/swift-java"&gt;swift-java&lt;/a&gt; gets rolling.&lt;/p&gt;
 &lt;p&gt;There is &lt;a href="https://www.graalvm.org/"&gt;GraalVM&lt;/a&gt;, which lets you compile java code to native code, but it doesn’t support compiling for iOS. &lt;a href="https://babashka.org"&gt;Babashka&lt;/a&gt;, which is a native Clojure dialect interpreter uses GraalVM.&lt;/p&gt;</description></item><item><title>Mixing Swift and Lisp in Your iOS App - S7 Scheme</title><link>https://rodschmidt.com/posts/s7-scheme/</link><pubDate>Mon, 22 Dec 2025 21:07:11 -0700</pubDate><guid>https://rodschmidt.com/posts/s7-scheme/</guid><description>&lt;p&gt;I am a fan of &lt;a href="https://en.wikipedia.org/wiki/Lisp_%28programming_language%29"&gt;Lisp&lt;/a&gt;. I was first attracted to it because it was the original language of artificial intelligence because of its ability to manipulate symbols and its own code. I spent a whole year using Lisp in a series of courses on artificial intelligence in college. I became quite adept at using it and quite enjoyed using it as well.&lt;/p&gt;
@@ -21,9 +37,9 @@
 &lt;p&gt;I’m currently in this boat. The least expensive plan on the marketplace for me is over $700. That would make it the 2nd highest item on my monthly expense list. Right now, my monthly income is less than that. I simply can’t afford it.&lt;/p&gt;</description></item><item><title>Numerology: 17 Years in the App Store (Part 1)</title><link>https://rodschmidt.com/posts/numerology-history-1/</link><pubDate>Tue, 28 Oct 2025 16:31:32 -0600</pubDate><guid>https://rodschmidt.com/posts/numerology-history-1/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;My app, &lt;a href="https://apps.apple.com/us/app/id292749698"&gt;Numerology&lt;/a&gt;, has been in the Apple app store for over 17 years. During that time, it and its variations (lite version, Mac version) have been downloaded over 188,000 times, and made almost $150,000 in profit.&lt;/p&gt;
 &lt;div&gt;
- &lt;img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
- src="https://rodschmidt.com/images/numerology-logo.png" 
- title="Numerology Icon" 
+ &lt;img style="display: block; margin: 0.7rem auto; border: /*none*/ 1px solid black; margin-bottom: 0px;"
+ src="https://rodschmidt.com/images/numerology-logo.png"
+ title="Numerology Icon"
  alt="Numerology Icon"
  
  width="128"
@@ -43,9 +59,9 @@ the problems I see with it.&lt;/p&gt;
 &lt;p&gt;I think Brandon Williams and Stephen Cellis, the creators of TCA, are absolutely brilliant, and what
 they have managed to pull off with the creation of TCA is amazing. However, It’s just the two of them,
 and nobody, or no thing, is perfect.&lt;/p&gt;</description></item><item><title>St. Louis Cardinals, My Penultimate Baseball Stadium?</title><link>https://rodschmidt.com/posts/baseball-stl/</link><pubDate>Wed, 20 Sep 2023 17:48:29 -0600</pubDate><guid>https://rodschmidt.com/posts/baseball-stl/</guid><description>&lt;div&gt;
- &lt;img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
- src="https://rodschmidt.com/images/BuschStadium.jpeg" 
- title="Busch Stadium" 
+ &lt;img style="display: block; margin: 0.7rem auto; border: /*none*/ 1px solid black; margin-bottom: 0px;"
+ src="https://rodschmidt.com/images/BuschStadium.jpeg"
+ title="Busch Stadium"
  alt="Busch Stadium"
  
  &gt;
@@ -58,9 +74,9 @@ This time I went to St. Louis to see the Cardinals. I call this my penultimate s
 Pittsburgh is left after this one. More on that later.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s the box score:
 &lt;div&gt;
- &lt;img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
- src="https://rodschmidt.com/images/CardinalsBoxScore.png" 
- title="Box Score" 
+ &lt;img style="display: block; margin: 0.7rem auto; border: /*none*/ 1px solid black; margin-bottom: 0px;"
+ src="https://rodschmidt.com/images/CardinalsBoxScore.png"
+ title="Box Score"
  alt="Box Score"
  
  &gt;
@@ -77,9 +93,9 @@ Pittsburgh is left after this one. More on that later.&lt;/p&gt;
 &lt;p&gt;The other example is CleanNote that applies Clean Architecture to an iOS and Mac application. You can find that one &lt;a href="https://github.com/dcutting/CleanNote"&gt;here&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>The Clean Architecture: An Example</title><link>https://rodschmidt.com/posts/the-clean-architecture-an-example/</link><pubDate>Sun, 29 Jan 2017 21:33:02 +0000</pubDate><guid>https://rodschmidt.com/posts/the-clean-architecture-an-example/</guid><description>&lt;p&gt;Today, I’d like to take an example iOS app written with an MVC architecture and show you what the example would be with a Clean Swift architecture. The example I’ve chosen to use is the Quiz app from chapter 1 of the 3rd edition of &lt;a href="https://www.amazon.com/iOS-Programming-Ranch-Guide-Guides/dp/0321821521/ref=sr_1_7?crid=393OBE770KCSR&amp;amp;dchild=1&amp;amp;keywords=big+nerd+ranch+ios+programming&amp;amp;qid=1586836438&amp;amp;sprefix=Big+nerd+ranch%2Caps%2C182&amp;amp;sr=8-7"&gt;iOS Programming: The Big Nerd Ranch Guide&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The Quiz is a simple app that is like flash cards. It looks like this:&lt;/p&gt;
 &lt;div&gt;
- &lt;img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
- src="https://rodschmidt.com/images/quiz.png" 
- title="" 
+ &lt;img style="display: block; margin: 0.7rem auto; border: /*none*/ 1px solid black; margin-bottom: 0px;"
+ src="https://rodschmidt.com/images/quiz.png"
+ title=""
  alt=""
  
  &gt;
@@ -126,9 +142,9 @@ Pittsburgh is left after this one. More on that later.&lt;/p&gt;
  &lt;p style="text-align: center; font-size: smaller"&gt;A non-sticky footer&lt;/p&gt;</description></item><item><title>Back to Wordpress</title><link>https://rodschmidt.com/posts/back-to-wordpress/</link><pubDate>Sat, 14 Feb 2015 00:31:21 +0000</pubDate><guid>https://rodschmidt.com/posts/back-to-wordpress/</guid><description>&lt;p&gt;You&amp;rsquo;ve probably noticed that my blog has changed again. I&amp;rsquo;ve moved back to Wordpress from Octopress. I could never find a plugin for Octopress that did image captions right. I spent way too much time on it and just decided to use something that just worked. I looked at a lot of static blogging engines and they all had their issues.&lt;/p&gt;
 &lt;p&gt;With Wordpress, I have to use the web based editor, but it works and their is a lot of plugins and support behind it. I have better things to spend my time on. To make things better, I think I&amp;rsquo;ll try &lt;a href="http://desk.pm"&gt;Desk&lt;/a&gt;. I&amp;rsquo;ve also installed the Markdown plugin, so I can continue to use it.&lt;/p&gt;</description></item><item><title>App: The Human Story - My Prize</title><link>https://rodschmidt.com/posts/app-the-human-story-my-prize/</link><pubDate>Sun, 18 Jan 2015 00:09:53 +0000</pubDate><guid>https://rodschmidt.com/posts/app-the-human-story-my-prize/</guid><description>&lt;p&gt;A while back I wrote a &lt;a href="https://rodschmidt.com/app-the-human-story-my-story/"&gt;blog post&lt;/a&gt; and entered it in a contest for &lt;a href="http://appdocumentary.com/app-stories/submitted"&gt;App: The Human Story&lt;/a&gt;. I came in second, and for that I was awarded a custom app token from Matic. It finally came last week and here it is:&lt;/p&gt;
 &lt;div&gt;
- &lt;img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
- src="https://rodschmidt.com/images/apptoken-300x300.jpg" 
- title="My app token" 
+ &lt;img style="display: block; margin: 0.7rem auto; border: /*none*/ 1px solid black; margin-bottom: 0px;"
+ src="https://rodschmidt.com/images/apptoken-300x300.jpg"
+ title="My app token"
  alt="My app token"
  
  &gt;
@@ -183,18 +199,18 @@ Pittsburgh is left after this one. More on that later.&lt;/p&gt;
 &lt;p&gt;Today started off well. Found my way to the PCH, flipped the top down, and right away I was on a single lane road with no one in front of or behind me. That didn&amp;rsquo;t last long however. Kept going through towns where you have to slow down for the traffic. But every so often you hit a stretch of road and its just you and the road. You, and the road, surrounded by a bunch of tall evergreen trees providing shade. Perfect.&lt;/p&gt;</description></item><item><title>West Coast Tour - Seattle</title><link>https://rodschmidt.com/posts/west-coast-tour-seattle/</link><pubDate>Thu, 13 Jun 2002 00:47:07 +0000</pubDate><guid>https://rodschmidt.com/posts/west-coast-tour-seattle/</guid><description>&lt;p&gt;&lt;strong&gt;Wednesday, June 12th, 2002&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Took my time getting started and probably left Portland around 10am. Dez lent me some audio books (Thanks Dez) and I leisurely drove to Seattle arriving at about 3pm. Had the top down most of the way, but had to put it up about an hour outside of Seattle because I was starting to get sunburned. Its 90 degrees in Seattle today!&lt;/p&gt;
 &lt;div&gt;
- &lt;img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
- src="https://rodschmidt.com/images/Safeco_Field-300x225.jpg" 
- title="Safeco Field" 
+ &lt;img style="display: block; margin: 0.7rem auto; border: /*none*/ 1px solid black; margin-bottom: 0px;"
+ src="https://rodschmidt.com/images/Safeco_Field-300x225.jpg"
+ title="Safeco Field"
  alt="Safeco Field"
  
  &gt;
  &lt;p style="text-align: center; font-size: smaller;"&gt;Safeco Field&lt;/p&gt;</description></item><item><title>West Coast Tour - Portland</title><link>https://rodschmidt.com/posts/west-coast-tour-portland/</link><pubDate>Tue, 11 Jun 2002 23:08:43 +0000</pubDate><guid>https://rodschmidt.com/posts/west-coast-tour-portland/</guid><description>&lt;p&gt;&lt;strong&gt;Tuesday, June 11th, 2002&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The whole purpose of the west coast tour is too see the west coast baseball teams I haven&amp;rsquo;t seen yet (Seattle and San Diego) and to drive my Miata down the coast. So to that end I got up early and left at 5am and drove 12 hours with a few stops for lunch and rest.&lt;/p&gt;
 &lt;div&gt;
- &lt;img style="display: block; margin: 0.7rem auto; border: 1px solid black; margin-bottom: 0px;" 
- src="https://rodschmidt.com/images/the_way_to_Portland-300x225.jpg" 
- title="On the way to Portland" 
+ &lt;img style="display: block; margin: 0.7rem auto; border: /*none*/ 1px solid black; margin-bottom: 0px;"
+ src="https://rodschmidt.com/images/the_way_to_Portland-300x225.jpg"
+ title="On the way to Portland"
  alt="On the way to Portland"
  
  &gt;

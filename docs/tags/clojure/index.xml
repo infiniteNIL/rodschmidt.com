@@ -1,4 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clojure on Rod Schmidt</title><link>https://rodschmidt.com/tags/clojure/</link><description>Recent content in Clojure on Rod Schmidt</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 24 Dec 2025 18:10:57 -0700</lastBuildDate><atom:link href="https://rodschmidt.com/tags/clojure/index.xml" rel="self" type="application/rss+xml"/><item><title>Mixing Swift and Clojure in Your iOS App - Scittle</title><link>https://rodschmidt.com/posts/scittle/</link><pubDate>Wed, 24 Dec 2025 18:10:57 -0700</pubDate><guid>https://rodschmidt.com/posts/scittle/</guid><description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;Featured in Clojure Deref on &lt;a href="https://clojure.org/news/2025/12/30/deref"&gt;December 30th, 2025&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clojure on Rod Schmidt</title><link>https://rodschmidt.com/tags/clojure/</link><description>Recent content in Clojure on Rod Schmidt</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 08 Apr 2026 11:16:15 -0600</lastBuildDate><atom:link href="https://rodschmidt.com/tags/clojure/index.xml" rel="self" type="application/rss+xml"/><item><title>Swish - Clojure-like Lisp for Swift Video Series</title><link>https://rodschmidt.com/posts/swish-video-series/</link><pubDate>Wed, 08 Apr 2026 11:16:15 -0600</pubDate><guid>https://rodschmidt.com/posts/swish-video-series/</guid><description>&lt;p&gt;Since February of 2026, I&amp;rsquo;ve been publishing a series of videos on implementing Swish, a Clojure-like Lisp
+in Swift using Claude Code. You can find it &lt;a href="https://www.youtube.com/playlist?list=PLgZNfD3JAd4_2JeJQaFaOwuXV3Z5OX-SB"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;div&gt;
+ &lt;img style="display: block; margin: 0.7rem auto; border: /*none*/ 1px solid black; margin-bottom: 0px;"
+ src="https://rodschmidt.com/images/swish-logo.png"
+ title="Swish Logo"
+ alt="Swish Logo"
+ 
+ width="256"
+ 
+ &gt;
+ &lt;p style="text-align: center; font-size: smaller;"&gt;Swish Logo&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;I used Common Lisp for a solid year in college, and really enjoyed it. I always wanted to use it
+professionally, but never really had the chance.&lt;/p&gt;</description></item><item><title>Mixing Swift and Clojure in Your iOS App - Scittle</title><link>https://rodschmidt.com/posts/scittle/</link><pubDate>Wed, 24 Dec 2025 18:10:57 -0700</pubDate><guid>https://rodschmidt.com/posts/scittle/</guid><description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;Featured in Clojure Deref on &lt;a href="https://clojure.org/news/2025/12/30/deref"&gt;December 30th, 2025&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;In my &lt;a href="https://rodschmidt.com/posts/s7-scheme/"&gt;previous article&lt;/a&gt;, I showed how to embed a S7 Scheme interpreter in an iOS app. This time, I will show you how to embed a &lt;a href="https://clojurescript.org"&gt;ClojureScript&lt;/a&gt; interpreter, or at least a dialect of it.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://clojure.org"&gt;Clojure&lt;/a&gt; itself, runs on the JVM, and there’s not really a way to embed the JVM in an iOS app. Maybe once &lt;a href="https://github.com/swiftlang/swift-java"&gt;swift-java&lt;/a&gt; gets rolling.&lt;/p&gt;
 &lt;p&gt;There is &lt;a href="https://www.graalvm.org/"&gt;GraalVM&lt;/a&gt;, which lets you compile java code to native code, but it doesn’t support compiling for iOS. &lt;a href="https://babashka.org"&gt;Babashka&lt;/a&gt;, which is a native Clojure dialect interpreter uses GraalVM.&lt;/p&gt;</description></item></channel></rss>
