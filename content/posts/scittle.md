@@ -2,8 +2,10 @@
 title: "Mixing Swift and Clojure in Your iOS App - Scittle"
 date: 2025-12-24T18:10:57-07:00
 draft: false
-tags: ['Swift', 'Lisp', 'Apple Platforms']
+tags: ['Swift', 'Lisp', 'Clojure', 'Apple Platforms']
 ---
+**_Featured in Clojure Deref on [December 30th, 2025](https://clojure.org/news/2025/12/30/deref)_**
+
 In my [previous article](https://rodschmidt.com/posts/s7-scheme/), I showed how to embed a S7 Scheme interpreter in an iOS app. This time, I will show you how to embed a [ClojureScript](https://clojurescript.org) interpreter, or at least a dialect of it.
 
 [Clojure](https://clojure.org) itself, runs on the JVM, and there’s not really a way to embed the JVM in an iOS app. Maybe once [swift-java](https://github.com/swiftlang/swift-java) gets rolling.
