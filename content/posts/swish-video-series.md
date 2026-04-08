@@ -23,7 +23,7 @@ because creating a language is a lot of work and takes a lot of time.
 
 Lisps are fascinating, in that their syntax and evaluation model are pretty simple, but you can
 do amazing things with them. That is why Lisp has lasted over 50 years and modern languages still
-haven't caught up to them. They are just now getting macros, but nothing has elegant and simple as
+haven't caught up to them. They are just now getting macros, but nothing as elegant and simple as
 Lisp macros.
 
 I plan to make Swish something where you can embed an interpreter in your Swift app or you can
