@@ -12,9 +12,9 @@ One of the libraries the platform team provided was a library that managed featu
 Here’s the problem we had. The other teams created lots of feature flags. Almost everyday a new flag would need to be created. This meant updating the library to support the new flag. This led to lots of churn with new versions of the library being released almost everyday. Teams that needed that flag couldn’t move forward with their plans until they had the flag. Any other libraries that depended on the new flag had to be updated, built, and released as well. This led to more testing, increased build times and everything else that goes along with new releases.
 
 ## Solution
-I recogonized this problem, and took it upon myself to solve it. The root of the problem was that in order to add a new feature flag, the platform library had to change, even though all the logic for managing feature flags didn’t change at all. All that changed was a flag was added, removed, or changed.
+I recognized this problem, and took it upon myself to solve it. The root of the problem was that in order to add a new feature flag, the platform library had to change, even though all the logic for managing feature flags didn’t change at all. All that changed was a flag was added, removed, or changed.
 
-The answer was decentralized registration of feature flags. I added the ability for a feature flag to be registed at runtime, rather than basically hard-coded into the library. When the application started, one of the first things it did was register feature flags. Each team would define a feature flag provider in the application. When the application started up, it would ask each provider to register the flags a team needed.
+The answer was decentralized registration of feature flags. I added the ability for a feature flag to be registered at runtime, rather than basically hard-coded into the library. When the application started, one of the first things it did was register feature flags. Each team would define a feature flag provider in the application. When the application started up, it would ask each provider to register the flags a team needed.
 
 There was some pushback to this, as some felt it was too complicated and not necessary. I might agree if there was just one team, but in a large project with multiple teams, steps like this are often necessary.
 
