@@ -2,7 +2,7 @@
 title: "AI Won't Make Your Dev Team More Productive"
 date: 2026-05-27T00:00:00-06:00
 draft: false
-tags: ['AI', 'Software Development', 'No Estimates']
+tags: ['AI', 'No Estimates', 'Software Development']
 ---
 There’s no doubt that coding agents can make an individual developer more productive, at least in the initial stage of actually creating the code. However, I’ve got bad news for all the software development organizations out there. AI isn’t going to make you more productive. To do that, you need to improve your process.
 
