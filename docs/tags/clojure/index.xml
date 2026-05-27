@@ -1,33 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Clojure on Rod Schmidt</title>
-    <link>http://localhost:1313/tags/clojure/</link>
-    <description>Recent content in Clojure on Rod Schmidt</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 07 May 2026 10:43:18 -0600</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/clojure/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>ifgame - An Interactive Fiction game library for Clojure</title>
-      <link>http://localhost:1313/posts/ifgame/</link>
-      <pubDate>Thu, 07 May 2026 10:43:18 -0600</pubDate>
-      <guid>http://localhost:1313/posts/ifgame/</guid>
-      <description>&lt;p&gt;On of the first programs I ever ran on a computer was a text adventure game, also known as&#xA;Interactive Fiction. I think the first one I played was &lt;a href=&#34;https://en.wikipedia.org/wiki/Adventureland_(video_game)&#34;&gt;Adventureland&lt;/a&gt;&#xA;by &lt;a href=&#34;https://en.wikipedia.org/wiki/Scott_Adams_(game_designer)&#34;&gt;Scott Adams&lt;/a&gt;, which was based on the&#xA;first ever text adventure called &lt;a href=&#34;https://en.wikipedia.org/wiki/Colossal_Cave_Adventure&#34;&gt;Adventure&lt;/a&gt;&#xA;by Crowther and Woods. Adventureland was the first text adventure available for personal computers.&lt;/p&gt;&#xA;&lt;p&gt;Not long after that I discovered &lt;a href=&#34;https://en.wikipedia.org/wiki/Zork&#34;&gt;Zork I&lt;/a&gt;, the first game by&#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/Infocom&#34;&gt;Infocom&lt;/a&gt;. I loved the Infocom games, I played most of them,&#xA;spending many hours solving the games.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Swish - Clojure-like Lisp for Swift Video Series</title>
-      <link>http://localhost:1313/posts/swish-video-series/</link>
-      <pubDate>Wed, 08 Apr 2026 11:16:15 -0600</pubDate>
-      <guid>http://localhost:1313/posts/swish-video-series/</guid>
-      <description>&lt;p&gt;Since February of 2026, I&amp;rsquo;ve been publishing a series of videos on implementing Swish, a Clojure-like Lisp&#xA;in Swift using Claude Code. You can find it &lt;a href=&#34;https://www.youtube.com/playlist?list=PLgZNfD3JAd4_2JeJQaFaOwuXV3Z5OX-SB&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;div&gt;&#xA;  &lt;img style=&#34;display: block; margin: 0.7rem auto; border: /*none*/ 1px solid black; margin-bottom: 0px;&#34;&#xA;       src=&#34;http://localhost:1313/images/swish-logo.png&#34;&#xA;       title=&#34;Swish Logo&#34;&#xA;       alt=&#34;Swish Logo&#34;&#xA;       &#xA;       width=&#34;256&#34;&#xA;       &#xA;  &gt;&#xA;  &lt;p style=&#34;text-align: center; font-size: smaller;&#34;&gt;Swish Logo&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&#xA;&lt;p&gt;I used Common Lisp for a solid year in college, and really enjoyed it. I always wanted to use it&#xA;professionally, but never really had the chance.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Mixing Swift and Clojure in Your iOS App - Scittle</title>
-      <link>http://localhost:1313/posts/scittle/</link>
-      <pubDate>Wed, 24 Dec 2025 18:10:57 -0700</pubDate>
-      <guid>http://localhost:1313/posts/scittle/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;Featured in Clojure Deref on &lt;a href=&#34;https://clojure.org/news/2025/12/30/deref&#34;&gt;December 30th, 2025&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;In my &lt;a href=&#34;https://rodschmidt.com/posts/s7-scheme/&#34;&gt;previous article&lt;/a&gt;, I showed how to embed a S7 Scheme interpreter in an iOS app. This time, I will show you how to embed a &lt;a href=&#34;https://clojurescript.org&#34;&gt;ClojureScript&lt;/a&gt; interpreter, or at least a dialect of it.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://clojure.org&#34;&gt;Clojure&lt;/a&gt; itself, runs on the JVM, and there’s not really a way to embed the JVM in an iOS app. Maybe once &lt;a href=&#34;https://github.com/swiftlang/swift-java&#34;&gt;swift-java&lt;/a&gt; gets rolling.&lt;/p&gt;&#xA;&lt;p&gt;There is &lt;a href=&#34;https://www.graalvm.org/&#34;&gt;GraalVM&lt;/a&gt;, which lets you compile java code to native code, but it doesn’t support compiling for iOS. &lt;a href=&#34;https://babashka.org&#34;&gt;Babashka&lt;/a&gt;, which is a native Clojure dialect interpreter uses GraalVM.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clojure on Rod Schmidt</title><link>https://rodschmidt.com/tags/clojure/</link><description>Recent content in Clojure on Rod Schmidt</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 07 May 2026 10:43:18 -0600</lastBuildDate><atom:link href="https://rodschmidt.com/tags/clojure/index.xml" rel="self" type="application/rss+xml"/><item><title>ifgame - An Interactive Fiction game library for Clojure</title><link>https://rodschmidt.com/posts/ifgame/</link><pubDate>Thu, 07 May 2026 10:43:18 -0600</pubDate><guid>https://rodschmidt.com/posts/ifgame/</guid><description>&lt;p&gt;On of the first programs I ever ran on a computer was a text adventure game, also known as
+Interactive Fiction. I think the first one I played was &lt;a href="https://en.wikipedia.org/wiki/Adventureland_(video_game)"&gt;Adventureland&lt;/a&gt;
+by &lt;a href="https://en.wikipedia.org/wiki/Scott_Adams_(game_designer)"&gt;Scott Adams&lt;/a&gt;, which was based on the
+first ever text adventure called &lt;a href="https://en.wikipedia.org/wiki/Colossal_Cave_Adventure"&gt;Adventure&lt;/a&gt;
+by Crowther and Woods. Adventureland was the first text adventure available for personal computers.&lt;/p&gt;
+&lt;p&gt;Not long after that I discovered &lt;a href="https://en.wikipedia.org/wiki/Zork"&gt;Zork I&lt;/a&gt;, the first game by
+&lt;a href="https://en.wikipedia.org/wiki/Infocom"&gt;Infocom&lt;/a&gt;. I loved the Infocom games, I played most of them,
+spending many hours solving the games.&lt;/p&gt;</description></item><item><title>Swish - Clojure-like Lisp for Swift Video Series</title><link>https://rodschmidt.com/posts/swish-video-series/</link><pubDate>Wed, 08 Apr 2026 11:16:15 -0600</pubDate><guid>https://rodschmidt.com/posts/swish-video-series/</guid><description>&lt;p&gt;Since February of 2026, I&amp;rsquo;ve been publishing a series of videos on implementing Swish, a Clojure-like Lisp
+in Swift using Claude Code. You can find it &lt;a href="https://www.youtube.com/playlist?list=PLgZNfD3JAd4_2JeJQaFaOwuXV3Z5OX-SB"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;div&gt;
+ &lt;img style="display: block; margin: 0.7rem auto; border: /*none*/ 1px solid black; margin-bottom: 0px;"
+ src="https://rodschmidt.com/images/swish-logo.png"
+ title="Swish Logo"
+ alt="Swish Logo"
+ 
+ width="256"
+ 
+ &gt;
+ &lt;p style="text-align: center; font-size: smaller;"&gt;Swish Logo&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;I used Common Lisp for a solid year in college, and really enjoyed it. I always wanted to use it
+professionally, but never really had the chance.&lt;/p&gt;</description></item><item><title>Mixing Swift and Clojure in Your iOS App - Scittle</title><link>https://rodschmidt.com/posts/scittle/</link><pubDate>Wed, 24 Dec 2025 18:10:57 -0700</pubDate><guid>https://rodschmidt.com/posts/scittle/</guid><description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;Featured in Clojure Deref on &lt;a href="https://clojure.org/news/2025/12/30/deref"&gt;December 30th, 2025&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In my &lt;a href="https://rodschmidt.com/posts/s7-scheme/"&gt;previous article&lt;/a&gt;, I showed how to embed a S7 Scheme interpreter in an iOS app. This time, I will show you how to embed a &lt;a href="https://clojurescript.org"&gt;ClojureScript&lt;/a&gt; interpreter, or at least a dialect of it.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://clojure.org"&gt;Clojure&lt;/a&gt; itself, runs on the JVM, and there’s not really a way to embed the JVM in an iOS app. Maybe once &lt;a href="https://github.com/swiftlang/swift-java"&gt;swift-java&lt;/a&gt; gets rolling.&lt;/p&gt;
+&lt;p&gt;There is &lt;a href="https://www.graalvm.org/"&gt;GraalVM&lt;/a&gt;, which lets you compile java code to native code, but it doesn’t support compiling for iOS. &lt;a href="https://babashka.org"&gt;Babashka&lt;/a&gt;, which is a native Clojure dialect interpreter uses GraalVM.&lt;/p&gt;</description></item></channel></rss>

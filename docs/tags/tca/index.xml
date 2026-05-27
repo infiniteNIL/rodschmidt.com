@@ -1,19 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>TCA on Rod Schmidt</title>
-    <link>http://localhost:1313/tags/tca/</link>
-    <description>Recent content in TCA on Rod Schmidt</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 26 Apr 2024 11:35:37 -0600</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/tca/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>The Composable Architecture: My 3 Year Experience</title>
-      <link>http://localhost:1313/posts/composable-architecture-experience/</link>
-      <pubDate>Fri, 26 Apr 2024 11:35:37 -0600</pubDate>
-      <guid>http://localhost:1313/posts/composable-architecture-experience/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;I recently finished a 3 year stint with a company that uses the Composable Architecture (&lt;a href=&#34;https://github.com/pointfreeco/swift-composable-architecture&#34;&gt;TCA&lt;/a&gt;)&#xA;from &lt;a href=&#34;https://pointfree.co&#34;&gt;PointFree&lt;/a&gt;. I wanted to write about my experiences with TCA and some of&#xA;the problems I see with it.&lt;/p&gt;&#xA;&lt;p&gt;I think Brandon Williams and Stephen Cellis, the creators of TCA, are absolutely brilliant, and what&#xA;they have managed to pull off with the creation of TCA is amazing. However, It’s just the two of them,&#xA;and nobody, or no thing, is perfect.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TCA on Rod Schmidt</title><link>https://rodschmidt.com/tags/tca/</link><description>Recent content in TCA on Rod Schmidt</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 26 Apr 2024 11:35:37 -0600</lastBuildDate><atom:link href="https://rodschmidt.com/tags/tca/index.xml" rel="self" type="application/rss+xml"/><item><title>The Composable Architecture: My 3 Year Experience</title><link>https://rodschmidt.com/posts/composable-architecture-experience/</link><pubDate>Fri, 26 Apr 2024 11:35:37 -0600</pubDate><guid>https://rodschmidt.com/posts/composable-architecture-experience/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;I recently finished a 3 year stint with a company that uses the Composable Architecture (&lt;a href="https://github.com/pointfreeco/swift-composable-architecture"&gt;TCA&lt;/a&gt;)
+from &lt;a href="https://pointfree.co"&gt;PointFree&lt;/a&gt;. I wanted to write about my experiences with TCA and some of
+the problems I see with it.&lt;/p&gt;
+&lt;p&gt;I think Brandon Williams and Stephen Cellis, the creators of TCA, are absolutely brilliant, and what
+they have managed to pull off with the creation of TCA is amazing. However, It’s just the two of them,
+and nobody, or no thing, is perfect.&lt;/p&gt;</description></item></channel></rss>
