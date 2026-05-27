@@ -1,8 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Interactive Fiction on Rod Schmidt</title><link>https://rodschmidt.com/tags/interactive-fiction/</link><description>Recent content in Interactive Fiction on Rod Schmidt</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 07 May 2026 10:43:18 -0600</lastBuildDate><atom:link href="https://rodschmidt.com/tags/interactive-fiction/index.xml" rel="self" type="application/rss+xml"/><item><title>ifgame - An Interactive Fiction game library for Clojure</title><link>https://rodschmidt.com/posts/ifgame/</link><pubDate>Thu, 07 May 2026 10:43:18 -0600</pubDate><guid>https://rodschmidt.com/posts/ifgame/</guid><description>&lt;p&gt;On of the first programs I ever ran on a computer was a text adventure game, also known as
-Interactive Fiction. I think the first one I played was &lt;a href="https://en.wikipedia.org/wiki/Adventureland_(video_game)"&gt;Adventureland&lt;/a&gt;
-by &lt;a href="https://en.wikipedia.org/wiki/Scott_Adams_(game_designer)"&gt;Scott Adams&lt;/a&gt;, which was based on the
-first ever text adventure called &lt;a href="https://en.wikipedia.org/wiki/Colossal_Cave_Adventure"&gt;Adventure&lt;/a&gt;
-by Crowther and Woods. Adventureland was the first text adventure available for personal computers.&lt;/p&gt;
-&lt;p&gt;Not long after that I discovered &lt;a href="https://en.wikipedia.org/wiki/Zork"&gt;Zork I&lt;/a&gt;, the first game by
-&lt;a href="https://en.wikipedia.org/wiki/Infocom"&gt;Infocom&lt;/a&gt;. I loved the Infocom games, I played most of them,
-spending many hours solving the games.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interactive Fiction on Rod Schmidt</title>
+    <link>http://localhost:1313/tags/interactive-fiction/</link>
+    <description>Recent content in Interactive Fiction on Rod Schmidt</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 May 2026 10:43:18 -0600</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/interactive-fiction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ifgame - An Interactive Fiction game library for Clojure</title>
+      <link>http://localhost:1313/posts/ifgame/</link>
+      <pubDate>Thu, 07 May 2026 10:43:18 -0600</pubDate>
+      <guid>http://localhost:1313/posts/ifgame/</guid>
+      <description>&lt;p&gt;On of the first programs I ever ran on a computer was a text adventure game, also known as&#xA;Interactive Fiction. I think the first one I played was &lt;a href=&#34;https://en.wikipedia.org/wiki/Adventureland_(video_game)&#34;&gt;Adventureland&lt;/a&gt;&#xA;by &lt;a href=&#34;https://en.wikipedia.org/wiki/Scott_Adams_(game_designer)&#34;&gt;Scott Adams&lt;/a&gt;, which was based on the&#xA;first ever text adventure called &lt;a href=&#34;https://en.wikipedia.org/wiki/Colossal_Cave_Adventure&#34;&gt;Adventure&lt;/a&gt;&#xA;by Crowther and Woods. Adventureland was the first text adventure available for personal computers.&lt;/p&gt;&#xA;&lt;p&gt;Not long after that I discovered &lt;a href=&#34;https://en.wikipedia.org/wiki/Zork&#34;&gt;Zork I&lt;/a&gt;, the first game by&#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/Infocom&#34;&gt;Infocom&lt;/a&gt;. I loved the Infocom games, I played most of them,&#xA;spending many hours solving the games.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
